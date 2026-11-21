@@ -1,0 +1,360 @@
+/* Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
+   file LICENSE.rst or https://cmake.org/licensing for details.  */
+#include "cmCTestConfigureCommand.h"
+
+#include <chrono>
+#include <cstdlib>
+#include <memory>
+#include <ostream>
+#include <string>
+#include <utility>
+#include <vector>
+
+#include <cm/optional>
+#include <cmext/string_view>
+
+#include "cmArgumentParser.h"
+#include "cmCMakePresetsGraph.h"
+#include "cmCTest.h"
+#include "cmDuration.h"
+#include "cmExecutionStatus.h"
+#include "cmGeneratedFileStream.h"
+#include "cmGlobalGenerator.h"
+#include "cmInstrumentation.h"
+#include "cmInstrumentationQuery.h"
+#include "cmJSONState.h"
+#include "cmList.h"
+#include "cmMakefile.h"
+#include "cmOutputConverter.h"
+#include "cmStringAlgorithms.h"
+#include "cmSystemTools.h"
+#include "cmValue.h"
+#include "cmXMLWriter.h"
+#include "cmake.h"
+
+using ConfigurePreset = cmCMakePresetsGraph::ConfigurePreset;
+
+namespace {
+
+bool ConstructConfigureCommand(
+  cmExecutionStatus& status, cmMakefile& mf, std::string const sourceDirectory,
+  std::string const buildDirectory, std::string const outputDirectory,
+  std::string const options, std::string const presetName,
+  std::string const presetsFile, std::string& configureCommand)
+{
+  configureCommand =
+    cmStrCat('"', cmSystemTools::GetCMakeCommand(), "\" \"-S"_s,
+             cmSystemTools::CollapseFullPath(sourceDirectory), '"');
+
+  if (!buildDirectory.empty()) {
+    configureCommand =
+      cmStrCat(std::move(configureCommand), " \"-B"_s,
+               cmSystemTools::CollapseFullPath(buildDirectory), '"');
+  }
+
+  cmValue cmakeGenerator = mf.GetDefinition("CTEST_CMAKE_GENERATOR");
+  if (cmNonempty(cmakeGenerator)) {
+    configureCommand =
+      cmStrCat(std::move(configureCommand), " \"-G"_s, cmakeGenerator, '"');
+  }
+
+  bool presetProvidesBuildDir = false;
+  bool presetProvidesGenerator = false;
+
+  if (!presetName.empty()) {
+    cmCMakePresetsGraph presetsGraph;
+    if (!presetsGraph.ReadProjectPresets(sourceDirectory, presetsFile)) {
+      status.SetError(cmStrCat("\n Could not read presets from \""_s,
+                               sourceDirectory, "\":\n "_s,
+                               presetsGraph.parseState.GetErrorMessage()));
+      return false;
+    }
+
+    auto resolveResult =
+      presetsGraph.ResolvePreset(presetName, presetsGraph.ConfigurePresets);
+    auto resolveError =
+      cmCMakePresetsGraph::FormatPresetError<ConfigurePreset>(
+        resolveResult.StatusCode, resolveResult.ErrorPresetName,
+        resolveResult.Suggestion, sourceDirectory);
+    if (resolveError) {
+      status.SetError(*resolveError);
+      return false;
+    }
+
+    auto const* expandedPreset = resolveResult.Preset;
+
+    configureCommand = cmStrCat(std::move(configureCommand),
+                                R"( "--preset" ")"_s, presetName, '"');
+
+    if (!presetsFile.empty()) {
+      configureCommand =
+        cmStrCat(std::move(configureCommand), R"( "--presets-file" ")"_s,
+                 presetsFile, '"');
+    }
+
+    if (!expandedPreset->BinaryDir.empty()) {
+      presetProvidesBuildDir = true;
+    }
+
+    if (!expandedPreset->Generator.empty()) {
+      presetProvidesGenerator = true;
+    }
+  }
+
+  if (buildDirectory.empty() && !presetProvidesBuildDir) {
+    status.SetError("called with no build directory specified.  "
+                    "Either use the BUILD argument or set the "
+                    "CTEST_BINARY_DIRECTORY variable.");
+    return false;
+  }
+
+  if (!cmNonempty(cmakeGenerator) && !presetProvidesGenerator) {
+    status.SetError(
+      "called with no configure command specified.  "
+      "If this is a  \"built with CMake\" project, set "
+      "CTEST_CMAKE_GENERATOR. If not, set CTEST_CONFIGURE_COMMAND.");
+    return false;
+  }
+
+  if (mf.IsOn("CTEST_USE_LAUNCHERS")) {
+    configureCommand += " \"-DCTEST_USE_LAUNCHERS:BOOL=TRUE\"";
+  }
+
+  // Propagate CTEST_SITE / CTEST_BUILD_NAME into the SITE / BUILDNAME
+  // cache variables so DartConfiguration.tcl gets generated with
+  // correct values. We use an initial cache script (-C) instead of
+  // defining them on the command-line (-D) to avoid unused-cli warnings
+  // for projects that don't include the CTest module.
+  cmValue site = mf.GetDefinition("CTEST_SITE");
+  cmValue buildName = mf.GetDefinition("CTEST_BUILD_NAME");
+  if (cmNonempty(site) || cmNonempty(buildName)) {
+    std::string const initialCacheFile = cmStrCat(
+      outputDirectory, "/Temporary/CTestConfigureInitialCache.cmake"_s);
+    cmGeneratedFileStream initialCache(initialCacheFile);
+    if (cmNonempty(site)) {
+      initialCache << "set(SITE " << cmOutputConverter::EscapeForCMake(*site)
+                   << " CACHE STRING \"\")\n";
+    }
+    if (cmNonempty(buildName)) {
+      initialCache << "set(BUILDNAME "
+                   << cmOutputConverter::EscapeForCMake(*buildName)
+                   << " CACHE STRING \"\")\n";
+    }
+    initialCache.Close();
+
+    configureCommand =
+      cmStrCat(std::move(configureCommand), " \"-C"_s, initialCacheFile, '"');
+  }
+
+  cmValue cmakeGeneratorPlatform =
+    mf.GetDefinition("CTEST_CMAKE_GENERATOR_PLATFORM");
+  if (cmNonempty(cmakeGeneratorPlatform)) {
+    configureCommand = cmStrCat(std::move(configureCommand), " \"-A"_s,
+                                *cmakeGeneratorPlatform, '"');
+  }
+
+  cmValue cmakeGeneratorToolset =
+    mf.GetDefinition("CTEST_CMAKE_GENERATOR_TOOLSET");
+  if (cmNonempty(cmakeGeneratorToolset)) {
+    configureCommand = cmStrCat(std::move(configureCommand), " \"-T"_s,
+                                *cmakeGeneratorToolset, '"');
+  }
+
+  // Append OPTIONS to the configure command.
+  bool const multiConfig = [&]() -> bool {
+    cmake* cm = mf.GetCMakeInstance();
+    auto gg = cm->CreateGlobalGenerator(cmakeGenerator);
+    return gg && gg->IsMultiConfig();
+  }();
+
+  bool const buildTypeInOptions =
+    options.find("CMAKE_BUILD_TYPE=") != std::string::npos ||
+    options.find("CMAKE_BUILD_TYPE:STRING=") != std::string::npos;
+
+  auto const optionsList = cmList(options);
+  for (std::string const& option : optionsList) {
+    configureCommand =
+      cmStrCat(std::move(configureCommand), " \""_s, option, '"');
+  }
+
+  cmValue cmakeBuildType = mf.GetDefinition("CTEST_CONFIGURATION_TYPE");
+  if (!multiConfig && !buildTypeInOptions && cmNonempty(cmakeBuildType)) {
+    configureCommand =
+      cmStrCat(std::move(configureCommand), " \"-DCMAKE_BUILD_TYPE:STRING="_s,
+               cmakeBuildType, '"');
+  }
+
+  return true;
+}
+
+} // namespace
+
+bool cmCTestConfigureCommand::ExecuteConfigure(ConfigureArguments const& args,
+                                               cmExecutionStatus& status) const
+{
+  cmMakefile& mf = status.GetMakefile();
+
+  std::string buildDirectory = !args.Build.empty()
+    ? args.Build
+    : mf.GetDefinition("CTEST_BINARY_DIRECTORY");
+
+  std::string const sourceDirectory = !args.Source.empty()
+    ? args.Source
+    : mf.GetDefinition("CTEST_SOURCE_DIRECTORY");
+  if (sourceDirectory.empty() ||
+      !cmSystemTools::FileExists(sourceDirectory + "/CMakeLists.txt")) {
+    status.SetError("called with invalid source directory.  "
+                    "CTEST_SOURCE_DIRECTORY must be set to a directory "
+                    "that contains CMakeLists.txt.");
+    return false;
+  }
+
+  // Preset name is set according to the following priority order:
+  // 1) The PRESET option to ctest_configure()
+  // 2) CTEST_CONFIGURE_PRESET script variable
+  // 3) CTEST_PRESET script variable (error if no such configure preset exists)
+  std::string const presetName = !args.Preset.empty() ? args.Preset
+    : cmNonempty(mf.GetDefinition("CTEST_CONFIGURE_PRESET"))
+    ? *mf.GetDefinition("CTEST_CONFIGURE_PRESET")
+    : mf.GetSafeDefinition("CTEST_PRESET");
+
+  // Presets file is set according to the following priority order:
+  // 1) The PRESETS_FILE option to ctest_configure()
+  // 2) CTEST_PRESETS_FILE script variable
+  std::string const rawPresetsFile = !args.PresetsFile.empty()
+    ? args.PresetsFile
+    : mf.GetSafeDefinition("CTEST_PRESETS_FILE");
+
+  std::string const presetsFile = rawPresetsFile.empty()
+    ? ""
+    : cmSystemTools::CollapseFullPath(rawPresetsFile, sourceDirectory);
+
+  // Command-line options are set according to the following priority order:
+  // 1) The OPTIONS option to ctest_configure()
+  // 2) CTEST_CONFIGURE_OPTIONS script variable
+  std::string const options = !args.Options.empty()
+    ? args.Options
+    : mf.GetSafeDefinition("CTEST_CONFIGURE_OPTIONS");
+
+  // Skip checking CTEST_CONFIGURE_COMMAND when a preset is specified.
+  // We do this to avoid using a stale ConfigureCommand from a previous cmake
+  // run that would cause us to silently ignore the requested preset.
+  std::string configureCommand;
+  if (presetName.empty()) {
+    configureCommand = mf.GetDefinition("CTEST_CONFIGURE_COMMAND");
+  } else if (cmNonempty(mf.GetDefinition("CTEST_CONFIGURE_COMMAND"))) {
+    cmCTestOptionalLog(this->CTest, HANDLER_VERBOSE_OUTPUT, args.Quiet,
+                       "Ignoring CTEST_CONFIGURE_COMMAND because preset \""_s,
+                       presetName, "\" is in use.\n"_s);
+  }
+  if (configureCommand.empty() &&
+      !ConstructConfigureCommand(status, mf, sourceDirectory, buildDirectory,
+                                 this->CTest->GetOutputDir(), options,
+                                 presetName, presetsFile, configureCommand)) {
+    return false;
+  }
+
+  cmCTestOptionalLog(this->CTest, HANDLER_OUTPUT, args.Quiet,
+                     "Configure project\n"_s);
+
+  if (this->CTest->GetShowOnly()) {
+    cmCTestOptionalLog(this->CTest, DEBUG, args.Quiet,
+                       "Configure with command: "_s, configureCommand, '\n');
+    if (!args.ReturnValue.empty()) {
+      mf.AddDefinition(args.ReturnValue, "0");
+    }
+    return true;
+  }
+
+  if (!cmSystemTools::MakeDirectory(buildDirectory)) {
+    status.SetError(cmStrCat("cannot create directory "_s, buildDirectory));
+    return false;
+  }
+
+  cmCTestOptionalLog(this->CTest, HANDLER_VERBOSE_OUTPUT, args.Quiet,
+                     "Configure with command: "_s, configureCommand, '\n');
+
+  int const submitIndex =
+    args.SubmitIndex.empty() ? 0 : std::atoi(args.SubmitIndex.c_str());
+
+  cmGeneratedFileStream logFile;
+  this->CTest->StartLogFile("Configure", submitIndex, logFile);
+
+  auto const startTime = std::chrono::system_clock::now();
+  auto const startDateTime = this->CTest->CurrentTime();
+
+  std::string output;
+  int retVal = 0;
+  bool const res = this->CTest->RunMakeCommand(configureCommand, output,
+                                               &retVal, buildDirectory.c_str(),
+                                               cmDuration::zero(), logFile);
+
+  auto const endTime = std::chrono::system_clock::now();
+  auto const endDateTime = this->CTest->CurrentTime();
+  auto const elapsedMinutes =
+    std::chrono::duration_cast<std::chrono::minutes>(endTime - startTime);
+
+  cmCTestOptionalLog(this->CTest, DEBUG, args.Quiet, "End\n"_s);
+
+  if (!res || retVal) {
+    cmCTestLog(this->CTest, ERROR_MESSAGE,
+               "Error(s) when configuring the project\n"_s);
+  }
+
+  if (!args.ReturnValue.empty()) {
+    mf.AddDefinition(args.ReturnValue, std::to_string(retVal));
+  }
+
+  if (cmValue value = mf.GetDefinition("CTEST_CHANGE_ID")) {
+    this->CTest->SetCTestConfiguration("ChangeId", *value, args.Quiet);
+  }
+
+  if (cmValue value = mf.GetDefinition("CTEST_LABELS_FOR_SUBPROJECTS")) {
+    this->CTest->SetCTestConfiguration("LabelsForSubprojects", *value,
+                                       args.Quiet);
+  }
+
+  cmGeneratedFileStream xmlFile;
+  if (!this->CTest->StartResultingXML(cmCTest::PartConfigure, "Configure",
+                                      submitIndex, xmlFile)) {
+    cmCTestLog(this->CTest, ERROR_MESSAGE, "Cannot open configure file\n"_s);
+    return false;
+  }
+
+  cmXMLWriter xml(xmlFile);
+  this->CTest->StartXML(xml, mf.GetCMakeInstance(), args.Append);
+  this->CTest->GenerateSubprojectsOutput(xml);
+  xml.StartElement("Configure");
+  xml.Element("StartDateTime", startDateTime);
+  xml.Element("StartConfigureTime", startTime);
+  xml.Element("ConfigureCommand", configureCommand);
+  xml.Element("Log", output);
+  xml.Element("ConfigureStatus", retVal);
+  xml.Element("EndDateTime", endDateTime);
+  xml.Element("EndConfigureTime", endTime);
+  xml.Element("ElapsedMinutes", elapsedMinutes.count());
+
+  this->CTest->GetInstrumentation().CollectTimingData(
+    cmInstrumentationQuery::Hook::PrepareForCDash);
+  this->CTest->ConvertInstrumentationSnippetsToXML(xml, "configure");
+
+  xml.EndElement(); // Configure
+  this->CTest->EndXML(xml);
+
+  return res;
+}
+
+bool cmCTestConfigureCommand::InitialPass(std::vector<std::string> const& args,
+                                          cmExecutionStatus& status) const
+{
+  using Args = ConfigureArguments;
+  static auto const parser =
+    cmArgumentParser<Args>{ MakeHandlerParser<Args>() } //
+      .Bind("OPTIONS"_s, &ConfigureArguments::Options)
+      .Bind("PRESET"_s, &ConfigureArguments::Preset)
+      .Bind("PRESETS_FILE"_s, &ConfigureArguments::PresetsFile);
+
+  return this->Invoke(parser, args, status, [&](ConfigureArguments& a) {
+    return this->ExecuteConfigure(a, status);
+  });
+}

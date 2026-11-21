@@ -1,0 +1,219 @@
+// -*-c++-*-
+// vim: set ft=cpp:
+
+/* Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
+   file LICENSE.rst or https://cmake.org/licensing for details.  */
+#pragma once
+
+#include <algorithm>
+#include <iterator>
+#include <memory>
+#include <type_traits>
+#include <utility>
+#include <vector>
+
+#include <cm/ranges>
+#include <cmext/iterator>
+#include <cmext/type_traits>
+
+namespace cm {
+
+template <
+  typename Container1, typename Container2,
+  std::enable_if_t<
+    cm::is_sequence_container<Container1>::value &&
+      cm::is_unique_ptr<typename Container1::value_type>::value &&
+      cm::is_unique_ptr<typename Container2::value_type>::value &&
+      std::is_convertible<typename Container2::value_type::pointer,
+                          typename Container1::value_type::pointer>::value,
+    int> = 0>
+void append(Container1& v, Container2&& r)
+{
+  std::transform(
+    r.begin(), r.end(), std::back_inserter(v),
+    [](typename Container2::value_type& item) { return std::move(item); });
+  r.clear();
+}
+
+template <typename Container1, typename Container2,
+          std::enable_if_t<
+            cm::is_sequence_container<Container1>::value &&
+              std::is_pointer<typename Container1::value_type>::value &&
+              cm::is_unique_ptr<typename Container2::value_type>::value &&
+              std::is_convertible<typename Container2::value_type::pointer,
+                                  typename Container1::value_type>::value,
+            int> = 0>
+void append(Container1& v, Container2 const& r)
+{
+  std::transform(
+    r.begin(), r.end(), std::back_inserter(v),
+    [](typename Container2::value_type const& item) { return item.get(); });
+}
+
+template <
+  typename Container, typename InputIt,
+  std::enable_if_t<
+    cm::is_sequence_container<Container>::value &&
+      cm::is_input_iterator<InputIt>::value &&
+      std::is_convertible<typename std::iterator_traits<InputIt>::value_type,
+                          typename Container::value_type>::value,
+    int> = 0>
+void append(Container& v, InputIt first, InputIt last)
+{
+  v.insert(v.end(), first, last);
+}
+
+template <typename Container, typename Range,
+          std::enable_if_t<
+            cm::is_sequence_container<Container>::value &&
+              cm::is_input_range<Range>::value &&
+              !cm::is_unique_ptr<typename Container::value_type>::value &&
+              !cm::is_unique_ptr<typename Range::value_type>::value &&
+              std::is_convertible<typename Range::value_type,
+                                  typename Container::value_type>::value,
+            int> = 0>
+void append(Container& v, Range const& r)
+{
+  v.insert(v.end(), r.begin(), r.end());
+}
+
+template <typename Iterator, typename Key,
+          std::enable_if_t<
+            cm::is_input_iterator<Iterator>::value &&
+              std::is_convertible<Key,
+                                  typename std::iterator_traits<
+                                    Iterator>::value_type::first_type>::value,
+            int> = 0>
+bool contains(Iterator first, Iterator last, Key const& key)
+{
+  return std::find_if(
+           first, last,
+           [&key](
+             typename std::iterator_traits<Iterator>::value_type const& item) {
+             return item.first == key;
+           }) != last;
+}
+
+template <
+  typename Iterator, typename Key,
+  std::enable_if_t<
+    cm::is_input_iterator<Iterator>::value &&
+      std::is_convertible<
+        Key, typename std::iterator_traits<Iterator>::value_type>::value,
+    int> = 0>
+bool contains(Iterator first, Iterator last, Key const& key)
+{
+  return std::find(first, last, key) != last;
+}
+
+template <
+  typename Range, typename Key,
+  std::enable_if_t<cm::is_associative_container<Range>::value ||
+                     cm::is_unordered_associative_container<Range>::value,
+                   int> = 0>
+bool contains(Range const& range, Key const& key)
+{
+  return range.find(key) != range.end();
+}
+
+template <
+  typename Range, typename Key,
+  std::enable_if_t<cm::is_input_range<Range>::value &&
+                     !(cm::is_associative_container<Range>::value ||
+                       cm::is_unordered_associative_container<Range>::value),
+                   int> = 0>
+bool contains(Range const& range, Key const& key)
+{
+  return std::find(std::begin(range), std::end(range), key) != std::end(range);
+}
+
+template <
+  typename Range,
+  std::enable_if_t<cm::is_associative_container<Range>::value ||
+                     cm::is_unordered_associative_container<Range>::value,
+                   int> = 0>
+std::vector<typename Range::key_type> keys(Range const& range)
+{
+#if defined(CMake_HAVE_CXX_RANGES)
+  using key_type = typename Range::key_type;
+
+#  if __cplusplus >= 202302L || (defined(_MSVC_LANG) && _MSVC_LANG >= 202302L)
+  return std::vector<key_type>{ std::from_range, std::views::keys(range) };
+#  else
+  auto view = std::views::keys(range);
+  return std::vector<key_type>{ view.begin(), view.end() };
+#  endif
+#else
+  return cm::views::keys(range);
+#endif
+}
+
+template <
+  typename Range,
+  std::enable_if_t<cm::is_associative_container<Range>::value ||
+                     cm::is_unordered_associative_container<Range>::value,
+                   int> = 0>
+std::vector<typename Range::mapped_type> values(Range const& range)
+{
+#if defined(CMake_HAVE_CXX_RANGES)
+  using value_type = typename Range::mapped_type;
+
+#  if __cplusplus >= 202302L || (defined(_MSVC_LANG) && _MSVC_LANG >= 202302L)
+  return std::vector<value_type>{ std::from_range, std::views::values(range) };
+#  else
+  auto view = std::views::values(range);
+  return std::vector<value_type>{ view.begin(), view.end() };
+#  endif
+#else
+  return cm::views::values(range);
+#endif
+}
+
+// sequence containers with std::pair<> or std::tuple<> as elements
+template <
+  typename Range,
+  std::enable_if_t<cm::is_sequence_container<Range>::value &&
+                     cm::is_tuple<1, typename Range::value_type>::value,
+                   int> = 0>
+std::vector<typename std::tuple_element<0, typename Range::value_type>::type>
+keys(Range const& range)
+{
+#if defined(CMake_HAVE_CXX_RANGES)
+  using key_type =
+    typename std::tuple_element<0, typename Range::value_type>::type;
+
+#  if __cplusplus >= 202302L || (defined(_MSVC_LANG) && _MSVC_LANG >= 202302L)
+  return std::vector<key_type>{ std::from_range, std::views::keys(range) };
+#  else
+  auto view = std::views::keys(range);
+  return std::vector<key_type>{ view.begin(), view.end() };
+#  endif
+#else
+  return cm::views::keys(range);
+#endif
+}
+
+template <
+  typename Range,
+  std::enable_if_t<cm::is_sequence_container<Range>::value &&
+                     cm::is_tuple<2, typename Range::value_type>::value,
+                   int> = 0>
+std::vector<typename std::tuple_element<1, typename Range::value_type>::type>
+values(Range const& range)
+{
+#if defined(CMake_HAVE_CXX_RANGES)
+  using value_type =
+    typename std::tuple_element<1, typename Range::value_type>::type;
+
+#  if __cplusplus >= 202302L || (defined(_MSVC_LANG) && _MSVC_LANG >= 202302L)
+  return std::vector<value_type>{ std::from_range, std::views::values(range) };
+#  else
+  auto view = std::views::values(range);
+  return std::vector<value_type>{ view.begin(), view.end() };
+#  endif
+#else
+  return cm::views::values(range);
+#endif
+}
+
+} // namespace cm

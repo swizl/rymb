@@ -1,0 +1,12 @@
+build/
+_utf8_test/
+*.o
+*.obj
+*.a
+*.lib
+*.exe
+*.dll
+*.pdb
+*.ninja_deps
+*.ninja_log
+.git_upstream/
