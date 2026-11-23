@@ -1,4 +1,5 @@
 build/
+构建/
 _utf8_test/
 *.o
 *.obj

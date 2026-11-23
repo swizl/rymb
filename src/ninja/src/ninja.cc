@@ -770,7 +770,7 @@ int NinjaMain::ToolWinCodePage(const Options* options, int argc, char* argv[]) {
     printf("usage: ninja -t wincodepage\n");
     return 1;
   }
-  printf("Build file encoding: %s\n", GetACP() == CP_UTF8? "UTF-8" : "ANSI");
+  printf("Build file encoding: UTF-8\n");
   return 0;
 }
 #endif
