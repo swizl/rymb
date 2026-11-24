@@ -11,7 +11,6 @@
 #include <cm/string_view>
 #include <cmext/string_view>
 
-#include "cmsys/RegularExpression.hxx"
 
 #include "cmGenExContext.h"
 #include "cmGenExEvaluation.h"
@@ -519,9 +518,23 @@ bool cmGeneratorExpression::IsValidTargetName(std::string const& input)
 {
   // The ':' is supported to allow use with IMPORTED targets. At least
   // Qt 4 and 5 IMPORTED targets use ':' as the namespace delimiter.
-  static cmsys::RegularExpression targetNameValidator("^[A-Za-z0-9_.:+-]+$");
-
-  return targetNameValidator.find(input);
+  // Non-ASCII bytes (UTF-8 multibyte sequences, e.g. Chinese) are allowed so
+  // that target names may be written in Chinese.
+  if (input.empty()) {
+    return false;
+  }
+  for (unsigned char c : input) {
+    if (c >= 0x80) {
+      continue;
+    }
+    if (c == '_' || c == '.' || c == ':' || c == '+' || c == '-' ||
+        (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') ||
+        (c >= '0' && c <= '9')) {
+      continue;
+    }
+    return false;
+  }
+  return true;
 }
 
 void cmGeneratorExpression::ReplaceInstallPrefix(
