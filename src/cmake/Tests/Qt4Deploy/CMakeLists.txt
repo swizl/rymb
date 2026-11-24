@@ -24,7 +24,7 @@ endif()
 # install the Qt4 app with qsqlite plugin
 install(CODE "file(REMOVE_RECURSE \"${CMAKE_INSTALL_PREFIX}\")")
 install(TARGETS testdeploy DESTINATION .)
-include(../../Modules/DeployQt4.cmake)
+include(../../Modules/DeployQt4.配置脚本)
 if(APPLE)
   install_qt4_executable(testdeploy.app "qsqlite")
 elseif(WIN32)
@@ -64,8 +64,8 @@ if(QT_QSQLITE_PLUGIN_DEBUG OR QT_QSQLITE_PLUGIN_RELEASE)
   endif()
 
   add_custom_target(testdeploy_test ALL
-    COMMAND ${CMAKE_COMMAND} ${install_config} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_install.cmake
-    COMMENT "${CMAKE_COMMAND} ${install_config} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_install.cmake"
+    COMMAND ${CMAKE_COMMAND} ${install_config} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_install.配置脚本
+    COMMENT "${CMAKE_COMMAND} ${install_config} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_install.配置脚本"
     DEPENDS testdeploy)
 
 endif()

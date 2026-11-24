@@ -1,0 +1,5 @@
+include(${CMAKE_CURRENT_LIST_DIR}/../Sbom/Requirements.配置脚本)
+
+export(EXPORT foo NAMESPACE foo:: FILE foo.配置脚本)
+export(SBOM foo_sbom EXPORTS foo)
+export(SBOM bar_sbom EXPORTS bar)

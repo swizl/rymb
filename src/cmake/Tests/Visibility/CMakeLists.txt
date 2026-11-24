@@ -26,7 +26,7 @@ foreach(t
     COMMAND ${CMAKE_COMMAND}
     -DCMAKE_NM=${CMAKE_NM}
     -DTEST_LIBRARY_PATH=$<TARGET_FILE:${t}>
-    -P ${CMAKE_CURRENT_SOURCE_DIR}/verify.cmake
+    -P ${CMAKE_CURRENT_SOURCE_DIR}/verify.配置脚本
     )
 endforeach()
 
@@ -59,6 +59,6 @@ foreach(t
     COMMAND ${CMAKE_COMMAND}
     -DCMAKE_NM=${CMAKE_NM}
     -DTEST_LIBRARY_PATH=$<TARGET_FILE:${t}>
-    -P ${CMAKE_CURRENT_SOURCE_DIR}/verify.cmake
+    -P ${CMAKE_CURRENT_SOURCE_DIR}/verify.配置脚本
     )
 endforeach()

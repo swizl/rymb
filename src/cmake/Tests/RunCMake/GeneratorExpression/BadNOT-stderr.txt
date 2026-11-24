@@ -1,4 +1,4 @@
-CMake Error at BadNOT\.cmake:1 \(add_custom_target\):
+CMake Error at BadNOT\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<NOT>
@@ -6,7 +6,7 @@ CMake Error at BadNOT\.cmake:1 \(add_custom_target\):
   \$<NOT> expression requires exactly one parameter\.
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
-+CMake Error at BadNOT\.cmake:1 \(add_custom_target\):
++CMake Error at BadNOT\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<NOT:>
@@ -15,7 +15,7 @@ Call Stack \(most recent call first\):
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 +
-CMake Error at BadNOT\.cmake:1 \(add_custom_target\):
+CMake Error at BadNOT\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<NOT:,>
@@ -24,7 +24,7 @@ CMake Error at BadNOT\.cmake:1 \(add_custom_target\):
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 +
-CMake Error at BadNOT\.cmake:1 \(add_custom_target\):
+CMake Error at BadNOT\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<NOT:0,1>
@@ -33,7 +33,7 @@ CMake Error at BadNOT\.cmake:1 \(add_custom_target\):
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 +
-CMake Error at BadNOT\.cmake:1 \(add_custom_target\):
+CMake Error at BadNOT\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<NOT:01>
@@ -42,7 +42,7 @@ CMake Error at BadNOT\.cmake:1 \(add_custom_target\):
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 +
-CMake Error at BadNOT\.cmake:1 \(add_custom_target\):
+CMake Error at BadNOT\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<NOT:nothing>

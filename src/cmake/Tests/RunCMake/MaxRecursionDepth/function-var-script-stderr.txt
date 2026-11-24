@@ -6,16 +6,16 @@
 8
 9
 10
-CMake Error at .*/function\.cmake:2 \(message\):
+CMake Error at .*/function\.配置脚本:2 \(message\):
   Maximum recursion depth of 10 exceeded
 Call Stack \(most recent call first\):
-  .*/function\.cmake:4 \(recursive\)
-  .*/function\.cmake:4 \(recursive\)
-  .*/function\.cmake:4 \(recursive\)
-  .*/function\.cmake:4 \(recursive\)
-  .*/function\.cmake:4 \(recursive\)
-  .*/function\.cmake:4 \(recursive\)
-  .*/function\.cmake:4 \(recursive\)
-  .*/function\.cmake:4 \(recursive\)
-  .*/function\.cmake:7 \(recursive\)
+  .*/function\.配置脚本:4 \(recursive\)
+  .*/function\.配置脚本:4 \(recursive\)
+  .*/function\.配置脚本:4 \(recursive\)
+  .*/function\.配置脚本:4 \(recursive\)
+  .*/function\.配置脚本:4 \(recursive\)
+  .*/function\.配置脚本:4 \(recursive\)
+  .*/function\.配置脚本:4 \(recursive\)
+  .*/function\.配置脚本:4 \(recursive\)
+  .*/function\.配置脚本:7 \(recursive\)
   .*/CMakeLists\.txt:5 \(include\)$

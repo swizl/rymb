@@ -4,9 +4,9 @@ project(cxx_modules_export_build_database CXX)
 # Force empty configuration.
 set(CMAKE_BUILD_TYPE "")
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
-include("${CMAKE_SOURCE_DIR}/../export-build-database-setup.cmake")
+include("${CMAKE_SOURCE_DIR}/../export-build-database-setup.配置脚本")
 
 # _MBCS default append for MSVC ABI workaround: see CMP0204
 # So, force add the default value for all platforms to be consistent.
@@ -86,14 +86,14 @@ install(TARGETS export_build_database
   FILE_SET modules DESTINATION "lib/cxx/miu")
 export(EXPORT CXXModules
   NAMESPACE CXXModules::
-  FILE "${CMAKE_CURRENT_BINARY_DIR}/export_build_database-targets.cmake")
+  FILE "${CMAKE_CURRENT_BINARY_DIR}/export_build_database-targets.配置脚本")
 install(TARGETS provide_flags
   EXPORT CXXModulesDeps)
 export(EXPORT CXXModulesDeps
   NAMESPACE CXXModules::
-  FILE "${CMAKE_CURRENT_BINARY_DIR}/export_build_database-dep-targets.cmake")
-file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_build_database-config.cmake"
-  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_build_database-dep-targets.cmake\")
-include(\"\${CMAKE_CURRENT_LIST_DIR}/export_build_database-targets.cmake\")
+  FILE "${CMAKE_CURRENT_BINARY_DIR}/export_build_database-dep-targets.配置脚本")
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_build_database-config.配置脚本"
+  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_build_database-dep-targets.配置脚本\")
+include(\"\${CMAKE_CURRENT_LIST_DIR}/export_build_database-targets.配置脚本\")
 set(\${CMAKE_FIND_PACKAGE_NAME}_FOUND 1)
 ")

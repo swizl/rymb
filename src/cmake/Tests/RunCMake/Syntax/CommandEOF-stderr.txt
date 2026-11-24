@@ -1,4 +1,4 @@
-^CMake Error at CommandEOF\.cmake:1:
+^CMake Error at CommandEOF\.配置脚本:1:
   Unexpected end of file\.
 
   Parse error\.  Function missing opening "\("\.

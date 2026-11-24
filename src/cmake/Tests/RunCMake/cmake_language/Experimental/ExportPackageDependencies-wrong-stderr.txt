@@ -1,4 +1,4 @@
-^CMake Warning \(experimental\) at Experimental/ExportPackageDependencies-wrong\.cmake:4 \(cmake_language\):
+^CMake Warning \(experimental\) at Experimental/ExportPackageDependencies-wrong\.配置脚本:4 \(cmake_language\):
   CMAKE_EXPERIMENTAL_EXPORT_PACKAGE_DEPENDENCIES is set to incorrect value
 
     01234567-0123-0123-0123-0123456789ab
@@ -12,7 +12,7 @@ Call Stack \(most recent call first\):
 This warning is for project developers\.  Use -Wno-author or -Wno-experimental
 to suppress it\.
 +
-CMake Warning \(experimental\) at Experimental/ExportPackageDependencies-wrong\.cmake:19 \(cmake_language\):
+CMake Warning \(experimental\) at Experimental/ExportPackageDependencies-wrong\.配置脚本:19 \(cmake_language\):
   CMAKE_EXPERIMENTAL_EXPORT_PACKAGE_DEPENDENCIES is set to incorrect value
 
     76543210-3210-3210-3210-ba9876543210

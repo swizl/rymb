@@ -1,4 +1,4 @@
-SF:<SRC>/CrossFile.cmake
+SF:<SRC>/CrossFile.配置脚本
 FNF:0
 FNH:0
 DA:1,1
@@ -8,7 +8,7 @@ DA:4,1
 LF:4
 LH:4
 end_of_record
-SF:<SRC>/CrossFileLib.cmake
+SF:<SRC>/CrossFileLib.配置脚本
 FN:1,lib_f
 FN:4,lib_m
 FNDA:2,lib_f

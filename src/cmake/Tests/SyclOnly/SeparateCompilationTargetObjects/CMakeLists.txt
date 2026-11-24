@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 4.4)
 set(CMAKE_EXPERIMENTAL_SYCL "c0d1fb10-2ece-420e-9d29-7d7f2b300f25")
 project(SeparateCompilationObjects LANGUAGES SYCL)
-include(../utils/Test.cmake)
+include(../utils/Test.配置脚本)
 # Remove gate when IntelLLVM -fsycl-link bug is fixed
 if(CMAKE_SYCL_COMPILER_ID STREQUAL "IntelLLVM")
   sycl_not_supported("IntelLLVM -fsycl-link cannot produce a single device-link output")

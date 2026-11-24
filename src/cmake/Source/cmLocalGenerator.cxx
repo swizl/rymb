@@ -417,7 +417,7 @@ void cmLocalGenerator::GenerateTestFiles()
 
   std::string file =
     cmStrCat(this->StateSnapshot.GetDirectory().GetCurrentBinary(),
-             "/CTestTestfile.cmake"_s);
+             "/CTestTestfile.配置脚本"_s);
   this->GlobalGenerator->AddTestFile(file);
 
   cmGeneratedFileStream fout(file);
@@ -680,7 +680,7 @@ void cmLocalGenerator::GenerateInstallRules()
   if (file == homedir) {
     toplevel_install = 1;
   }
-  file += "/安装规则.cmake";
+  file += "/安装规则.配置脚本";
   this->GetGlobalGenerator()->AddInstallScript(file);
   cmGeneratedFileStream fout(file);
 
@@ -875,7 +875,7 @@ void cmLocalGenerator::GenerateInstallRules()
           if (!c.GetDirectory().GetPropertyAsBool("EXCLUDE_FROM_ALL")) {
             std::string odir = c.GetDirectory().GetCurrentBinary();
             cmSystemTools::ConvertToUnixSlashes(odir);
-            fout << "  include(\"" << odir << "/安装规则.cmake\")\n";
+            fout << "  include(\"" << odir << "/安装规则.配置脚本\")\n";
           }
         }
         fout << "\n";
@@ -3288,7 +3288,7 @@ void cmLocalGenerator::CopyPchCompilePdb(
   std::vector<std::string> const& extensions)
 {
   std::string const copy_script = cmStrCat(
-    target->GetSupportDirectory(), "/copy_idb_pdb_"_s, config, ".cmake"_s);
+    target->GetSupportDirectory(), "/copy_idb_pdb_"_s, config, ".配置脚本"_s);
   cmGeneratedFileStream file(copy_script);
   file.SetCopyIfDifferent(true);
 

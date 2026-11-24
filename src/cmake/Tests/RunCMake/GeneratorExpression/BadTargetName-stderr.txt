@@ -1,4 +1,4 @@
-CMake Error at BadTargetName\.cmake:1 \(add_custom_target\):
+CMake Error at BadTargetName\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<TARGET_NAME:\$<1:tgt>>

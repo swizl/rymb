@@ -52,7 +52,7 @@ add_custom_target(testbundleutils1_test  ALL
   "-DINPUTDIR=${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}"
   "-DOUTPUTDIR=${CMAKE_CURRENT_BINARY_DIR}/testdir1"
   "-DCMAKE_OBJDUMP=${CMAKE_OBJDUMP}"
-  -P "${CMAKE_CURRENT_SOURCE_DIR}/bundleutils.cmake"
+  -P "${CMAKE_CURRENT_SOURCE_DIR}/bundleutils.配置脚本"
   DEPENDS testbundleutils1 module1
   )
 
@@ -84,7 +84,7 @@ add_custom_target(testbundleutils2_test  ALL
   "-DINPUTDIR=${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}"
   "-DOUTPUTDIR=${CMAKE_CURRENT_BINARY_DIR}/testdir2"
   "-DCMAKE_OBJDUMP=${CMAKE_OBJDUMP}"
-  -P "${CMAKE_CURRENT_SOURCE_DIR}/bundleutils.cmake"
+  -P "${CMAKE_CURRENT_SOURCE_DIR}/bundleutils.配置脚本"
   DEPENDS testbundleutils1 module2
   )
 add_dependencies(testbundleutils2_test testbundleutils2)
@@ -130,7 +130,7 @@ if(APPLE AND NOT CMAKE_SYSTEM_VERSION VERSION_LESS 9.0)
     "-DMODULE=$<TARGET_FILE:module3>"
     "-DINPUTDIR=${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}"
     "-DOUTPUTDIR=${CMAKE_CURRENT_BINARY_DIR}/testdir3"
-    -P "${CMAKE_CURRENT_SOURCE_DIR}/bundleutils.cmake"
+    -P "${CMAKE_CURRENT_SOURCE_DIR}/bundleutils.配置脚本"
     DEPENDS testbundleutils3 module3
     )
 

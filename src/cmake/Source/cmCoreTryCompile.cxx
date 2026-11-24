@@ -879,7 +879,7 @@ cm::optional<cmTryCompileResult> cmCoreTryCompile::TryCompileCode(
     }
 
     if (!targets.empty()) {
-      std::string fname = cmStrCat('/', targetName, "Targets.cmake"_s);
+      std::string fname = cmStrCat('/', targetName, "Targets.配置脚本"_s);
       cmExportTryCompileFileGenerator tcfg(gg, targets, this->Makefile,
                                            testLangs);
       tcfg.SetExportFile(cmStrCat(this->BinaryDirectory, fname).c_str());
@@ -951,7 +951,7 @@ cm::optional<cmTryCompileResult> cmCoreTryCompile::TryCompileCode(
     // avoid adding that flag in the platform and compiler language files
     fprintf(fout,
             "include(\"${CMAKE_ROOT}/Modules/Internal/"
-            "HeaderpadWorkaround.cmake\")\n");
+            "HeaderpadWorkaround.配置脚本\")\n");
 
     if (targetType == cm::TargetType::EXECUTABLE) {
       /* Put the executable at a known location (for COPY_FILE).  */

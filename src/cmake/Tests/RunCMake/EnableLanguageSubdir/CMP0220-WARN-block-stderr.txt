@@ -1,4 +1,4 @@
-CMake Warning \(policy\) at CMP0220-WARN-block\.cmake:[0-9]+ \(enable_language\):
+CMake Warning \(policy\) at CMP0220-WARN-block\.配置脚本:[0-9]+ \(enable_language\):
   Policy CMP0220 is not set: Languages enabled in subdirectories propagate to
   the top-level directory\.  Run "cmake --help-policy CMP0220" for policy
   details\.  Use the cmake_policy command to set the policy and suppress this

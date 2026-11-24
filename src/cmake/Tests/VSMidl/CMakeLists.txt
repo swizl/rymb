@@ -45,13 +45,13 @@ if(NOT DEFINED url)
 endif()
 message(STATUS "url='${url}'")
 
-set(base_dir "${HOME}/.cmake/Dashboards/${CMAKE_BUILDNAME}/${THIS_TESTNAME}")
+set(base_dir "${HOME}/.配置脚本/Dashboards/${CMAKE_BUILDNAME}/${THIS_TESTNAME}")
 set(binary_dir "${base_dir}/build")
 set(source_dir "${base_dir}/src")
 
 # Source dir for this project exists in the CMake source tree, but we cannot
 # use it in-place since there might be a space in its directory name.
-# Source dir is therefore copied under a '.cmake/Dashboards'
+# Source dir is therefore copied under a '.配置脚本/Dashboards'
 # dir in your HOME directory to give it a name with no spaces.
 #
 ExternalProject_Add(clean-${PROJECT_NAME}

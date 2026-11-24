@@ -3,7 +3,7 @@ project(ImportJavaNativeHeaders LANGUAGES NONE)
 cmake_minimum_required (VERSION 3.19...3.20)
 set(CMAKE_VERBOSE_MAKEFILE 1)
 
-include(${NATIVE_HEADERS_IMPORT_DIR}/native.cmake)
+include(${NATIVE_HEADERS_IMPORT_DIR}/native.配置脚本)
 
 if(NOT TARGET D1::D1-native)
   message(FATAL_ERROR "Target 'D1::D1-native' not found.")

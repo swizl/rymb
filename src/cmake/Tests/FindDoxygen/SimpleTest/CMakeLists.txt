@@ -13,7 +13,7 @@ if(TARGET Doxygen::doxygen)
         message(FATAL_ERROR "Backward compatibility broken: DOXYGEN not set")
     endif()
     # Check presence of expected generated files
-    foreach(file CMakeDoxyfile.in CMakeDoxygenDefaults.cmake)
+    foreach(file CMakeDoxyfile.in CMakeDoxygenDefaults.配置脚本)
         if(NOT EXISTS "${PROJECT_BINARY_DIR}/${file}")
             message(FATAL_ERROR "Missing generated file: ${file}")
         endif()

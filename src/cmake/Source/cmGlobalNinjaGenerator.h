@@ -38,7 +38,7 @@ class Value;
 
 /**
  * \class cmGlobalNinjaGenerator
- * \brief Write a 构建.ninja file.
+ * \brief Write a 构建.构建文件 file.
  *
  * The main differences between this generator and the UnixMakefile
  * generator family are:
@@ -46,7 +46,7 @@ class Value;
  *   it is handle by Ninja's -v option.
  * - We don't care about computing any progress status since Ninja manages
  *   it itself.
- * - We generate one 构建.ninja and one 规则.ninja per project.
+ * - We generate one 构建.构建文件 and one 规则.构建文件 per project.
  * - We try to minimize the number of generated rules: one per target and
  *   language.
  * - We use Ninja special variable $in and $out to produce nice output.
@@ -56,11 +56,11 @@ class Value;
 class cmGlobalNinjaGenerator : public cmGlobalCommonGenerator
 {
 public:
-  /// The default name of Ninja's build file. Typically: 构建.ninja.
+  /// The default name of Ninja's build file. Typically: 构建.构建文件.
   static char const* NINJA_BUILD_FILE;
 
-  /// The default name of Ninja's rules file. Typically: 规则.ninja.
-  /// It is included in the main 构建.ninja file.
+  /// The default name of Ninja's rules file. Typically: 规则.构建文件.
+  /// It is included in the main 构建.构建文件 file.
   static char const* NINJA_RULES_FILE;
 
   /// The indentation string used when generating Ninja's build file.
@@ -680,7 +680,7 @@ private:
 class cmGlobalNinjaMultiGenerator : public cmGlobalNinjaGenerator
 {
 public:
-  /// The default name of Ninja's common file. Typically: common.ninja.
+  /// The default name of Ninja's common file. Typically: common.构建文件.
   static char const* NINJA_COMMON_FILE;
   /// The default file extension to use for per-config Ninja files.
   static char const* NINJA_FILE_EXTENSION;

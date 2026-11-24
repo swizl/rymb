@@ -18,5 +18,5 @@ if(NOT CMAKE_CUDA_COMPILER_ID STREQUAL "Clang")
 endif()
 add_custom_command(TARGET CudaOnlyPDB POST_BUILD
   COMMAND ${CMAKE_COMMAND} -Dconfig=$<CONFIG> "-Dpdbs=${pdbs}"
-                           -P ${CMAKE_CURRENT_SOURCE_DIR}/check_pdbs.cmake
+                           -P ${CMAKE_CURRENT_SOURCE_DIR}/check_pdbs.配置脚本
   )

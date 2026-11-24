@@ -1,0 +1,1 @@
+check_installed([[^empty1.txt;empty2.txt;empty3.配置脚本;empty3.txt;empty4.配置脚本;empty4.txt$]])

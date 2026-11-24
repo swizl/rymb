@@ -7,4 +7,4 @@ if(BORLAND)
   set(pre -)
 endif()
 
-include(${RunCMake_TEST}.cmake)
+include(${RunCMake_TEST}.配置脚本)

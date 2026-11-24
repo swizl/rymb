@@ -6,7 +6,7 @@
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build",
       "installDir": "${sourceDir}/install",
-      "toolchainFile": "${sourceDir}/toolchain.cmake",
+      "toolchainFile": "${sourceDir}/toolchain.配置脚本",
       "cacheVariables": {
         "CMAKE_INSTALL_PREFIX": {
           "type": "PATH",
@@ -14,7 +14,7 @@
         },
         "CMAKE_TOOLCHAIN_FILE": {
           "type": "FILEPATH",
-          "value": "${sourceDir}/bad_toolchain.cmake"
+          "value": "${sourceDir}/bad_toolchain.配置脚本"
         }
       }
     }

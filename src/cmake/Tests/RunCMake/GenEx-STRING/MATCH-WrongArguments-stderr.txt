@@ -1,4 +1,4 @@
-CMake Error at MATCH-WrongArguments\.cmake:[0-9]+ \(add_custom_target\):
+CMake Error at MATCH-WrongArguments\.配置脚本:[0-9]+ \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRING:MATCH,string,\(>
@@ -8,7 +8,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 
 
-CMake Error at MATCH-WrongArguments\.cmake:[0-9]+ \(add_custom_target\):
+CMake Error at MATCH-WrongArguments\.配置脚本:[0-9]+ \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRING:MATCH,string,FOO,\.\+>
@@ -18,7 +18,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 
 
-CMake Error at MATCH-WrongArguments\.cmake:[0-9]+ \(add_custom_target\):
+CMake Error at MATCH-WrongArguments\.配置脚本:[0-9]+ \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRING:MATCH,string,SEEK:FOO,\.\+>

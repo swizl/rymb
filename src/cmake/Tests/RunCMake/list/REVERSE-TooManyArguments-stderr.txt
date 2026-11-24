@@ -1,4 +1,4 @@
-^CMake Error at REVERSE-TooManyArguments\.cmake:1 \(list\):
+^CMake Error at REVERSE-TooManyArguments\.配置脚本:1 \(list\):
   list sub-command REVERSE only takes one argument\.
 Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)$

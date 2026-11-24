@@ -435,7 +435,7 @@ int main(int argc, char const* const* argv)
     cpackConfigFile = cmSystemTools::ToNormalizedPathOnDisk(cpackConfigFile);
   } else {
     cpackConfigFile = cmStrCat(cmSystemTools::GetLogicalWorkingDirectory(),
-                               "/CPackConfig.cmake"_s);
+                               "/CPackConfig.配置脚本"_s);
     cpackConfigFileSpecified = false;
   }
 
@@ -464,18 +464,18 @@ int main(int argc, char const* const* argv)
     // find out which system cpack is running on, so it can setup the search
     // paths, so FIND_XXX() commands can be used in scripts
     std::string systemFile =
-      globalMF.GetModulesFile("CMakeDetermineSystem.cmake");
+      globalMF.GetModulesFile("CMakeDetermineSystem.配置脚本");
     if (!globalMF.ReadListFile(systemFile)) {
       cmCPack_Log(&log, cmCPackLog::LOG_ERROR,
-                  "Error reading CMakeDetermineSystem.cmake\n");
+                  "Error reading CMakeDetermineSystem.配置脚本\n");
       return 1;
     }
 
     systemFile =
-      globalMF.GetModulesFile("CMakeSystemSpecificInformation.cmake");
+      globalMF.GetModulesFile("CMakeSystemSpecificInformation.配置脚本");
     if (!globalMF.ReadListFile(systemFile)) {
       cmCPack_Log(&log, cmCPackLog::LOG_ERROR,
-                  "Error reading CMakeSystemSpecificInformation.cmake\n");
+                  "Error reading CMakeSystemSpecificInformation.配置脚本\n");
       return 1;
     }
 

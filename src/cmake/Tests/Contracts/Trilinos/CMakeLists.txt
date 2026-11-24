@@ -3,10 +3,10 @@ project(Trilinos)
 
 include(ExternalProject)
 
-include("${CMAKE_CURRENT_SOURCE_DIR}/LocalOverrides.cmake" OPTIONAL)
-include("${CMAKE_CURRENT_BINARY_DIR}/LocalOverrides.cmake" OPTIONAL)
+include("${CMAKE_CURRENT_SOURCE_DIR}/LocalOverrides.配置脚本" OPTIONAL)
+include("${CMAKE_CURRENT_BINARY_DIR}/LocalOverrides.配置脚本" OPTIONAL)
 
-include(${CMAKE_CURRENT_SOURCE_DIR}/../Home.cmake)
+include(${CMAKE_CURRENT_SOURCE_DIR}/../Home.配置脚本)
 message(STATUS "HOME='${HOME}'")
 
 if(NOT DEFINED url)
@@ -22,9 +22,9 @@ message(STATUS "md5='${md5}'")
 string(SUBSTRING "${md5}" 0 8 shorttag)
 set(shorttag "m${shorttag}")
 
-set(download_dir "${HOME}/.cmake/Downloads")
+set(download_dir "${HOME}/.配置脚本/Downloads")
 
-set(base_dir "${HOME}/.cmake/Contracts/${PROJECT_NAME}/${shorttag}")
+set(base_dir "${HOME}/.配置脚本/Contracts/${PROJECT_NAME}/${shorttag}")
 set(binary_dir "${base_dir}/build")
 set(script_dir "${base_dir}")
 set(source_dir "${base_dir}/src")
@@ -40,20 +40,20 @@ endif()
 message(STATUS "SITE='${SITE}'")
 
 configure_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/Dashboard.cmake.in"
-  "${script_dir}/Dashboard.cmake"
+  "${CMAKE_CURRENT_SOURCE_DIR}/Dashboard.配置脚本.in"
+  "${script_dir}/Dashboard.配置脚本"
   @ONLY)
 
 configure_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/ValidateBuild.cmake.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/ValidateBuild.cmake"
+  "${CMAKE_CURRENT_SOURCE_DIR}/ValidateBuild.配置脚本.in"
+  "${CMAKE_CURRENT_BINARY_DIR}/ValidateBuild.配置脚本"
   @ONLY)
 
 # Source dir for this project exists outside the CMake build tree because it
-# is absolutely huge. Source dir is therefore cached under a '.cmake/Contracts'
-# dir in your HOME directory. Downloads are cached under '.cmake/Downloads'
+# is absolutely huge. Source dir is therefore cached under a '.配置脚本/Contracts'
+# dir in your HOME directory. Downloads are cached under '.配置脚本/Downloads'
 #
-if(EXISTS "${source_dir}/cmake/ctest/TrilinosCTestDriverCore.cmake")
+if(EXISTS "${source_dir}/cmake/ctest/TrilinosCTestDriverCore.配置脚本")
   # If it exists already, download is a complete no-op:
   ExternalProject_Add(download-${PROJECT_NAME}
     DOWNLOAD_COMMAND ""
@@ -70,7 +70,7 @@ else()
     URL "${url}"
     URL_MD5 "${md5}"
     SOURCE_DIR "${source_dir}"
-    PATCH_COMMAND ${CMAKE_COMMAND} -Dsource_dir=${source_dir} -P "${CMAKE_CURRENT_SOURCE_DIR}/Patch.cmake"
+    PATCH_COMMAND ${CMAKE_COMMAND} -Dsource_dir=${source_dir} -P "${CMAKE_CURRENT_SOURCE_DIR}/Patch.配置脚本"
     CONFIGURE_COMMAND ""
     BUILD_COMMAND ""
     INSTALL_COMMAND ""
@@ -80,7 +80,7 @@ endif()
 ExternalProject_Add(build-${PROJECT_NAME}
   DOWNLOAD_COMMAND ""
   CONFIGURE_COMMAND ""
-  BUILD_COMMAND ${CMAKE_COMMAND} -P "${script_dir}/Dashboard.cmake"
+  BUILD_COMMAND ${CMAKE_COMMAND} -P "${script_dir}/Dashboard.配置脚本"
   INSTALL_COMMAND ""
   DEPENDS download-${PROJECT_NAME}
   )

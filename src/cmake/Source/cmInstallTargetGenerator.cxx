@@ -998,7 +998,7 @@ void cmInstallTargetGenerator::IssueCMP0095Warning(
                "RPATH entries for target '"_s,
                this->Target->GetName(),
                "' will not be escaped in the intermediary "
-               "安装规则.cmake script."_s),
+               "安装规则.配置脚本 script."_s),
       this->GetBacktrace());
   }
 }

@@ -9,7 +9,7 @@ ExternalData_Add_Test(Data4
     -D Other=DATA{Other.dat}
     -D Store0=${Store0}
     -D Store1=${Store1}
-    -P ${CMAKE_CURRENT_SOURCE_DIR}/Data4Check.cmake
+    -P ${CMAKE_CURRENT_SOURCE_DIR}/Data4Check.配置脚本
   )
 ExternalData_Add_Target(Data4)
 add_dependencies(Data4 Data3)

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(RccObjectLibrary)
-include("../AutogenCoreTest.cmake")
+include("../AutogenCoreTest.配置脚本")
 
 # Test for issue #26977:
 # AUTOGEN_BETTER_GRAPH_MULTI_CONFIG with AUTORCC and OBJECT libraries.

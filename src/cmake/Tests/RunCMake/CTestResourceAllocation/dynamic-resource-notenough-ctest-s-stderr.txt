@@ -10,5 +10,5 @@ Resource spec file:
   [^
 ]*/Tests/RunCMake/CTestResourceAllocation/dynamic-resource-notenough-ctest-s-build/dynamic-resspec\.json
 CMake Error at [^
-]*/Tests/RunCMake/CTestResourceAllocation/dynamic-resource-notenough-ctest-s/test\.cmake:[0-9]+ \(message\):
+]*/Tests/RunCMake/CTestResourceAllocation/dynamic-resource-notenough-ctest-s/test\.配置脚本:[0-9]+ \(message\):
   Tests did not pass$

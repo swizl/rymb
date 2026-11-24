@@ -1,0 +1,6 @@
+set(_FindCUDA_testing TRUE)
+find_package(CUDA MODULE)
+
+if(NOT _FindCUDA_included)
+  message(FATAL_ERROR "FindCUDA.配置脚本 not included")
+endif()

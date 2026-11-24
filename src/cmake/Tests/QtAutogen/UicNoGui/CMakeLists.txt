@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(UicNoGui)
-include("../AutogenCoreTest.cmake")
+include("../AutogenCoreTest.配置脚本")
 
 # This tests creates a target that has AUTOUIC enabled but does not
 # link against QtXWidgets.

@@ -1,4 +1,4 @@
-^CMake Error at CMP0145-Dart-NEW\.cmake:[0-9]+ \(include\):
+^CMake Error at CMP0145-Dart-NEW\.配置脚本:[0-9]+ \(include\):
   include could not find requested file:
 
     Dart

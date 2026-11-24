@@ -1,22 +1,22 @@
-CMake Error at BadOutput\.cmake:3 \(add_custom_command\):
+CMake Error at BadOutput\.配置脚本:3 \(add_custom_command\):
   OUTPUT containing a "<" is not allowed\.
 Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 
 
-CMake Error at BadOutput\.cmake:4 \(add_custom_command\):
+CMake Error at BadOutput\.配置脚本:4 \(add_custom_command\):
   OUTPUT containing a ">" is not allowed\.
 Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 
 (
-CMake Error at BadOutput\.cmake:5 \(add_custom_command\):
+CMake Error at BadOutput\.配置脚本:5 \(add_custom_command\):
   OUTPUT containing a ">" is not allowed\.
 Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 
 )+
-CMake Error at BadOutput\.cmake:6 \(add_custom_command\):
+CMake Error at BadOutput\.配置脚本:6 \(add_custom_command\):
   OUTPUT path
 
     .*RunCMake/add_custom_command/e
@@ -26,7 +26,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 
 (
-CMake Error at BadOutput\.cmake:7 \(add_custom_command\):
+CMake Error at BadOutput\.配置脚本:7 \(add_custom_command\):
   Error evaluating generator expression:
 
     \$<TARGET_PROPERTY:prop>
@@ -39,7 +39,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 
 )+(
-CMake Error at BadOutput\.cmake:8 \(add_custom_command\):
+CMake Error at BadOutput\.配置脚本:8 \(add_custom_command\):
   Error evaluating generator expression:
 
     \$<OUTPUT_CONFIG:h>
@@ -49,7 +49,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 
 )+(
-CMake Error at BadOutput\.cmake:9 \(add_custom_command\):
+CMake Error at BadOutput\.配置脚本:9 \(add_custom_command\):
   Error evaluating generator expression:
 
     \$<COMMAND_CONFIG:i>

@@ -29,7 +29,7 @@ check_property("" "IMPORTED_CXX_MODULES_LINK_LIBRARIES" CXXModules::import_std_n
 check_property("<UNDEF>" "INTERFACE_LINK_LIBRARIES" CXXModules::import_std_not_in_export)
 
 # Extract the export-dependent targets from the export file.
-file(STRINGS "${import_std_not_in_export_DIR}/import_std_not_in_export-targets.cmake" usage_dependent_targets
+file(STRINGS "${import_std_not_in_export_DIR}/import_std_not_in_export-targets.配置脚本" usage_dependent_targets
   REGEX "foreach._target ")
 # Rudimentary argument splitting.
 string(REPLACE " " ";" usage_dependent_targets "${usage_dependent_targets}")

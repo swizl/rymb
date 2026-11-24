@@ -1,0 +1,11 @@
+install(
+  FILES ${CMAKE_CURRENT_SOURCE_DIR}/empty3.配置脚本 ${CMAKE_CURRENT_SOURCE_DIR}/empty4.配置脚本
+  DESTINATION .
+  )
+install(
+  SCRIPT "${CMAKE_CURRENT_SOURCE_DIR}/install_script.配置脚本"
+  CODE ""
+  CODE "write_empty_file(empty2.txt)"
+  SCRIPT "$<INSTALL_PREFIX>/empty3.配置脚本"
+  CODE [[include($<INSTALL_PREFIX>/empty4.配置脚本)]]
+  )

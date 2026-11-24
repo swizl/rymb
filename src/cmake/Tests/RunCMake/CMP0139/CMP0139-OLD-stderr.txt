@@ -1,4 +1,4 @@
-^CMake Warning \(deprecated\) at CMP0139-OLD\.cmake:[0-9]+ \(cmake_policy\):
+^CMake Warning \(deprecated\) at CMP0139-OLD\.配置脚本:[0-9]+ \(cmake_policy\):
   The OLD behavior for policy CMP0139 will be removed from a future version
   of CMake\.
 
@@ -11,7 +11,7 @@ Call Stack \(most recent call first\):
 This warning is for project developers\.  Use -Wno-author or -Wno-deprecated
 to suppress it\.
 +
-CMake Error at CMP0139-OLD\.cmake:[0-9]+ \(if\):
+CMake Error at CMP0139-OLD\.配置脚本:[0-9]+ \(if\):
   if given arguments:
 
     "/path1" "PATH_EQUAL" "/path2"

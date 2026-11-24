@@ -371,7 +371,7 @@ void cmExportInstallCMakeConfigGenerator::GenerateCxxModuleConfigInformation(
   // Now load per-configuration properties for them.
   /* clang-format off */
   os << "# Load information for each installed configuration.\n"
-        "file(GLOB _cmake_cxx_module_includes \"${CMAKE_CURRENT_LIST_DIR}/cxx-modules-" << name << "-*.cmake\")\n"
+        "file(GLOB _cmake_cxx_module_includes \"${CMAKE_CURRENT_LIST_DIR}/cxx-modules-" << name << "-*.配置脚本\")\n"
         "foreach(_cmake_cxx_module_include IN LISTS _cmake_cxx_module_includes)\n"
         "  include(\"${_cmake_cxx_module_include}\")\n"
         "endforeach()\n"
@@ -397,7 +397,7 @@ bool cmExportInstallCMakeConfigGenerator::
   std::string const dest =
     cmStrCat(this->FileDir, '/', cxx_modules_dirname, '/');
   std::string fileName =
-    cmStrCat(dest, "cxx-modules-"_s, name, '-', filename_config, ".cmake"_s);
+    cmStrCat(dest, "cxx-modules-"_s, name, '-', filename_config, ".配置脚本"_s);
 
   cmGeneratedFileStream os(fileName, true);
   if (!os) {
@@ -420,7 +420,7 @@ bool cmExportInstallCMakeConfigGenerator::
     }
 
     auto prop_filename = cmStrCat("target-"_s, tgt->GetFilesystemExportName(),
-                                  '-', filename_config, ".cmake"_s);
+                                  '-', filename_config, ".配置脚本"_s);
     prop_files.emplace_back(cmStrCat(dest, prop_filename));
     os << "include(\"${CMAKE_CURRENT_LIST_DIR}/" << prop_filename << "\")\n";
   }

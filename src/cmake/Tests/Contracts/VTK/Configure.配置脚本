@@ -1,0 +1,3 @@
+set(exe "$ENV{HOME}/.配置脚本/Contracts/VTK/VTK-build/bin/vtkCommonCoreCxxTests")
+set(args otherArrays)
+set(CMake_TEST_CONTRACT_VTK_RUN_TEST ${exe} ${args})

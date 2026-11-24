@@ -68,10 +68,10 @@ foreach(test test1 test2 test3 test4 test5)
     )
 endforeach()
 
-export(TARGETS shared shared2 framework FILE "${CMAKE_CURRENT_BINARY_DIR}/exp.cmake")
+export(TARGETS shared shared2 framework FILE "${CMAKE_CURRENT_BINARY_DIR}/exp.配置脚本")
 
 install(TARGETS shared EXPORT MyExport DESTINATION lib)
 install(TARGETS shared2 EXPORT MyExport DESTINATION lib2)
 install(TARGETS framework EXPORT MyExport DESTINATION lib-fw)
 install(TARGETS framework2 EXPORT MyExport DESTINATION lib-fw2)
-install(EXPORT MyExport DESTINATION lib FILE exp.cmake)
+install(EXPORT MyExport DESTINATION lib FILE exp.配置脚本)

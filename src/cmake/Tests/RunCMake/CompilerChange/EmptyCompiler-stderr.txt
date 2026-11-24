@@ -3,7 +3,7 @@ Configure will be re-run and you may have to reset some variables\.
 The following variables have changed:
 CMAKE_C_COMPILER= *
 +
-CMake Error at EmptyCompiler\.cmake:2 \(enable_language\):
+CMake Error at EmptyCompiler\.配置脚本:2 \(enable_language\):
   No CMAKE_C_COMPILER could be found\.
 
   Tell CMake where to find the compiler by setting either the environment

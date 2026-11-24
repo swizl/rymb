@@ -4,7 +4,7 @@
     .*
 
   is less than the version of Ninja required by CMake for adding restat
-  dependencies to the build\.ninja manifest regeneration target:
+  dependencies to the build\.构建文件 manifest regeneration target:
 
     1\.8
 

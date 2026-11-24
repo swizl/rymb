@@ -1,4 +1,4 @@
-^CMake Error at SORT-COMPARATOR-DuplicateOption\.cmake:10 \(list\):
+^CMake Error at SORT-COMPARATOR-DuplicateOption\.配置脚本:10 \(list\):
   list sub-command SORT option "COMPARATOR" has been specified multiple
   times\.
 Call Stack \(most recent call first\):

@@ -2,6 +2,6 @@
 -- After cmake_language
 -- Forwarding find_package\(SomeDep\)
 -- Provider invoked for method FIND_PACKAGE with args: QUIET;REQUIRED
--- SomeDepConfig\.cmake was used
+-- SomeDepConfig\.配置脚本 was used
 -- Leaving provider
 -- Configuring done

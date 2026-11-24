@@ -1,4 +1,4 @@
-CMake Error at JSONOneArg\.cmake:1 \(string\):
+CMake Error at JSONOneArg\.配置脚本:1 \(string\):
   string sub-command JSON missing mode argument\.
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)

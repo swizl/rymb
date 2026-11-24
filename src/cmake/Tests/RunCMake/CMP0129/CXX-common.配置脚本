@@ -1,0 +1,4 @@
+enable_language(CXX)
+set(CMAKE_VERBOSE_MAKEFILE TRUE)
+include(CompareCompilerVersion.配置脚本)
+compare_compiler_version(CXX)

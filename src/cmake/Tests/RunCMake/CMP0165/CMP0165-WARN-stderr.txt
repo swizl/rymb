@@ -1,4 +1,4 @@
-CMake Warning \(author\) at CMP0165-WARN\.cmake:[0-9]+ \(enable_language\):
+CMake Warning \(author\) at CMP0165-WARN\.配置脚本:[0-9]+ \(enable_language\):
   project\(\) should be called prior to this enable_language\(\) call\.
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)

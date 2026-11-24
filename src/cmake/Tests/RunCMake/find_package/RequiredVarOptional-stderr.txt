@@ -1,5 +1,5 @@
-CMake Error at RequiredVarOptional\.cmake:[0-9]+ \(find_package\):
-  By not providing "FindDoesNotExist\.cmake" in CMAKE_MODULE_PATH this project
+CMake Error at RequiredVarOptional\.配置脚本:[0-9]+ \(find_package\):
+  By not providing "FindDoesNotExist\.配置脚本" in CMAKE_MODULE_PATH this project
   has asked CMake to find a package configuration file provided by
   "DoesNotExist", but CMake did not find one\.
 
@@ -8,8 +8,8 @@ CMake Error at RequiredVarOptional\.cmake:[0-9]+ \(find_package\):
 
     DoesNotExist\.cps
     doesnotexist\.cps
-    DoesNotExistConfig\.cmake
-    doesnotexist-config\.cmake
+    DoesNotExistConfig\.配置脚本
+    doesnotexist-config\.配置脚本
 
   Add the installation prefix of "DoesNotExist" to CMAKE_PREFIX_PATH or set
   "DoesNotExist_DIR" to a directory containing one of the above files\.  If

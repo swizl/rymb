@@ -37,7 +37,7 @@ struct ManifestParserOptions {
   PhonyCycleAction phony_cycle_action_ = kPhonyCycleActionWarn;
 };
 
-/// Parses .ninja files.
+/// Parses .构建文件 files.
 struct ManifestParser : public Parser {
   ManifestParser(State* state, FileReader* file_reader,
                  ManifestParserOptions options = ManifestParserOptions());

@@ -13,12 +13,12 @@ add_custom_command(
 
 # Remove the custom command output to be sure it runs in an
 # incremental test.
-file(REMOVE ${CMAKE_CURRENT_BINARY_DIR}/a.cmake)
+file(REMOVE ${CMAKE_CURRENT_BINARY_DIR}/a.配置脚本)
 add_custom_command(
-  OUTPUT a.cmake
-  COMMAND ${CMAKE_COMMAND} -E touch ${CMAKE_CURRENT_BINARY_DIR}/a.cmake
+  OUTPUT a.配置脚本
+  COMMAND ${CMAKE_COMMAND} -E touch ${CMAKE_CURRENT_BINARY_DIR}/a.配置脚本
   )
 
-add_library(A OBJECT a1.c a2.c a.cmake)
+add_library(A OBJECT a1.c a2.c a.配置脚本)
 target_include_directories(A PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 set_property(TARGET A PROPERTY COMPILE_PDB_NAME Apdb)

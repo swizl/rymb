@@ -9,6 +9,6 @@ class MyOtherInterface
 
 };
 
-Q_DECLARE_INTERFACE(MyOtherInterface, "org.cmake.example.MyOtherInterface")
+Q_DECLARE_INTERFACE(MyOtherInterface, "org.配置脚本.example.MyOtherInterface")
 
 #endif

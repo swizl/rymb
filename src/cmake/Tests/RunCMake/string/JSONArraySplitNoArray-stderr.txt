@@ -1,4 +1,4 @@
-CMake Error at JSONArraySplitNoArray\.cmake:1 \(string\):
+CMake Error at JSONArraySplitNoArray\.配置脚本:1 \(string\):
   string sub-command JSON ARRAY_SPLIT needs to be called with an element of
   type ARRAY, got NUMBER\.
 Call Stack \(most recent call first\):

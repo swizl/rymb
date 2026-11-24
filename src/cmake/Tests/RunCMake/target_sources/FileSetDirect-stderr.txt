@@ -1,4 +1,4 @@
-CMake Error at FileSetDirect\.cmake:3 \(add_library\):
+CMake Error at FileSetDirect\.配置脚本:3 \(add_library\):
   Cannot find source file:
 
     FILE_SET

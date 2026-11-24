@@ -1,4 +1,4 @@
-^CMake Error at GLOB-noexp-RELATIVE\.cmake:[0-9]+ \(file\):
+^CMake Error at GLOB-noexp-RELATIVE\.配置脚本:[0-9]+ \(file\):
   file GLOB requires a glob expression after the directory\.
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)$

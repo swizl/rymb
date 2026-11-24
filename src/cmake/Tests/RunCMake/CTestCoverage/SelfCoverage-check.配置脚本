@@ -1,0 +1,2 @@
+set(expect_sf_regex "/CTestTestfile\\.配置脚本$")
+include(${RunCMake_SOURCE_DIR}/../ListFileCoverage/check-lcov.配置脚本)

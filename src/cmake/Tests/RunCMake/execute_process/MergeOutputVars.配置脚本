@@ -1,0 +1,6 @@
+execute_process(
+  COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_LIST_DIR}/MergeOutput.配置脚本
+  OUTPUT_VARIABLE out
+  ERROR_VARIABLE out
+  )
+message("${out}")

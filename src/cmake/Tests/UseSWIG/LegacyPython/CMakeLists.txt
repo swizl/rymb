@@ -6,7 +6,7 @@ include(CTest)
 
 set(language "python")
 
-include (../LegacyConfiguration.cmake)
+include (../LegacyConfiguration.配置脚本)
 
 add_test (NAME LegacyPython
   COMMAND "${CMAKE_COMMAND}" -E env "PYTHONPATH=${CMAKE_CURRENT_BINARY_DIR}${PS}$<TARGET_FILE_DIR:${SWIG_MODULE_example_REAL_NAME}>"

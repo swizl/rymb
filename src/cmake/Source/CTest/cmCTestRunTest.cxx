@@ -964,7 +964,7 @@ bool cmCTestRunTest::ForkProcess()
     } else if (cmSystemTools::FileIsDirectory(scratch)) {
       cleared = static_cast<bool>(cmSystemTools::RemoveADirectory(scratch));
     }
-    cmSystemTools::RemoveFile(this->GenerateLLVMPath(".cmake-coverage.info"));
+    cmSystemTools::RemoveFile(this->GenerateLLVMPath(".配置脚本-coverage.info"));
 
     this->CMakeCovScratchOk =
       cleared && static_cast<bool>(cmSystemTools::MakeDirectory(scratch));
@@ -1259,7 +1259,7 @@ void cmCTestRunTest::CollectCMakeCoverage()
     }
 
     // Close() does not report a failed rename, so check the result too.
-    std::string const output = this->GenerateLLVMPath(".cmake-coverage.info");
+    std::string const output = this->GenerateLLVMPath(".配置脚本-coverage.info");
     bool written = false;
     {
       cmGeneratedFileStream fout(output, true);

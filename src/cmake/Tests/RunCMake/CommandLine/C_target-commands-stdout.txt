@@ -1,1 +1,1 @@
-loading initial cache file \.\./C_target-commands_initial-cache\.cmake
+loading initial cache file \.\./C_target-commands_initial-cache\.配置脚本

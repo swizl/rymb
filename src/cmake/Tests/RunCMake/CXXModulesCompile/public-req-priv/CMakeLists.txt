@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24...3.28)
 project(cxx_modules_public_req_private CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 add_library(public_req_private)
 target_sources(public_req_private

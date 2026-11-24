@@ -2,7 +2,7 @@
 
 cmake_minimum_required(VERSION 3.16)
 project(RerunMocOnMissingDependency)
-include("../AutogenCoreTest.cmake")
+include("../AutogenCoreTest.配置脚本")
 
 # Create an executable to generate a clean target
 set(main_source "${CMAKE_CURRENT_BINARY_DIR}/generated_main.cpp")

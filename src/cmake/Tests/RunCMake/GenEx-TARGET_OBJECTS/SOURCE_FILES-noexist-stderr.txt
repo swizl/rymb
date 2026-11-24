@@ -1,4 +1,4 @@
-CMake Error at SOURCE_FILES-noexist\.cmake:[0-9]+ \(add_custom_target\):
+CMake Error at SOURCE_FILES-noexist\.配置脚本:[0-9]+ \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<TARGET_OBJECTS:c_objs,SOURCE_FILES:[^

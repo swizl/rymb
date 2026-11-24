@@ -39,7 +39,7 @@ cmGlobalUnixMakefileGenerator3::cmGlobalUnixMakefileGenerator3(cmake* cm)
 {
   // This type of makefile always requires unix style paths
   this->ForceUnixPaths = true;
-  this->FindMakeProgramFile = "CMakeUnixFindMake.cmake";
+  this->FindMakeProgramFile = "CMakeUnixFindMake.配置脚本";
   this->ToolSupportsColor = true;
 
 #if defined(_WIN32) || defined(__VMS)
@@ -274,7 +274,7 @@ void cmGlobalUnixMakefileGenerator3::WriteMainCMakefile()
   // see if the build system must be regenerated.
   std::string cmakefileName =
     cmStrCat(this->GetCMakeInstance()->GetHomeOutputDirectory(),
-             "/CMakeFiles/Makefile.cmake"_s);
+             "/CMakeFiles/Makefile.配置脚本"_s);
   cmGeneratedFileStream cmakefileStream(cmakefileName);
   if (!cmakefileStream) {
     return;
@@ -358,7 +358,7 @@ void cmGlobalUnixMakefileGenerator3::WriteMainCMakefile()
                         << "\"\n";
       }
       tmpStr = cmStrCat(localGen->GetCurrentBinaryDirectory(),
-                        "/CMakeFiles/CMakeDirectoryInformation.cmake"_s);
+                        "/CMakeFiles/CMakeDirectoryInformation.配置脚本"_s);
       cmakefileStream << "  \"" << localGen->MaybeRelativeToTopBinDir(tmpStr)
                       << "\"\n";
     }
@@ -384,7 +384,7 @@ void cmGlobalUnixMakefileGenerator3::WriteMainCMakefileLanguageRules(
       if (tgt->IsInBuildSystem() &&
           tgt->GetType() != cm::TargetType::GLOBAL_TARGET) {
         std::string tname = cmStrCat(lg.GetRelativeTargetDirectory(tgt.get()),
-                                     "/DependInfo.cmake"_s);
+                                     "/DependInfo.配置脚本"_s);
         cmSystemTools::ConvertToUnixSlashes(tname);
         cmakefileStream << "  \"" << tname << "\"\n";
       }
@@ -560,7 +560,7 @@ std::string cmGlobalUnixMakefileGenerator3::ConvertToMakefilePath(
   std::string const& path) const
 {
   // Watcom WMake treats '+' as special. Quote the whole path so names
-  // containing '+' (e.g. test+1.c, stdc++.cmake) are accepted.
+  // containing '+' (e.g. test+1.c, stdc++.配置脚本) are accepted.
   bool const isWatcomWMake =
     this->GetCMakeInstance()->GetState()->UseWatcomWMake();
   bool const isForceQuote =

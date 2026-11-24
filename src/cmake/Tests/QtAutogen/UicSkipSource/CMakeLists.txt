@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(UicSkipSource)
-include("../AutogenGuiTest.cmake")
+include("../AutogenGuiTest.配置脚本")
 
 # Test for SKIP_AUTOUIC and SKIP_AUTOGEN on an AUTOUIC enabled target
 set(skipUicSources

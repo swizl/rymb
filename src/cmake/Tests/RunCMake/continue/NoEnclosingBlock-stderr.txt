@@ -1,4 +1,4 @@
-CMake Error at NoEnclosingBlock\.cmake:1 \(continue\):
+CMake Error at NoEnclosingBlock\.配置脚本:1 \(continue\):
   A CONTINUE command was found outside of a proper FOREACH or WHILE loop
   scope\.
 Call Stack \(most recent call first\):

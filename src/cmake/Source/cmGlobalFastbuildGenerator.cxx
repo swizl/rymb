@@ -241,7 +241,7 @@ cmGlobalFastbuildGenerator::cmGlobalFastbuildGenerator(cmake* cm)
 #ifdef _WIN32
   cm->GetState()->SetWindowsShell(true);
 #endif
-  this->FindMakeProgramFile = "CMakeFastbuildFindMake.cmake";
+  this->FindMakeProgramFile = "CMakeFastbuildFindMake.配置脚本";
   cm->GetState()->SetFastbuildMake(true);
   cm->GetState()->SetIsGeneratorMultiConfig(false);
 }

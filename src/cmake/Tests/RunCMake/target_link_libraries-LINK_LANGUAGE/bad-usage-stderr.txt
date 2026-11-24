@@ -1,4 +1,4 @@
-CMake Error at bad-usage\.cmake:4 \(target_link_libraries\):
+CMake Error at bad-usage\.配置脚本:4 \(target_link_libraries\):
   Error evaluating generator expression:
 
     \$<LINK_LANGUAGE>

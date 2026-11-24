@@ -1,4 +1,4 @@
-SF:<SRC>/ParseError.cmake
+SF:<SRC>/ParseError.配置脚本
 FNF:0
 FNH:0
 DA:1,1

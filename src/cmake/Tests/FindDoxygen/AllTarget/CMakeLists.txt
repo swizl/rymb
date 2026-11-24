@@ -20,7 +20,7 @@ file(REMOVE_RECURSE ${CMAKE_CURRENT_BINARY_DIR}/${DOXYGEN_OUTPUT_DIRECTORY})
 doxygen_add_docs(docsWithAll ALL ${CMAKE_CURRENT_BINARY_DIR}/main.cpp)
 
 # Define tests cases that check whether targets were built
-file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/dirExists.cmake [[
+file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/dirExists.配置脚本 [[
 cmake_minimum_required(VERSION 3.11)
 if(NOT EXISTS ${dirName})
     message(FATAL_ERROR "Directory does not exist: ${dirName}")
@@ -30,12 +30,12 @@ endif()
 add_test(NAME checkWith COMMAND
     ${CMAKE_COMMAND}
     -D dirName=${CMAKE_CURRENT_BINARY_DIR}/outDirWith
-    -P dirExists.cmake
+    -P dirExists.配置脚本
 )
 add_test(NAME checkWithout COMMAND
     ${CMAKE_COMMAND}
     -D dirName=${CMAKE_CURRENT_BINARY_DIR}/outDirWithout
-    -P dirExists.cmake
+    -P dirExists.配置脚本
 )
 set_tests_properties(checkWithout PROPERTIES
     WILL_FAIL TRUE

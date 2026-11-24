@@ -1,1 +1,1 @@
-SetupTest2.cmake
+SetupTest2.配置脚本

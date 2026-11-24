@@ -1,0 +1,1 @@
+message(STATUS "ParentVariableSubDir/Inc/include2.配置脚本: '${CMAKE_PARENT_LIST_FILE}'")

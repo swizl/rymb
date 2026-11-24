@@ -5,7 +5,7 @@
  +CACHE{parent_cache}:STRING = "p_cache_val"
  +parent_regular = "p_val"
 -- Printing variables\.\.\.
- +Variables in scope at '.*PrintVariablesScope\.cmake'
+ +Variables in scope at '.*PrintVariablesScope\.配置脚本'
  +matching NAME_REGEX '\^\(parent_|child_\)' \(case sensitive\):
  +CACHE{parent_cache}:STRING = "p_cache_val"
  +parent_regular = "p_val"

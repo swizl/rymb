@@ -82,7 +82,7 @@ extern "C" int LLVMFuzzerInitialize(int* argc, char*** argv)
   } else
 #endif
   {
-    g_scriptFile = g_testDir + "/fuzz_script.cmake";
+    g_scriptFile = g_testDir + "/fuzz_script.配置脚本";
   }
 
   return 0;

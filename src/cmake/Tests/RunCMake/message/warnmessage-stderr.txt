@@ -1,11 +1,11 @@
-^CMake Warning \(deprecated\) at warnmessage\.cmake:4 \(message\):
+^CMake Warning \(deprecated\) at warnmessage\.配置脚本:4 \(message\):
   This is a deprecation warning
 Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 This warning is for project developers\.  Use -Wno-author or -Wno-deprecated
 to suppress it\.
 +
-CMake Warning \(author\) at warnmessage\.cmake:8 \(message\):
+CMake Warning \(author\) at warnmessage\.配置脚本:8 \(message\):
   This is a author warning
 Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)

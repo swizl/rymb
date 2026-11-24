@@ -1,5 +1,5 @@
 # Import targets from the exported build tree.
-include(${Import_BINARY_DIR}/../Export/ExportBuildTree.cmake)
+include(${Import_BINARY_DIR}/../Export/ExportBuildTree.配置脚本)
 
 set(_tgts
   bld_testExe1 # Ordinary executable
@@ -27,4 +27,4 @@ install(IMPORTED_RUNTIME_ARTIFACTS ${_tgts}
   FRAMEWORK DESTINATION zzz/frameworks
   )
 
-install(SCRIPT "${CMAKE_CURRENT_SOURCE_DIR}/check_installed.cmake")
+install(SCRIPT "${CMAKE_CURRENT_SOURCE_DIR}/check_installed.配置脚本")

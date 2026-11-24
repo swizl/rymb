@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.26)
 project(GlobalAutogenSystemUseInclude)
 
-include("../AutogenCoreTest.cmake")
+include("../AutogenCoreTest.配置脚本")
 
 block()
   set(test_autogen_use_system_include ON)

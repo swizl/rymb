@@ -5,5 +5,5 @@ CMake Warning:
 
 
 CMake Error: The source directory [^
-]* does not appear to contain dne\.cmake\.
+]* does not appear to contain dne\.配置脚本\.
 Specify --help for usage, or press the help button on the CMake GUI\.

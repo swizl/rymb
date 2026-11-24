@@ -2,7 +2,7 @@
    file LICENSE.rst or https://cmake.org/licensing for details.  */
 
 /* Source of the checked-in object files used by the CreateDef test.
-   See CreateDef.cmake for the commands used to regenerate them.  */
+   See CreateDef.配置脚本 for the commands used to regenerate them.  */
 
 class Virt
 {

@@ -14,7 +14,7 @@ class cmInstalledFile;
 class cmLocalGenerator;
 
 /** \class cmCPackPropertiesGenerator
- * \brief Support class for generating CPackProperties.cmake.
+ * \brief Support class for generating CPackProperties.配置脚本.
  *
  */
 class cmCPackPropertiesGenerator : public cmScriptGenerator

@@ -1,0 +1,7 @@
+cmake_policy(SET CMP0188 OLD)
+set(_FindGCCXML_testing TRUE)
+find_package(GCCXML MODULE)
+
+if(NOT _FindGCCXML_included)
+  message(FATAL_ERROR "FindGCCXML.配置脚本 not included")
+endif()

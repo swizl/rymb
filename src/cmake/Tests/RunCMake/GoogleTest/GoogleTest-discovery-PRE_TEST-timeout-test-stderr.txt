@@ -1,5 +1,5 @@
 CMake Error at [^
-]*GoogleTestAddTests\.cmake:[0-9]+ \(message\):
+]*GoogleTestAddTests\.配置脚本:[0-9]+ \(message\):
 [ \t]*Error running test executable\.
 +
 [ \t]*Path: '[^']*discovery_timeout_test(\.exe)?'

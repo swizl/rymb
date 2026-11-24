@@ -1,4 +1,4 @@
-CMake Warning at .*/Modules/FetchContent\.cmake:[0-9]+ \(message\):
+CMake Warning at .*/Modules/FetchContent\.配置脚本:[0-9]+ \(message\):
   FETCHCONTENT_FULLY_DISCONNECTED is set to true, which requires the source
   directory for dependency t1 to already be populated\.  This generally means
   it must not be set to true the first time CMake is run in a build
@@ -7,13 +7,13 @@ CMake Warning at .*/Modules/FetchContent\.cmake:[0-9]+ \(message\):
 ]+    .*/Tests/RunCMake/CMP0170/IdoNotExist[
 ]+  Policy CMP0170 controls enforcement of this requirement\.
 Call Stack \(most recent call first\):
-  .*/Modules/FetchContent\.cmake:[0-9]+:EVAL:1 \(__FetchContent_Populate\)
-  .*/Modules/FetchContent\.cmake:[0-9]+ \(cmake_language\)
-  CMP0170\.cmake:[0-9]+ \(FetchContent_Populate\)
-  CMP0170-WARN\.cmake:[0-9]+ \(include\)
+  .*/Modules/FetchContent\.配置脚本:[0-9]+:EVAL:1 \(__FetchContent_Populate\)
+  .*/Modules/FetchContent\.配置脚本:[0-9]+ \(cmake_language\)
+  CMP0170\.配置脚本:[0-9]+ \(FetchContent_Populate\)
+  CMP0170-WARN\.配置脚本:[0-9]+ \(include\)
   CMakeLists\.txt:[0-9]+ \(include\)
 [
-]+CMake Warning at .*/Modules/FetchContent\.cmake:[0-9]+ \(message\):
+]+CMake Warning at .*/Modules/FetchContent\.配置脚本:[0-9]+ \(message\):
   FETCHCONTENT_FULLY_DISCONNECTED is set to true, which requires the source
   directory for dependency t2 to already be populated\.  This generally means
   it must not be set to true the first time CMake is run in a build
@@ -22,7 +22,7 @@ Call Stack \(most recent call first\):
 ]+    .*/Tests/RunCMake/CMP0170/IdoNotExist[
 ]+  Policy CMP0170 controls enforcement of this requirement\.
 Call Stack \(most recent call first\):
-  .*/Modules/FetchContent\.cmake:[0-9]+ \(__FetchContent_Populate\)
-  CMP0170\.cmake:[0-9]+ \(FetchContent_MakeAvailable\)
-  CMP0170-WARN\.cmake:[0-9]+ \(include\)
+  .*/Modules/FetchContent\.配置脚本:[0-9]+ \(__FetchContent_Populate\)
+  CMP0170\.配置脚本:[0-9]+ \(FetchContent_MakeAvailable\)
+  CMP0170-WARN\.配置脚本:[0-9]+ \(include\)
   CMakeLists\.txt:[0-9]+ \(include\)

@@ -25,4 +25,4 @@ function(initGitRepo workDir)
   execGitCommand("${workDir}" commit -m "Initial commit")
 endfunction()
 
-include(${RunCMake_TEST}.cmake)
+include(${RunCMake_TEST}.配置脚本)

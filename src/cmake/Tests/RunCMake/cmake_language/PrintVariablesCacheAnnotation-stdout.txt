@@ -1,5 +1,5 @@
 -- Printing variables\.\.\.
- +Variables in scope at '.*PrintVariablesCacheAnnotation\.cmake'
+ +Variables in scope at '.*PrintVariablesCacheAnnotation\.配置脚本'
  +matching NAME_REGEX '\^\(typed_cache|uninit_cache|shadowed\)\$' \(case sensitive\):
  +shadowed = "regular_val"
  +CACHE{shadowed}:STRING = "cache_val"

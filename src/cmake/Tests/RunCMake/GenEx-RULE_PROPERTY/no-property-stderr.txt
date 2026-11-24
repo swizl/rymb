@@ -1,4 +1,4 @@
-CMake Error at no-property\.cmake:[0-9]+ \(file\):
+CMake Error at no-property\.配置脚本:[0-9]+ \(file\):
   Error evaluating generator expression:
 
     \$<RULE_PROPERTY:rule,>

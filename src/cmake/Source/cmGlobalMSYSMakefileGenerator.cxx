@@ -15,7 +15,7 @@
 cmGlobalMSYSMakefileGenerator::cmGlobalMSYSMakefileGenerator(cmake* cm)
   : cmGlobalUnixMakefileGenerator3(cm)
 {
-  this->FindMakeProgramFile = "CMakeMSYSFindMake.cmake";
+  this->FindMakeProgramFile = "CMakeMSYSFindMake.配置脚本";
   this->ForceUnixPaths = true;
   this->ToolSupportsColor = true;
   this->UseLinkScript = false;

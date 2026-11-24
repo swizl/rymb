@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24...3.28)
 project(cxx_modules_export_interfaces_no_properties CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 add_library(export_interfaces_no_properties STATIC)
 target_sources(export_interfaces_no_properties
@@ -30,9 +30,9 @@ install(TARGETS export_interfaces_no_properties no_modules
   FILE_SET modules DESTINATION "lib/cxx/miu")
 export(EXPORT CXXModules
   NAMESPACE CXXModules::
-  FILE "${CMAKE_CURRENT_BINARY_DIR}/export_interfaces_no_properties-targets.cmake")
-file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_interfaces_no_properties-config.cmake"
-  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_interfaces_no_properties-targets.cmake\")
+  FILE "${CMAKE_CURRENT_BINARY_DIR}/export_interfaces_no_properties-targets.配置脚本")
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_interfaces_no_properties-config.配置脚本"
+  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_interfaces_no_properties-targets.配置脚本\")
 set(\${CMAKE_FIND_PACKAGE_NAME}_FOUND 1)
 ")
 

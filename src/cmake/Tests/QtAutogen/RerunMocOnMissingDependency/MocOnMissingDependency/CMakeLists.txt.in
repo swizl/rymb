@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.18)
 project(MocOnMissingDependency)
-include("@CMAKE_CURRENT_LIST_DIR@/../AutogenCoreTest.cmake")
+include("@CMAKE_CURRENT_LIST_DIR@/../AutogenCoreTest.配置脚本")
 set(CMAKE_AUTOMOC ON)
 add_executable(MocOnMissingDependency main.cpp myobject.cpp)
 target_include_directories(MocOnMissingDependency PRIVATE inc1 inc2)

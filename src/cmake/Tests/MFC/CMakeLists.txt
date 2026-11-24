@@ -39,14 +39,14 @@ ExternalProject_Add(mfcStatic
 
 set(binary_dir "${CMAKE_CURRENT_BINARY_DIR}")
 configure_file(
-  ${CMAKE_CURRENT_SOURCE_DIR}/ValidateBuild.cmake.in
-  ${CMAKE_CURRENT_BINARY_DIR}/ValidateBuild.cmake
+  ${CMAKE_CURRENT_SOURCE_DIR}/ValidateBuild.配置脚本.in
+  ${CMAKE_CURRENT_BINARY_DIR}/ValidateBuild.配置脚本
   @ONLY
   )
 add_test(
   NAME validate
   COMMAND ${CMAKE_COMMAND}
-    -P "${CMAKE_CURRENT_BINARY_DIR}/ValidateBuild.cmake"
+    -P "${CMAKE_CURRENT_BINARY_DIR}/ValidateBuild.配置脚本"
   )
 
 

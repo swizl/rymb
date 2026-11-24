@@ -321,7 +321,7 @@ void TryRunCommandImpl::DoNotRunExecutable(
   cmSystemTools::CopyFileAlways(this->OutputFile, copyDest);
 
   std::string resultFileName = cmStrCat(
-    this->Makefile->GetHomeOutputDirectory(), "/TryRunResults.cmake"_s);
+    this->Makefile->GetHomeOutputDirectory(), "/TryRunResults.配置脚本"_s);
 
   std::string detailsString = cmStrCat("For details see "_s, resultFileName);
 

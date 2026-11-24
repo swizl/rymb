@@ -1,4 +1,4 @@
-CMake Error at InvalidCps1\.cmake:[0-9]+ \(find_package\):
+CMake Error at InvalidCps1\.配置脚本:[0-9]+ \(find_package\):
   Could not find a configuration file for package "Empty" that is compatible
   with requested version ""\.
 

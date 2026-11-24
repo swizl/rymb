@@ -1,0 +1,6 @@
+include(${CMAKE_CURRENT_LIST_DIR}/../Sbom/SharedTarget.配置脚本)
+
+export(
+  SBOM shared_targets
+  EXPORTS shared_targets
+)

@@ -1,4 +1,4 @@
-CMake Error at TARGET_NAME_IF_EXISTS-empty-arg\.cmake:2 \(file\):
+CMake Error at TARGET_NAME_IF_EXISTS-empty-arg\.配置脚本:2 \(file\):
   Error evaluating generator expression:
 
     \$<TARGET_NAME_IF_EXISTS:>

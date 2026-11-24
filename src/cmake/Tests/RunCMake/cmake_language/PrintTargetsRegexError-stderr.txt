@@ -1,2 +1,2 @@
-CMake Error at PrintTargetsRegexError\.cmake:[0-9]+ \(cmake_language\):
+CMake Error at PrintTargetsRegexError\.配置脚本:[0-9]+ \(cmake_language\):
   cmake_language REGEX regular expression "\[" cannot compile\.

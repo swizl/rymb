@@ -172,7 +172,7 @@ void cmRST::ProcessLine(std::string const& line)
       // Output cmake domain directives and their content normally.
       this->NormalLine(line);
     } else if (this->CMakeModuleDirective.find(line)) {
-      // Process cmake-module directive: scan .cmake file comments.
+      // Process cmake-module directive: scan .配置脚本 file comments.
       std::string file = this->CMakeModuleDirective.match(1);
       if (file.empty() || !this->ProcessInclude(file, Include::Module)) {
         this->NormalLine(line);

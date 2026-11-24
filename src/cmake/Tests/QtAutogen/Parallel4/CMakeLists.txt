@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
 project(Parallel4)
-include("../AutogenGuiTest.cmake")
+include("../AutogenGuiTest.配置脚本")
 
 # Test different values for AUTOGEN_PARALLEL
-include("../Parallel/parallel.cmake")
+include("../Parallel/parallel.配置脚本")
 
 add_executable(parallel4 ${PARALLEL_SRC})
 set_target_properties(parallel4 PROPERTIES AUTOGEN_PARALLEL 4)

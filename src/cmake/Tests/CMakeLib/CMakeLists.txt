@@ -133,7 +133,7 @@ if(CMake_ENABLE_DEBUGGER)
     list(APPEND testDebuggerNamedPipe_Project_ARGS "-DCMAKE_GENERATOR_INSTANCE=${CMAKE_GENERATOR_INSTANCE}")
   endif()
   set(testDebuggerNamedPipe_Script_ARGS
-    "$<TARGET_FILE:cmake>" -P ${CMAKE_CURRENT_SOURCE_DIR}/DebuggerSample/script.cmake
+    "$<TARGET_FILE:cmake>" -P ${CMAKE_CURRENT_SOURCE_DIR}/DebuggerSample/script.配置脚本
     )
   foreach(case Project Script)
     add_test(NAME CMakeLib.testDebuggerNamedPipe-${case} COMMAND testDebuggerNamedPipe ${testDebuggerNamedPipe_${case}_ARGS})

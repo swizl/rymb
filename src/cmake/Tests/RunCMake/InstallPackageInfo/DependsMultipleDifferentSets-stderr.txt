@@ -1,7 +1,7 @@
 CMake Error in CMakeLists\.txt:
   install\(EXPORT "bar" \.\.\.\) includes target "bar" which requires target "foo"
   that is not in this export set, but in multiple other export sets:
-  cmake/foo\.cmake, cps/foo\.cps, cmake/foo-alt\.cmake\.
+  cmake/foo\.配置脚本, cps/foo\.cps, cmake/foo-alt\.配置脚本\.
 
   An exported target cannot depend upon another target which is exported in
   more than one export set or with more than one namespace\.  Consider
@@ -11,7 +11,7 @@ CMake Error in CMakeLists\.txt:
 CMake Error in CMakeLists\.txt:
   install\(PACKAGE_INFO "bar" \.\.\.\) includes target "bar" which requires target
   "foo" that is not in this export set, but in multiple other export sets:
-  cmake/foo\.cmake, cps/foo\.cps, cmake/foo-alt\.cmake\.
+  cmake/foo\.配置脚本, cps/foo\.cps, cmake/foo-alt\.配置脚本\.
 
   An exported target cannot depend upon another target which is exported in
   more than one export set or with more than one namespace\.  Consider

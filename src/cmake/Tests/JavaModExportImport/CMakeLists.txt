@@ -28,8 +28,8 @@ else()
   endif()
 endif()
 
-configure_file(${JavaModExportImport_SOURCE_DIR}/InitialCache.cmake.in
-               ${JavaModExportImport_BINARY_DIR}/InitialCache.cmake @ONLY)
+configure_file(${JavaModExportImport_SOURCE_DIR}/InitialCache.配置脚本.in
+               ${JavaModExportImport_BINARY_DIR}/InitialCache.配置脚本 @ONLY)
 
 # Build the build exporter.
 add_custom_command(
@@ -43,7 +43,7 @@ add_custom_command(
     --build-generator ${CMAKE_GENERATOR}
     --build-generator-platform "${CMAKE_GENERATOR_PLATFORM}"
     --build-generator-toolset "${CMAKE_GENERATOR_TOOLSET}"
-    --build-options -C${JavaModExportImport_BINARY_DIR}/InitialCache.cmake
+    --build-options -C${JavaModExportImport_BINARY_DIR}/InitialCache.配置脚本
   VERBATIM
   )
 add_custom_target(BuildExportTarget ALL DEPENDS ${JavaModExportImport_BINARY_DIR}/BuildExportProject)
@@ -66,7 +66,7 @@ add_custom_command(
     --build-generator ${CMAKE_GENERATOR}
     --build-generator-platform "${CMAKE_GENERATOR_PLATFORM}"
     --build-generator-toolset "${CMAKE_GENERATOR_TOOLSET}"
-    --build-options -C${JavaModExportImport_BINARY_DIR}/InitialCache.cmake
+    --build-options -C${JavaModExportImport_BINARY_DIR}/InitialCache.配置脚本
   VERBATIM
   )
 add_custom_target(InstallExportTarget ALL DEPENDS ${JavaModExportImport_BINARY_DIR}/InstallExportProject)
@@ -89,7 +89,7 @@ add_custom_command(
     --build-generator-platform "${CMAKE_GENERATOR_PLATFORM}"
     --build-generator-toolset "${CMAKE_GENERATOR_TOOLSET}"
     --build-options
-      -C${JavaModExportImport_BINARY_DIR}/InitialCache.cmake
+      -C${JavaModExportImport_BINARY_DIR}/InitialCache.配置脚本
       -DJavaBuildExportTest_DIR:PATH=${JavaModExportImport_BINARY_DIR}/BuildExport
       -DJavaInstallExportTest_DIR:PATH=${JavaModExportImport_BINARY_DIR}/Root/share/cmake
   VERBATIM

@@ -1,4 +1,4 @@
-SF:<SRC>/FatalErrorNested.cmake
+SF:<SRC>/FatalErrorNested.配置脚本
 FN:1,f
 FNDA:1,f
 FNF:1

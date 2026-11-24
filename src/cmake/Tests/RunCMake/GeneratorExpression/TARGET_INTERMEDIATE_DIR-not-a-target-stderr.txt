@@ -1,4 +1,4 @@
-CMake Error at TARGET_INTERMEDIATE_DIR-not-a-target\.cmake:1 \(file\):
+CMake Error at TARGET_INTERMEDIATE_DIR-not-a-target\.配置脚本:1 \(file\):
   Error evaluating generator expression:
 
     \$<TARGET_INTERMEDIATE_DIR:bar>

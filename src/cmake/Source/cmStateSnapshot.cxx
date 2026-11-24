@@ -527,7 +527,7 @@ void cmStateSnapshot::SetDefaultDefinitions()
     Modules/Platforms/.
     To keep cmake scripts (-P) and custom language and compiler modules
     working, these variables are still also set here in this place, but they
-    will be reset in CMakeSystemSpecificInformation.cmake before the platform
+    will be reset in CMakeSystemSpecificInformation.配置脚本 before the platform
     files are executed. */
   cm::string_view hostSystemName = cmSystemTools::GetSystemName();
   this->SetDefinition("CMAKE_HOST_SYSTEM_NAME", hostSystemName);

@@ -6,7 +6,7 @@ include(CTest)
 
 set(language "python")
 
-include (../BasicConfiguration.cmake)
+include (../BasicConfiguration.配置脚本)
 
 add_test (NAME BasicPython
   COMMAND "${CMAKE_COMMAND}" -E env "PYTHONPATH=${CMAKE_CURRENT_BINARY_DIR}${PS}$<TARGET_FILE_DIR:example>"

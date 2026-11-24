@@ -1,7 +1,7 @@
-CMake Error at EscapeChar-@char@-@testnum@.cmake:1 \(message\):
+CMake Error at EscapeChar-@char@-@testnum@.配置脚本:1 \(message\):
   Syntax error in cmake code at
 
-    .*/Tests/RunCMake/Syntax/EscapeChar-@char@-@testnum@.cmake:1
+    .*/Tests/RunCMake/Syntax/EscapeChar-@char@-@testnum@.配置脚本:1
 
   when parsing string
 

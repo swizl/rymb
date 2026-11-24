@@ -1,4 +1,4 @@
-CMake Error at BadCompilerCXX\.cmake:2 \(enable_language\):
+CMake Error at BadCompilerCXX\.配置脚本:2 \(enable_language\):
   The CMAKE_CXX_COMPILER:
 
     no-CXX-compiler

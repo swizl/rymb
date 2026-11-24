@@ -15,7 +15,7 @@
 cmGlobalJOMMakefileGenerator::cmGlobalJOMMakefileGenerator(cmake* cm)
   : cmGlobalUnixMakefileGenerator3(cm)
 {
-  this->FindMakeProgramFile = "CMakeJOMFindMake.cmake";
+  this->FindMakeProgramFile = "CMakeJOMFindMake.配置脚本";
   this->ForceUnixPaths = false;
   this->ToolSupportsColor = true;
   this->UseLinkScript = false;

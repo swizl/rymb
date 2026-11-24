@@ -1,4 +1,4 @@
-^CMake Error at invalid-name\.cmake:3 \(add_library\):
+^CMake Error at invalid-name\.配置脚本:3 \(add_library\):
   The target name "invalid\$name" is reserved or not valid for certain CMake
   features, such as generator expressions, and may result in undefined
   behavior\.

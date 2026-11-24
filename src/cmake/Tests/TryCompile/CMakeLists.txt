@@ -40,7 +40,7 @@ set(try_compile_redundant_SOURCES SOURCES)
 set(try_compile_output_vars OUTPUT_VARIABLE TRY_OUT)
 set(try_compile_compile_output_var TRY_OUT)
 set(try_compile_run_output_var TRY_OUT)
-include(old_and_new_signature_tests.cmake)
+include(old_and_new_signature_tests.配置脚本)
 
 # run new signature tests
 set(try_compile_bindir_or_SOURCES SOURCES)
@@ -50,7 +50,7 @@ set(try_compile_output_vars
   RUN_OUTPUT_VARIABLE RUN_OUTPUT)
 set(try_compile_compile_output_var COMPILE_OUT)
 set(try_compile_run_output_var RUN_OUTPUT)
-include(old_and_new_signature_tests.cmake)
+include(old_and_new_signature_tests.配置脚本)
 
 # try to compile an empty source specified directly
 try_compile(SHOULD_FAIL_DUE_TO_EMPTY_SOURCE

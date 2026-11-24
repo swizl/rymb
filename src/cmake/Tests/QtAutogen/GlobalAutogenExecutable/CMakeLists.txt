@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.26)
 project(GlobalAutogenExecutable)
 
-include("../AutogenCoreTest.cmake")
+include("../AutogenCoreTest.配置脚本")
 
 set(test_automoc_path "global_automoc_exe_path")
 set(test_autouic_path "global_autouic_exe_path")

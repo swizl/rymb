@@ -1,4 +1,4 @@
-CMake Error at BracketNoSpace0\.cmake:1:
+CMake Error at BracketNoSpace0\.配置脚本:1:
   Syntax Error in cmake code at column 27
 
   Argument not separated from preceding token by whitespace\.

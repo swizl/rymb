@@ -3,11 +3,11 @@
 
 This warning is for project developers\.  Use -Wno-author to suppress it\.
 +)+
-(CMake Warning \(author\) at CMP0163-Common-Test11\.cmake:[0-9]+ \(add_subdirectory\):
+(CMake Warning \(author\) at CMP0163-Common-Test11\.配置脚本:[0-9]+ \(add_subdirectory\):
   Unsetting the 'GENERATED' property is not allowed under CMP0118!
 
 Call Stack \(most recent call first\):
-  CMP0118-NEW/CMP0163-OLD-Test11\.cmake:[0-9]+ \(include\)
+  CMP0118-NEW/CMP0163-OLD-Test11\.配置脚本:[0-9]+ \(include\)
   CMakeLists\.txt:[0-9]+ \(include\)
 This warning is for project developers\.  Use -Wno-author to suppress it\.
 +)+)+

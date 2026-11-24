@@ -1,4 +1,4 @@
-^CMake Warning \(experimental\) at Editions\.cmake:[0-9]+ \(enable_language\):
+^CMake Warning \(experimental\) at Editions\.配置脚本:[0-9]+ \(enable_language\):
   CMake's support for the Rust programming language is experimental\.  It is
   meant only for experimentation and feedback to CMake developers\.
 Call Stack \(most recent call first\):

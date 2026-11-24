@@ -101,7 +101,7 @@ cmDocumentationEntry const cmDocumentationOptions[] = {
   { "-P <file>", "Process script mode." },
   { "--find-package", "Legacy pkg-config like mode.  Do not use." },
   { "--graphviz=<file>",
-    "Generate graphviz of dependencies, see CMakeGraphVizOptions.cmake for "
+    "Generate graphviz of dependencies, see CMakeGraphVizOptions.配置脚本 for "
     "more." },
   { "--system-information [file]", "Dump information about this system." },
   { "--print-config-dir",

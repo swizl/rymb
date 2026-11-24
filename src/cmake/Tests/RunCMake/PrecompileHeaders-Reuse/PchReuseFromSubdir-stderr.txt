@@ -1,4 +1,4 @@
-CMake Warning \(deprecated\) at PchReuseFromSubdir\.cmake:[0-9]+ \(subdirs\):
+CMake Warning \(deprecated\) at PchReuseFromSubdir\.配置脚本:[0-9]+ \(subdirs\):
   The 'subdirs' command has been superseded\.  Use the 'add_subdirectory'
   command instead\.
 Call Stack \(most recent call first\):

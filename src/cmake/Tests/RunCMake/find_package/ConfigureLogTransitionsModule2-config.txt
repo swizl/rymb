@@ -15,14 +15,14 @@ events:(
   -
     kind: "message-v1"
     backtrace:
-      - "ConfigureLogTransitionsModule2\.cmake:[0-9]+ \(message\)"
+      - "ConfigureLogTransitionsModule2\.配置脚本:[0-9]+ \(message\)"
       - "CMakeLists\.txt:[0-9]+ \(include\)"
     message: \|
       NotDefined -> NotFound
   -
     kind: "find_package-v1"
     backtrace:
-      - "ConfigureLogTransitionsModule2\.cmake:[0-9]+ \(find_package\)"
+      - "ConfigureLogTransitionsModule2\.配置脚本:[0-9]+ \(find_package\)"
       - "CMakeLists\.txt:[0-9]+ \(include\)"
     name: "ViaModule"
     configs:
@@ -33,10 +33,10 @@ events:(
         filename: "viamodule\.cps"
         kind: "cps"
       -
-        filename: "ViaModuleConfig\.cmake"
+        filename: "ViaModuleConfig\.配置脚本"
         kind: "cmake"
       -
-        filename: "viamodule-config\.cmake"
+        filename: "viamodule-config\.配置脚本"
         kind: "cmake"
     version_request:
       exact: false
@@ -62,11 +62,11 @@ events:(
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "[^"]*/Tests/RunCMake/find_package/ConfigureLogTransitionsModule2-build/CMakeFiles/pkgRedirects/ViaModuleConfig\.cmake"
+        path: "[^"]*/Tests/RunCMake/find_package/ConfigureLogTransitionsModule2-build/CMakeFiles/pkgRedirects/ViaModuleConfig\.配置脚本"
         mode: "config"
         reason: "no_exist"
       -
-        path: "[^"]*/Tests/RunCMake/find_package/ConfigureLogTransitionsModule2-build/CMakeFiles/pkgRedirects/viamodule-config\.cmake"
+        path: "[^"]*/Tests/RunCMake/find_package/ConfigureLogTransitionsModule2-build/CMakeFiles/pkgRedirects/viamodule-config\.配置脚本"
         mode: "config"
         reason: "no_exist"
       -
@@ -86,7 +86,7 @@ events:(
         mode: "cps"
         reason: "no_exist"(
       -
-        path: "[^"]*/((viamodule|ViaModule)\.cps|(viamodule-config|ViaModuleConfig)\.cmake)"
+        path: "[^"]*/((viamodule|ViaModule)\.cps|(viamodule-config|ViaModuleConfig)\.配置脚本)"
         mode: "(cps|config)"
         reason: "no_exist")*
     found: null
@@ -96,35 +96,35 @@ events:(
   -
     kind: "message-v1"
     backtrace:
-      - "ConfigureLogTransitionsModule2\.cmake:[0-9]+ \(message\)"
+      - "ConfigureLogTransitionsModule2\.配置脚本:[0-9]+ \(message\)"
       - "CMakeLists\.txt:[0-9]+ \(include\)"
     message: \|
       NotFound -> NotFound
   -
     kind: "message-v1"
     backtrace:
-      - "ConfigureLogTransitionsModule2\.cmake:[0-9]+ \(message\)"
+      - "ConfigureLogTransitionsModule2\.配置脚本:[0-9]+ \(message\)"
       - "CMakeLists\.txt:[0-9]+ \(include\)"
     message: \|
       NotFound -> Found
   -
     kind: "message-v1"
     backtrace:
-      - "ConfigureLogTransitionsModule2\.cmake:[0-9]+ \(message\)"
+      - "ConfigureLogTransitionsModule2\.配置脚本:[0-9]+ \(message\)"
       - "CMakeLists\.txt:[0-9]+ \(include\)"
     message: \|
       Found -> Found
   -
     kind: "message-v1"
     backtrace:
-      - "ConfigureLogTransitionsModule2\.cmake:[0-9]+ \(message\)"
+      - "ConfigureLogTransitionsModule2\.配置脚本:[0-9]+ \(message\)"
       - "CMakeLists\.txt:[0-9]+ \(include\)"
     message: \|
       Found -> NotFound
   -
     kind: "find_package-v1"
     backtrace:
-      - "ConfigureLogTransitionsModule2\.cmake:[0-9]+ \(find_package\)"
+      - "ConfigureLogTransitionsModule2\.配置脚本:[0-9]+ \(find_package\)"
       - "CMakeLists\.txt:[0-9]+ \(include\)"
     name: "ViaModule"
     configs:
@@ -135,10 +135,10 @@ events:(
         filename: "viamodule\.cps"
         kind: "cps"
       -
-        filename: "ViaModuleConfig\.cmake"
+        filename: "ViaModuleConfig\.配置脚本"
         kind: "cmake"
       -
-        filename: "viamodule-config\.cmake"
+        filename: "viamodule-config\.配置脚本"
         kind: "cmake"
     version_request:
       exact: false
@@ -164,11 +164,11 @@ events:(
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "[^"]*/Tests/RunCMake/find_package/ConfigureLogTransitionsModule2-build/CMakeFiles/pkgRedirects/ViaModuleConfig\.cmake"
+        path: "[^"]*/Tests/RunCMake/find_package/ConfigureLogTransitionsModule2-build/CMakeFiles/pkgRedirects/ViaModuleConfig\.配置脚本"
         mode: "config"
         reason: "no_exist"
       -
-        path: "[^"]*/Tests/RunCMake/find_package/ConfigureLogTransitionsModule2-build/CMakeFiles/pkgRedirects/viamodule-config\.cmake"
+        path: "[^"]*/Tests/RunCMake/find_package/ConfigureLogTransitionsModule2-build/CMakeFiles/pkgRedirects/viamodule-config\.配置脚本"
         mode: "config"
         reason: "no_exist"
       -
@@ -188,7 +188,7 @@ events:(
         mode: "cps"
         reason: "no_exist"(
       -
-        path: "[^"]*/((viamodule|ViaModule)\.cps|(viamodule-config|ViaModuleConfig)\.cmake)"
+        path: "[^"]*/((viamodule|ViaModule)\.cps|(viamodule-config|ViaModuleConfig)\.配置脚本)"
         mode: "(cps|config)"
         reason: "no_exist")*
     found: null
@@ -198,7 +198,7 @@ events:(
   -
     kind: "message-v1"
     backtrace:
-      - "ConfigureLogTransitionsModule2\.cmake:[0-9]+ \(message\)"
+      - "ConfigureLogTransitionsModule2\.配置脚本:[0-9]+ \(message\)"
       - "CMakeLists\.txt:[0-9]+ \(include\)"
     message: \|
       END

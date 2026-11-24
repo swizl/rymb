@@ -8,5 +8,5 @@ target_link_libraries(main lib)
 cmake_instrumentation(
   API_VERSION 1
   DATA_VERSION 1
-  CALLBACK ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_LIST_DIR}/callback.cmake
+  CALLBACK ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_LIST_DIR}/callback.配置脚本
 )

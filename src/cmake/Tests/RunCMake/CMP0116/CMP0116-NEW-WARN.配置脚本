@@ -1,0 +1,3 @@
+set(depdir)
+
+include(Common.配置脚本)

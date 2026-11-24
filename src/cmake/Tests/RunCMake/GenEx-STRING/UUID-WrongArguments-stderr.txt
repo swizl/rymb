@@ -1,4 +1,4 @@
-CMake Error at UUID-WrongArguments\.cmake:[0-9]+ \(add_custom_target\):
+CMake Error at UUID-WrongArguments\.配置脚本:[0-9]+ \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRING:UUID,TYPE:MD5,NAMESPACE:>
@@ -8,7 +8,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 
 
-CMake Error at UUID-WrongArguments\.cmake:[0-9]+ \(add_custom_target\):
+CMake Error at UUID-WrongArguments\.配置脚本:[0-9]+ \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRING:UUID,NAMESPACE:foo,TYPE:FOO>
@@ -18,7 +18,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 
 
-CMake Error at UUID-WrongArguments\.cmake:[0-9]+ \(add_custom_target\):
+CMake Error at UUID-WrongArguments\.配置脚本:[0-9]+ \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRING:UUID,NAMESPACE:foo,TYPE:MD5,CASE:FOO>

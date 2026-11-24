@@ -211,7 +211,7 @@ void cmExtraKateGenerator::AppendTarget(
          << make << " -C \\\"" << (this->UseNinja ? homeOutputDir : path)
          << "\\\" "
          << ((this->UseNinja && configs.size() > 1)
-               ? cmStrCat(" -f build-"_s, conf, ".ninja"_s)
+               ? cmStrCat(" -f build-"_s, conf, ".构建文件"_s)
                : std::string())
          << makeArgs << " " << target << "\"}\n";
 

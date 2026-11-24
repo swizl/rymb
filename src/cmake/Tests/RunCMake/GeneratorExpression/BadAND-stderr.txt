@@ -1,4 +1,4 @@
-CMake Error at BadAND\.cmake:1 \(add_custom_target\):
+CMake Error at BadAND\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<AND>
@@ -7,7 +7,7 @@ CMake Error at BadAND\.cmake:1 \(add_custom_target\):
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 +
-CMake Error at BadAND\.cmake:1 \(add_custom_target\):
+CMake Error at BadAND\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<AND:>
@@ -16,7 +16,7 @@ CMake Error at BadAND\.cmake:1 \(add_custom_target\):
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 +
-CMake Error at BadAND\.cmake:1 \(add_custom_target\):
+CMake Error at BadAND\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<AND:,>
@@ -25,7 +25,7 @@ CMake Error at BadAND\.cmake:1 \(add_custom_target\):
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 +
-CMake Error at BadAND\.cmake:1 \(add_custom_target\):
+CMake Error at BadAND\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<AND:01>
@@ -34,7 +34,7 @@ CMake Error at BadAND\.cmake:1 \(add_custom_target\):
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 +
-CMake Error at BadAND\.cmake:1 \(add_custom_target\):
+CMake Error at BadAND\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<AND:nothing>
@@ -43,7 +43,7 @@ CMake Error at BadAND\.cmake:1 \(add_custom_target\):
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 +
-CMake Error at BadAND\.cmake:1 \(add_custom_target\):
+CMake Error at BadAND\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<AND:1,nothing>

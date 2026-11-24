@@ -368,7 +368,7 @@ void CMakeGUITest::presetArg_data()
       /*Key=*/"CMAKE_TOOLCHAIN_FILE",
       /*Value=*/
       QString::fromLocal8Bit(CMakeGUITest_BINARY_DIR
-                             "/presetArg-installDir/src/toolchain.cmake"),
+                             "/presetArg-installDir/src/toolchain.配置脚本"),
       /*Strings=*/{},
       /*Help=*/"",
       /*Type=*/QCMakeProperty::FILEPATH,

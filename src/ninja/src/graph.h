@@ -275,7 +275,7 @@ struct Edge {
   bool maybe_phonycycle_diagnostic() const;
 
   // Historical info: how long did this edge take last time,
-  // as per .ninja_log, if known? Defaults to -1 if unknown.
+  // as per .构建日志, if known? Defaults to -1 if unknown.
   int64_t prev_elapsed_time_millis = -1;
 };
 

@@ -1,0 +1,1 @@
+CTEST_RUN_SCRIPT("CTestTestRunScript/hello.配置脚本" RETURN_VALUE res RETURN_VALUE)

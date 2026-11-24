@@ -1,5 +1,5 @@
 ^CMake Warning \(policy\) at [^
-]*/CMP0205-common\.cmake:[0-9]+ \(file\):
+]*/CMP0205-common\.配置脚本:[0-9]+ \(file\):
   Path
 
     [^
@@ -12,8 +12,8 @@
   Use the cmake_policy command to set the policy and suppress this warning\.
 Call Stack \(most recent call first\):
   [^
-]*/CMP0205-common-WARN\.cmake:[0-9]+ \(include\)
+]*/CMP0205-common-WARN\.配置脚本:[0-9]+ \(include\)
   [^
-]*/CMP0205-SymLink-WARN\.cmake:[0-9]+ \(include\)
+]*/CMP0205-SymLink-WARN\.配置脚本:[0-9]+ \(include\)
 This warning is for project developers\.  Use -Wno-author or -Wno-policy to
 suppress it\.$

@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 
 project(ExportLanguagesTest)
 
-include(${CMAKE_CURRENT_BINARY_DIR}/../BExport.cmake)
+include(${CMAKE_CURRENT_BINARY_DIR}/../BExport.配置脚本)
 get_property(configs TARGET ExpExportLanguagesB PROPERTY IMPORTED_CONFIGURATIONS)
 foreach(c ${configs})
   get_property(langs TARGET ExpExportLanguagesB PROPERTY IMPORTED_LINK_INTERFACE_LANGUAGES_${c})

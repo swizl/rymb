@@ -503,7 +503,7 @@ void cmLocalUnixMakefileGenerator3::WriteDirectoryInformationFile()
 {
   std::string infoFileName =
     cmStrCat(this->GetCurrentBinaryDirectory(),
-             "/CMakeFiles/CMakeDirectoryInformation.cmake"_s);
+             "/CMakeFiles/CMakeDirectoryInformation.配置脚本"_s);
 
   // Open the output file.
   cmGeneratedFileStream infoFileStream(infoFileName);
@@ -867,7 +867,7 @@ void cmLocalUnixMakefileGenerator3::WriteSpecialTargetsBottom(
                                              cmOutputConverter::SHELL));
       commands.push_back(rescanRule);
     }
-    std::string cmakefileName = "CMakeFiles/Makefile.cmake";
+    std::string cmakefileName = "CMakeFiles/Makefile.配置脚本";
     std::string runRule = cmStrCat(
       "$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) "_s,
       cm->GetIgnoreCompileWarningAsError() ? "--compile-no-warning-as-error "
@@ -1171,7 +1171,7 @@ void cmLocalUnixMakefileGenerator3::AppendCleanCommand(
     cleanfile += "_";
     cleanfile += filename;
   }
-  cleanfile += ".cmake";
+  cleanfile += ".配置脚本";
   cmsys::ofstream fout(cleanfile.c_str());
   if (!fout) {
     cmSystemTools::Error("Could not create " + cleanfile);
@@ -1205,7 +1205,7 @@ void cmLocalUnixMakefileGenerator3::AppendCleanCommand(
             "# Per-language clean rules from dependency scanning.\n"
             "foreach(lang " << cmJoin(languages, " ") << ")\n"
             "  include(" << langFileDir
-         << "/cmake_clean_${lang}.cmake OPTIONAL)\n"
+         << "/cmake_clean_${lang}.配置脚本 OPTIONAL)\n"
             "endforeach()\n";
     /* clang-format on */
   }
@@ -1229,7 +1229,7 @@ void cmLocalUnixMakefileGenerator3::AppendDirectoryCleanCommand(
   auto const& rootLG = this->GetGlobalGenerator()->GetLocalGenerators().at(0);
   std::string const& currentBinaryDir = this->GetCurrentBinaryDirectory();
   std::string cleanfile =
-    cmStrCat(currentBinaryDir, "/CMakeFiles/cmake_directory_clean.cmake"_s);
+    cmStrCat(currentBinaryDir, "/CMakeFiles/cmake_directory_clean.配置脚本"_s);
   // Write clean script
   {
     cmsys::ofstream fout(cleanfile.c_str());
@@ -1469,7 +1469,7 @@ bool cmLocalUnixMakefileGenerator3::UpdateDependencies(
   // read in the target info file
   if (!this->Makefile->ReadListFile(tgtInfo) ||
       cmSystemTools::GetErrorOccurredFlag()) {
-    cmSystemTools::Error("Target DependInfo.cmake file not found");
+    cmSystemTools::Error("Target DependInfo.配置脚本 file not found");
   }
 
   bool status = true;
@@ -1496,7 +1496,7 @@ bool cmLocalUnixMakefileGenerator3::UpdateDependencies(
     std::string const internalDependFile = targetDir + "/depend.internal";
     std::string const dependFile = targetDir + "/depend.make";
 
-    // If the target DependInfo.cmake file has changed since the last
+    // If the target DependInfo.配置脚本 file has changed since the last
     // time dependencies were scanned then force rescanning.  This may
     // happen when a new source file is added and CMake regenerates the
     // project but no other sources were touched.
@@ -1521,7 +1521,7 @@ bool cmLocalUnixMakefileGenerator3::UpdateDependencies(
     {
       std::string dirInfoFile =
         cmStrCat(this->GetCurrentBinaryDirectory(),
-                 "/CMakeFiles/CMakeDirectoryInformation.cmake"_s);
+                 "/CMakeFiles/CMakeDirectoryInformation.配置脚本"_s);
       int result;
       if (!ftc->Compare(internalDependFile, dirInfoFile, &result) ||
           result < 0) {
@@ -1547,7 +1547,7 @@ bool cmLocalUnixMakefileGenerator3::UpdateDependencies(
       // cmDependsC::Check() fills the vector validDependencies() with the
       // dependencies for those files where they are still valid, i.e.
       // neither the files themselves nor any files they depend on have
-      // changed. We don't do that if the CMakeDirectoryInformation.cmake
+      // changed. We don't do that if the CMakeDirectoryInformation.配置脚本
       // file has changed, because then potentially all dependencies have
       // changed. This information is given later on to cmDependsC, which
       // then only rescans the files where it did not get valid dependencies
@@ -1611,7 +1611,7 @@ bool cmLocalUnixMakefileGenerator3::UpdateDependencies(
 
       // Open the cmake dependency tracking file.  This should not be
       // copy-if-different because dependencies are re-scanned when it is
-      // older than the DependInfo.cmake.
+      // older than the DependInfo.配置脚本.
       cmGeneratedFileStream internalRuleFileStream(
         internalDepFile, false, this->GlobalGenerator->GetMakefileEncoding());
       if (!internalRuleFileStream) {
@@ -1640,7 +1640,7 @@ bool cmLocalUnixMakefileGenerator3::ScanDependencies(
   {
     std::string dirInfoFile =
       cmStrCat(this->GetCurrentBinaryDirectory(),
-               "/CMakeFiles/CMakeDirectoryInformation.cmake"_s);
+               "/CMakeFiles/CMakeDirectoryInformation.配置脚本"_s);
     if (mf->ReadListFile(dirInfoFile) &&
         !cmSystemTools::GetErrorOccurredFlag()) {
       haveDirectoryInfo = true;
@@ -1679,7 +1679,7 @@ bool cmLocalUnixMakefileGenerator3::ScanDependencies(
 
   // Open the cmake dependency tracking file.  This should not be
   // copy-if-different because dependencies are re-scanned when it is
-  // older than the DependInfo.cmake.
+  // older than the DependInfo.配置脚本.
   cmGeneratedFileStream internalRuleFileStream(
     internalDependFile, false, this->GlobalGenerator->GetMakefileEncoding());
   if (!internalRuleFileStream) {
@@ -1943,7 +1943,7 @@ void cmLocalUnixMakefileGenerator3::WriteLocalAllRules(
                                              cmOutputConverter::SHELL));
       commands.push_back(rescanRule);
     }
-    std::string cmakefileName = "CMakeFiles/Makefile.cmake";
+    std::string cmakefileName = "CMakeFiles/Makefile.配置脚本";
     {
       std::string runRule = cmStrCat(
         "$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) "_s,

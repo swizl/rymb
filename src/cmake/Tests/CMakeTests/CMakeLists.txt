@@ -2,11 +2,11 @@ set(CMAKE_EXECUTABLE "${CMake_BIN_DIR}/cmake")
 
 
 macro(AddCMakeTest TestName PreArgs)
-  configure_file("${CMAKE_CURRENT_SOURCE_DIR}/${TestName}Test.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/${TestName}Test.cmake" @ONLY)
+  configure_file("${CMAKE_CURRENT_SOURCE_DIR}/${TestName}Test.配置脚本.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/${TestName}Test.配置脚本" @ONLY)
   add_test(NAME CMake.${TestName}
     COMMAND ${CMAKE_EXECUTABLE} ${PreArgs}
-    -P "${CMAKE_CURRENT_BINARY_DIR}/${TestName}Test.cmake" ${ARGN})
+    -P "${CMAKE_CURRENT_BINARY_DIR}/${TestName}Test.配置脚本" ${ARGN})
 endmacro()
 
 

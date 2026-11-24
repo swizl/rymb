@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24...3.28)
 project(cxx_modules_try_run CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 try_run(can_run_modules_result can_compile_modules
   SOURCES_TYPE CXX_MODULE

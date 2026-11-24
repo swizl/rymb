@@ -15,8 +15,8 @@ set_property(
   PROPERTY SYMBOLIC 1
   )
 
-configure_file(${MacRuntimePath_SOURCE_DIR}/InitialCache.cmake.in
-               ${MacRuntimePath_BINARY_DIR}/InitialCache.cmake @ONLY)
+configure_file(${MacRuntimePath_SOURCE_DIR}/InitialCache.配置脚本.in
+               ${MacRuntimePath_BINARY_DIR}/InitialCache.配置脚本 @ONLY)
 
 get_property(_isMultiConfig GLOBAL PROPERTY GENERATOR_IS_MULTI_CONFIG)
 if(_isMultiConfig)
@@ -42,7 +42,7 @@ add_custom_command(
     --build-generator ${CMAKE_GENERATOR}
     --build-generator-platform "${CMAKE_GENERATOR_PLATFORM}"
     --build-generator-toolset "${CMAKE_GENERATOR_TOOLSET}"
-    --build-options -C${MacRuntimePath_BINARY_DIR}/InitialCache.cmake
+    --build-options -C${MacRuntimePath_BINARY_DIR}/InitialCache.配置脚本
   VERBATIM
   )
 add_custom_target(ExportTarget ALL DEPENDS ${MacRuntimePath_BINARY_DIR}/ExportProject)
@@ -64,7 +64,7 @@ add_custom_command(
    --build-generator ${CMAKE_GENERATOR}
    --build-generator-platform "${CMAKE_GENERATOR_PLATFORM}"
    --build-generator-toolset "${CMAKE_GENERATOR_TOOLSET}"
-   --build-options -C${MacRuntimePath_BINARY_DIR}/InitialCache.cmake
+   --build-options -C${MacRuntimePath_BINARY_DIR}/InitialCache.配置脚本
   VERBATIM
   )
 add_custom_target(ImportTarget ALL DEPENDS ${MacRuntimePath_BINARY_DIR}/ImportProject)

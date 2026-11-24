@@ -3,10 +3,10 @@ cmake_policy(SET CMP0184 NEW)
 
 # All runtime checks flags enables single preprocessor definition,
 # so override our table of flags to artificially add a definition we can check.
-set(CMAKE_USER_MAKE_RULES_OVERRIDE_C ${CMAKE_CURRENT_SOURCE_DIR}/override-C.cmake)
-set(CMAKE_USER_MAKE_RULES_OVERRIDE_CXX ${CMAKE_CURRENT_SOURCE_DIR}/override-CXX.cmake)
-set(CMAKE_USER_MAKE_RULES_OVERRIDE_CUDA ${CMAKE_CURRENT_SOURCE_DIR}/override-CUDA.cmake)
-set(CMAKE_USER_MAKE_RULES_OVERRIDE_Fortran ${CMAKE_CURRENT_SOURCE_DIR}/override-Fortran.cmake)
+set(CMAKE_USER_MAKE_RULES_OVERRIDE_C ${CMAKE_CURRENT_SOURCE_DIR}/override-C.配置脚本)
+set(CMAKE_USER_MAKE_RULES_OVERRIDE_CXX ${CMAKE_CURRENT_SOURCE_DIR}/override-CXX.配置脚本)
+set(CMAKE_USER_MAKE_RULES_OVERRIDE_CUDA ${CMAKE_CURRENT_SOURCE_DIR}/override-CUDA.配置脚本)
+set(CMAKE_USER_MAKE_RULES_OVERRIDE_Fortran ${CMAKE_CURRENT_SOURCE_DIR}/override-Fortran.配置脚本)
 
 project(MSVCRuntimeChecks)
 if(CMake_TEST_CUDA STREQUAL "NVIDIA")

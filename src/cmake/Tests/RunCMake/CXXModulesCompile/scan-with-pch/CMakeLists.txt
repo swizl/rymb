@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.28)
 project(cxx_modules_scan_with_pch CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 add_executable(simple)
 target_sources(simple

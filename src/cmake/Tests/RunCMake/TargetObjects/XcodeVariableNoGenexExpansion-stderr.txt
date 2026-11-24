@@ -1,4 +1,4 @@
-CMake Error at XcodeVariableNoGenexExpansion\.cmake:9 \(file\):
+CMake Error at XcodeVariableNoGenexExpansion\.配置脚本:9 \(file\):
   Error evaluating generator expression:
 
     \$\<TARGET_OBJECTS:A\>

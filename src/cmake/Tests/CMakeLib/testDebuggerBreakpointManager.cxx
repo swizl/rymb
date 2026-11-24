@@ -215,14 +215,14 @@ static bool testBreakpointCaseMismatch_SourceLoadedFirst()
   TempDirGuard guard;
   guard.Path = tempDir;
 
-  std::string createdFile = tempDir + "/TestCase.cmake";
+  std::string createdFile = tempDir + "/TestCase.配置脚本";
   {
     cmsys::ofstream f(createdFile.c_str());
   }
 
   std::string canonicalPath =
     cmSystemTools::ToNormalizedPathOnDisk(createdFile);
-  std::string lowerFile = tempDir + "/testcase.cmake";
+  std::string lowerFile = tempDir + "/testcase.配置脚本";
   std::string normalizedLower =
     cmSystemTools::ToNormalizedPathOnDisk(lowerFile);
 
@@ -275,14 +275,14 @@ static bool testBreakpointCaseMismatch_BreakpointsSetFirst()
   TempDirGuard guard;
   guard.Path = tempDir;
 
-  std::string createdFile = tempDir + "/TestCase.cmake";
+  std::string createdFile = tempDir + "/TestCase.配置脚本";
   {
     cmsys::ofstream f(createdFile.c_str());
   }
 
   std::string canonicalPath =
     cmSystemTools::ToNormalizedPathOnDisk(createdFile);
-  std::string lowerFile = tempDir + "/testcase.cmake";
+  std::string lowerFile = tempDir + "/testcase.配置脚本";
   std::string normalizedLower =
     cmSystemTools::ToNormalizedPathOnDisk(lowerFile);
 
@@ -346,14 +346,14 @@ static bool testGetBreakpoints_CaseMismatch()
   TempDirGuard guard;
   guard.Path = tempDir;
 
-  std::string createdFile = tempDir + "/TestCase.cmake";
+  std::string createdFile = tempDir + "/TestCase.配置脚本";
   {
     cmsys::ofstream f(createdFile.c_str());
   }
 
   std::string canonicalPath =
     cmSystemTools::ToNormalizedPathOnDisk(createdFile);
-  std::string lowerFile = tempDir + "/testcase.cmake";
+  std::string lowerFile = tempDir + "/testcase.配置脚本";
   std::string normalizedLower =
     cmSystemTools::ToNormalizedPathOnDisk(lowerFile);
 

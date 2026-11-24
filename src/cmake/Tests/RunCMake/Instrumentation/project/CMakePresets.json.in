@@ -15,7 +15,7 @@
       },
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "INSTRUMENT_COMMAND_FILE": "cmake-command-workflow.cmake"
+        "INSTRUMENT_COMMAND_FILE": "cmake-command-workflow.配置脚本"
       },
       "generator" : "@RunCMake_GENERATOR@"
     }

@@ -1,0 +1,8 @@
+file(READ "${RunCMake_TEST_BINARY_DIR}/cmake_install.配置脚本" install_script)
+
+if (NOT install_script MATCHES [[include\("[^)]*/CMakeFiles/install-bmi-generic-args\.dir/install-cxx-module-bmi-[^.]*\.配置脚本" OPTIONAL\)]])
+  list(APPEND RunCMake_TEST_FAILED
+    "Could not find BMI install script inclusion")
+endif ()
+
+string(REPLACE ";" "; " RunCMake_TEST_FAILED "${RunCMake_TEST_FAILED}")

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(RerunMocPlugin)
-include("../AutogenCoreTest.cmake")
+include("../AutogenCoreTest.配置脚本")
 
 # Tests Q_PLUGIN_METADATA and CMAKE_AUTOMOC_DEPEND_FILTERS
 # json file change detection

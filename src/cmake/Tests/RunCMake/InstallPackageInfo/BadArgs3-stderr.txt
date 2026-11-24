@@ -1,4 +1,4 @@
-CMake Error at BadArgs3\.cmake:[0-9]+ \(install\):
+CMake Error at BadArgs3\.配置脚本:[0-9]+ \(install\):
   install PACKAGE_INFO given invalid argument:
 
     APPENDIX: missing required value
@@ -6,7 +6,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 
 
-CMake Error at BadArgs3\.cmake:[0-9]+ \(install\):
+CMake Error at BadArgs3\.配置脚本:[0-9]+ \(install\):
   install PACKAGE_INFO given invalid argument:
 
     VERSION: missing required value
@@ -14,7 +14,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 
 
-CMake Error at BadArgs3\.cmake:[0-9]+ \(install\):
+CMake Error at BadArgs3\.配置脚本:[0-9]+ \(install\):
   install PACKAGE_INFO given invalid argument:
 
     COMPAT_VERSION: missing required value
@@ -22,7 +22,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 
 
-CMake Error at BadArgs3\.cmake:[0-9]+ \(install\):
+CMake Error at BadArgs3\.配置脚本:[0-9]+ \(install\):
   install PACKAGE_INFO given invalid argument:
 
     VERSION_SCHEMA: missing required value
@@ -30,7 +30,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 
 
-CMake Error at BadArgs3\.cmake:[0-9]+ \(install\):
+CMake Error at BadArgs3\.配置脚本:[0-9]+ \(install\):
   install PACKAGE_INFO given invalid argument:
 
     LICENSE: missing required value
@@ -38,7 +38,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 
 
-CMake Error at BadArgs3\.cmake:[0-9]+ \(install\):
+CMake Error at BadArgs3\.配置脚本:[0-9]+ \(install\):
   install PACKAGE_INFO given invalid argument:
 
     DEFAULT_LICENSE: missing required value
@@ -46,7 +46,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 
 
-CMake Error at BadArgs3\.cmake:[0-9]+ \(install\):
+CMake Error at BadArgs3\.配置脚本:[0-9]+ \(install\):
   install PACKAGE_INFO given invalid argument:
 
     DESCRIPTION: missing required value
@@ -54,7 +54,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 
 
-CMake Error at BadArgs3\.cmake:[0-9]+ \(install\):
+CMake Error at BadArgs3\.配置脚本:[0-9]+ \(install\):
   install PACKAGE_INFO given invalid argument:
 
     HOMEPAGE_URL: missing required value
@@ -62,7 +62,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 
 
-CMake Error at BadArgs3\.cmake:[0-9]+ \(install\):
+CMake Error at BadArgs3\.配置脚本:[0-9]+ \(install\):
   install PACKAGE_INFO given invalid argument:
 
     DEFAULT_TARGETS: missing required value
@@ -70,7 +70,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 
 
-CMake Error at BadArgs3\.cmake:[0-9]+ \(install\):
+CMake Error at BadArgs3\.配置脚本:[0-9]+ \(install\):
   install PACKAGE_INFO given invalid argument:
 
     DEFAULT_CONFIGURATIONS: missing required value
@@ -78,7 +78,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 
 
-CMake Error at BadArgs3\.cmake:[0-9]+ \(install\):
+CMake Error at BadArgs3\.配置脚本:[0-9]+ \(install\):
   install PACKAGE_INFO given invalid argument:
 
     PROJECT: missing required value
@@ -86,7 +86,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 
 
-CMake Error at BadArgs3\.cmake:[0-9]+ \(install\):
+CMake Error at BadArgs3\.配置脚本:[0-9]+ \(install\):
   install PACKAGE_INFO given invalid arguments:
 
     DEFAULT_LICENSE: empty string not allowed

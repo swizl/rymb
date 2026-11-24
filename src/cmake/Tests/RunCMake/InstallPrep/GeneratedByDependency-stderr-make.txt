@@ -1,4 +1,4 @@
-^CMake Warning \(author\) at GeneratedByDependency\.cmake:[0-9]+ \(add_library\):
+^CMake Warning \(author\) at GeneratedByDependency\.配置脚本:[0-9]+ \(add_library\):
   Target "generated_headers" installs file
 
     [^

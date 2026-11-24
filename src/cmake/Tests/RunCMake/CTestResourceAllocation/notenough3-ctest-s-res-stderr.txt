@@ -17,5 +17,5 @@ Resource spec file:
   [^
 ]*/Tests/RunCMake/CTestResourceAllocation/resspec\.json
 CMake Error at [^
-]*/Tests/RunCMake/CTestResourceAllocation/notenough3-ctest-s-res/test\.cmake:[0-9]+ \(message\):
+]*/Tests/RunCMake/CTestResourceAllocation/notenough3-ctest-s-res/test\.配置脚本:[0-9]+ \(message\):
   Tests did not pass$

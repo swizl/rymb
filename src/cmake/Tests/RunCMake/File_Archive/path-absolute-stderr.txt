@@ -3,7 +3,7 @@ CMake Error: Current file:
   [^
 ]*/Tests/RunCMake/File_Archive/path-absolute-build/SHOULD_NOT_EXIST_ABS\.txt
 CMake Error at [^
-]*/Tests/RunCMake/File_Archive/path-absolute\.cmake:[0-9]+ \(file\):
+]*/Tests/RunCMake/File_Archive/path-absolute\.配置脚本:[0-9]+ \(file\):
   file failed to extract:
 
     [^

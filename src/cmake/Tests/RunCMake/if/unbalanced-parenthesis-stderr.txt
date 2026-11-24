@@ -1,4 +1,4 @@
-CMake Error at unbalanced-parenthesis\.cmake:[0-9]+ \(if\):
+CMake Error at unbalanced-parenthesis\.配置脚本:[0-9]+ \(if\):
   if given arguments:
 
     "\("

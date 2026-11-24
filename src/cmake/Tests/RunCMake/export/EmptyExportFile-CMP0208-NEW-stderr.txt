@@ -1,4 +1,4 @@
-CMake Error at EmptyExportFile-CMP0208-NEW\.cmake:[0-9]+ \(export\):
+CMake Error at EmptyExportFile-CMP0208-NEW\.配置脚本:[0-9]+ \(export\):
   export EXPORT given invalid argument:
 
     FILE: missing required value

@@ -1,4 +1,4 @@
-^CMake Error at InvalidArgumentInParenthesis\.cmake:1 \(if\):
+^CMake Error at InvalidArgumentInParenthesis\.配置脚本:1 \(if\):
   if given arguments:
 
     "\(" "A" "B" "\)" "OR" "\(" "" "\)"

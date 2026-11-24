@@ -1,2 +1,2 @@
-CMake Error at .*/Modules/ExternalData\.cmake:[0-9]+ \(message\):
+CMake Error at .*/Modules/ExternalData\.配置脚本:[0-9]+ \(message\):
   ExternalData_LINK_MODE must be `auto` or list: hardlink, symlink, copy

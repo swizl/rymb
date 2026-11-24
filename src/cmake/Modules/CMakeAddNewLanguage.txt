@@ -14,13 +14,13 @@ the API is internal we will not necessarily include notice of any
 changes in release notes.
 
 
-CMakeDetermine(LANG)Compiler.cmake  -> this should find the compiler for LANG and configure CMake(LANG)Compiler.cmake.in
+CMakeDetermine(LANG)Compiler.配置脚本  -> this should find the compiler for LANG and configure CMake(LANG)Compiler.配置脚本.in
 
-CMake(LANG)Compiler.cmake.in  -> used by CMakeDetermine(LANG)Compiler.cmake
+CMake(LANG)Compiler.配置脚本.in  -> used by CMakeDetermine(LANG)Compiler.配置脚本
   This file is used to store compiler information and is copied down into try
   compile directories so that try compiles do not need to re-determine and test the LANG
 
-CMake(LANG)Information.cmake => set compiler configuration:
+CMake(LANG)Information.配置脚本 => set compiler configuration:
   CMAKE_(LANG)_CREATE_SHARED_LIBRARY
   CMAKE_(LANG)_CREATE_SHARED_MODULE
   CMAKE_(LANG)_CREATE_STATIC_LIBRARY
@@ -29,11 +29,11 @@ CMake(LANG)Information.cmake => set compiler configuration:
 
   CMAKE_(LANG)_USE_LINKER_INFORMATION
 
-CMakeTest(LANG)Compiler.cmake -> test the compiler and set:
+CMakeTest(LANG)Compiler.配置脚本 -> test the compiler and set:
   set(CMAKE_(LANG)_COMPILER_WORKS 1 CACHE INTERNAL "")
 
 
-If the variable CMAKE_(LANG)_USE_LINKER_INFORMATION has value TRUE, the file CMake(LANG)LinkerInformation.cmake
+If the variable CMAKE_(LANG)_USE_LINKER_INFORMATION has value TRUE, the file CMake(LANG)LinkerInformation.配置脚本
 should be defined.
 
-CMake(LANG)LinkerInformation.cmake  -> set up linker configuration for LANG.
+CMake(LANG)LinkerInformation.配置脚本  -> set up linker configuration for LANG.

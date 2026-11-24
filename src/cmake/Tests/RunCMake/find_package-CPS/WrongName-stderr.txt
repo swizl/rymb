@@ -1,4 +1,4 @@
-CMake Error at WrongName\.cmake:[0-9]+ \(find_package\):
+CMake Error at WrongName\.配置脚本:[0-9]+ \(find_package\):
   Could not find a configuration file for package "WrongName" that is
   compatible with requested version ""\.
 

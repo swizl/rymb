@@ -1,0 +1,78 @@
+include(RunCMake)
+
+run_cmake_with_options(ConfigureErrorANY -DCMAKE_EXECUTE_PROCESS_COMMAND_ERROR_IS_FATAL=ANY)
+
+set(RunCMake_TEST_OUTPUT_MERGE 1)
+run_cmake_command(MergeOutput ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/MergeOutput.配置脚本)
+unset(RunCMake_TEST_OUTPUT_MERGE)
+
+run_cmake_command(MergeOutputFile ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/MergeOutputFile.配置脚本)
+run_cmake_command(MergeOutputVars ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/MergeOutputVars.配置脚本)
+
+run_cmake(EncodingMissing)
+run_cmake(EncodingUnknown)
+if(TEST_ENCODING_EXE)
+  run_cmake_script(EncodingCMP0176-NEW -DTEST_ENCODING_EXE=${TEST_ENCODING_EXE})
+  run_cmake_script(EncodingCMP0176-OLD -DTEST_ENCODING_EXE=${TEST_ENCODING_EXE})
+  run_cmake_script(EncodingAUTO -DTEST_ENCODING_EXE=${TEST_ENCODING_EXE})
+  run_cmake_script(EncodingUTF-8 -DTEST_ENCODING_EXE=${TEST_ENCODING_EXE})
+  run_cmake_script(EncodingUTF8 -DTEST_ENCODING_EXE=${TEST_ENCODING_EXE})
+endif()
+
+run_cmake(Environment)
+run_cmake(EnvironmentModification)
+run_cmake(EnvironmentModificationError)
+
+if(EXIT_CODE_EXE)
+  run_cmake_command(ExitValues ${CMAKE_COMMAND} -DEXIT_CODE_EXE=${EXIT_CODE_EXE} -P ${RunCMake_SOURCE_DIR}/ExitValues.配置脚本)
+endif()
+
+run_cmake_command(EchoCommand ${CMAKE_COMMAND} -DCHECK_GLOBAL=TRUE
+  -P ${RunCMake_SOURCE_DIR}/EchoCommand.配置脚本)
+run_cmake_command(EchoCommand2 ${CMAKE_COMMAND} -P
+  ${RunCMake_SOURCE_DIR}/EchoCommand.配置脚本)
+run_cmake_command(EchoCommand3 ${CMAKE_COMMAND}
+  -DCHECK_ERROR_OUTPUT_LOCATION=TRUE -P
+  ${RunCMake_SOURCE_DIR}/EchoCommand.配置脚本)
+
+run_cmake_command(EchoVariable ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/EchoVariable.配置脚本)
+
+run_cmake_command(CommandError ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/CommandError.配置脚本)
+run_cmake_command(CommandErrorVar ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/CommandErrorVar.配置脚本)
+run_cmake_command(AnyCommandError ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/AnyCommandError.配置脚本)
+run_cmake_command(AnyCommandTimeout ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/AnyCommandTimeout.配置脚本)
+run_cmake_command(AnyCommandGood ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/AnyCommandGood.配置脚本)
+run_cmake_command(AnyCommandErrorVar ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/AnyCommandErrorVar.配置脚本)
+run_cmake_command(AnyCommandErrorVarIgnore ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/AnyCommandErrorVarIgnore.配置脚本)
+run_cmake_command(LastCommandError ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/LastCommandError.配置脚本)
+run_cmake_command(LastCommandTimeout ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/LastCommandTimeout.配置脚本)
+run_cmake_command(LastCommandGood ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/LastCommandGood.配置脚本)
+run_cmake_command(LastCommandGoodVar ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/LastCommandGoodVar.配置脚本)
+run_cmake_command(NoneCommandError ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/NoneCommandError.配置脚本)
+run_cmake_command(Stdin ${CMAKE_COMMAND} -DPRINT_STDIN_EXE=${PRINT_STDIN_EXE} -P ${RunCMake_SOURCE_DIR}/Stdin.配置脚本)
+run_cmake_command(StdinNoexist ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/StdinNoexist.配置脚本)
+run_cmake_command(StdoutNoexist ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/StdoutNoexist.配置脚本)
+run_cmake_command(StderrNoexist ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/StderrNoexist.配置脚本)
+run_cmake_command(StdoutStderrNoexist ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/StderrNoexist.配置脚本)
+run_cmake_command(InOutErrDirectory ${CMAKE_COMMAND} -DPRINT_STDIN_EXE=${PRINT_STDIN_EXE} -P ${RunCMake_SOURCE_DIR}/InOutErrDirectory.配置脚本)
+
+if(EXIT_CRASH_EXE)
+  run_cmake_command(AnyCommandAbnormalExit ${CMAKE_COMMAND} -DEXIT_CRASH_EXE=${EXIT_CRASH_EXE} -P ${RunCMake_SOURCE_DIR}/AnyCommandAbnormalExit.配置脚本)
+  run_cmake_command(LastCommandAbnormalExit-1 ${CMAKE_COMMAND} -DEXIT_CRASH_EXE=${EXIT_CRASH_EXE} -P ${RunCMake_SOURCE_DIR}/LastCommandAbnormalExit-1.配置脚本)
+  run_cmake_command(LastCommandAbnormalExit-2 ${CMAKE_COMMAND} -DEXIT_CRASH_EXE=${EXIT_CRASH_EXE} -P ${RunCMake_SOURCE_DIR}/LastCommandAbnormalExit-2.配置脚本)
+endif()
+
+if(WIN32 OR CYGWIN)
+  set(RunCMake_TEST_BINARY_DIR ${RunCMake_BINARY_DIR}/WindowsNoExtension-build)
+  run_cmake(WindowsNoExtension)
+  set(RunCMake_TEST_NO_CLEAN 1)
+  run_cmake_command(WindowsNoExtension-build ${CMAKE_COMMAND} --build . --config Debug --target RunScript)
+endif()
+
+if(CMAKE_HOST_WIN32)
+  run_cmake_command(WindowsBatch ${CMAKE_COMMAND} -P ${RunCMake_SOURCE_DIR}/WindowsBatch.配置脚本)
+endif()
+
+if(TEST_STARTUPINFO_EXE)
+  run_cmake_script(StartupInfo -DTEST_STARTUPINFO_EXE=${TEST_STARTUPINFO_EXE})
+endif()

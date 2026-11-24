@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(UicOnly)
-include("../AutogenGuiTest.cmake")
+include("../AutogenGuiTest.配置脚本")
 
 # Test AUTOUIC being enabled only
 add_executable(uicOnly main.cpp UicOnly.cpp)

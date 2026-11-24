@@ -1,1 +1,1 @@
-configure_file(../PreventConfigureFileDupBuildRule.cmake PreventTargetAliasesDupBuildRule.cmake @ONLY)
+configure_file(../PreventConfigureFileDupBuildRule.配置脚本 PreventTargetAliasesDupBuildRule.配置脚本 @ONLY)

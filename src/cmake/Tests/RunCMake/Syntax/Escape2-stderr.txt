@@ -1,7 +1,7 @@
-CMake Error at Escape2\.cmake:[0-9]+ \(message\):
+CMake Error at Escape2\.配置脚本:[0-9]+ \(message\):
   Syntax error in cmake code at
 
-    .*/Tests/RunCMake/Syntax/Escape2\.cmake:[0-9]+
+    .*/Tests/RunCMake/Syntax/Escape2\.配置脚本:[0-9]+
 
   when parsing string
 
@@ -9,5 +9,5 @@ CMake Error at Escape2\.cmake:[0-9]+ \(message\):
 
   Invalid character escape '\\' \(at end of input\)\.
 Call Stack \(most recent call first\):
-  Escape2\.cmake:[0-9]+ \(escape\)
+  Escape2\.配置脚本:[0-9]+ \(escape\)
   CMakeLists\.txt:3 \(include\)

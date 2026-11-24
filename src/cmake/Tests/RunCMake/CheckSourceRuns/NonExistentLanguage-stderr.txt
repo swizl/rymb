@@ -1,2 +1,2 @@
-CMake Error at .*CheckSourceRuns\.cmake:[0-9]+ \(message\):
+CMake Error at .*CheckSourceRuns\.配置脚本:[0-9]+ \(message\):
   check_source_runs: FAKE_LANG: unknown language\.

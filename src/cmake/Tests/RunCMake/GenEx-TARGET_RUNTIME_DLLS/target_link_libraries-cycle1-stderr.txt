@@ -1,4 +1,4 @@
-CMake Error at target_link_libraries-cycle1\.cmake:[0-9]+ \(target_link_libraries\):
+CMake Error at target_link_libraries-cycle1\.配置脚本:[0-9]+ \(target_link_libraries\):
   Error evaluating generator expression:
 
     \$<TARGET_RUNTIME_DLLS:lib1>

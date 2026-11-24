@@ -1,8 +1,8 @@
-^CMake Debug Log at FromPATHEnv\.cmake:[0-9]+ \(find_package\):
-  find_package considered the following paths for FindResolved\.cmake:
+^CMake Debug Log at FromPATHEnv\.配置脚本:[0-9]+ \(find_package\):
+  find_package considered the following paths for FindResolved\.配置脚本:
 
     [^
-]*/Modules/FindResolved\.cmake
+]*/Modules/FindResolved\.配置脚本
 
   The file was not found\.
 
@@ -74,9 +74,9 @@
   module:
 
     [^
-]*/Tests/RunCMake/find_package/FromPATHEnv-build/CMakeFiles/pkgRedirects/ResolvedConfig\.cmake
+]*/Tests/RunCMake/find_package/FromPATHEnv-build/CMakeFiles/pkgRedirects/ResolvedConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/FromPATHEnv-build/CMakeFiles/pkgRedirects/resolved-config\.cmake
+]*/Tests/RunCMake/find_package/FromPATHEnv-build/CMakeFiles/pkgRedirects/resolved-config\.配置脚本
     [^
 ]*/Tests/RunCMake/find_package/FromPATHEnv-build/CMakeFiles/pkgRedirects/lib/cps/Resolved\.cps
     [^
@@ -86,12 +86,12 @@
     [^
 ]*/Tests/RunCMake/find_package/FromPATHEnv-build/CMakeFiles/pkgRedirects/share/cps/resolved\.cps
     [^
-]*/Tests/RunCMake/find_package/PackageRoot/ResolvedConfig\.cmake
+]*/Tests/RunCMake/find_package/PackageRoot/ResolvedConfig\.配置脚本
 
   The file was found at
 
     [^
-]*/Tests/RunCMake/find_package/PackageRoot/ResolvedConfig\.cmake
+]*/Tests/RunCMake/find_package/PackageRoot/ResolvedConfig\.配置脚本
 
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)$

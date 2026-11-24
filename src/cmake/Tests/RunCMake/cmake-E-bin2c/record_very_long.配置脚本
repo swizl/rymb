@@ -1,0 +1,6 @@
+file(CONFIGURE
+  OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/very_long_executables.配置脚本"
+  CONTENT [==[set(generate_very_long [====[@GENERATE_VERY_LONG@]====])
+]==]
+  @ONLY
+  )

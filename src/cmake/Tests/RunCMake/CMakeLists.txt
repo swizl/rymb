@@ -36,7 +36,7 @@ macro(add_RunCMake_test test)
     -DRunCMake_BINARY_DIR=${CMAKE_CURRENT_BINARY_DIR}/${test}
     ${${test}_ARGS}
     ${TEST_ARGS}
-    -P "${CMAKE_CURRENT_SOURCE_DIR}/${Test_Dir}/RunCMakeTest.cmake"
+    -P "${CMAKE_CURRENT_SOURCE_DIR}/${Test_Dir}/RunCMakeTest.配置脚本"
     )
 endmacro()
 
@@ -56,14 +56,14 @@ function(add_RunCMake_test_group test types)
     # much system information so it is easier to set programs and environment
     # values here
     unset(${test}_${type}_FOUND_PREREQUIREMENTS)
-    if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${test}/${type}/Prerequirements.cmake")
-      include("${CMAKE_CURRENT_SOURCE_DIR}/${test}/${type}/Prerequirements.cmake")
+    if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${test}/${type}/Prerequirements.配置脚本")
+      include("${CMAKE_CURRENT_SOURCE_DIR}/${test}/${type}/Prerequirements.配置脚本")
     else()
       string(REGEX MATCH "^[^.]*" main_type "${type}")
-      include("${CMAKE_CURRENT_SOURCE_DIR}/${test}/${main_type}/Prerequirements.cmake")
+      include("${CMAKE_CURRENT_SOURCE_DIR}/${test}/${main_type}/Prerequirements.配置脚本")
     endif()
     get_test_prerequirements("${test}_${type}_FOUND_PREREQUIREMENTS"
-        "${TEST_CONFIG_DIR}/${type}_config.cmake")
+        "${TEST_CONFIG_DIR}/${type}_config.配置脚本")
 
     # only add the test if prerequirements are met
     if(${test}_${type}_FOUND_PREREQUIREMENTS)
@@ -79,8 +79,8 @@ function(add_RunCMake_test_group test types)
         -DRunCMake_SOURCE_DIR=${CMAKE_CURRENT_SOURCE_DIR}/${test}
         -DRunCMake_BINARY_DIR=${CMAKE_CURRENT_BINARY_DIR}/${type}/${test}
         ${TEST_ARGS}
-        -Dconfig_file=${TEST_CONFIG_DIR}/${type}_config.cmake
-        -P "${CMAKE_CURRENT_SOURCE_DIR}/${test}/RunCMakeTest.cmake"
+        -Dconfig_file=${TEST_CONFIG_DIR}/${type}_config.配置脚本
+        -P "${CMAKE_CURRENT_SOURCE_DIR}/${test}/RunCMakeTest.配置脚本"
         )
     endif()
   endforeach()
@@ -1831,5 +1831,5 @@ set_property(TEST RunCMake.MsvcCharsetDefines APPEND PROPERTY LABELS "CUDA")
 
 add_RunCMake_test(cmake-E-bin2c -DCMake_TEST_BIN2C_LARGE_FILE=${CMake_TEST_BIN2C_LARGE_FILE})
 if(CMake_TEST_BIN2C_LARGE_FILE)
-  set_property(TEST RunCMake.cmake-E-bin2c PROPERTY TIMEOUT ${CMAKE_LONG_TEST_TIMEOUT})
+  set_property(TEST RunCMake.配置脚本-E-bin2c PROPERTY TIMEOUT ${CMAKE_LONG_TEST_TIMEOUT})
 endif()

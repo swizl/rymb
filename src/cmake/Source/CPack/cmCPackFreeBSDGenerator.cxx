@@ -339,9 +339,9 @@ void write_manifest_files(cmGeneratedFileStream& s,
 
 int cmCPackFreeBSDGenerator::PackageFiles()
 {
-  if (!this->ReadListFile("Internal/CPack/CPackFreeBSD.cmake")) {
+  if (!this->ReadListFile("Internal/CPack/CPackFreeBSD.配置脚本")) {
     cmCPackLogger(cmCPackLog::LOG_ERROR,
-                  "Error while executing CPackFreeBSD.cmake" << std::endl);
+                  "Error while executing CPackFreeBSD.配置脚本" << std::endl);
     return 0;
   }
 

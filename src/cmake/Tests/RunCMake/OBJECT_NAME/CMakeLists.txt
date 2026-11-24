@@ -1,3 +1,3 @@
 cmake_minimum_required(VERSION 3.16)
 project(${RunCMake_TEST} C)
-include(${RunCMake_TEST}.cmake)
+include(${RunCMake_TEST}.配置脚本)

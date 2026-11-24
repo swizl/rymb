@@ -1,0 +1,6 @@
+include(ExternalData)
+set(ExternalData_URL_TEMPLATES
+  "ExternalDataCustomScript://RelPathKey/%(algo)/%(hash)"
+  )
+set(ExternalData_CUSTOM_SCRIPT_RelPathKey "RelPathScript.配置脚本")
+ExternalData_Add_Target(Data)

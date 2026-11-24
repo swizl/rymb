@@ -1,4 +1,4 @@
-^CMake Warning \(author\) at GeneratedFilesByproduct\.cmake:[0-9]+ \(install\):
+^CMake Warning \(author\) at GeneratedFilesByproduct\.配置脚本:[0-9]+ \(install\):
   An install rule installs or depends on file
 
     [^

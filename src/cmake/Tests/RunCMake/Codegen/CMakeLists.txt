@@ -4,4 +4,4 @@ project(${RunCMake_TEST} LANGUAGES C)
 # This value is read from the top level CMakeLists.txt
 cmake_policy(SET CMP0171 NEW)
 
-include(${RunCMake_TEST}.cmake)
+include(${RunCMake_TEST}.配置脚本)

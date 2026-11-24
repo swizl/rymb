@@ -2,7 +2,7 @@
 CMake Error: Current file:
   \.\./SHOULD_NOT_EXIST\.txt
 CMake Error at [^
-]*/Tests/RunCMake/File_Archive/path-traversal\.cmake:[0-9]+ \(file\):
+]*/Tests/RunCMake/File_Archive/path-traversal\.配置脚本:[0-9]+ \(file\):
   file failed to extract:
 
     [^

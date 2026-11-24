@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 4.4)
 project(cxx_modules_install_prep_bmi CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 add_library(install_bmi STATIC)
 target_sources(install_bmi

@@ -30,4 +30,4 @@ generate_export_header(shared_variant
 
 target_compile_definitions(static_variant PUBLIC MYPREFIX_LIBSHARED_AND_STATIC_STATIC_DEFINE)
 
-export(TARGETS shared_variant static_variant FILE Targets.cmake)
+export(TARGETS shared_variant static_variant FILE Targets.配置脚本)

@@ -1,4 +1,4 @@
-CMake Warning \(policy\) at CMP0156-Common\.cmake:[0-9]+ \(add_library\):
+CMake Warning \(policy\) at CMP0156-Common\.配置脚本:[0-9]+ \(add_library\):
   Policy CMP0156 is not set: De-duplicate libraries on link lines based on
   linker capabilities\.  Run "cmake --help-policy CMP0156" for policy details\.
   Use the cmake_policy command to set the policy and suppress this warning\.
@@ -6,12 +6,12 @@ CMake Warning \(policy\) at CMP0156-Common\.cmake:[0-9]+ \(add_library\):
   Since the policy is not set, legacy libraries de-duplication strategy will
   be applied\.
 Call Stack \(most recent call first\):
-  CMP0156-WARN\.cmake:[0-9]+ \(include\)
+  CMP0156-WARN\.配置脚本:[0-9]+ \(include\)
   CMakeLists\.txt:[0-9]+ \(include\)
 This warning is for project developers\.  Use -Wno-author or -Wno-policy to
 suppress it\.
 
-CMake Warning \(policy\) at CMP0156-Common\.cmake:[0-9]+ \(add_library\):
+CMake Warning \(policy\) at CMP0156-Common\.配置脚本:[0-9]+ \(add_library\):
   Policy CMP0156 is not set: De-duplicate libraries on link lines based on
   linker capabilities\.  Run "cmake --help-policy CMP0156" for policy details\.
   Use the cmake_policy command to set the policy and suppress this warning\.
@@ -19,12 +19,12 @@ CMake Warning \(policy\) at CMP0156-Common\.cmake:[0-9]+ \(add_library\):
   Since the policy is not set, legacy libraries de-duplication strategy will
   be applied\.
 Call Stack \(most recent call first\):
-  CMP0156-WARN\.cmake:[0-9]+ \(include\)
+  CMP0156-WARN\.配置脚本:[0-9]+ \(include\)
   CMakeLists\.txt:[0-9]+ \(include\)
 This warning is for project developers\.  Use -Wno-author or -Wno-policy to
 suppress it\.
 
-CMake Warning \(policy\) at CMP0156-Common\.cmake:[0-9]+ \(add_executable\):
+CMake Warning \(policy\) at CMP0156-Common\.配置脚本:[0-9]+ \(add_executable\):
   Policy CMP0156 is not set: De-duplicate libraries on link lines based on
   linker capabilities\.  Run "cmake --help-policy CMP0156" for policy details\.
   Use the cmake_policy command to set the policy and suppress this warning\.
@@ -32,7 +32,7 @@ CMake Warning \(policy\) at CMP0156-Common\.cmake:[0-9]+ \(add_executable\):
   Since the policy is not set, legacy libraries de-duplication strategy will
   be applied\.
 Call Stack \(most recent call first\):
-  CMP0156-WARN\.cmake:[0-9]+ \(include\)
+  CMP0156-WARN\.配置脚本:[0-9]+ \(include\)
   CMakeLists\.txt:[0-9]+ \(include\)
 This warning is for project developers\.  Use -Wno-author or -Wno-policy to
 suppress it\.

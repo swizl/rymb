@@ -1,4 +1,4 @@
-^CMake Warning at cmake_install\.cmake:[0-9]+ \(file\):
+^CMake Warning at cmake_install\.配置脚本:[0-9]+ \(file\):
   Dependency librpath_search_postexcluded\.so found in search directory:
 
     [^
@@ -6,9 +6,9 @@
 
   See file\(GET_RUNTIME_DEPENDENCIES\) documentation for more information\.
 Call Stack \(most recent call first\):
-  cmake_install\.cmake:[0-9]+ \(exec_get_runtime_dependencies\)
+  cmake_install\.配置脚本:[0-9]+ \(exec_get_runtime_dependencies\)
 
-*CMake Warning at cmake_install\.cmake:[0-9]+ \(file\):
+*CMake Warning at cmake_install\.配置脚本:[0-9]+ \(file\):
   Dependency librpath_search\.so found in search directory:
 
     [^
@@ -16,9 +16,9 @@ Call Stack \(most recent call first\):
 
   See file\(GET_RUNTIME_DEPENDENCIES\) documentation for more information\.
 Call Stack \(most recent call first\):
-  cmake_install\.cmake:[0-9]+ \(exec_get_runtime_dependencies\)
+  cmake_install\.配置脚本:[0-9]+ \(exec_get_runtime_dependencies\)
 
-*CMake Warning at cmake_install\.cmake:[0-9]+ \(file\):
+*CMake Warning at cmake_install\.配置脚本:[0-9]+ \(file\):
   Dependency librunpath_search_postexcluded\.so found in search directory:
 
     [^
@@ -26,9 +26,9 @@ Call Stack \(most recent call first\):
 
   See file\(GET_RUNTIME_DEPENDENCIES\) documentation for more information\.
 Call Stack \(most recent call first\):
-  cmake_install\.cmake:[0-9]+ \(exec_get_runtime_dependencies\)
+  cmake_install\.配置脚本:[0-9]+ \(exec_get_runtime_dependencies\)
 
-*CMake Warning at cmake_install\.cmake:[0-9]+ \(file\):
+*CMake Warning at cmake_install\.配置脚本:[0-9]+ \(file\):
   Dependency librunpath_search\.so found in search directory:
 
     [^
@@ -36,9 +36,9 @@ Call Stack \(most recent call first\):
 
   See file\(GET_RUNTIME_DEPENDENCIES\) documentation for more information\.
 Call Stack \(most recent call first\):
-  cmake_install\.cmake:[0-9]+ \(exec_get_runtime_dependencies\)
+  cmake_install\.配置脚本:[0-9]+ \(exec_get_runtime_dependencies\)
 
-*CMake Warning at cmake_install\.cmake:[0-9]+ \(file\):
+*CMake Warning at cmake_install\.配置脚本:[0-9]+ \(file\):
   Dependency librpath_search_postexcluded\.so found in search directory:
 
     [^
@@ -46,9 +46,9 @@ Call Stack \(most recent call first\):
 
   See file\(GET_RUNTIME_DEPENDENCIES\) documentation for more information\.
 Call Stack \(most recent call first\):
-  cmake_install\.cmake:[0-9]+ \(exec_get_runtime_dependencies\)
+  cmake_install\.配置脚本:[0-9]+ \(exec_get_runtime_dependencies\)
 
-*CMake Warning at cmake_install\.cmake:[0-9]+ \(file\):
+*CMake Warning at cmake_install\.配置脚本:[0-9]+ \(file\):
   Dependency librpath_search\.so found in search directory:
 
     [^
@@ -56,9 +56,9 @@ Call Stack \(most recent call first\):
 
   See file\(GET_RUNTIME_DEPENDENCIES\) documentation for more information\.
 Call Stack \(most recent call first\):
-  cmake_install\.cmake:[0-9]+ \(exec_get_runtime_dependencies\)
+  cmake_install\.配置脚本:[0-9]+ \(exec_get_runtime_dependencies\)
 
-*CMake Warning at cmake_install\.cmake:[0-9]+ \(file\):
+*CMake Warning at cmake_install\.配置脚本:[0-9]+ \(file\):
   Dependency librunpath_search_postexcluded\.so found in search directory:
 
     [^
@@ -66,9 +66,9 @@ Call Stack \(most recent call first\):
 
   See file\(GET_RUNTIME_DEPENDENCIES\) documentation for more information\.
 Call Stack \(most recent call first\):
-  cmake_install\.cmake:[0-9]+ \(exec_get_runtime_dependencies\)
+  cmake_install\.配置脚本:[0-9]+ \(exec_get_runtime_dependencies\)
 
-*CMake Warning at cmake_install\.cmake:[0-9]+ \(file\):
+*CMake Warning at cmake_install\.配置脚本:[0-9]+ \(file\):
   Dependency librunpath_search\.so found in search directory:
 
     [^
@@ -76,9 +76,9 @@ Call Stack \(most recent call first\):
 
   See file\(GET_RUNTIME_DEPENDENCIES\) documentation for more information\.
 Call Stack \(most recent call first\):
-  cmake_install\.cmake:[0-9]+ \(exec_get_runtime_dependencies\)
+  cmake_install\.配置脚本:[0-9]+ \(exec_get_runtime_dependencies\)
 
-*CMake Warning at cmake_install\.cmake:[0-9]+ \(file\):
+*CMake Warning at cmake_install\.配置脚本:[0-9]+ \(file\):
   Dependency librpath_search_postexcluded\.so found in search directory:
 
     [^
@@ -86,9 +86,9 @@ Call Stack \(most recent call first\):
 
   See file\(GET_RUNTIME_DEPENDENCIES\) documentation for more information\.
 Call Stack \(most recent call first\):
-  cmake_install\.cmake:[0-9]+ \(exec_get_runtime_dependencies\)
+  cmake_install\.配置脚本:[0-9]+ \(exec_get_runtime_dependencies\)
 
-*CMake Warning at cmake_install\.cmake:[0-9]+ \(file\):
+*CMake Warning at cmake_install\.配置脚本:[0-9]+ \(file\):
   Dependency librpath_search\.so found in search directory:
 
     [^
@@ -96,9 +96,9 @@ Call Stack \(most recent call first\):
 
   See file\(GET_RUNTIME_DEPENDENCIES\) documentation for more information\.
 Call Stack \(most recent call first\):
-  cmake_install\.cmake:[0-9]+ \(exec_get_runtime_dependencies\)
+  cmake_install\.配置脚本:[0-9]+ \(exec_get_runtime_dependencies\)
 
-*CMake Warning at cmake_install\.cmake:[0-9]+ \(file\):
+*CMake Warning at cmake_install\.配置脚本:[0-9]+ \(file\):
   Dependency librunpath_search_postexcluded\.so found in search directory:
 
     [^
@@ -106,9 +106,9 @@ Call Stack \(most recent call first\):
 
   See file\(GET_RUNTIME_DEPENDENCIES\) documentation for more information\.
 Call Stack \(most recent call first\):
-  cmake_install\.cmake:[0-9]+ \(exec_get_runtime_dependencies\)
+  cmake_install\.配置脚本:[0-9]+ \(exec_get_runtime_dependencies\)
 
-*CMake Warning at cmake_install\.cmake:[0-9]+ \(file\):
+*CMake Warning at cmake_install\.配置脚本:[0-9]+ \(file\):
   Dependency librunpath_search\.so found in search directory:
 
     [^
@@ -116,4 +116,4 @@ Call Stack \(most recent call first\):
 
   See file\(GET_RUNTIME_DEPENDENCIES\) documentation for more information\.
 Call Stack \(most recent call first\):
-  cmake_install\.cmake:[0-9]+ \(exec_get_runtime_dependencies\)$
+  cmake_install\.配置脚本:[0-9]+ \(exec_get_runtime_dependencies\)$

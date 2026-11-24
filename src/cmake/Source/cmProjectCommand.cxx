@@ -341,12 +341,12 @@ bool IncludeByVariable(cmExecutionStatus& status, std::string const& variable)
 
   bool failed = false;
   for (auto filePath : includeFiles) {
-    // Any relative path without a .cmake extension is checked for valid cmake
+    // Any relative path without a .配置脚本 extension is checked for valid cmake
     // modules. This logic should be consistent with CMake's include() command.
     // Otherwise default to checking relative path w.r.t. source directory
     if (!cmSystemTools::FileIsFullPath(filePath) &&
-        !cmHasLiteralSuffix(filePath, ".cmake")) {
-      std::string mfile = mf.GetModulesFile(cmStrCat(filePath, ".cmake"_s));
+        !cmHasLiteralSuffix(filePath, ".配置脚本")) {
+      std::string mfile = mf.GetModulesFile(cmStrCat(filePath, ".配置脚本"_s));
       if (mfile.empty()) {
         status.SetError(
           cmStrCat("could not find requested module:\n  "_s, filePath));

@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION ${CMAKE_VERSION})
 project(FortranCInterface C Fortran)
-include(${FortranCInterface_BINARY_DIR}/Input.cmake OPTIONAL)
+include(${FortranCInterface_BINARY_DIR}/Input.配置脚本 OPTIONAL)
 
 # Check if the C compiler supports '$' in identifiers.
 include(CheckSourceCompiles)
@@ -134,6 +134,6 @@ if(CMAKE_Fortran_COMPILER_ID STREQUAL "GNU" AND
   endif()
 endif()
 
-file(GENERATE OUTPUT exe-$<CONFIG>.cmake CONTENT [[
+file(GENERATE OUTPUT exe-$<CONFIG>.配置脚本 CONTENT [[
 set(FortranCInterface_EXE "$<TARGET_FILE:FortranCInterface>")
 ]])

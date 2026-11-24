@@ -98,7 +98,7 @@ bool cmIncludeCommand(std::vector<std::string> const& args,
   if (!cmSystemTools::FileIsFullPath(fname)) {
     bool system = false;
     // Not a path. Maybe module.
-    std::string module = cmStrCat(fname, ".cmake"_s);
+    std::string module = cmStrCat(fname, ".配置脚本"_s);
     std::string mfile = status.GetMakefile().GetModulesFile(module, system);
 
     if (system) {

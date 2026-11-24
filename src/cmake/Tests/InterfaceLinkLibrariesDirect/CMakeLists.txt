@@ -1,15 +1,15 @@
 cmake_minimum_required(VERSION 3.21)
 project(InterfaceLinkLibrariesDirect C)
 
-include(testStaticLibPlugin.cmake)
+include(testStaticLibPlugin.配置脚本)
 add_executable(InterfaceLinkLibrariesDirect main.c)
 target_link_libraries(InterfaceLinkLibrariesDirect PRIVATE testStaticLibWithPlugin)
 
-include(testSharedLibWithHelper.cmake)
+include(testSharedLibWithHelper.配置脚本)
 add_executable(UseSharedLibWithHelper UseSharedLibWithHelper.c)
 target_link_libraries(UseSharedLibWithHelper PRIVATE testSharedLibWithHelper testSharedLibHelperExclude)
 
-include(testExeWithPluginHelper.cmake)
+include(testExeWithPluginHelper.配置脚本)
 add_library(ExePlugin MODULE ExePlugin.c)
 target_link_libraries(ExePlugin PRIVATE testExeWithPluginHelper testExePluginHelperExclude)
 

@@ -1,0 +1,2 @@
+set(CPACK_PROJECT_CONFIG_FILE "missing.配置脚本")
+include(CPack)

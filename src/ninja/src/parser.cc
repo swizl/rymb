@@ -23,7 +23,7 @@ bool Parser::Load(const string& filename, string* err, Lexer* parent) {
   // If |parent| is not NULL, metrics collection has been started by a parent
   // Parser::Load() in our call stack. Do not start a new one here to avoid
   // over-counting parsing times.
-  METRIC_RECORD_IF(".ninja parse", parent == NULL);
+  METRIC_RECORD_IF(".构建文件 parse", parent == NULL);
   string contents;
   string read_err;
   if (file_reader_->ReadFile(filename, &contents, &read_err) !=

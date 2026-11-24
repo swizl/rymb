@@ -1,4 +1,4 @@
-CMake Error at BadPrefix1\.cmake:[0-9]+ \(find_package\):
+CMake Error at BadPrefix1\.配置脚本:[0-9]+ \(find_package\):
   Could not find a configuration file for package "BadPrefix1" that is
   compatible with requested version ""\.
 

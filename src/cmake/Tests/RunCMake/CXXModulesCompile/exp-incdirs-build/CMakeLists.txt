@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24...3.28)
 project(cxx_modules_export_include_directories CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 add_library(export_include_directories STATIC
   include/include.h
@@ -36,13 +36,13 @@ install(TARGETS export_include_directories no_modules
   FILE_SET modules DESTINATION "lib/cxx/miu")
 export(EXPORT CXXModules
   NAMESPACE CXXModules::
-  FILE "${CMAKE_CURRENT_BINARY_DIR}/export_include_directories-targets.cmake"
+  FILE "${CMAKE_CURRENT_BINARY_DIR}/export_include_directories-targets.配置脚本"
   CXX_MODULES_DIRECTORY "export_include_directories-cxx-modules")
 export(PACKAGE_INFO export_include_directories_cps
   EXPORT CXXModules
   CXX_MODULES_DIRECTORY "export_include_directories-cxx-modules-cps")
-file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_include_directories-config.cmake"
-  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_include_directories-targets.cmake\")
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_include_directories-config.配置脚本"
+  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_include_directories-targets.配置脚本\")
 set(\${CMAKE_FIND_PACKAGE_NAME}_FOUND 1)
 ")
 

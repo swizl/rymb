@@ -1,4 +1,4 @@
-CMake Error at BadEmpty\.cmake:1 \(add_custom_target\):
+CMake Error at BadEmpty\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<>
@@ -7,7 +7,7 @@ CMake Error at BadEmpty\.cmake:1 \(add_custom_target\):
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 +
-CMake Error at BadEmpty\.cmake:1 \(add_custom_target\):
+CMake Error at BadEmpty\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<:foo>

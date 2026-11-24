@@ -3,13 +3,13 @@ project(ctest_fixtures LANGUAGES NONE)
 include(CTest)
 
 macro(passTest testName)
-  set(someFile "${CMAKE_CURRENT_SOURCE_DIR}/test.cmake")
+  set(someFile "${CMAKE_CURRENT_SOURCE_DIR}/test.配置脚本")
   add_test(NAME ${testName}
            COMMAND ${CMAKE_COMMAND} -E compare_files "${someFile}" "${someFile}")
 endmacro()
 
 macro(failTest testName)
-  set(someFile "${CMAKE_CURRENT_SOURCE_DIR}/test.cmake")
+  set(someFile "${CMAKE_CURRENT_SOURCE_DIR}/test.配置脚本")
   add_test(NAME ${testName}
            COMMAND ${CMAKE_COMMAND} -E compare_files "${someFile}" "${someFile}xxx")
 endmacro()

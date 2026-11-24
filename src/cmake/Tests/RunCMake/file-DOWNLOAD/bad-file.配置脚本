@@ -1,0 +1,3 @@
+include(common.配置脚本)
+
+file(DOWNLOAD ${url} .)

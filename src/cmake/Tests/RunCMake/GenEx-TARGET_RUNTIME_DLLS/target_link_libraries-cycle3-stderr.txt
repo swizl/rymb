@@ -1,4 +1,4 @@
-CMake Error at target_link_libraries-cycle3\.cmake:[0-9]+ \(add_library\):
+CMake Error at target_link_libraries-cycle3\.配置脚本:[0-9]+ \(add_library\):
   The LINK_LIBRARIES of "lib1" use a generator expression that depends on the
   LINK_LIBRARIES themselves:
 

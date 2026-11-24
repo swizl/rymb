@@ -1,4 +1,4 @@
-CMake Error at no-source\.cmake:[0-9]+ \(file\):
+CMake Error at no-source\.配置脚本:[0-9]+ \(file\):
   Error evaluating generator expression:
 
     \$<SOURCE_PROPERTY:,FOO>

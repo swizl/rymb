@@ -152,7 +152,7 @@ void DepsLog::Close() {
 }
 
 LoadStatus DepsLog::Load(const string& path, State* state, string* err) {
-  METRIC_RECORD(".ninja_deps load");
+  METRIC_RECORD(".构建依赖 load");
   char buf[kMaxRecordSize + 1];
   FILE* f = FileOpenUtf8(path, "rb");
   if (!f) {
@@ -343,7 +343,7 @@ Node* DepsLog::GetFirstReverseDepsNode(Node* node) {
 }
 
 bool DepsLog::Recompact(const string& path, string* err) {
-  METRIC_RECORD(".ninja_deps recompact");
+  METRIC_RECORD(".构建依赖 recompact");
 
   Close();
   string temp_path = path + ".recompact";

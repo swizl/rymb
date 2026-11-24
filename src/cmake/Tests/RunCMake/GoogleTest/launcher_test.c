@@ -26,7 +26,7 @@ char const json_output[] = "{\n"
 
 int main(int argc, char** argv)
 {
-  /* Note: Launcher.cmake doesn't actually depend on Google Test as such;
+  /* Note: Launcher.配置脚本 doesn't actually depend on Google Test as such;
    * it only requires that we produces output in the expected format when
    * invoked with --gtest_list_tests. Thus, we fake that here. This allows us
    * to test the module without actually needing Google Test.  */

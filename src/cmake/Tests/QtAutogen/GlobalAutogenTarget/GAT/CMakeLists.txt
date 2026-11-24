@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(GAT)
-include("../../AutogenCoreTest.cmake")
+include("../../AutogenCoreTest.配置脚本")
 
 # Include directories
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})

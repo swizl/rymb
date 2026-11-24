@@ -96,7 +96,7 @@ void cmLocalNinjaGenerator::Generate()
                                            "localized /showIncludes string");
       this->GetRulesFileStream() << "msvc_deps_prefix = ";
       // 'cl /showIncludes' encodes output in the console output code page.
-      // It may differ from the encoding used for file paths in '构建.ninja'.
+      // It may differ from the encoding used for file paths in '构建.构建文件'.
       // Ninja matches the showIncludes prefix using its raw byte sequence.
       this->GetRulesFileStream().WriteAltEncoding(
         showIncludesPrefix, cmGeneratedFileStream::Encoding::ConsoleOutput);
@@ -292,7 +292,7 @@ void cmLocalNinjaGenerator::WriteNinjaRequiredVersion(std::ostream& os)
   }
 
   // The Ninja generator writes rules which require support for restat
-  // when rebuilding 构建.ninja manifest (>= 1.8)
+  // when rebuilding 构建.构建文件 manifest (>= 1.8)
   if (this->GetGlobalNinjaGenerator()->SupportsManifestRestat() &&
       this->GetCMakeInstance()->DoWriteGlobVerifyTarget() &&
       !this->GetGlobalNinjaGenerator()->GlobalSettingIsOn(
@@ -460,7 +460,7 @@ std::string cmLocalNinjaGenerator::WriteCommandScript(
   for (auto const& i : cmdLines) {
     std::string cmd = i;
     // The command line was built assuming it would be written to
-    // the 构建.ninja file, so it uses '$$' for '$'.  Remove this
+    // the 构建.构建文件 file, so it uses '$$' for '$'.  Remove this
     // for the raw shell script.
     cmSystemTools::ReplaceString(cmd, "$$", "$");
 #ifdef _WIN32

@@ -1,4 +1,4 @@
-CMake Error at set_provider\.cmake:[0-9]+ \(cmake_language\):
+CMake Error at set_provider\.配置脚本:[0-9]+ \(cmake_language\):
   cmake_language Dependency providers can only be set as part of the first
   call to project\(\)\.  More specifically,
   cmake_language\(SET_DEPENDENCY_PROVIDER\) can only be called while the first

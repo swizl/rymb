@@ -1,0 +1,2 @@
+message(STATUS "SomeDepConfig.配置脚本 was used")
+set(SomeDep_FOUND TRUE)

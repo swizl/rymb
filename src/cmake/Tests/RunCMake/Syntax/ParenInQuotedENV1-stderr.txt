@@ -1,8 +1,8 @@
-^CMake Error at ParenInQuotedENV1\.cmake:2 \(message\):
+^CMake Error at ParenInQuotedENV1\.配置脚本:2 \(message\):
   Syntax error in cmake code at
 
     [^
-]*/Tests/RunCMake/Syntax/ParenInQuotedENV1\.cmake:2
+]*/Tests/RunCMake/Syntax/ParenInQuotedENV1\.配置脚本:2
 
   when parsing string
 

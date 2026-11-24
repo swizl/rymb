@@ -1,11 +1,11 @@
-^CMake Warning \(author\) in EndMismatch\.cmake:
+^CMake Warning \(author\) in EndMismatch\.配置脚本:
   A logical block opening on the line
 
-    .*/Tests/RunCMake/while/EndMismatch\.cmake:1 \(while\)
+    .*/Tests/RunCMake/while/EndMismatch\.配置脚本:1 \(while\)
 
   closes on the line
 
-    .*/Tests/RunCMake/while/EndMismatch\.cmake:2 \(endwhile\)
+    .*/Tests/RunCMake/while/EndMismatch\.配置脚本:2 \(endwhile\)
 
   with mis-matching arguments\.
 Call Stack \(most recent call first\):

@@ -1,0 +1,3 @@
+include(${CMAKE_CURRENT_LIST_DIR}/../Sbom/DefaultLicense.配置脚本)
+
+install(SBOM licenses EXPORTS licenses DEFAULT_LICENSE MIT DESTINATION .)

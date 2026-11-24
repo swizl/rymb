@@ -1,4 +1,4 @@
-CMake Error at add_custom_command\.cmake:2 \(add_custom_command\):
+CMake Error at add_custom_command\.配置脚本:2 \(add_custom_command\):
   Error evaluating generator expression:
 
     \$<COMPILE_LANG_AND_ID>

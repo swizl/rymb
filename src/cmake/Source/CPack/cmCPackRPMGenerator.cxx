@@ -92,17 +92,17 @@ int cmCPackRPMGenerator::PackageOnePack(std::string const& initialToplevel,
   this->SetOption("CPACK_OUTPUT_FILE_NAME", outputFileName);
   /* replace the TEMPORARY package file name */
   this->SetOption("CPACK_TEMPORARY_PACKAGE_FILE_NAME", packageFileName);
-  // Tell CPackRPM.cmake the name of the component NAME.
+  // Tell CPackRPM.配置脚本 the name of the component NAME.
   this->SetOption("CPACK_RPM_PACKAGE_COMPONENT", packageName);
-  // Tell CPackRPM.cmake the suffix for the component NAME.
+  // Tell CPackRPM.配置脚本 the suffix for the component NAME.
   this->SetOption("CPACK_RPM_PACKAGE_COMPONENT_PART_NAME",
                   sanitizedPkgNameSuffix);
-  // Tell CPackRPM.cmake the path where the component is.
+  // Tell CPackRPM.配置脚本 the path where the component is.
   std::string component_path = cmStrCat('/', sanitizedPkgDirName);
   this->SetOption("CPACK_RPM_PACKAGE_COMPONENT_PART_PATH", component_path);
-  if (!this->ReadListFile("Internal/CPack/CPackRPM.cmake")) {
+  if (!this->ReadListFile("Internal/CPack/CPackRPM.配置脚本")) {
     cmCPackLogger(cmCPackLog::LOG_ERROR,
-                  "Error while execution CPackRPM.cmake" << std::endl);
+                  "Error while execution CPackRPM.配置脚本" << std::endl);
     return 0;
   }
 
@@ -407,16 +407,16 @@ int cmCPackRPMGenerator::PackageComponentsAllInOne(
   this->SetOption("CPACK_TEMPORARY_PACKAGE_FILE_NAME", packageFileName);
 
   if (!compInstDirName.empty()) {
-    // Tell CPackRPM.cmake the path where the component is.
+    // Tell CPackRPM.配置脚本 the path where the component is.
     std::string component_path = cmStrCat('/', compInstDirName);
     this->SetOption("CPACK_RPM_PACKAGE_COMPONENT_PART_PATH", component_path);
   }
 
-  if (this->ReadListFile("Internal/CPack/CPackRPM.cmake")) {
+  if (this->ReadListFile("Internal/CPack/CPackRPM.配置脚本")) {
     this->AddGeneratedPackageNames();
   } else {
     cmCPackLogger(cmCPackLog::LOG_ERROR,
-                  "Error while execution CPackRPM.cmake" << std::endl);
+                  "Error while execution CPackRPM.配置脚本" << std::endl);
     retval = 0;
   }
 

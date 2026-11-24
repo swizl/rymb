@@ -1,4 +1,4 @@
-^CMake Warning \(policy\) at CMP0196-WARN\.cmake:[0-9]+ \(include\):
+^CMake Warning \(policy\) at CMP0196-WARN\.配置脚本:[0-9]+ \(include\):
   Policy CMP0196 is not set: The CMakeDetermineVSServicePack module is
   removed\.  Run "cmake --help-policy CMP0196" for policy details\.  Use the
   cmake_policy command to set the policy and suppress this warning\.

@@ -5,7 +5,7 @@ include(CTest)
 
 
 # We expect this configure to occur through a 'ctest -D Experimental' or a
-# 'ctest -S script.cmake' call.
+# 'ctest -S script.配置脚本' call.
 #
 # In either case, we expect CMAKE_BUILD_TYPE to be defined for single-configuration
 # build trees and not defined for multi-configuration build trees. The value of

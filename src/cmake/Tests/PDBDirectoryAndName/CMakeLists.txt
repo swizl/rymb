@@ -97,6 +97,6 @@ foreach(t ${my_targets})
 endforeach()
 add_custom_target(check_pdbs ALL VERBATIM
   COMMAND ${CMAKE_COMMAND} -Dconfig=$<CONFIGURATION> "-Dpdbs=${pdbs}"
-                           -P ${CMAKE_CURRENT_SOURCE_DIR}/check_pdbs.cmake
+                           -P ${CMAKE_CURRENT_SOURCE_DIR}/check_pdbs.配置脚本
   )
 add_dependencies(check_pdbs ${my_targets})

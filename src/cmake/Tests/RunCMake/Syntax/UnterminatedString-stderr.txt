@@ -1,4 +1,4 @@
-CMake Error at UnterminatedString\.cmake:2:
+CMake Error at UnterminatedString\.配置脚本:2:
   Parse error\.  Function missing ending "\)"\.  Instead found unterminated
   string with text "\)
 

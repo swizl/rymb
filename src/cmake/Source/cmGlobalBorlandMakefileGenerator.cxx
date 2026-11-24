@@ -18,7 +18,7 @@ cmGlobalBorlandMakefileGenerator::cmGlobalBorlandMakefileGenerator(cmake* cm)
   : cmGlobalUnixMakefileGenerator3(cm)
 {
   this->EmptyRuleHackDepends = "NUL";
-  this->FindMakeProgramFile = "CMakeBorlandFindMake.cmake";
+  this->FindMakeProgramFile = "CMakeBorlandFindMake.配置脚本";
   this->ForceUnixPaths = false;
   this->ToolSupportsColor = true;
   this->UseLinkScript = false;

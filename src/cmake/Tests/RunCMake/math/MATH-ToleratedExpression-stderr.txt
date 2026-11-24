@@ -1,4 +1,4 @@
-^CMake Warning \(author\) at MATH-ToleratedExpression\.cmake:1 \(math\):
+^CMake Warning \(author\) at MATH-ToleratedExpression\.配置脚本:1 \(math\):
   Unexpected character in expression at position 1: '
 
   Unexpected character in expression at position 7: '

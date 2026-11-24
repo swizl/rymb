@@ -63,7 +63,7 @@ std::string cmInstallCxxModuleBmiGenerator::GetScriptLocation(
   }
 
   return cmStrCat(this->Target->GetCMFSupportDirectory(),
-                  "/install-cxx-module-bmi-"_s, configName, ".cmake"_s);
+                  "/install-cxx-module-bmi-"_s, configName, ".配置脚本"_s);
 }
 
 std::string cmInstallCxxModuleBmiGenerator::GetDestination(

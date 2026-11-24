@@ -1,4 +1,4 @@
-^CMake Error at MATH-DivideMinByMinusOne\.cmake:1 \(math\):
+^CMake Error at MATH-DivideMinByMinusOne\.配置脚本:1 \(math\):
   math cannot evaluate the expression: "~9223372036854775807/-1": signed
   integer overflow in division\.
 Call Stack \(most recent call first\):

@@ -1,4 +1,4 @@
-^CMake Error at PolicyBeforeVersionRemoved\.cmake:1 \(cmake_policy\):
+^CMake Error at PolicyBeforeVersionRemoved\.配置脚本:1 \(cmake_policy\):
   Compatibility with CMake < 3\.5 has been removed from CMake\.
 
   Update the VERSION argument <min> value\.  Or, use the <min>\.\.\.<max> syntax

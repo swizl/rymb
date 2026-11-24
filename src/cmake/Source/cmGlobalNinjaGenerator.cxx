@@ -62,9 +62,9 @@
 #include "cmVersion.h"
 #include "cmake.h"
 
-char const* cmGlobalNinjaGenerator::NINJA_BUILD_FILE = "构建.ninja";
+char const* cmGlobalNinjaGenerator::NINJA_BUILD_FILE = "构建.构建文件";
 char const* cmGlobalNinjaGenerator::NINJA_RULES_FILE =
-  "CMakeFiles/规则.ninja";
+  "CMakeFiles/规则.构建文件";
 char const* cmGlobalNinjaGenerator::INDENT = "  ";
 #ifdef _WIN32
 std::string const cmGlobalNinjaGenerator::SHELL_NOOP = "cd .";
@@ -408,7 +408,7 @@ void cmGlobalNinjaGenerator::WriteCustomCommandBuild(
     }
     if (!depfile.empty()) {
       vars["depfile"] = ninjaDepfilePath;
-      // Add the depfile to the `.ninja_deps` database. Since this (generally)
+      // Add the depfile to the `.构建依赖` database. Since this (generally)
       // removes the file, it cannot be declared as an output or byproduct of
       // the command.
       if (!depfileIsOutput) {
@@ -585,7 +585,7 @@ cmGlobalNinjaGenerator::cmGlobalNinjaGenerator(cmake* cm)
   this->Comspec = cmSystemTools::GetComspec();
 #endif
   cm->GetState()->SetNinja(true);
-  this->FindMakeProgramFile = "CMakeNinjaFindMake.cmake";
+  this->FindMakeProgramFile = "CMakeNinjaFindMake.配置脚本";
 }
 
 // Virtual public methods.
@@ -605,7 +605,7 @@ codecvt_Encoding cmGlobalNinjaGenerator::GetMakefileEncoding() const
 cmDocumentationEntry cmGlobalNinjaGenerator::GetDocumentation()
 {
   return { cmGlobalNinjaGenerator::GetActualName(),
-           "Generates 构建.ninja files." };
+           "Generates 构建.构建文件 files." };
 }
 
 std::vector<std::string> const& cmGlobalNinjaGenerator::GetConfigNames() const
@@ -712,17 +712,17 @@ void cmGlobalNinjaGenerator::CleanMetaData()
     }
   };
 
-  // Can the tools below expect '构建.ninja' to be loadable?
+  // Can the tools below expect '构建.构建文件' to be loadable?
   bool const expectBuildManifest =
     !this->IsMultiConfig() && this->OutputPathPrefix.empty();
 
-  // Skip some ninja tools if they need '构建.ninja' but it is missing.
+  // Skip some ninja tools if they need '构建.构建文件' but it is missing.
   bool const missingBuildManifest = expectBuildManifest &&
     this->NinjaSupportsUnconditionalRecompactTool &&
-    !cmSystemTools::FileExists("构建.ninja");
+    !cmSystemTools::FileExists("构建.构建文件");
 
   // The `recompact` tool loads the manifest. As above, we don't have a single
-  // `构建.ninja` to load for this in Ninja-Multi. This may be relaxed in the
+  // `构建.构建文件` to load for this in Ninja-Multi. This may be relaxed in the
   // future pending further investigation into how Ninja works upstream
   // (ninja#1721).
   if (this->NinjaSupportsUnconditionalRecompactTool &&
@@ -1542,7 +1542,7 @@ void cmGlobalNinjaGenerator::AppendTargetOutputs(
   std::string const& config, cmNinjaTargetDepends depends) const
 {
   // for frameworks, we want the real name, not sample name
-  // frameworks always appear versioned, and the 构建.ninja
+  // frameworks always appear versioned, and the 构建.构建文件
   // will always attempt to manage symbolic links instead
   // of letting cmOSXBundleGenerator do it.
   cmGeneratorTarget::NameType nameType = target->IsFrameworkOnApple()
@@ -2187,7 +2187,7 @@ void cmGlobalNinjaGenerator::WriteTargetRebuildManifest(std::ostream& os)
         this->NinjaVersion,
         "\n"
         "is less than the version of Ninja required by CMake for adding "
-        "restat dependencies to the 构建.ninja manifest regeneration "
+        "restat dependencies to the 构建.构建文件 manifest regeneration "
         "target:\n"
         "  "_s,
         cmGlobalNinjaGenerator::RequiredNinjaVersionForManifestRestat(),
@@ -2260,7 +2260,7 @@ bool cmGlobalNinjaGenerator::SupportsCWDDepend() const
 bool cmGlobalNinjaGenerator::WriteTargetCleanAdditional(std::ostream& os)
 {
   auto const& lgr = this->LocalGenerators.at(0);
-  std::string cleanScriptRel = "CMakeFiles/clean_additional.cmake";
+  std::string cleanScriptRel = "CMakeFiles/clean_additional.配置脚本";
   std::string cleanScriptAbs =
     cmStrCat(lgr->GetBinaryDirectory(), '/', cleanScriptRel);
   std::vector<std::string> const& configs = this->GetConfigNames();
@@ -3520,8 +3520,8 @@ std::string cmGlobalNinjaGenerator::ConvertToOutputPath(std::string path) const
 }
 
 char const* cmGlobalNinjaMultiGenerator::NINJA_COMMON_FILE =
-  "CMakeFiles/common.ninja";
-char const* cmGlobalNinjaMultiGenerator::NINJA_FILE_EXTENSION = ".ninja";
+  "CMakeFiles/common.构建文件";
+char const* cmGlobalNinjaMultiGenerator::NINJA_FILE_EXTENSION = ".构建文件";
 
 cmGlobalNinjaMultiGenerator::cmGlobalNinjaMultiGenerator(cmake* cm)
   : cmGlobalNinjaGenerator(cm)
@@ -3533,7 +3533,7 @@ cmGlobalNinjaMultiGenerator::cmGlobalNinjaMultiGenerator(cmake* cm)
 cmDocumentationEntry cmGlobalNinjaMultiGenerator::GetDocumentation()
 {
   return { cmGlobalNinjaMultiGenerator::GetActualName(),
-           "Generates build-<Config>.ninja files." };
+           "Generates build-<Config>.构建文件 files." };
 }
 
 std::string cmGlobalNinjaMultiGenerator::ExpandCFGIntDir(

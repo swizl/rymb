@@ -1,0 +1,3 @@
+include(${CMAKE_CURRENT_LIST_DIR}/TestVariable.配置脚本)
+
+test_variable(PRESET_NAME "UNINITIALIZED" "GoodInheritanceMacro")

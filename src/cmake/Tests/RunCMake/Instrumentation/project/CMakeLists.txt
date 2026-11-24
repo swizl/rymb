@@ -154,7 +154,7 @@ if (CTEST_INTERRUPT)
   # `ctest -F` resume the finished fast test is removed, which would otherwise
   # leave its dependents blocked.  (InterruptBuild is provided by the
   # INTERRUPT_BUILD_SRC block above, which is always enabled together with this.)
-  set(runtest "${CMAKE_CURRENT_SOURCE_DIR}/runtest.cmake")
+  set(runtest "${CMAKE_CURRENT_SOURCE_DIR}/runtest.配置脚本")
   add_test(NAME ctestFast COMMAND ${CMAKE_COMMAND}
     -DMARKER=${CMAKE_BINARY_DIR}/ran/ctestFast -P ${runtest})
   set_tests_properties(ctestFast PROPERTIES COST 100)

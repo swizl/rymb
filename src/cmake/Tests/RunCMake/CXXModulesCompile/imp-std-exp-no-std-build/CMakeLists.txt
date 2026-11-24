@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.29)
 project(cxx_modules_import_std_export_no_std CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 set(CMAKE_NO_STD 1)
 
@@ -24,9 +24,9 @@ install(TARGETS import_std_export_no_std
   FILE_SET use_std DESTINATION "lib/cxx/miu")
 export(EXPORT export
   NAMESPACE CXXModules::
-  FILE "${CMAKE_CURRENT_BINARY_DIR}/import_std_export_no_std-targets.cmake")
-file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/import_std_export_no_std-config.cmake"
-  "include(\"\${CMAKE_CURRENT_LIST_DIR}/import_std_export_no_std-targets.cmake\")
+  FILE "${CMAKE_CURRENT_BINARY_DIR}/import_std_export_no_std-targets.配置脚本")
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/import_std_export_no_std-config.配置脚本"
+  "include(\"\${CMAKE_CURRENT_LIST_DIR}/import_std_export_no_std-targets.配置脚本\")
 set(\${CMAKE_FIND_PACKAGE_NAME}_FOUND 1)
 ")
 

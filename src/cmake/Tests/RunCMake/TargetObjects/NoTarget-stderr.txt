@@ -1,4 +1,4 @@
-(CMake Error at NoTarget\.cmake:4 \(file\):
+(CMake Error at NoTarget\.配置脚本:4 \(file\):
   Error evaluating generator expression:
 
     \$<TARGET_OBJECTS:NoTarget>
@@ -7,7 +7,7 @@
 Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 *)+
-(CMake Error at NoTarget\.cmake:5 \(file\):
+(CMake Error at NoTarget\.配置脚本:5 \(file\):
   Error evaluating generator expression:
 
     \$<TARGET_OBJECTS:NoTarget>

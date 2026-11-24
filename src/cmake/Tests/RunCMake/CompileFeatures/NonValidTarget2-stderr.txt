@@ -1,4 +1,4 @@
-CMake Error at NonValidTarget2\.cmake:4 \(add_custom_target\):
+CMake Error at NonValidTarget2\.配置脚本:4 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<COMPILE_FEATURES:cxx_final>

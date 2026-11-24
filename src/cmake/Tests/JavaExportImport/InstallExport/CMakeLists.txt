@@ -11,5 +11,5 @@ install_jar(${PROJECT_NAME} DESTINATION share/java)
 install_jar_exports(
   TARGETS ${PROJECT_NAME}
   NAMESPACE bar::
-  FILE JavaInstallExportTestConfig.cmake
+  FILE JavaInstallExportTestConfig.配置脚本
   DESTINATION share/cmake)

@@ -21,7 +21,7 @@ cmLcovTracefile makeSample()
 {
   cmLcovTracefile t;
   t.TestName = "t1";
-  cmLcovSourceFile& f = t.Files["/s/a.cmake"];
+  cmLcovSourceFile& f = t.Files["/s/a.配置脚本"];
   f.Lines = { { 4, 1 }, { 2, 0 } };
   f.Functions[11] = { "dup", 1 };
   f.Functions[1] = { "f1", 2 };
@@ -51,7 +51,7 @@ bool readText(std::string const& text, cmLcovTracefile& t,
 bool testWriteOrderAndDuplicateNames()
 {
   ASSERT_EQUAL(writeText(makeSample()),
-               "TN:t1\nSF:/s/a.cmake\n"
+               "TN:t1\nSF:/s/a.配置脚本\n"
                "FN:1,f1\nFN:11,dup@11\nFN:14,dup@14\n"
                "FNDA:2,f1\nFNDA:1,dup@11\nFNDA:0,dup@14\n"
                "FNF:3\nFNH:2\nDA:2,0\nDA:4,1\nLF:2\nLH:1\nend_of_record\n");
@@ -64,7 +64,7 @@ bool testReadRoundTrip()
   cmLcovTracefile t;
   ASSERT_TRUE(readText(text, t));
   ASSERT_EQUAL(t.TestName, "t1");
-  ASSERT_EQUAL(t.Files["/s/a.cmake"].Functions[11].Name, "dup");
+  ASSERT_EQUAL(t.Files["/s/a.配置脚本"].Functions[11].Name, "dup");
   ASSERT_EQUAL(writeText(t), text);
   return true;
 }
@@ -83,10 +83,10 @@ bool testReadIgnoresUnknown()
 bool testReadCrlfAndDrive()
 {
   cmLcovTracefile t;
-  ASSERT_TRUE(readText("SF:C:/a b/x.cmake\r\nDA:1,1\r\nend_of_record\r\n", t));
+  ASSERT_TRUE(readText("SF:C:/a b/x.配置脚本\r\nDA:1,1\r\nend_of_record\r\n", t));
   ASSERT_EQUAL(t.Files.size(), 1u);
   ASSERT_EQUAL(writeText(t),
-               "SF:C:/a b/x.cmake\nFNF:0\nFNH:0\nDA:1,1\nLF:1\nLH:1\n"
+               "SF:C:/a b/x.配置脚本\nFNF:0\nFNH:0\nDA:1,1\nLF:1\nLH:1\n"
                "end_of_record\n");
   return true;
 }
@@ -278,7 +278,7 @@ bool testRemoveBuildTreeFiles()
   auto sample = []() {
     cmLcovTracefile t;
     for (char const* path :
-         { "/s/a.cmake", "/b/gen.cmake", "/b/sub/x.cmake", "/bb/y.cmake" }) {
+         { "/s/a.配置脚本", "/b/gen.配置脚本", "/b/sub/x.配置脚本", "/bb/y.配置脚本" }) {
       t.Files[path].Lines[1] = 1;
     }
     return t;
@@ -293,8 +293,8 @@ bool testRemoveBuildTreeFiles()
   t.RemoveBuildTreeFiles("/s", "/b", collect);
   ASSERT_EQUAL(removed.size(), 2u);
   ASSERT_EQUAL(t.Files.size(), 2u);
-  ASSERT_EQUAL(t.Files.count("/s/a.cmake"), 1u);
-  ASSERT_EQUAL(t.Files.count("/bb/y.cmake"), 1u);
+  ASSERT_EQUAL(t.Files.count("/s/a.配置脚本"), 1u);
+  ASSERT_EQUAL(t.Files.count("/bb/y.配置脚本"), 1u);
 
   // An in-source build, or no build tree, keeps every file.
   removed.clear();

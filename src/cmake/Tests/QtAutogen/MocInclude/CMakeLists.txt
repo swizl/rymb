@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 project(MocInclude)
 if (NOT DEFINED AUTOGEN_CORE_TEST_CMAKE)
-  get_filename_component(AUTOGEN_CORE_TEST_CMAKE "../AutogenCoreTest.cmake" ABSOLUTE)
+  get_filename_component(AUTOGEN_CORE_TEST_CMAKE "../AutogenCoreTest.配置脚本" ABSOLUTE)
 endif()
 include("${AUTOGEN_CORE_TEST_CMAKE}")
 

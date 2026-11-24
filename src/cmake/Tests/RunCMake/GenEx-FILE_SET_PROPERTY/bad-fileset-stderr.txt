@@ -1,4 +1,4 @@
-CMake Error at bad-fileset\.cmake:4 \(file\):
+CMake Error at bad-fileset\.配置脚本:4 \(file\):
   Error evaluating generator expression:
 
     \$<FILE_SET_PROPERTY:foo,TARGET:foo,FOO>

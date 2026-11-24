@@ -9,7 +9,7 @@ add_test(Environment1 Environment)
 add_test(Environment2 Environment)
 add_test(EchoEnvironment1 ${CMAKE_COMMAND} -E environment)
 add_test(EchoEnvironment2 ${CMAKE_COMMAND} -E environment)
-add_test(EchoEnvironment3 ${CMAKE_COMMAND} -P "${CMAKE_CURRENT_SOURCE_DIR}/check_mod.cmake")
+add_test(EchoEnvironment3 ${CMAKE_COMMAND} -P "${CMAKE_CURRENT_SOURCE_DIR}/check_mod.配置脚本")
 
 # Make sure "CMAKE_ENV.*Happy Thanksgiving" is in the output of
 # the "1" tests:

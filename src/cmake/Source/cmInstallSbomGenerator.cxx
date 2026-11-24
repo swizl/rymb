@@ -88,7 +88,7 @@ void cmInstallSbomGenerator::GenerateScript(std::ostream& os)
     this->TempSbomFiles.emplace(c, std::move(configName));
   }
 
-  // Emit the 安装规则.cmake script to copy the file at install time.
+  // Emit the 安装规则.配置脚本 script to copy the file at install time.
   this->cmInstallGenerator::GenerateScript(os);
 }
 

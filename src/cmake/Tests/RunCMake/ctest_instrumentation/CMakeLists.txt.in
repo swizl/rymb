@@ -18,7 +18,7 @@ if($ENV{USE_PROCESS_METRICS})
     API_VERSION 1
     DATA_VERSION 1.2
     OPTIONS processMetrics cdashSubmit
-    CALLBACK "${CMAKE_COMMAND}" -P "@RunCMake_SOURCE_DIR@/save-process-metrics.cmake"
+    CALLBACK "${CMAKE_COMMAND}" -P "@RunCMake_SOURCE_DIR@/save-process-metrics.配置脚本"
   )
 endif()
 @CASE_CMAKELISTS_SUFFIX_CODE@

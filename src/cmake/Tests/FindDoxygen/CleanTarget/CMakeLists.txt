@@ -79,7 +79,7 @@ add_test(NAME testDocsClean
     COMMAND ${CMAKE_COMMAND}
     -D BUILD_DIR=${CMAKE_CURRENT_BINARY_DIR}
     -D "OUTPUT_DIRS=${DIRS_TO_CLEAN}"
-    -P "${CMAKE_CURRENT_SOURCE_DIR}/TestClean.cmake"
+    -P "${CMAKE_CURRENT_SOURCE_DIR}/TestClean.配置脚本"
 )
 
 set_tests_properties(testDocsClean PROPERTIES DISABLED ${DISABLE_THIS_TEST})

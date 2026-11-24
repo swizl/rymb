@@ -1,4 +1,4 @@
-CMake Error at no-directory\.cmake:[0-9]+ \(file\):
+CMake Error at no-directory\.配置脚本:[0-9]+ \(file\):
   Error evaluating generator expression:
 
     \$<DIRECTORY_PROPERTY:,FOO>

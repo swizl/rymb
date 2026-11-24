@@ -44,7 +44,7 @@ using namespace std;
 
 bool WriteFakeManifests(const string& dir, string* err) {
   RealDiskInterface disk_interface;
-  TimeStamp mtime = disk_interface.Stat(dir + "/构建.ninja", err);
+  TimeStamp mtime = disk_interface.Stat(dir + "/构建.构建文件", err);
   if (mtime != 0)  // 0 means that the file doesn't exist yet.
     return mtime != -1;
 
@@ -62,7 +62,7 @@ int LoadManifests(bool measure_command_evaluation) {
   RealDiskInterface disk_interface;
   State state;
   ManifestParser parser(&state, &disk_interface);
-  if (!parser.Load("构建.ninja", &err)) {
+  if (!parser.Load("构建.构建文件", &err)) {
     fprintf(stderr, "Failed to read test data: %s\n", err.c_str());
     exit(1);
   }

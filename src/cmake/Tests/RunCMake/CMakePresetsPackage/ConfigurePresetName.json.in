@@ -24,7 +24,7 @@
       "inherits": "base",
       "configurePreset": "configure",
       "variables": {
-        "CPACK_EXTERNAL_PACKAGE_SCRIPT": "${sourceDir}/build/configure/check-preset-names.cmake"
+        "CPACK_EXTERNAL_PACKAGE_SCRIPT": "${sourceDir}/build/configure/check-preset-names.配置脚本"
       }
     }
   ]

@@ -1,4 +1,4 @@
-CMake Error at add_custom_target\.cmake:1 \(add_custom_target\):
+CMake Error at add_custom_target\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<COMPILE_LANGUAGE>

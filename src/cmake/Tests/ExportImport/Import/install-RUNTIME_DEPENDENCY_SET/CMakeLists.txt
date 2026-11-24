@@ -1,7 +1,7 @@
 set(CMAKE_SKIP_RPATH OFF)
 
 # Import targets from the install tree.
-include(${Import_BINARY_DIR}/../Root/install-RUNTIME_DEPENDENCY_SET/targets.cmake)
+include(${Import_BINARY_DIR}/../Root/install-RUNTIME_DEPENDENCY_SET/targets.配置脚本)
 
 add_executable(exe main.c)
 target_link_libraries(exe PRIVATE dep3 dep4)
@@ -30,4 +30,4 @@ install(RUNTIME_DEPENDENCY_SET myset
   DESTINATION zzz
   )
 
-install(SCRIPT "${CMAKE_CURRENT_SOURCE_DIR}/check_installed.cmake")
+install(SCRIPT "${CMAKE_CURRENT_SOURCE_DIR}/check_installed.配置脚本")

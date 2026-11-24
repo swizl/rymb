@@ -1,4 +1,4 @@
-CMake Error at alias-target\.cmake:8 \(add_library\):
+CMake Error at alias-target\.配置脚本:8 \(add_library\):
   add_library cannot create ALIAS target "next_alias" because target "alias"
   is itself an ALIAS\.
 Call Stack \(most recent call first\):

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 project(MocInterfaceMacroNames)
 
-include("../AutogenCoreTest.cmake")
+include("../AutogenCoreTest.配置脚本")
 
 set(CMAKE_AUTOMOC ON)
 
@@ -18,7 +18,7 @@ add_library(static_lib STATIC static_lib.cpp)
 set_target_properties(static_lib PROPERTIES INTERFACE_AUTOMOC_MACRO_NAMES "STATIC_LIB_MACRO")
 
 set(AUTOGEN_INFO_FILE "${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles/dummy_autogen.dir/AutogenInfo.json")
-set(CHECK_AUTOGEN_JSON_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CheckAutogenJson.cmake")
+set(CHECK_AUTOGEN_JSON_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CheckAutogenJson.配置脚本")
 message(STATUS "AutogenInfo.json: ${AUTOGEN_INFO_FILE}")
 
 add_custom_command(TARGET dummy POST_BUILD
@@ -29,11 +29,11 @@ install(TARGETS shared_lib EXPORT shared_lib)
 install(TARGETS interface_lib EXPORT interface_lib)
 install(TARGETS static_lib EXPORT static_lib)
 
-install(EXPORT shared_lib FILE shared_libTargets.cmake DESTINATION lib/cmake/shared_lib)
-install(EXPORT interface_lib FILE interface_libTargets.cmake DESTINATION lib/cmake/interface_lib)
-install(EXPORT static_lib FILE static_libTargets.cmake DESTINATION lib/cmake/static_lib)
+install(EXPORT shared_lib FILE shared_libTargets.配置脚本 DESTINATION lib/cmake/shared_lib)
+install(EXPORT interface_lib FILE interface_libTargets.配置脚本 DESTINATION lib/cmake/interface_lib)
+install(EXPORT static_lib FILE static_libTargets.配置脚本 DESTINATION lib/cmake/static_lib)
 
-set(CHECK_EXPORT_TARGETS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CheckExportTargets.cmake")
+set(CHECK_EXPORT_TARGETS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CheckExportTargets.配置脚本")
 set(EXPORT_FOLDER_PATH "${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles/Export")
 
 add_custom_command(TARGET dummy POST_BUILD

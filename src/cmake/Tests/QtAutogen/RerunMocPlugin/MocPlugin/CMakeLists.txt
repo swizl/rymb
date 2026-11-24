@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(MocPlugin)
-include("../../AutogenGuiTest.cmake")
+include("../../AutogenGuiTest.配置脚本")
 
 if (QT_TEST_VERSION LESS 5)
   message(SEND_ERROR "Qt 5 or higher required.")

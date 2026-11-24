@@ -58,7 +58,7 @@ def check_object_cmakeFiles(o):
             "isCMake": None,
         },
         {
-            "path": "^cmakeFiles-v1\\.cmake$",
+            "path": "^cmakeFiles-v1\\.配置脚本$",
             "isGenerated": None,
             "isExternal": None,
             "isCMake": None,
@@ -82,25 +82,25 @@ def check_object_cmakeFiles(o):
             "isCMake": None,
         },
         {
-            "path": "^dir/dirtest\\.cmake$",
+            "path": "^dir/dirtest\\.配置脚本$",
             "isGenerated": None,
             "isExternal": None,
             "isCMake": None,
         },
         {
-            "path": "^.*/Tests/RunCMake/FileAPIDummyFile\\.cmake$",
+            "path": "^.*/Tests/RunCMake/FileAPIDummyFile\\.配置脚本$",
             "isGenerated": None,
             "isExternal": True,
             "isCMake": None,
         },
         {
-            "path": "^.*/Tests/RunCMake/FileAPI/cmakeFiles-v1-build/generated\\.cmake",
+            "path": "^.*/Tests/RunCMake/FileAPI/cmakeFiles-v1-build/generated\\.配置脚本",
             "isGenerated": True,
             "isExternal": None,
             "isCMake": None,
         },
         {
-            "path": "^.*/Modules/CMakeParseArguments\\.cmake$",
+            "path": "^.*/Modules/CMakeParseArguments\\.配置脚本$",
             "isGenerated": None,
             "isExternal": True,
             "isCMake": True,
@@ -112,14 +112,14 @@ def check_object_cmakeFiles(o):
             "expression": "^.*/Tests/RunCMake/FileAPI/dir/\\*$",
             "paths": [
                 "^.*/Tests/RunCMake/FileAPI/dir/dir$",
-                "^.*/Tests/RunCMake/FileAPI/dir/dirtest\\.cmake$"
+                "^.*/Tests/RunCMake/FileAPI/dir/dirtest\\.配置脚本$"
             ],
             "listDirectories": True,
         },
         {
-            "expression": "^.*/Tests/RunCMake/FileAPI/dir/\\*\\.cmake$",
+            "expression": "^.*/Tests/RunCMake/FileAPI/dir/\\*\\.配置脚本$",
             "paths": [
-                "^dir/dirtest\\.cmake$"
+                "^dir/dirtest\\.配置脚本$"
             ],
             "followSymlinks": True,
             "recurse": True,

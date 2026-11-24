@@ -1,3 +1,3 @@
 -- Toolchain file: [^
-]*/Tests/RunCMake/CompilerChange/baz\.cmake
+]*/Tests/RunCMake/CompilerChange/baz\.配置脚本
 -- Using toolchain: baz

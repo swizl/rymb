@@ -1,4 +1,4 @@
-CMake Warning \(policy\) at CMP0222-WARN-churn\.cmake:[0-9]+ \(if\):
+CMake Warning \(policy\) at CMP0222-WARN-churn\.配置脚本:[0-9]+ \(if\):
   Policy CMP0222 is not set: The if\(\) command supports path prefix tests
   using PATH_IS_PREFIX operator\.  Run "cmake --help-policy CMP0222" for
   policy details\.  Use the cmake_policy command to set the policy and

@@ -9,7 +9,7 @@ set(CMAKE_VS_INCLUDE_INSTALL_TO_DEFAULT_BUILD 1)
 add_custom_target(ClearExes ALL
   COMMAND "${CMAKE_COMMAND}"
     -Ddir=${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}
-    -P ${CMAKE_CURRENT_SOURCE_DIR}/ClearExes.cmake
+    -P ${CMAKE_CURRENT_SOURCE_DIR}/ClearExes.配置脚本
   VERBATIM)
 
 # Make sure ClearExes is executed before other targets are built

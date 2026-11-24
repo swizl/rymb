@@ -1,4 +1,4 @@
-CMake Error at LOCK-error-no-function\.cmake:[0-9]+ \(file\):
+CMake Error at LOCK-error-no-function\.配置脚本:[0-9]+ \(file\):
   error locking file
 
     ".*"

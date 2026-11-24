@@ -38,7 +38,7 @@ if(dump_command)
     -DDUMP_COMMAND=${dump_command}
     -DDUMP_ARGS=${dump_args}
     -DTEST_LIBRARY_PATH=$<TARGET_FILE:UsesNoCudaRT>
-    -P ${CMAKE_CURRENT_SOURCE_DIR}/no_runtime.cmake
+    -P ${CMAKE_CURRENT_SOURCE_DIR}/no_runtime.配置脚本
     )
   endif()
   add_custom_command(TARGET UsesStaticCudaRT POST_BUILD
@@ -46,13 +46,13 @@ if(dump_command)
     -DDUMP_COMMAND=${dump_command}
     -DDUMP_ARGS=${dump_args}
     -DTEST_LIBRARY_PATH=$<TARGET_FILE:UsesStaticCudaRT>
-    -P ${CMAKE_CURRENT_SOURCE_DIR}/uses_static_runtime.cmake
+    -P ${CMAKE_CURRENT_SOURCE_DIR}/uses_static_runtime.配置脚本
   )
   string(REPLACE ";" "|" dirs "${CMAKE_CUDA_IMPLICIT_LINK_DIRECTORIES}")
   add_custom_command(TARGET CudaOnlyRuntimeControls POST_BUILD
     COMMAND ${CMAKE_COMMAND}
     -DEXEC_PATH=$<TARGET_FILE:CudaOnlyRuntimeControls>
     -DEXTRA_LIB_DIRS="${dirs}"
-    -P ${CMAKE_CURRENT_SOURCE_DIR}/verify_runtime.cmake
+    -P ${CMAKE_CURRENT_SOURCE_DIR}/verify_runtime.配置脚本
   )
 endif()

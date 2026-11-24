@@ -1,4 +1,4 @@
-CMake Error at .*/Modules/ExternalData\.cmake:[0-9]+ \(message\):
+CMake Error at .*/Modules/ExternalData\.配置脚本:[0-9]+ \(message\):
   Data file referenced by argument
 
     DATA{\.\./NotUnderRoot\.txt}
@@ -9,4 +9,4 @@ CMake Error at .*/Modules/ExternalData\.cmake:[0-9]+ \(message\):
 
 Call Stack \(most recent call first\):
   .*
-  NotUnderRoot\.cmake:2 \(ExternalData_Add_Test\)
+  NotUnderRoot\.配置脚本:2 \(ExternalData_Add_Test\)

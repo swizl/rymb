@@ -10,4 +10,4 @@ add_jar(${PROJECT_NAME} Foo.java)
 export_jars(
   TARGETS ${PROJECT_NAME}
   NAMESPACE foo::
-  FILE JavaBuildExportTestConfig.cmake)
+  FILE JavaBuildExportTestConfig.配置脚本)

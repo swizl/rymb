@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(MocOptions2)
-include("../AutogenCoreTest.cmake")
+include("../AutogenCoreTest.配置脚本")
 
 # Test extra options passed to moc via AUTOMOC_MOC_OPTIONS
 add_executable(mocOptions object.cpp main.cpp)

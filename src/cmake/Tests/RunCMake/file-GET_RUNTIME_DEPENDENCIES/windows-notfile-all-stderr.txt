@@ -1,4 +1,4 @@
-^CMake Error at cmake_install\.cmake:[0-9]+ \(file\):
+^CMake Error at cmake_install\.配置脚本:[0-9]+ \(file\):
   file Failed to run (dumpbin|objdump) on:
 
     [^

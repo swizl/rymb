@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24...3.28)
 project(cxx_modules_export_bmi_and_interfaces CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 add_library(export_bmi_and_interfaces STATIC)
 target_sources(export_bmi_and_interfaces
@@ -31,10 +31,10 @@ install(TARGETS export_bmi_and_interfaces no_modules
   CXX_MODULES_BMI DESTINATION "lib/cxx/bmi")
 export(EXPORT CXXModules
   NAMESPACE CXXModules::
-  FILE "${CMAKE_CURRENT_BINARY_DIR}/export_bmi_and_interfaces-targets.cmake"
+  FILE "${CMAKE_CURRENT_BINARY_DIR}/export_bmi_and_interfaces-targets.配置脚本"
   CXX_MODULES_DIRECTORY "export_bmi_and_interfaces-cxx-modules")
-file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_bmi_and_interfaces-config.cmake"
-  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_bmi_and_interfaces-targets.cmake\")
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_bmi_and_interfaces-config.配置脚本"
+  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_bmi_and_interfaces-targets.配置脚本\")
 set(\${CMAKE_FIND_PACKAGE_NAME}_FOUND 1)
 ")
 

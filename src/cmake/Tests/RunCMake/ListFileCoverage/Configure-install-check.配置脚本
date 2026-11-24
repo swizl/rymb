@@ -1,0 +1,2 @@
+set(expect_sf_regex "/cmake_install\\.配置脚本$")
+include(${RunCMake_SOURCE_DIR}/check-lcov.配置脚本)

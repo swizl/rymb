@@ -1,5 +1,5 @@
 ^CMake Warning \(policy\) at [^
-]*/Modules/CPack\.cmake:[0-9]+ \(cmake_policy\):
+]*/Modules/CPack\.配置脚本:[0-9]+ \(cmake_policy\):
   Policy CMP0161 is not set: CPACK_PRODUCTBUILD_DOMAINS defaults to true\.
   Run "cmake --help-policy CMP0161" for policy details\.  Use the cmake_policy
   command to set the policy and suppress this warning\.

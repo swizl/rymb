@@ -1,4 +1,4 @@
-^CMake Error at DIRECTORY-DESTINATION-TYPE\.cmake:[0-9]+ \(install\):
+^CMake Error at DIRECTORY-DESTINATION-TYPE\.配置脚本:[0-9]+ \(install\):
   install DIRECTORY given both TYPE and DESTINATION arguments\.  You may only
   specify one\.
 Call Stack \(most recent call first\):

@@ -8,4 +8,4 @@ add_library(libstatic STATIC libstatic.cpp)
 
 generate_export_header(libstatic)
 
-export(TARGETS libstatic FILE Targets.cmake)
+export(TARGETS libstatic FILE Targets.配置脚本)

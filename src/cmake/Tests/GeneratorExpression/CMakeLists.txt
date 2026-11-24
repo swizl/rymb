@@ -86,7 +86,7 @@ add_custom_target(check-part1 ALL
     -Dtest_colons_3=$<1:Qt5::Core>
     -Dtest_colons_4=$<1:C:\\CMake>
     -Dtest_colons_5=$<1:C:/CMake>
-    -P ${CMAKE_CURRENT_SOURCE_DIR}/check-part1.cmake
+    -P ${CMAKE_CURRENT_SOURCE_DIR}/check-part1.配置脚本
   COMMAND ${CMAKE_COMMAND} -E echo "check done (part 1 of 5)"
   VERBATIM
   )
@@ -173,7 +173,7 @@ add_custom_target(check-part2 ALL
     -Dtest_arbitrary_content_comma_8=$<1:a,,b>
     -Dtest_arbitrary_content_comma_9=$<1:a,,b,,>
     -Dtest_arbitrary_content_comma_10=$<1:,,a,,b,,>
-    -P ${CMAKE_CURRENT_SOURCE_DIR}/check-part2.cmake
+    -P ${CMAKE_CURRENT_SOURCE_DIR}/check-part2.配置脚本
   COMMAND ${CMAKE_COMMAND} -E echo "check done (part 2 of 5)"
   VERBATIM
 )
@@ -309,7 +309,7 @@ add_custom_target(check-part3 ALL
     -Dequal21=$<EQUAL:10,+012>
     -Dequal22=$<EQUAL:10,-012>
     -Dequal23=$<EQUAL:-10,-012>
-    -P ${CMAKE_CURRENT_SOURCE_DIR}/check-part3.cmake
+    -P ${CMAKE_CURRENT_SOURCE_DIR}/check-part3.配置脚本
   COMMAND ${CMAKE_COMMAND} -E echo "check done (part 3 of 5)"
   VERBATIM
   )
@@ -346,7 +346,7 @@ add_custom_target(check-part4 ALL
     -Dif_4=$<IF:$<EQUAL:30,30>,a,b>
     -DWIN32=${WIN32}
     -DCMAKE_GENERATOR=${CMAKE_GENERATOR}
-    -P ${CMAKE_CURRENT_SOURCE_DIR}/check-part4.cmake
+    -P ${CMAKE_CURRENT_SOURCE_DIR}/check-part4.配置脚本
   COMMAND ${CMAKE_COMMAND} -E echo "check done (part 4 of 5)"
   VERBATIM
   )
@@ -367,7 +367,7 @@ set_property(SOURCE check-part5.stamp PROPERTY SYMBOLIC 1)
 
 add_custom_command(
   OUTPUT file.foo.bar
-  COMMAND ${CMAKE_COMMAND} -P check-part5.cmake
+  COMMAND ${CMAKE_COMMAND} -P check-part5.配置脚本
   VERBATIM
   )
 
@@ -467,7 +467,7 @@ if(NOT CMAKE_GENERATOR STREQUAL Xcode OR NOT CMAKE_OSX_ARCHITECTURES MATCHES "[;
     COMMAND ${CMAKE_COMMAND}
       "-DOBJLIB_LISTFILE=${CMAKE_CURRENT_BINARY_DIR}/objlib_files_$<CONFIGURATION>"
       -DEXPECTED_NUM_OBJECTFILES=2
-      -P "${CMAKE_CURRENT_SOURCE_DIR}/check_object_files.cmake"
+      -P "${CMAKE_CURRENT_SOURCE_DIR}/check_object_files.配置脚本"
     DEPENDS objlib
   )
 
@@ -482,7 +482,7 @@ if(NOT CMAKE_GENERATOR STREQUAL Xcode OR NOT CMAKE_OSX_ARCHITECTURES MATCHES "[;
     COMMAND ${CMAKE_COMMAND}
       "-DOBJLIB_LISTFILE=${CMAKE_CURRENT_BINARY_DIR}/sharedlib_files_$<CONFIGURATION>"
       -DEXPECTED_NUM_OBJECTFILES=2
-      -P "${CMAKE_CURRENT_SOURCE_DIR}/check_object_files.cmake"
+      -P "${CMAKE_CURRENT_SOURCE_DIR}/check_object_files.配置脚本"
     DEPENDS sharedlib
   )
 
@@ -497,7 +497,7 @@ if(NOT CMAKE_GENERATOR STREQUAL Xcode OR NOT CMAKE_OSX_ARCHITECTURES MATCHES "[;
     COMMAND ${CMAKE_COMMAND}
       "-DOBJLIB_LISTFILE=${CMAKE_CURRENT_BINARY_DIR}/staticlib_files_$<CONFIGURATION>"
       -DEXPECTED_NUM_OBJECTFILES=2
-      -P "${CMAKE_CURRENT_SOURCE_DIR}/check_object_files.cmake"
+      -P "${CMAKE_CURRENT_SOURCE_DIR}/check_object_files.配置脚本"
     DEPENDS staticlib
   )
 
@@ -512,7 +512,7 @@ if(NOT CMAKE_GENERATOR STREQUAL Xcode OR NOT CMAKE_OSX_ARCHITECTURES MATCHES "[;
     COMMAND ${CMAKE_COMMAND}
       "-DOBJLIB_LISTFILE=${CMAKE_CURRENT_BINARY_DIR}/execobjs_files_$<CONFIGURATION>"
       -DEXPECTED_NUM_OBJECTFILES=3
-      -P "${CMAKE_CURRENT_SOURCE_DIR}/check_object_files.cmake"
+      -P "${CMAKE_CURRENT_SOURCE_DIR}/check_object_files.配置脚本"
     DEPENDS execobjs
   )
 endif()

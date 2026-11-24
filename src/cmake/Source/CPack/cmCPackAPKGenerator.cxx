@@ -25,13 +25,13 @@ int cmCPackAPKGenerator::PackageFiles()
   cmCPackLogger(cmCPackLog::LOG_DEBUG,
                 "Toplevel: " << this->toplevel << std::endl);
 
-  if (!this->ReadListFile("Internal/CPack/CPackAPK.cmake")) {
+  if (!this->ReadListFile("Internal/CPack/CPackAPK.配置脚本")) {
     cmCPackLogger(cmCPackLog::LOG_ERROR,
-                  "Error while executing CPackAPK.cmake" << std::endl);
+                  "Error while executing CPackAPK.配置脚本" << std::endl);
     return 0;
   }
 
-  // CPackAPK.cmake writes the package to the file name CPack asked for.
+  // CPackAPK.配置脚本 writes the package to the file name CPack asked for.
   for (std::string const& packageFileName : this->packageFileNames) {
     if (!cmSystemTools::FileExists(packageFileName)) {
       cmCPackLogger(cmCPackLog::LOG_ERROR,

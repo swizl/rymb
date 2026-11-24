@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16.0)
 project(SameName)
-include("../AutogenGuiTest.cmake")
+include("../AutogenGuiTest.配置脚本")
 
 # Process .hh headers in AUTOMOC
 cmake_policy(SET CMP0100 NEW)

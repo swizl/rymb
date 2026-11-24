@@ -51,9 +51,9 @@ if(NOT CMAKE_ANDROID_ARCH_ABI)
     "${elf_magic}ELF debug\nneeded libc++_shared.so\n")
   file(WRITE "${aar_contents}/jni/x86_64/libkept.so" "${elf_magic}ELF debug\n")
   set(CPACK_APK_STRIP_EXECUTABLE
-    "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_SOURCE_DIR}/strip.cmake")
+    "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_SOURCE_DIR}/strip.配置脚本")
   set(CPACK_READELF_EXECUTABLE
-    "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_SOURCE_DIR}/readelf.cmake")
+    "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_SOURCE_DIR}/readelf.配置脚本")
   set(CPACK_APK_KEEP_DEBUG_SYMBOLS "libke?t*.so")
   set(CPACK_APK_NDK_ROOT "${CMAKE_CURRENT_BINARY_DIR}/ndk")
   set(ndk_libraries
@@ -118,7 +118,7 @@ if(NOT APK_TEST_DEFAULT_DIRECTORIES)
   )
 endif()
 if(APK_TEST_MAVEN)
-  include(maven.cmake)
+  include(maven.配置脚本)
 endif()
 
 include(CPack)

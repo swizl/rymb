@@ -1,6 +1,6 @@
 ^NotDefined -> NotFound
-CMake Warning at ConfigureLogTransitionsModule2Suppressed\.cmake:[0-9]+ \(find_package\):
-  By not providing "FindViaModule\.cmake" in CMAKE_MODULE_PATH this project
+CMake Warning at ConfigureLogTransitionsModule2Suppressed\.配置脚本:[0-9]+ \(find_package\):
+  By not providing "FindViaModule\.配置脚本" in CMAKE_MODULE_PATH this project
   has asked CMake to find a package configuration file provided by
   "ViaModule", but CMake did not find one\.
 
@@ -9,8 +9,8 @@ CMake Warning at ConfigureLogTransitionsModule2Suppressed\.cmake:[0-9]+ \(find_p
 
     ViaModule\.cps
     viamodule\.cps
-    ViaModuleConfig\.cmake
-    viamodule-config\.cmake
+    ViaModuleConfig\.配置脚本
+    viamodule-config\.配置脚本
 
   Add the installation prefix of "ViaModule" to CMAKE_PREFIX_PATH or set
   "ViaModule_DIR" to a directory containing one of the above files\.  If
@@ -21,8 +21,8 @@ Call Stack \(most recent call first\):
 
 
 NotFound -> NotFound
-CMake Warning at ConfigureLogTransitionsModule2Suppressed\.cmake:[0-9]+ \(find_package\):
-  By not providing "FindViaModule\.cmake" in CMAKE_MODULE_PATH this project
+CMake Warning at ConfigureLogTransitionsModule2Suppressed\.配置脚本:[0-9]+ \(find_package\):
+  By not providing "FindViaModule\.配置脚本" in CMAKE_MODULE_PATH this project
   has asked CMake to find a package configuration file provided by
   "ViaModule", but CMake did not find one\.
 
@@ -31,8 +31,8 @@ CMake Warning at ConfigureLogTransitionsModule2Suppressed\.cmake:[0-9]+ \(find_p
 
     ViaModule\.cps
     viamodule\.cps
-    ViaModuleConfig\.cmake
-    viamodule-config\.cmake
+    ViaModuleConfig\.配置脚本
+    viamodule-config\.配置脚本
 
   Add the installation prefix of "ViaModule" to CMAKE_PREFIX_PATH or set
   "ViaModule_DIR" to a directory containing one of the above files\.  If
@@ -45,8 +45,8 @@ Call Stack \(most recent call first\):
 NotFound -> Found
 Found -> Found
 Found -> NotFound
-CMake Warning at ConfigureLogTransitionsModule2Suppressed\.cmake:[0-9]+ \(find_package\):
-  By not providing "FindViaModule\.cmake" in CMAKE_MODULE_PATH this project
+CMake Warning at ConfigureLogTransitionsModule2Suppressed\.配置脚本:[0-9]+ \(find_package\):
+  By not providing "FindViaModule\.配置脚本" in CMAKE_MODULE_PATH this project
   has asked CMake to find a package configuration file provided by
   "ViaModule", but CMake did not find one\.
 
@@ -55,8 +55,8 @@ CMake Warning at ConfigureLogTransitionsModule2Suppressed\.cmake:[0-9]+ \(find_p
 
     ViaModule\.cps
     viamodule\.cps
-    ViaModuleConfig\.cmake
-    viamodule-config\.cmake
+    ViaModuleConfig\.配置脚本
+    viamodule-config\.配置脚本
 
   Add the installation prefix of "ViaModule" to CMAKE_PREFIX_PATH or set
   "ViaModule_DIR" to a directory containing one of the above files\.  If

@@ -139,7 +139,7 @@ add_custom_target(link_depends_no_shared_check ALL
    -Dlib=$<TARGET_FILE:link_depends_no_shared_lib>
    -Dexe=$<TARGET_FILE:link_depends_no_shared_exe>
    -Dout=${CMAKE_CURRENT_BINARY_DIR}/link_depends_no_shared_check.txt
-   -P ${CMAKE_CURRENT_SOURCE_DIR}/link_depends_no_shared_check.cmake
+   -P ${CMAKE_CURRENT_SOURCE_DIR}/link_depends_no_shared_check.配置脚本
   )
 add_dependencies(link_depends_no_shared_check link_depends_no_shared_exe)
 
@@ -210,6 +210,6 @@ add_custom_target(object_depends_check ALL
    -Dexe=$<TARGET_FILE:object_depends>
    -Dout=${CMAKE_CURRENT_BINARY_DIR}/object_depends_check.txt
    -Dtxt=${CMAKE_CURRENT_BINARY_DIR}/object_depends.txt
-   -P ${CMAKE_CURRENT_SOURCE_DIR}/object_depends_check.cmake
+   -P ${CMAKE_CURRENT_SOURCE_DIR}/object_depends_check.配置脚本
   )
 add_dependencies(object_depends_check object_depends)

@@ -1,4 +1,4 @@
-^CMake Error at FILTER-PREDICATE-NoOutput\.cmake:6 \(list\):
+^CMake Error at FILTER-PREDICATE-NoOutput\.配置脚本:6 \(list\):
   list sub-command FILTER, mode PREDICATE: function "bad_predicate" did not
   set the output variable\.
 Call Stack \(most recent call first\):

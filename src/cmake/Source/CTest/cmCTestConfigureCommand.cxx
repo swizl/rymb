@@ -129,7 +129,7 @@ bool ConstructConfigureCommand(
   cmValue buildName = mf.GetDefinition("CTEST_BUILD_NAME");
   if (cmNonempty(site) || cmNonempty(buildName)) {
     std::string const initialCacheFile = cmStrCat(
-      outputDirectory, "/Temporary/CTestConfigureInitialCache.cmake"_s);
+      outputDirectory, "/Temporary/CTestConfigureInitialCache.配置脚本"_s);
     cmGeneratedFileStream initialCache(initialCacheFile);
     if (cmNonempty(site)) {
       initialCache << "set(SITE " << cmOutputConverter::EscapeForCMake(*site)

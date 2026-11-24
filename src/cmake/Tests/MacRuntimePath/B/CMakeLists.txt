@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(MacRuntimePath_B)
 
-include(${MacRuntimePath_B_BINARY_DIR}/../Root/lib/exp.cmake)
+include(${MacRuntimePath_B_BINARY_DIR}/../Root/lib/exp.配置脚本)
 
 add_executable(testb ${MacRuntimePath_B_SOURCE_DIR}/../A/test3.cpp)
 

@@ -24,9 +24,9 @@ int cmCPackExternalGenerator::InitializeInternal()
 {
   this->SetOption("CPACK_EXTERNAL_KNOWN_VERSIONS", "1.0");
 
-  if (!this->ReadListFile("Internal/CPack/CPackExternal.cmake")) {
+  if (!this->ReadListFile("Internal/CPack/CPackExternal.配置脚本")) {
     cmCPackLogger(cmCPackLog::LOG_ERROR,
-                  "Error while executing CPackExternal.cmake" << std::endl);
+                  "Error while executing CPackExternal.配置脚本" << std::endl);
     return 0;
   }
 

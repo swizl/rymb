@@ -1,0 +1,1 @@
+find_package(NotHere MODULE CONFIG CONFIGS NotHereConfig.配置脚本 NO_DEFAULT_PATH)

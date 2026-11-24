@@ -52,7 +52,7 @@ extern "C" int LLVMFuzzerTestOneInput(uint8_t const* data, size_t size)
 
   // Test string matching utilities
   (void)cmSystemTools::StringStartsWith(input, "CMAKE_");
-  (void)cmSystemTools::StringEndsWith(input, ".cmake");
+  (void)cmSystemTools::StringEndsWith(input, ".配置脚本");
 
   // Test simple pattern matching
   if (size >= 4) {

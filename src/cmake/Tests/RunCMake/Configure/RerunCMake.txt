@@ -1,1 +1,1 @@
-Source-tree dependency for "RerunCMake.cmake".
+Source-tree dependency for "RerunCMake.配置脚本".

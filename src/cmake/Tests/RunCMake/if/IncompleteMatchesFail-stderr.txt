@@ -1,4 +1,4 @@
-CMake Error at IncompleteMatchesFail\.cmake:1 \(if\):
+CMake Error at IncompleteMatchesFail\.配置脚本:1 \(if\):
   if given arguments:
 
     "LHS" "MATCHES"

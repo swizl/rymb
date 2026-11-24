@@ -100,5 +100,5 @@ install(EXPORT expInterface NAMESPACE exp:: DESTINATION lib/exp)
 
 export(EXPORT expInterface
   NAMESPACE bld::
-  FILE ../ExportInterfaceBuildTree.cmake
+  FILE ../ExportInterfaceBuildTree.配置脚本
 )

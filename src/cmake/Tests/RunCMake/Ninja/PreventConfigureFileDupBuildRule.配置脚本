@@ -1,0 +1,4 @@
+enable_language(C)
+
+configure_file(PreventConfigureFileDupBuildRule.配置脚本 PreventTargetAliasesDupBuildRule.配置脚本 @ONLY)
+add_subdirectory(SubDirConfigureFileDup)

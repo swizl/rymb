@@ -1,4 +1,4 @@
-^CMake Warning \(author\) at InstallBeforeFramework\.cmake:4 \(install\):
+^CMake Warning \(author\) at InstallBeforeFramework\.配置脚本:4 \(install\):
   Target 'foo' was changed to a FRAMEWORK sometime after install\(\)\.  This may
   result in the wrong install DESTINATION\.  Set the FRAMEWORK property
   earlier\.

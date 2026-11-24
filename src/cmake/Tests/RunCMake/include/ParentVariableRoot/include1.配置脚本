@@ -1,0 +1,3 @@
+message(STATUS "ParentVariableRoot/include1.配置脚本: '${CMAKE_PARENT_LIST_FILE}'")
+include(ParentVariableRoot/include2.配置脚本)
+message(STATUS "ParentVariableRoot/include1.配置脚本: '${CMAKE_PARENT_LIST_FILE}'")

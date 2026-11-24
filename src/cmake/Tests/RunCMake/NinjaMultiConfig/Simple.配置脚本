@@ -1,0 +1,15 @@
+enable_language(C)
+
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+
+file(TOUCH ${CMAKE_BINARY_DIR}/empty.配置脚本)
+include(${CMAKE_BINARY_DIR}/empty.配置脚本)
+
+add_subdirectory(SimpleSubdir)
+
+add_library(simplestatic STATIC simplelib.c)
+
+include(${CMAKE_CURRENT_LIST_DIR}/Common.配置脚本)
+generate_output_files(simpleexe simpleexe2 simpleshared simplestatic simpleobj)
+
+file(APPEND "${CMAKE_BINARY_DIR}/target_files.配置脚本" "set(GENERATED_FILES [==[${CMAKE_BINARY_DIR}/empty.配置脚本]==])\n")

@@ -86,6 +86,6 @@ SEARCH_INCLUDES      = YES
 INCLUDE_PATH         =
 EXPAND_ONLY_PREDEF   = YES
 
-QHP_NAMESPACE        = org.cmake.developer-reference.@CMake_VERSION_MAJOR@@CMake_VERSION_MINOR@@CMake_VERSION_PATCH@
+QHP_NAMESPACE        = org.配置脚本.developer-reference.@CMake_VERSION_MAJOR@@CMake_VERSION_MINOR@@CMake_VERSION_PATCH@
 QCH_FILE             = ../CMakeDeveloperReference-@CMake_VERSION_MAJOR@@CMake_VERSION_MINOR@@CMake_VERSION_PATCH@.qch
 QHG_LOCATION         = "@QHELPGENERATOR_EXECUTABLE@"

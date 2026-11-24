@@ -44,7 +44,7 @@ check_property("${export_interfaces_flag}100;${export_interfaces_flag}300" "IMPO
 check_property("CXXModules::export_used;CXXModules::export_install" "IMPORTED_CXX_MODULES_LINK_LIBRARIES")
 
 # Extract the export-dependent targets from the export file.
-file(STRINGS "${export_usage_DIR}/export_usage-targets.cmake" usage_dependent_targets
+file(STRINGS "${export_usage_DIR}/export_usage-targets.配置脚本" usage_dependent_targets
   REGEX "foreach._target ")
 # Rudimentary argument splitting.
 string(REPLACE " " ";" usage_dependent_targets "${usage_dependent_targets}")

@@ -1,4 +1,4 @@
-CMake Error at LinkImplementationCycle1\.cmake:5 \(target_link_libraries\):
+CMake Error at LinkImplementationCycle1\.配置脚本:5 \(target_link_libraries\):
   Error evaluating generator expression:
 
     \$<TARGET_PROPERTY:INCLUDE_DIRECTORIES>

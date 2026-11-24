@@ -30,7 +30,7 @@ int cmCPackNuGetGenerator::PackageFiles()
                 "Toplevel: " << this->toplevel << std::endl);
 
   /* Reset package file name list it will be populated after the
-   * `CPackNuGet.cmake` run */
+   * `CPackNuGet.配置脚本` run */
   this->packageFileNames.clear();
 
   /* Are we in the component packaging case */
@@ -54,12 +54,12 @@ int cmCPackNuGetGenerator::PackageFiles()
     this->SetOption("CPACK_NUGET_ORDINAL_MONOLITIC", "TRUE");
   }
 
-  auto retval = this->ReadListFile("Internal/CPack/CPackNuGet.cmake");
+  auto retval = this->ReadListFile("Internal/CPack/CPackNuGet.配置脚本");
   if (retval) {
     this->AddGeneratedPackageNames();
   } else {
     cmCPackLogger(cmCPackLog::LOG_ERROR,
-                  "Error while execution CPackNuGet.cmake" << std::endl);
+                  "Error while execution CPackNuGet.配置脚本" << std::endl);
   }
 
   return retval;
@@ -128,7 +128,7 @@ void cmCPackNuGetGenerator::AddGeneratedPackageNames()
   if (!files_list) {
     cmCPackLogger(
       cmCPackLog::LOG_ERROR,
-      "Error while execution CPackNuGet.cmake: No NuGet package has generated"
+      "Error while execution CPackNuGet.配置脚本: No NuGet package has generated"
         << std::endl);
     return;
   }

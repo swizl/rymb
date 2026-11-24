@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24...3.28)
 project(cxx_modules_try_compile_ext CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 # The module sources reside outside of the project's source directory.
 set(srcdir "${CMAKE_CURRENT_LIST_DIR}/../try-compile")

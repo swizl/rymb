@@ -1,4 +1,4 @@
-CMake Error at NonValidCompiler-TARGET_PDB_FILE_BASE_NAME\.cmake:6 \(file\):
+CMake Error at NonValidCompiler-TARGET_PDB_FILE_BASE_NAME\.配置脚本:6 \(file\):
   Error evaluating generator expression:
 
     \$<TARGET_PDB_FILE_BASE_NAME:empty>

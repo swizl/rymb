@@ -1,5 +1,5 @@
 ^CMake Warning \(policy\) at [^
-]*/Modules/CPack\.cmake:[0-9]+ \(cmake_policy\):
+]*/Modules/CPack\.配置脚本:[0-9]+ \(cmake_policy\):
   Policy CMP0206 is not set: The CPack Archive Generator defaults to UID 0
   and GID 0\.  Run "cmake --help-policy CMP0206" for policy details\.  Use the
   cmake_policy command to set the policy and suppress this warning\.

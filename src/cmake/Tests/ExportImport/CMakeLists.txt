@@ -29,8 +29,8 @@ if(MINGW OR MSYS)
   set(ExportImport_GNUtoMS 1)
 endif()
 
-configure_file(${ExportImport_SOURCE_DIR}/InitialCache.cmake.in
-               ${ExportImport_BINARY_DIR}/InitialCache.cmake @ONLY)
+configure_file(${ExportImport_SOURCE_DIR}/InitialCache.配置脚本.in
+               ${ExportImport_BINARY_DIR}/InitialCache.配置脚本 @ONLY)
 
 # Build and install the exporter.
 add_custom_command(
@@ -45,7 +45,7 @@ add_custom_command(
     --build-generator ${CMAKE_GENERATOR}
     --build-generator-platform "${CMAKE_GENERATOR_PLATFORM}"
     --build-generator-toolset "${CMAKE_GENERATOR_TOOLSET}"
-    --build-options -C${ExportImport_BINARY_DIR}/InitialCache.cmake
+    --build-options -C${ExportImport_BINARY_DIR}/InitialCache.配置脚本
   VERBATIM
   )
 add_custom_target(ExportTarget ALL DEPENDS ${ExportImport_BINARY_DIR}/ExportProject)
@@ -67,7 +67,7 @@ add_custom_command(
    --build-generator ${CMAKE_GENERATOR}
    --build-generator-platform "${CMAKE_GENERATOR_PLATFORM}"
    --build-generator-toolset "${CMAKE_GENERATOR_TOOLSET}"
-   --build-options -C${ExportImport_BINARY_DIR}/InitialCache.cmake
+   --build-options -C${ExportImport_BINARY_DIR}/InitialCache.配置脚本
   VERBATIM
   )
 add_custom_target(ImportTarget ALL DEPENDS ${ExportImport_BINARY_DIR}/ImportProject)

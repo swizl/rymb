@@ -160,10 +160,10 @@ bool cmCTestStartCommand::InitialPass(std::vector<std::string> const& args,
 
   std::string fname;
 
-  std::string src_dir_fname = cmStrCat(sourceDir, "/CTestConfig.cmake"_s);
+  std::string src_dir_fname = cmStrCat(sourceDir, "/CTestConfig.配置脚本"_s);
   cmSystemTools::ConvertToUnixSlashes(src_dir_fname);
 
-  std::string bld_dir_fname = cmStrCat(binaryDir, "/CTestConfig.cmake"_s);
+  std::string bld_dir_fname = cmStrCat(binaryDir, "/CTestConfig.配置脚本"_s);
   cmSystemTools::ConvertToUnixSlashes(bld_dir_fname);
 
   if (cmSystemTools::FileExists(bld_dir_fname)) {
@@ -204,8 +204,8 @@ bool cmCTestStartCommand::InitialPass(std::vector<std::string> const& args,
       this->CTest->GetCTestConfiguration("NightlyStartTime").empty()) {
     cmCTestOptionalLog(
       this->CTest, WARNING, quiet,
-      "WARNING: No nightly start time found please set in CTestConfig.cmake"
-      " or DartConfig.cmake\n"_s);
+      "WARNING: No nightly start time found please set in CTestConfig.配置脚本"
+      " or DartConfig.配置脚本\n"_s);
     return false;
   }
 

@@ -1,6 +1,0 @@
-set(REGEX_TO_MATCH "\\.CachePluginDLL = '[/\\]path[/\\]to[/\\]plugin'")
-include(${RunCMake_SOURCE_DIR}/check.cmake)
-if(NOT RunCMake_TEST_FAILED)
-  set(REGEX_TO_MATCH "\\.CachePluginDLLConfig = 'key=value'")
-  include(${RunCMake_SOURCE_DIR}/check.cmake)
-endif()

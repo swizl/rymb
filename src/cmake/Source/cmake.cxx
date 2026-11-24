@@ -928,7 +928,7 @@ bool cmake::FindPackage(std::vector<std::string> const& args)
 
   mf->SetArgcArgv(args);
 
-  std::string systemFile = mf->GetModulesFile("CMakeFindPackageMode.cmake");
+  std::string systemFile = mf->GetModulesFile("CMakeFindPackageMode.配置脚本");
   mf->ReadListFile(systemFile);
 
   std::string language = mf->GetSafeDefinition("LANGUAGE");
@@ -1914,7 +1914,7 @@ int cmake::AddCMakePaths()
                       cmStateEnums::INTERNAL);
 #endif
   if (!cmSystemTools::FileExists(
-        (cmSystemTools::GetCMakeRoot() + "/Modules/CMake.cmake"))) {
+        (cmSystemTools::GetCMakeRoot() + "/Modules/CMake.配置脚本"))) {
     // couldn't find modules
     cmSystemTools::Error(
       cmStrCat("Could not find CMAKE_ROOT !!!\n"
@@ -3029,14 +3029,14 @@ void cmake::PreLoadCMakeFiles()
   std::vector<std::string> args;
   std::string pre_load = this->GetHomeDirectory();
   if (!pre_load.empty()) {
-    pre_load += "/PreLoad.cmake";
+    pre_load += "/PreLoad.配置脚本";
     if (cmSystemTools::FileExists(pre_load)) {
       this->ReadListFile(args, pre_load);
     }
   }
   pre_load = this->GetHomeOutputDirectory();
   if (!pre_load.empty()) {
-    pre_load += "/PreLoad.cmake";
+    pre_load += "/PreLoad.配置脚本";
     if (cmSystemTools::FileExists(pre_load)) {
       this->ReadListFile(args, pre_load);
     }
@@ -3283,7 +3283,7 @@ int cmake::Run(std::vector<std::string> const& args, bool noconfigure)
   // it hasn’t built the target yet. To make it a no-op for future runs, we
   // trigger a dummy fbuild invocation that creates this marker file and runs
   // CMake, marking rebuild-bff as up-to-date.  That run only touches a file,
-  // so check for it before PreLoad.cmake, and run no CMake code.
+  // so check for it before PreLoad.配置脚本, and run no CMake code.
   std::string const FBuildRestatFile =
     cmStrCat(this->GetHomeOutputDirectory(), '/', FASTBUILD_RESTAT_FILE);
   if (!noconfigure && cmSystemTools::FileExists(FBuildRestatFile)) {
@@ -3869,9 +3869,9 @@ void cmake::GenerateGraphViz(std::string const& fileName) const
   cmGraphVizWriter gvWriter(fileName, this->GetGlobalGenerator());
 
   std::string settingsFile =
-    cmStrCat(this->GetHomeOutputDirectory(), "/CMakeGraphVizOptions.cmake"_s);
+    cmStrCat(this->GetHomeOutputDirectory(), "/CMakeGraphVizOptions.配置脚本"_s);
   std::string fallbackSettingsFile =
-    cmStrCat(this->GetHomeDirectory(), "/CMakeGraphVizOptions.cmake"_s);
+    cmStrCat(this->GetHomeDirectory(), "/CMakeGraphVizOptions.配置脚本"_s);
 
   gvWriter.ReadSettings(settingsFile, fallbackSettingsFile);
 
@@ -3976,7 +3976,7 @@ int cmake::GetSystemInformation(std::vector<std::string>& args)
   this->AddCMakePaths();
   std::string modulesPath =
     cmStrCat(cmSystemTools::GetCMakeRoot(), "/Modules"_s);
-  std::string inFile = cmStrCat(modulesPath, "/SystemInformation.cmake"_s);
+  std::string inFile = cmStrCat(modulesPath, "/SystemInformation.配置脚本"_s);
   std::string outFile = cmStrCat(destPath, "/构建清单.txt"_s);
 
   // Copy file

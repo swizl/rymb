@@ -46,10 +46,10 @@ add_custom_command(OUTPUT ${FortranOnly_BINARY_DIR}/testfhello.txt
 add_executable(FortranOnly2 testfhello.txt testf.f ${test_rc})
 target_link_libraries(FortranOnly2 FortranOnlylib)
 # create a custom target to check the content of testfhello.txt
-# by running the cmake script checktestf2.cmake
+# by running the cmake script checktestf2.配置脚本
 add_custom_target(checktestf2 ALL
   COMMAND ${CMAKE_COMMAND}
-  -P ${FortranOnly_SOURCE_DIR}/checktestf2.cmake)
+  -P ${FortranOnly_SOURCE_DIR}/checktestf2.配置脚本)
 
 # create a custom target that runs FortranOnly1 executable and creates
 # a file out.txt that should have hello world in it.
@@ -64,7 +64,7 @@ add_dependencies(FortranOnly2 FortranOnly1)
 # add a custom target that checks that out.txt has the correct
 # content
 add_custom_target(checksayhello ALL
-  COMMAND ${CMAKE_COMMAND} -P ${FortranOnly_SOURCE_DIR}/checksayhello.cmake
+  COMMAND ${CMAKE_COMMAND} -P ${FortranOnly_SOURCE_DIR}/checksayhello.配置脚本
   )
 add_dependencies(checksayhello sayhello)
 
@@ -130,7 +130,7 @@ if("${CMAKE_GENERATOR}" MATCHES "Makefile" AND CMAKE_MAKE_PROGRAM)
     add_custom_target(test_preprocess ${MAYBE_ALL}
       COMMAND ${CMAKE_COMMAND} -E rm -f CMakeFiles/preprocess.dir/preprocess.F.i
       COMMAND ${CMAKE_MAKE_PROGRAM} preprocess.i
-      COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_SOURCE_DIR}/test_preprocess.cmake
+      COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_SOURCE_DIR}/test_preprocess.配置脚本
       # Remove bogus file some compilers leave behind.
       COMMAND ${CMAKE_COMMAND} -E rm -f ${CMAKE_CURRENT_SOURCE_DIR}/preprocess.s
       WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}

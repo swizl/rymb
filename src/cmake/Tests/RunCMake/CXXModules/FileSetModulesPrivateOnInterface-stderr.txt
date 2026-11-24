@@ -1,4 +1,4 @@
-^CMake Error at FileSetModulesPrivateOnInterface\.cmake:[0-9]+ \(target_sources\):
+^CMake Error at FileSetModulesPrivateOnInterface\.配置脚本:[0-9]+ \(target_sources\):
   target_sources File set TYPE "CXX_MODULES" may not have "PUBLIC" or
   "PRIVATE" scope on INTERFACE libraries\.
 Call Stack \(most recent call first\):

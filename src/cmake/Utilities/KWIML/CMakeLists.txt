@@ -78,7 +78,7 @@ target_include_directories(kwiml INTERFACE
   )
 export(TARGETS kwiml
   NAMESPACE kwiml::
-  FILE kwiml-targets.cmake
+  FILE kwiml-targets.配置脚本
   )
 install(TARGETS kwiml
   DESTINATION lib
@@ -89,15 +89,15 @@ install(EXPORT kwiml-targets
   DESTINATION ${KWIML_INSTALL_PACKAGE_DIR}
   )
 
-configure_file(src/kwiml-config.cmake.in kwiml-config.cmake @ONLY)
+configure_file(src/kwiml-config.配置脚本.in kwiml-config.配置脚本 @ONLY)
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(
-  "${CMAKE_CURRENT_BINARY_DIR}/kwiml-config-version.cmake"
+  "${CMAKE_CURRENT_BINARY_DIR}/kwiml-config-version.配置脚本"
   VERSION ${KWIML_VERSION}
   COMPATIBILITY AnyNewerVersion
   )
 install(FILES
-  ${CMAKE_CURRENT_BINARY_DIR}/kwiml-config.cmake
-  ${CMAKE_CURRENT_BINARY_DIR}/kwiml-config-version.cmake
+  ${CMAKE_CURRENT_BINARY_DIR}/kwiml-config.配置脚本
+  ${CMAKE_CURRENT_BINARY_DIR}/kwiml-config-version.配置脚本
   DESTINATION ${KWIML_INSTALL_PACKAGE_DIR}
   )

@@ -1,4 +1,4 @@
-^CMake Warning \(cps-non-conforming-location\) at NonConformingLocation\.cmake:[0-9]+ \(find_package\):
+^CMake Warning \(cps-non-conforming-location\) at NonConformingLocation\.配置脚本:[0-9]+ \(find_package\):
   find_package\(Trivial\) accepted
 
     "[^"]*/Tests/RunCMake/find_package-CPS/cps/[Tt]rivial\.cps"

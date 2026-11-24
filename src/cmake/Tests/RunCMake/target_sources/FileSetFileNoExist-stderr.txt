@@ -1,4 +1,4 @@
-^CMake Error at FileSetFileNoExist\.cmake:[0-9]+ \(target_sources\):
+^CMake Error at FileSetFileNoExist\.配置脚本:[0-9]+ \(target_sources\):
   Cannot find source file:
 
     [^

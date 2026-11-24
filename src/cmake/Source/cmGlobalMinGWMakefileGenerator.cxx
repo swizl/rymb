@@ -9,7 +9,7 @@
 cmGlobalMinGWMakefileGenerator::cmGlobalMinGWMakefileGenerator(cmake* cm)
   : cmGlobalUnixMakefileGenerator3(cm)
 {
-  this->FindMakeProgramFile = "CMakeMinGWFindMake.cmake";
+  this->FindMakeProgramFile = "CMakeMinGWFindMake.配置脚本";
   this->ForceUnixPaths = true;
   this->ToolSupportsColor = true;
   this->UseLinkScript = true;

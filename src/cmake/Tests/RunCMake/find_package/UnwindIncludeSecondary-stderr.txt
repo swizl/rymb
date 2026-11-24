@@ -1,22 +1,22 @@
-CMake Warning at UnwindInclude/UnwindSecondary\.cmake:1 \(find_package\):
+CMake Warning at UnwindInclude/UnwindSecondary\.配置脚本:1 \(find_package\):
   Found package configuration file:
 
     [^
-]*/Tests/RunCMake/find_package/UnwindInclude/SecondaryUnwindConfig\.cmake
+]*/Tests/RunCMake/find_package/UnwindInclude/SecondaryUnwindConfig\.配置脚本
 
   but it set SecondaryUnwind_FOUND to FALSE so package "SecondaryUnwind" is
   considered to be NOT FOUND\.
 Call Stack \(most recent call first\):
-  UnwindInclude/PrimaryUnwindConfig\.cmake:1 \(include\)
-  UnwindIncludeSecondary\.cmake:5 \(find_package\)
+  UnwindInclude/PrimaryUnwindConfig\.配置脚本:1 \(include\)
+  UnwindIncludeSecondary\.配置脚本:5 \(find_package\)
   CMakeLists\.txt:3 \(include\)
 
 
-CMake Warning at UnwindIncludeSecondary\.cmake:5 \(find_package\):
+CMake Warning at UnwindIncludeSecondary\.配置脚本:5 \(find_package\):
   Found package configuration file:
 
     [^
-]*/Tests/RunCMake/find_package/UnwindInclude/PrimaryUnwindConfig\.cmake
+]*/Tests/RunCMake/find_package/UnwindInclude/PrimaryUnwindConfig\.配置脚本
 
   but it set PrimaryUnwind_FOUND to FALSE so package "PrimaryUnwind" is
   considered to be NOT FOUND\.

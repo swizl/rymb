@@ -1,17 +1,17 @@
 -- Printing variables\.\.\.
- Variables in scope at '.*PrintVariablesIgnoreCase\.cmake' matching name '\^my_' \(case sensitive\):
+ Variables in scope at '.*PrintVariablesIgnoreCase\.配置脚本' matching name '\^my_' \(case sensitive\):
    my_lower = "abc"
 
 -- Printing variables\.\.\.
- Variables in scope at '.*PrintVariablesIgnoreCase\.cmake' matching name '\^my_' \(case insensitive\):
+ Variables in scope at '.*PrintVariablesIgnoreCase\.配置脚本' matching name '\^my_' \(case insensitive\):
    MY_UPPER = "ABC"
    my_lower = "abc"
 
 -- Printing variables\.\.\.
- Variables in scope at '.*PrintVariablesIgnoreCase\.cmake' matching value '\^abc' \(case sensitive\):
+ Variables in scope at '.*PrintVariablesIgnoreCase\.配置脚本' matching value '\^abc' \(case sensitive\):
    my_lower = "abc"
 
 -- Printing variables\.\.\.
- Variables in scope at '.*PrintVariablesIgnoreCase\.cmake' matching value '\^abc' \(case insensitive\):
+ Variables in scope at '.*PrintVariablesIgnoreCase\.配置脚本' matching value '\^abc' \(case insensitive\):
    MY_UPPER = "ABC"
    my_lower = "abc"

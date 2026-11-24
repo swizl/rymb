@@ -1,5 +1,5 @@
-CMake Warning \(deprecated\) at .*CMakePrintHelpers\.cmake:[0-9]+ \(message\):
+CMake Warning \(deprecated\) at .*CMakePrintHelpers\.配置脚本:[0-9]+ \(message\):
   cmake_print_properties\(\) is deprecated\.  Use
   cmake_language\(PRINT_PROPERTIES\) instead\.
 Call Stack \(most recent call first\):
-  PrintPropertiesDeprecation\.cmake:[0-9]+ \(cmake_print_properties\)
+  PrintPropertiesDeprecation\.配置脚本:[0-9]+ \(cmake_print_properties\)

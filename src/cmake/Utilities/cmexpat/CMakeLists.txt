@@ -14,8 +14,8 @@ elseif(CMAKE_SYSTEM_NAME STREQUAL "SunOS")
   add_definitions(-D_XOPEN_SOURCE=600)
 endif()
 
-include(ConfigureChecks.cmake)
-configure_file(expat_config.h.cmake expat_config.h @ONLY)
+include(ConfigureChecks.配置脚本)
+configure_file(expat_config.h.配置脚本 expat_config.h @ONLY)
 
 include_directories(
   ${CMAKE_CURRENT_BINARY_DIR}

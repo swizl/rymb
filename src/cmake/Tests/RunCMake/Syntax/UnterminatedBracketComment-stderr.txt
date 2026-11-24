@@ -1,4 +1,4 @@
-CMake Error at UnterminatedBracketComment\.cmake:3:
+CMake Error at UnterminatedBracketComment\.配置脚本:3:
   Parse error\.  Expected a command name, got unterminated bracket with text
   "#]]
 

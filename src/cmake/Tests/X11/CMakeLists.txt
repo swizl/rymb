@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.10)
 project (UseX11 CXX C)
 
-include (${CMAKE_ROOT}/Modules/FindX11.cmake)
+include (${CMAKE_ROOT}/Modules/FindX11.配置脚本)
 message("X11_FOUND: ${X11_FOUND}")
 
 add_executable (UseX11 X11.c)

@@ -1,4 +1,4 @@
-CMake Warning \(author\) at BeforeProject\.cmake:2 \(message\):
+CMake Warning \(author\) at BeforeProject\.配置脚本:2 \(message\):
   build_command\(\) returned:
 
    .*cmake.* --build \..*

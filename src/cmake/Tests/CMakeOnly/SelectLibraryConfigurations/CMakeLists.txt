@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 project(SelectLibraryConfigurations NONE)
 
-include(${CMAKE_ROOT}/Modules/SelectLibraryConfigurations.cmake)
+include(${CMAKE_ROOT}/Modules/SelectLibraryConfigurations.配置脚本)
 
 macro(check_slc basename expect)
   message(STATUS "checking select_library_configurations(${basename})")

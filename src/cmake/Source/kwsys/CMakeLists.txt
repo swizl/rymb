@@ -214,7 +214,7 @@ if(NOT DEFINED KWSYS_BUILD_SHARED)
 endif()
 
 # Include helper macros.
-include(${CMAKE_CURRENT_SOURCE_DIR}/kwsysPlatformTests.cmake)
+include(${CMAKE_CURRENT_SOURCE_DIR}/kwsysPlatformTests.配置脚本)
 
 # Do full dependency headers.
 include_regular_expression("^.*$")
@@ -621,8 +621,8 @@ foreach(cpp IN LISTS cppclasses)
     set(KWSYS_CLASSES ${KWSYS_CLASSES} ${cpp})
 
     # Load component-specific CMake code.
-    if(EXISTS ${PROJECT_SOURCE_DIR}/kwsys${cpp}.cmake)
-      include(${PROJECT_SOURCE_DIR}/kwsys${cpp}.cmake)
+    if(EXISTS ${PROJECT_SOURCE_DIR}/kwsys${cpp}.配置脚本)
+      include(${PROJECT_SOURCE_DIR}/kwsys${cpp}.配置脚本)
     endif()
   endif()
 endforeach()
@@ -636,8 +636,8 @@ foreach(c IN ITEMS
     set(KWSYS_H_FILES ${KWSYS_H_FILES} ${c})
 
     # Load component-specific CMake code.
-    if(EXISTS ${PROJECT_SOURCE_DIR}/kwsys${c}.cmake)
-      include(${PROJECT_SOURCE_DIR}/kwsys${c}.cmake)
+    if(EXISTS ${PROJECT_SOURCE_DIR}/kwsys${c}.配置脚本)
+      include(${PROJECT_SOURCE_DIR}/kwsys${c}.配置脚本)
     endif()
   endif()
 endforeach()
@@ -1054,9 +1054,9 @@ if(KWSYS_STANDALONE OR CMake_SOURCE_DIR)
     include_directories(${PROJECT_BINARY_DIR})
 
     if(CTEST_TEST_KWSYS)
-      configure_file("${CMAKE_CURRENT_SOURCE_DIR}/ExtraTest.cmake.in"
-        "${CMAKE_CURRENT_BINARY_DIR}/ExtraTest.cmake")
-      set_property(DIRECTORY APPEND PROPERTY TEST_INCLUDE_FILES "${CMAKE_CURRENT_BINARY_DIR}/ExtraTest.cmake")
+      configure_file("${CMAKE_CURRENT_SOURCE_DIR}/ExtraTest.配置脚本.in"
+        "${CMAKE_CURRENT_BINARY_DIR}/ExtraTest.配置脚本")
+      set_property(DIRECTORY APPEND PROPERTY TEST_INCLUDE_FILES "${CMAKE_CURRENT_BINARY_DIR}/ExtraTest.配置脚本")
     endif()
 
     set(KWSYS_TEST_ARGS_testCommandLineArguments
@@ -1139,8 +1139,8 @@ if(KWSYS_STANDALONE OR CMake_SOURCE_DIR)
     endif()
 
     # Set up ctest custom configuration file.
-    configure_file(${PROJECT_SOURCE_DIR}/CTestCustom.cmake.in
-                   ${PROJECT_BINARY_DIR}/CTestCustom.cmake @ONLY)
+    configure_file(${PROJECT_SOURCE_DIR}/CTestCustom.配置脚本.in
+                   ${PROJECT_BINARY_DIR}/CTestCustom.配置脚本 @ONLY)
 
     # Suppress known consistent failures on buggy systems.
     if(KWSYS_TEST_BOGUS_FAILURES)

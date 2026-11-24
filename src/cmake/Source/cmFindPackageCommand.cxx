@@ -989,11 +989,11 @@ bool cmFindPackageCommand::InitialPass(std::vector<std::string> const& args)
       this->AddPathSuffix(args[i]);
     } else if (doing == DoingConfigs) {
       if (args[i].find_first_of(":/\\") != std::string::npos ||
-          !cmHasSuffix(args[i], ".cmake"_s)) {
+          !cmHasSuffix(args[i], ".配置脚本"_s)) {
         this->SetError(cmStrCat(
           "given CONFIGS option followed by invalid file name \""_s, args[i],
           "\".  The names given must be file names without "
-          "a path and with a \".cmake\" extension."_s));
+          "a path and with a \".配置脚本\" extension."_s));
         return false;
       }
       this->Configs.emplace_back(args[i], pdt::CMake);
@@ -1097,7 +1097,7 @@ bool cmFindPackageCommand::InitialPass(std::vector<std::string> const& args)
   }
 
   if (this->VersionComplete.empty() || this->Components.empty()) {
-    // Check whether we are recursing inside "Find<name>.cmake" within
+    // Check whether we are recursing inside "Find<name>.配置脚本" within
     // another find_package(<name>) call.
     std::string const mod = cmStrCat(this->Name, "_FIND_MODULE"_s);
     if (this->Makefile->IsOn(mod)) {
@@ -1359,7 +1359,7 @@ bool cmFindPackageCommand::FindPackage(
       // included at least once, so we know the FetchContent_MakeAvailable()
       // command will be defined. Any future find_package() calls after this
       // one for this package will bypass this once-only delegation.
-      // The following call will typically create a <name>-config.cmake file
+      // The following call will typically create a <name>-config.配置脚本 file
       // in the redirectsDir, which we still want to process like any other
       // config file to ensure we follow normal find_package() processing.
       cmListFileFunction func(
@@ -1371,9 +1371,9 @@ bool cmFindPackageCommand::FindPackage(
     }
 
     if (cmSystemTools::FileExists(
-          cmStrCat(redirectsDir, '/', nameLower, "-config.cmake"_s)) ||
+          cmStrCat(redirectsDir, '/', nameLower, "-config.配置脚本"_s)) ||
         cmSystemTools::FileExists(
-          cmStrCat(redirectsDir, '/', overrideName, "Config.cmake"_s))) {
+          cmStrCat(redirectsDir, '/', overrideName, "Config.配置脚本"_s))) {
       // Force the use of this redirected config package file, regardless of
       // the type of find_package() call. Files in the redirectsDir must always
       // take priority over everything else.
@@ -1390,7 +1390,7 @@ bool cmFindPackageCommand::FindPackage(
     }
   }
 
-  // See if there is a Find<PackageName>.cmake module.
+  // See if there is a Find<PackageName>.配置脚本 module.
   bool loadedPackage = false;
   if (forceConfigMode) {
     loadedPackage = this->FindPackageUsingConfigMode();
@@ -1421,28 +1421,28 @@ bool cmFindPackageCommand::FindPackage(
                 "and "
                 "no Find"
              << this->Name
-             << ".cmake module is in CMAKE_MODULE_PATH.  "
+             << ".配置脚本 module is in CMAKE_MODULE_PATH.  "
                 "Add MODULE to exclusively request Module mode and fail if "
                 "Find"
              << this->Name
-             << ".cmake is missing.  "
+             << ".配置脚本 is missing.  "
                 "Add CONFIG to exclusively request Config mode and search for "
                 "a "
                 "package configuration file provided by "
-             << this->Name << " (" << this->Name << "Config.cmake or "
-             << cmSystemTools::LowerCase(this->Name) << "-config.cmake).  ";
+             << this->Name << " (" << this->Name << "Config.配置脚本 or "
+             << cmSystemTools::LowerCase(this->Name) << "-config.配置脚本).  ";
         } else {
           aw << "find_package called without NO_MODULE option and no "
                 "Find"
              << this->Name
-             << ".cmake module is in CMAKE_MODULE_PATH.  "
+             << ".配置脚本 module is in CMAKE_MODULE_PATH.  "
                 "Add NO_MODULE to exclusively request Config mode and search "
                 "for a "
                 "package configuration file provided by "
-             << this->Name << " (" << this->Name << "Config.cmake or "
+             << this->Name << " (" << this->Name << "Config.配置脚本 or "
              << cmSystemTools::LowerCase(this->Name)
-             << "-config.cmake).  Otherwise make Find" << this->Name
-             << ".cmake available in CMAKE_MODULE_PATH.";
+             << "-config.配置脚本).  Otherwise make Find" << this->Name
+             << ".配置脚本 available in CMAKE_MODULE_PATH.";
         }
         aw << "\n"
               "(Variable CMAKE_FIND_PACKAGE_WARN_NO_MODULE enabled this "
@@ -1492,10 +1492,10 @@ bool cmFindPackageCommand::FindPackageUsingConfigMode()
         }
       }
 
-      config = cmStrCat(n, "Config.cmake"_s);
+      config = cmStrCat(n, "Config.配置脚本"_s);
       this->Configs.emplace_back(std::move(config), pdt::CMake);
 
-      config = cmStrCat(cmSystemTools::LowerCase(n), "-config.cmake"_s);
+      config = cmStrCat(cmSystemTools::LowerCase(n), "-config.配置脚本"_s);
       this->Configs.emplace_back(std::move(config), pdt::CMake);
     }
   }
@@ -1654,7 +1654,7 @@ void cmFindPackageCommand::RestoreFindDefinitions()
 
 bool cmFindPackageCommand::FindModule(bool& found)
 {
-  std::string moduleFileName = cmStrCat("Find"_s, this->Name, ".cmake"_s);
+  std::string moduleFileName = cmStrCat("Find"_s, this->Name, ".配置脚本"_s);
 
   bool system = false;
   std::string debugBuffer =
@@ -1891,7 +1891,7 @@ bool cmFindPackageCommand::HandlePackageMode(
           << cmJoin(cmMakeRange(missingTargets), ", "_s);
       } else if (!this->ConsideredConfigs.empty()) {
         // If there are files in ConsideredConfigs, it means that
-        // FooConfig.cmake have been found, but they didn't have appropriate
+        // FooConfig.配置脚本 have been found, but they didn't have appropriate
         // versions.
         auto duplicate_end = cmRemoveDuplicates(this->ConsideredConfigs);
         e << "Could not find a configuration file for package \"" << this->Name
@@ -1919,7 +1919,7 @@ bool cmFindPackageCommand::HandlePackageMode(
         if (this->UseConfigFiles) {
           if (this->UseFindModules) {
             e << "By not providing \"Find" << this->Name
-              << ".cmake\" in "
+              << ".配置脚本\" in "
                  "CMAKE_MODULE_PATH this project has asked CMake to find a "
                  "package configuration file provided by \""
               << this->Name
@@ -1951,12 +1951,12 @@ bool cmFindPackageCommand::HandlePackageMode(
         } else // if(!this->UseFindModules && !this->UseConfigFiles)
         {
           e << "No \"Find" << this->Name
-            << ".cmake\" found in "
+            << ".配置脚本\" found in "
                "CMAKE_MODULE_PATH.";
 
           aw
             << "Find" << this->Name
-            << ".cmake must either be part of this "
+            << ".配置脚本 must either be part of this "
                "project itself, in this case adjust CMAKE_MODULE_PATH so that "
                "it points to the correct location inside its source tree.\n"
                "Or it must be installed by a package which has already been "
@@ -1965,7 +1965,7 @@ bool cmFindPackageCommand::HandlePackageMode(
                "contain the location where that package has installed "
                "Find"
             << this->Name
-            << ".cmake.  This must be a location "
+            << ".配置脚本.  This must be a location "
                "provided by that package.  This error in general means that "
                "the buildsystem of this project is relying on a Find-module "
                "without ensuring that it is actually available.\n";
@@ -2471,7 +2471,7 @@ void cmFindPackageCommand::AppendSuccessInformation()
   this->AppendToFoundProperty(packageFound);
 
   // Record whether the find was quiet or not, so this can be used
-  // e.g. in FeatureSummary.cmake
+  // e.g. in FeatureSummary.配置脚本
   std::string const quietInfoPropName =
     cmStrCat("_CMAKE_"_s, this->Name, "_QUIET"_s);
   this->Makefile->GetState()->SetGlobalProperty(
@@ -2754,7 +2754,7 @@ void cmFindPackageCommand::FillPrefixesUserRegistry()
 #else
   std::string dir;
   if (cmSystemTools::GetEnv("HOME", dir)) {
-    dir += "/.cmake/packages/";
+    dir += "/.配置脚本/packages/";
     dir += this->Name;
     this->LoadPackageRegistryDir(dir,
                                  this->LabeledPaths[PathLabel::UserRegistry]);
@@ -2942,7 +2942,7 @@ void cmFindPackageCommand::FillPrefixesCMakeSystemVariable()
   //
   // When we need to remove `CMAKE_INSTALL_PREFIX` we remove the Nth occurrence
   // of `CMAKE_INSTALL_PREFIX` from `CMAKE_SYSTEM_PREFIX_PATH`, where `N` is
-  // computed by `CMakeSystemSpecificInformation.cmake` while constructing
+  // computed by `CMakeSystemSpecificInformation.配置脚本` while constructing
   // `CMAKE_SYSTEM_PREFIX_PATH`. This ensures that if projects / toolchains
   // have removed `CMAKE_INSTALL_PREFIX` from the list, we don't remove
   // some other entry by mistake
@@ -3269,18 +3269,18 @@ bool cmFindPackageCommand::CheckVersion(std::string const& config_file)
       reason = SearchResult::Error;
     }
   } else {
-    // Get the filename without the .cmake extension.
+    // Get the filename without the .配置脚本 extension.
     std::string version_file_base = config_file.substr(0, pos);
 
-    // Look for foo-config-version.cmake
-    std::string version_file = cmStrCat(version_file_base, "-version.cmake"_s);
+    // Look for foo-config-version.配置脚本
+    std::string version_file = cmStrCat(version_file_base, "-version.配置脚本"_s);
     if (!haveResult && cmSystemTools::FileExists(version_file, true)) {
       result = this->CheckVersionFile(version_file, version);
       haveResult = true;
     }
 
-    // Look for fooConfigVersion.cmake
-    version_file = cmStrCat(version_file_base, "Version.cmake"_s);
+    // Look for fooConfigVersion.配置脚本
+    version_file = cmStrCat(version_file_base, "Version.配置脚本"_s);
     if (!haveResult && cmSystemTools::FileExists(version_file, true)) {
       result = this->CheckVersionFile(version_file, version);
       haveResult = true;

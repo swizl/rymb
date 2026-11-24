@@ -6,7 +6,7 @@ include(CTest)
 
 set(language "fortran")
 
-include (../BasicConfiguration.cmake)
+include (../BasicConfiguration.配置脚本)
 get_target_property(EXAMPLE_PREFIX example PREFIX)
 if (NOT EXAMPLE_PREFIX STREQUAL "${CMAKE_SHARED_LIBRARY_PREFIX}"
     AND NOT EXAMPLE_PREFIX STREQUAL "EXAMPLE_PREFIX-NOTFOUND")

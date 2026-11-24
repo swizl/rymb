@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24...3.28)
 project(cxx_modules_nested_dirs CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 add_library(export_nested_dirs STATIC)
 target_sources(export_nested_dirs
@@ -20,13 +20,13 @@ install(TARGETS export_nested_dirs
   FILE_SET modules DESTINATION "lib/cxx/miu")
 export(EXPORT CXXModules
   NAMESPACE CXXModules::
-  FILE "${CMAKE_CURRENT_BINARY_DIR}/export_nested_dirs-targets.cmake"
+  FILE "${CMAKE_CURRENT_BINARY_DIR}/export_nested_dirs-targets.配置脚本"
   CXX_MODULES_DIRECTORY "export_nested_dirs-cxx-modules")
 export(PACKAGE_INFO export_nested_dirs_cps
   EXPORT CXXModules
   CXX_MODULES_DIRECTORY "export_nested_dirs-cxx-modules-cps")
-file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_nested_dirs-config.cmake"
-  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_nested_dirs-targets.cmake\")
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_nested_dirs-config.配置脚本"
+  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_nested_dirs-targets.配置脚本\")
 set(\${CMAKE_FIND_PACKAGE_NAME}_FOUND 1)
 ")
 

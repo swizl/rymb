@@ -872,7 +872,7 @@ void cmExtraEclipseCDT4Generator::CreateCProjectFile() const
     }
   }
   // now also the system include directories, in case we found them in
-  // CMakeSystemSpecificInformation.cmake. This makes Eclipse find the
+  // CMakeSystemSpecificInformation.配置脚本. This makes Eclipse find the
   // standard headers.
   std::string compiler = mf->GetSafeDefinition("CMAKE_C_COMPILER");
   if (this->CEnabled && !compiler.empty()) {
@@ -975,7 +975,7 @@ void cmExtraEclipseCDT4Generator::CreateCProjectFile() const
                        cmSystemTools::GetCMakeCommand(), "\" -P \""_s);
             cleanArgs += lgen->GetTargetDirectory(
               target.get(), cmStateEnums::IntermediateDirKind::ObjectFiles);
-            cleanArgs += "/cmake_clean.cmake\"";
+            cleanArgs += "/cmake_clean.配置脚本\"";
             cmExtraEclipseCDT4Generator::AppendTarget(
               xml, "Clean", cmSystemTools::GetCMakeCommand(), cleanArgs,
               virtDir, "", "");

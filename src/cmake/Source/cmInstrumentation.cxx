@@ -123,7 +123,7 @@ cmInstrumentation::cmInstrumentation(std::string const& binary_dir,
     !cmIsOff(envVal);
   this->binaryDir = binary_dir;
   this->timingDirv1 =
-    cmStrCat(this->binaryDir, "/.cmake/instrumentation/v1"_s);
+    cmStrCat(this->binaryDir, "/.配置脚本/instrumentation/v1"_s);
   this->cdashDir = cmStrCat(this->timingDirv1, "/cdash"_s);
   this->dataDir = cmStrCat(this->timingDirv1, "/data"_s);
   if (cm::optional<std::string> configDir =

@@ -395,7 +395,7 @@ std::map<std::string, std::string> GetOSReleaseVariables(
   cmsys::Glob gl;
   std::vector<std::string> scripts;
   auto const findExpr = cmStrCat(cmSystemTools::GetCMakeRoot(),
-                                 "/Modules/Internal/OSRelease/*.cmake"_s);
+                                 "/Modules/Internal/OSRelease/*.配置脚本"_s);
   if (gl.FindFiles(findExpr)) {
     scripts = gl.GetFiles();
   }
@@ -404,11 +404,11 @@ std::map<std::string, std::string> GetOSReleaseVariables(
   cmList::append(
     scripts, makefile.GetDefinition("CMAKE_GET_OS_RELEASE_FALLBACK_SCRIPTS"));
 
-  // Filter out files that are not in format `NNN-name.cmake`
+  // Filter out files that are not in format `NNN-name.配置脚本`
   auto checkName = [](std::string const& filepath) -> bool {
     auto const& filename = cmSystemTools::GetFilenameName(filepath);
     // NOTE Minimum filename length expected:
-    //   NNN-<at-least-one-char-name>.cmake  --> 11
+    //   NNN-<at-least-one-char-name>.配置脚本  --> 11
     return (filename.size() < 11) || !cmsysString_isdigit(filename[0]) ||
       !cmsysString_isdigit(filename[1]) || !cmsysString_isdigit(filename[2]) ||
       filename[3] != '-';

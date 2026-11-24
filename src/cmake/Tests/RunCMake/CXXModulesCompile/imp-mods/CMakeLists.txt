@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24...3.28)
 project(cxx_modules_import_interfaces CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 if (NO_PROPERTIES)
   set(package_name "export_interfaces_no_properties")
@@ -22,7 +22,7 @@ elseif (WITH_HEADERS)
 elseif (CONFIG_MODULES)
   set(package_name "export_interface_config")
 elseif (BUILD_DATABASE)
-  include("${CMAKE_SOURCE_DIR}/../export-build-database-setup.cmake")
+  include("${CMAKE_SOURCE_DIR}/../export-build-database-setup.配置脚本")
   set(package_name "export_build_database")
 else ()
   set(package_name "export_interfaces")

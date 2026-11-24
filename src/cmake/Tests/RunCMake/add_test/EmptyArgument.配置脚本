@@ -1,0 +1,5 @@
+enable_testing()
+add_test(
+  NAME "EmptyArgument"
+  COMMAND "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_LIST_DIR}/CheckEmptyArgument.配置脚本" -- "A" "" "B"
+)

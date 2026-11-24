@@ -1,4 +1,4 @@
-^CMake Error at TRANSFORM-REPLACE-InvalidReplace2\.cmake:2 \(list\):
+^CMake Error at TRANSFORM-REPLACE-InvalidReplace2\.配置脚本:2 \(list\):
   list sub-command TRANSFORM, action REPLACE: Unknown escape "\\z" in
   replace-expression\.
 Call Stack \(most recent call first\):

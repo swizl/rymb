@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(MocMacroName)
-include("../AutogenCoreTest.cmake")
+include("../AutogenCoreTest.配置脚本")
 
 # Test CMAKE_AUTOMOC_MACRO_NAMES and AUTOMOC_MACRO_NAMES
 list(APPEND CMAKE_AUTOMOC_MACRO_NAMES "QO1_ALIAS")

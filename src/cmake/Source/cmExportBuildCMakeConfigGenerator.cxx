@@ -247,7 +247,7 @@ void cmExportBuildCMakeConfigGenerator::GenerateCxxModuleConfigInformation(
       c = "noconfig";
     }
     os << "include(\"${CMAKE_CURRENT_LIST_DIR}/cxx-modules-" << name << '-'
-       << c << ".cmake\"" << opt << ")\n";
+       << c << ".配置脚本\"" << opt << ")\n";
   }
 }
 
@@ -266,7 +266,7 @@ bool cmExportBuildCMakeConfigGenerator::
 
   std::string fileName =
     cmStrCat(this->FileDir, '/', cxx_modules_dirname, "/cxx-modules-"_s, name,
-             '-', config, ".cmake"_s);
+             '-', config, ".配置脚本"_s);
 
   cmGeneratedFileStream os(fileName, true);
   if (!os) {
@@ -285,7 +285,7 @@ bool cmExportBuildCMakeConfigGenerator::
     }
 
     os << "include(\"${CMAKE_CURRENT_LIST_DIR}/target-"
-       << tgt->GetFilesystemExportName() << '-' << config << ".cmake\")\n";
+       << tgt->GetFilesystemExportName() << '-' << config << ".配置脚本\")\n";
   }
 
   return true;

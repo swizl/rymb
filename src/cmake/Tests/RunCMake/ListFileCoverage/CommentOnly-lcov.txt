@@ -1,4 +1,4 @@
-SF:<SRC>/CommentOnly.cmake
+SF:<SRC>/CommentOnly.配置脚本
 FNF:0
 FNH:0
 DA:1,1

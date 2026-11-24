@@ -5,7 +5,7 @@
       "name": "FuturePresetToolchainField",
       "generator": "@RunCMake_GENERATOR@",
       "binaryDir": "${sourceDir}/build",
-      "toolchainFile": "${sourceDir}/toolchain.cmake"
+      "toolchainFile": "${sourceDir}/toolchain.配置脚本"
     }
   ]
 }

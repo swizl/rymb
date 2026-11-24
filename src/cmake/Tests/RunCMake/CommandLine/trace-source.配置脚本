@@ -1,0 +1,3 @@
+message(STATUS "before include()")
+include("trace-only-this-file.配置脚本")
+message(STATUS "after include()")

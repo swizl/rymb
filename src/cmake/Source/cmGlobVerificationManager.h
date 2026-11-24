@@ -25,7 +25,7 @@ class cmGlobVerificationManager
 {
 protected:
   //! Save verification script for given makefile.
-  //! Saves to output <path>/<CMakeFilesDirectory>/VerifyGlobs.cmake
+  //! Saves to output <path>/<CMakeFilesDirectory>/VerifyGlobs.配置脚本
   bool SaveVerificationScript(std::string const& path, cmMessenger* messenger);
 
   //! Add an entry into the glob cache

@@ -1,4 +1,4 @@
-CMake Error at FileSetOverlappingBaseDirs\.cmake:[0-9]+ \(target_sources\):
+CMake Error at FileSetOverlappingBaseDirs\.配置脚本:[0-9]+ \(target_sources\):
   Base directories in file set cannot be subdirectories of each other:
 
     [^

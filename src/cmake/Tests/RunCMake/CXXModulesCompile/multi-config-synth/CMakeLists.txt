@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24...3.28)
 project(cxx_modules_multi_config_synth CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 add_library(importable)
 target_sources(importable
@@ -10,12 +10,12 @@ target_compile_features(importable PUBLIC cxx_std_20)
 
 export(TARGETS importable
   NAMESPACE CXXModules::
-  FILE "${CMAKE_CURRENT_BINARY_DIR}/importable-targets.cmake"
+  FILE "${CMAKE_CURRENT_BINARY_DIR}/importable-targets.配置脚本"
   CXX_MODULES_DIRECTORY "importable-cxx-modules"
   )
 
-file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/importable-config.cmake"
-  "include(\"\${CMAKE_CURRENT_LIST_DIR}/importable-targets.cmake\")\n"
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/importable-config.配置脚本"
+  "include(\"\${CMAKE_CURRENT_LIST_DIR}/importable-targets.配置脚本\")\n"
   )
 
 set(generator

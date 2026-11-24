@@ -5,14 +5,14 @@ add_library(SubDirLinkBImported IMPORTED INTERFACE)
 target_compile_definitions(SubDirLinkBImported INTERFACE DEF_SubDirLinkBImportedForImport)
 
 # Import targets from the exported build tree.
-include(${Import_BINARY_DIR}/../Export/ExportBuildTree.cmake)
+include(${Import_BINARY_DIR}/../Export/ExportBuildTree.配置脚本)
 
 # Import targets from the exported install tree.
-include(${CMAKE_INSTALL_PREFIX}/lib/exp/exp.cmake)
+include(${CMAKE_INSTALL_PREFIX}/lib/exp/exp.配置脚本)
 
 # Import two exports, where the Depends one depends on an exported target from the Required one:
-include(${CMAKE_INSTALL_PREFIX}/lib/cmake/testLibRequired/testLibRequiredTargets.cmake)
-include(${CMAKE_INSTALL_PREFIX}/lib/cmake/testLibDepends/testLibDependsTargets.cmake)
+include(${CMAKE_INSTALL_PREFIX}/lib/cmake/testLibRequired/testLibRequiredTargets.配置脚本)
+include(${CMAKE_INSTALL_PREFIX}/lib/cmake/testLibDepends/testLibDependsTargets.配置脚本)
 
 # Try referencing an executable imported from the install tree.
 add_custom_command(
@@ -139,7 +139,7 @@ target_link_libraries(imp_testInterfaceInclude1d PRIVATE bld_testInterfaceInclud
 add_custom_target(check_testLib1_genex ALL
   COMMAND ${CMAKE_COMMAND} -DtestLib1=$<TARGET_FILE:exp_testLib1>
                            -Dprefix=${CMAKE_INSTALL_PREFIX}
-          -P ${CMAKE_CURRENT_SOURCE_DIR}/check_testLib1_genex.cmake
+          -P ${CMAKE_CURRENT_SOURCE_DIR}/check_testLib1_genex.配置脚本
   )
 
 if(CMAKE_SHARED_LIBRARY_SONAME_C_FLAG AND
@@ -174,12 +174,12 @@ if(CMAKE_SHARED_LIBRARY_SONAME_C_FLAG AND
         add_custom_target(check_${ns}_testLib5_soname ALL COMMAND
           ${CMAKE_COMMAND} -Dreadelf=${READELF_EXE}
           -Dlib=$<TARGET_FILE:${ns}_testLib5>
-          -P ${CMAKE_CURRENT_SOURCE_DIR}/check_lib_soname.cmake
+          -P ${CMAKE_CURRENT_SOURCE_DIR}/check_lib_soname.配置脚本
           )
         add_custom_target(check_${ns}_testLibNoSONAME_soname ALL COMMAND
           ${CMAKE_COMMAND} -Dreadelf=${READELF_EXE}
           -Dlib=$<TARGET_FILE:${ns}_testLibNoSONAME>
-          -P ${CMAKE_CURRENT_SOURCE_DIR}/check_lib_nosoname.cmake
+          -P ${CMAKE_CURRENT_SOURCE_DIR}/check_lib_nosoname.配置脚本
           )
       endif()
     endif()
@@ -213,7 +213,7 @@ target_compile_definitions(imp_testExe1  PRIVATE "$<$<CONFIG:Debug,RelWithDebInf
 target_compile_definitions(imp_testExe1b PRIVATE "$<$<CONFIG:Debug,RelWithDebInfo>:EXE_DBG>")
 
 #-----------------------------------------------------------------------------
-include(${CMAKE_INSTALL_PREFIX}/lib/expAbs/expAbs.cmake)
+include(${CMAKE_INSTALL_PREFIX}/lib/expAbs/expAbs.配置脚本)
 
 add_executable(imp_testExeAbs1
   imp_testExeAbs1.c

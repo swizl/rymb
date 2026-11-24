@@ -1,4 +1,4 @@
-CMake Error at SUBSTRING-WrongArguments\.cmake:[0-9]+ \(add_custom_target\):
+CMake Error at SUBSTRING-WrongArguments\.配置脚本:[0-9]+ \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRING:SUBSTRING,string,foo,1>
@@ -8,7 +8,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 
 
-CMake Error at SUBSTRING-WrongArguments\.cmake:[0-9]+ \(add_custom_target\):
+CMake Error at SUBSTRING-WrongArguments\.配置脚本:[0-9]+ \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRING:SUBSTRING,string,1,foo>
@@ -18,7 +18,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 
 
-CMake Error at SUBSTRING-WrongArguments\.cmake:[0-9]+ \(add_custom_target\):
+CMake Error at SUBSTRING-WrongArguments\.配置脚本:[0-9]+ \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRING:SUBSTRING,string,-1,2>
@@ -28,7 +28,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 
 
-CMake Error at SUBSTRING-WrongArguments\.cmake:[0-9]+ \(add_custom_target\):
+CMake Error at SUBSTRING-WrongArguments\.配置脚本:[0-9]+ \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRING:SUBSTRING,string,1,-2>

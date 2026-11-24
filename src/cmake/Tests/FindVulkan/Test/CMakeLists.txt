@@ -91,7 +91,7 @@ if(Vulkan_GLSLC_EXECUTABLE)
     COMMAND ${CMAKE_COMMAND}
     "-DVULKAN_GLSLC_EXECUTABLE=${Vulkan_GLSLC_EXECUTABLE}"
     "-DVULKAN_GLSLC_EXECUTABLE_TARGET=$<TARGET_FILE:Vulkan::glslc>"
-    -P "${CMAKE_CURRENT_LIST_DIR}/Run-glslc.cmake"
+    -P "${CMAKE_CURRENT_LIST_DIR}/Run-glslc.配置脚本"
     )
 endif()
 
@@ -100,7 +100,7 @@ if(Vulkan_GLSLANG_VALIDATOR_EXECUTABLE)
     COMMAND ${CMAKE_COMMAND}
     "-DVULKAN_GLSLANG_VALIDATOR_EXECUTABLE=${Vulkan_GLSLANG_VALIDATOR_EXECUTABLE}"
     "-DVULKAN_GLSLANG_VALIDATOR_EXECUTABLE_TARGET=$<TARGET_FILE:Vulkan::glslangValidator>"
-    -P "${CMAKE_CURRENT_LIST_DIR}/Run-glslangValidator.cmake"
+    -P "${CMAKE_CURRENT_LIST_DIR}/Run-glslangValidator.配置脚本"
     )
 endif()
 
@@ -109,6 +109,6 @@ if(Vulkan_dxc_EXECUTABLE)
     COMMAND ${CMAKE_COMMAND}
     "-DVULKAN_DXC_EXECUTABLE=${Vulkan_dxc_EXECUTABLE}"
     "-DVULKAN_DXC_EXECUTABLE_TARGET=$<TARGET_FILE:Vulkan::dxc_exe>"
-    -P "${CMAKE_CURRENT_LIST_DIR}/Run-dxc_exe.cmake"
+    -P "${CMAKE_CURRENT_LIST_DIR}/Run-dxc_exe.配置脚本"
     )
 endif()

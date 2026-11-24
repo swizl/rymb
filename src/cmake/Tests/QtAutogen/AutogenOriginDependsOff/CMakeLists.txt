@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(AutogenOriginDependsOff)
-include("../AutogenCoreTest.cmake")
+include("../AutogenCoreTest.配置脚本")
 
 get_property(_isMultiConfig GLOBAL PROPERTY GENERATOR_IS_MULTI_CONFIG)
 # XXX(xcode-per-cfg-src): Enable multi-config code path for Xcode
@@ -31,7 +31,7 @@ add_custom_target ( a_mc
         "-DMCF=${CBD}/a_qt_autogen/${mocs_compilation_cpp}"
         "-DCF_IN=${CSD}/a_mc.hpp.in"
         "-DCF_OUT=${CBD}/a_mc.hpp"
-        -P ${CSD}/configure_content.cmake
+        -P ${CSD}/configure_content.配置脚本
     )
 add_dependencies ( a_mc a_qt_autogen )
 
@@ -63,7 +63,7 @@ add_custom_command (
         "-DMCF=${CBD}/b_qt_autogen/${mocs_compilation_cpp}"
         "-DCF_IN=${CSD}/b_mc.cpp.in"
         "-DCF_OUT=${CBD}/b_mc.cpp"
-        -P ${CSD}/configure_content.cmake
+        -P ${CSD}/configure_content.配置脚本
     )
 add_library ( b_mc ${CSD}/b_mc.hpp ${CBD}/b_mc.cpp )
 

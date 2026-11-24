@@ -19,7 +19,7 @@ enum class PackageDomain;
 
 /**
  * This data represents the actual contents of find_package
- * <PACKAGE>-Config.cmake or <PACKAGE>.cps file, and not what is passed
+ * <PACKAGE>-Config.配置脚本 or <PACKAGE>.cps file, and not what is passed
  * to the find_package command. They can be the same, but it is not guaranteed.
  */
 

@@ -29,8 +29,8 @@ set_property(DIRECTORY APPEND PROPERTY COMPILE_DEFINITIONS ${CURL_DEBUG_MACROS} 
 configure_file("curl_config-cmake.h.in" "${CMAKE_CURRENT_BINARY_DIR}/curl_config.h")
 
 # Get CSOURCES, HHEADERS, LIB_RCFILES variables
-curl_transform_makefile_inc("Makefile.inc" "${CMAKE_CURRENT_BINARY_DIR}/Makefile.inc.cmake")
-include("${CMAKE_CURRENT_BINARY_DIR}/Makefile.inc.cmake")
+curl_transform_makefile_inc("Makefile.inc" "${CMAKE_CURRENT_BINARY_DIR}/Makefile.inc.配置脚本")
+include("${CMAKE_CURRENT_BINARY_DIR}/Makefile.inc.配置脚本")
 
 list(APPEND HHEADERS "${CMAKE_CURRENT_BINARY_DIR}/curl_config.h")
 
@@ -304,8 +304,8 @@ if(BUILD_SHARED_LIBS)
 
   if(CURL_LIBCURL_SOVERSION OR CURL_LIBCURL_VERSIONED_SYMBOLS)
     # Get VERSIONCHANGE, VERSIONADD, VERSIONDEL, VERSIONINFO variables
-    curl_transform_makefile_inc("Makefile.soname" "${CMAKE_CURRENT_BINARY_DIR}/Makefile.soname.cmake")
-    include("${CMAKE_CURRENT_BINARY_DIR}/Makefile.soname.cmake")
+    curl_transform_makefile_inc("Makefile.soname" "${CMAKE_CURRENT_BINARY_DIR}/Makefile.soname.配置脚本")
+    include("${CMAKE_CURRENT_BINARY_DIR}/Makefile.soname.配置脚本")
 
     math(EXPR _cmakesoname "${VERSIONCHANGE} - ${VERSIONDEL}")
     set(_cmakeversion "${_cmakesoname}.${VERSIONDEL}.${VERSIONADD}")
@@ -379,7 +379,7 @@ if(CURL_ENABLE_EXPORT_TARGET)
   endif()
 
   export(TARGETS ${libcurl_export}
-    FILE "${PROJECT_BINARY_DIR}/libcurl-target.cmake"
+    FILE "${PROJECT_BINARY_DIR}/libcurl-target.配置脚本"
     NAMESPACE ${PROJECT_NAME}::
   )
 endif()

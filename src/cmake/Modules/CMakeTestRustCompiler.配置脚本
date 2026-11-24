@@ -1,0 +1,9 @@
+# Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
+# file LICENSE.rst or https://cmake.org/licensing for details.
+
+configure_file(
+  "${CMAKE_ROOT}/Modules/CMakeRustCompiler.配置脚本.in"
+  "${CMAKE_PLATFORM_INFO_DIR}/CMakeRustCompiler.配置脚本"
+  @ONLY)
+
+include(${CMAKE_PLATFORM_INFO_DIR}/CMakeRustCompiler.配置脚本)

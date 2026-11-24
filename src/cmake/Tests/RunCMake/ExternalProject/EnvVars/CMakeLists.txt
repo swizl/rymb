@@ -14,9 +14,9 @@ if(MYLIST)
 endif()
 
 add_custom_target(EchoEnvVars ALL COMMENT "Build environment..."
-  COMMAND "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_SOURCE_DIR}/EchoVar.cmake")
+  COMMAND "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_SOURCE_DIR}/EchoVar.配置脚本")
 
-install(SCRIPT "${CMAKE_CURRENT_SOURCE_DIR}/EchoVar.cmake")
+install(SCRIPT "${CMAKE_CURRENT_SOURCE_DIR}/EchoVar.配置脚本")
 
 # Avoid repeating always-out-of-date EchoEnvVars during install step.
 set(CMAKE_SKIP_INSTALL_ALL_DEPENDENCY 1)

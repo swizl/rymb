@@ -1,4 +1,4 @@
-CMake Error at CMP0028-NEW\.cmake:5 \(target_link_libraries\):
+CMake Error at CMP0028-NEW\.配置脚本:5 \(target_link_libraries\):
   Target "foo" links to:
 
     External::Library

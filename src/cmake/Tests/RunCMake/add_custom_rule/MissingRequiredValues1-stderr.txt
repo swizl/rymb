@@ -1,4 +1,4 @@
-CMake Error at MissingRequiredValues1\.cmake:[0-9]+ \(add_custom_rule\):
+CMake Error at MissingRequiredValues1\.配置脚本:[0-9]+ \(add_custom_rule\):
   add_custom_rule given invalid arguments:
 
     COMMAND: missing required value

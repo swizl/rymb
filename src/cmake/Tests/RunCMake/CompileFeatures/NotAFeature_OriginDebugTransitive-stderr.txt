@@ -1,4 +1,4 @@
-CMake Debug Log at NotAFeature_OriginDebugTransitive\.cmake:6 \(target_link_libraries\):
+CMake Debug Log at NotAFeature_OriginDebugTransitive\.配置脚本:6 \(target_link_libraries\):
   Used compile features for target somelib:
 
    \* not_a_feature

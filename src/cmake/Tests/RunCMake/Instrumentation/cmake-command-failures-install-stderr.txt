@@ -1,2 +1,2 @@
-CMake Error at cmake_install\.cmake.*:
+CMake Error at cmake_install\.配置脚本.*:
   Failed install\.

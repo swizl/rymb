@@ -3,7 +3,7 @@ after try_compile with CMP0067 WARN-enabled but no variables
 before try_compile with CMP0067 WARN-default
 after try_compile with CMP0067 WARN-default
 before try_compile with CMP0067 WARN-enabled
-CMake Warning \(policy\) at CMP0067\.cmake:[0-9]+ \(try_compile\):
+CMake Warning \(policy\) at CMP0067\.配置脚本:[0-9]+ \(try_compile\):
   Policy CMP0067 is not set: Honor language standard in try_compile\(\)
   source-file signature\.  Run "cmake --help-policy CMP0067" for policy
   details\.  Use the cmake_policy command to set the policy and suppress this
@@ -20,7 +20,7 @@ This warning is for project developers\.  Use -Wno-author or -Wno-policy to
 suppress it\.
 +
 after try_compile with CMP0067 WARN-enabled
-CMake Warning \(deprecated\) at CMP0067\.cmake:[0-9]+ \(cmake_policy\):
+CMake Warning \(deprecated\) at CMP0067\.配置脚本:[0-9]+ \(cmake_policy\):
   The OLD behavior for policy CMP0067 will be removed from a future version
   of CMake\.
 

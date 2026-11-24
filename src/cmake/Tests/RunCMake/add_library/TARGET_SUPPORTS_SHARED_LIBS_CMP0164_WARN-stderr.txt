@@ -1,4 +1,4 @@
-^CMake Warning \(author\) at TARGET_SUPPORTS_SHARED_LIBS_CMP0164_WARN\.cmake:[0-9]+ \(add_library\):
+^CMake Warning \(author\) at TARGET_SUPPORTS_SHARED_LIBS_CMP0164_WARN\.配置脚本:[0-9]+ \(add_library\):
   ADD_LIBRARY called with SHARED option but the target platform does not
   support dynamic linking\.  Building a STATIC library instead\.  This may lead
   to problems\.

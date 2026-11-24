@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.28)
 project(export_with_headers CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 add_library(export_with_headers)
 target_sources(export_with_headers
@@ -22,13 +22,13 @@ install(TARGETS export_with_headers
   FILE_SET modules DESTINATION ${CMAKE_INSTALL_LIBDIR}/miu)
 export(EXPORT CXXModules
   NAMESPACE CXXModules::
-  FILE "${CMAKE_CURRENT_BINARY_DIR}/export_with_headers-targets.cmake"
+  FILE "${CMAKE_CURRENT_BINARY_DIR}/export_with_headers-targets.配置脚本"
   CXX_MODULES_DIRECTORY "export_with_headers-cxx-modules")
 export(PACKAGE_INFO export_with_headers_cps
   EXPORT CXXModules
   CXX_MODULES_DIRECTORY "export_with_headers-cxx-modules-cps")
-file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_with_headers-config.cmake"
-  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_with_headers-targets.cmake\")
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_with_headers-config.配置脚本"
+  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_with_headers-targets.配置脚本\")
 set(\${CMAKE_FIND_PACKAGE_NAME}_FOUND 1)
 ")
 

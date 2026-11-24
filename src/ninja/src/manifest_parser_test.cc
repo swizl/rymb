@@ -344,18 +344,18 @@ TEST_F(ParserTest, DuplicateEdgeWithMultipleOutputsError) {
 }
 
 TEST_F(ParserTest, DuplicateEdgeInIncludedFile) {
-  fs_.Create("sub.ninja",
+  fs_.Create("sub.构建文件",
     "rule cat\n"
     "  command = cat $in > $out\n"
     "build out1 out2: cat in1\n"
     "build out1: cat in2\n"
     "build final: cat out1\n");
   const char kInput[] =
-    "subninja sub.ninja\n";
+    "subninja sub.构建文件\n";
   ManifestParser parser(&state, &fs_);
   string err;
   EXPECT_FALSE(parser.ParseTest(kInput, &err));
-  EXPECT_EQ("sub.ninja:5: multiple rules generate out1\n", err);
+  EXPECT_EQ("sub.构建文件:5: multiple rules generate out1\n", err);
 }
 
 TEST_F(ParserTest, PhonySelfReferenceIgnored) {
@@ -851,8 +851,8 @@ TEST_F(ParserTest, MissingInput) {
   State local_state;
   ManifestParser parser(&local_state, &fs_);
   string err;
-  EXPECT_FALSE(parser.Load("构建.ninja", &err));
-  EXPECT_EQ("loading '构建.ninja': No such file or directory", err);
+  EXPECT_FALSE(parser.Load("构建.构建文件", &err));
+  EXPECT_EQ("loading '构建.构建文件': No such file or directory", err);
 }
 
 TEST_F(ParserTest, MultipleOutputs) {
@@ -876,7 +876,7 @@ TEST_F(ParserTest, MultipleOutputsWithDeps) {
 }
 
 TEST_F(ParserTest, SubNinja) {
-  fs_.Create("test.ninja",
+  fs_.Create("test.构建文件",
     "var = inner\n"
     "build $builddir/inner: varref\n");
   ASSERT_NO_FATAL_FAILURE(AssertParse(
@@ -885,11 +885,11 @@ TEST_F(ParserTest, SubNinja) {
 "  command = varref $var\n"
 "var = outer\n"
 "build $builddir/outer: varref\n"
-"subninja test.ninja\n"
+"subninja test.构建文件\n"
 "build $builddir/outer2: varref\n"));
   ASSERT_EQ(1u, fs_.files_read_.size());
 
-  EXPECT_EQ("test.ninja", fs_.files_read_[0]);
+  EXPECT_EQ("test.构建文件", fs_.files_read_[0]);
   EXPECT_TRUE(state.LookupNode("some_dir/outer"));
   // Verify our builddir setting is inherited.
   EXPECT_TRUE(state.LookupNode("some_dir/inner"));
@@ -903,54 +903,54 @@ TEST_F(ParserTest, SubNinja) {
 TEST_F(ParserTest, MissingSubNinja) {
   ManifestParser parser(&state, &fs_);
   string err;
-  EXPECT_FALSE(parser.ParseTest("subninja foo.ninja\n", &err));
-  EXPECT_EQ("input:1: loading 'foo.ninja': No such file or directory\n"
-            "subninja foo.ninja\n"
+  EXPECT_FALSE(parser.ParseTest("subninja foo.构建文件\n", &err));
+  EXPECT_EQ("input:1: loading 'foo.构建文件': No such file or directory\n"
+            "subninja foo.构建文件\n"
             "                  ^ near here"
             , err);
 }
 
 TEST_F(ParserTest, DuplicateRuleInDifferentSubninjas) {
   // Test that rules are scoped to subninjas.
-  fs_.Create("test.ninja", "rule cat\n"
+  fs_.Create("test.构建文件", "rule cat\n"
                          "  command = cat\n");
   ManifestParser parser(&state, &fs_);
   string err;
   EXPECT_TRUE(parser.ParseTest("rule cat\n"
                                 "  command = cat\n"
-                                "subninja test.ninja\n", &err));
+                                "subninja test.构建文件\n", &err));
 }
 
 TEST_F(ParserTest, DuplicateRuleInDifferentSubninjasWithInclude) {
   // Test that rules are scoped to subninjas even with includes.
-  fs_.Create("rules.ninja", "rule cat\n"
+  fs_.Create("rules.构建文件", "rule cat\n"
                          "  command = cat\n");
-  fs_.Create("test.ninja", "include rules.ninja\n"
+  fs_.Create("test.构建文件", "include rules.构建文件\n"
                          "build x : cat\n");
   ManifestParser parser(&state, &fs_);
   string err;
-  EXPECT_TRUE(parser.ParseTest("include rules.ninja\n"
-                                "subninja test.ninja\n"
+  EXPECT_TRUE(parser.ParseTest("include rules.构建文件\n"
+                                "subninja test.构建文件\n"
                                 "build y : cat\n", &err));
 }
 
 TEST_F(ParserTest, Include) {
-  fs_.Create("include.ninja", "var = inner\n");
+  fs_.Create("include.构建文件", "var = inner\n");
   ASSERT_NO_FATAL_FAILURE(AssertParse(
 "var = outer\n"
-"include include.ninja\n"));
+"include include.构建文件\n"));
 
   ASSERT_EQ(1u, fs_.files_read_.size());
-  EXPECT_EQ("include.ninja", fs_.files_read_[0]);
+  EXPECT_EQ("include.构建文件", fs_.files_read_[0]);
   EXPECT_EQ("inner", state.bindings_.LookupVariable("var"));
 }
 
 TEST_F(ParserTest, BrokenInclude) {
-  fs_.Create("include.ninja", "build\n");
+  fs_.Create("include.构建文件", "build\n");
   ManifestParser parser(&state, &fs_);
   string err;
-  EXPECT_FALSE(parser.ParseTest("include include.ninja\n", &err));
-  EXPECT_EQ("include.ninja:1: expected path\n"
+  EXPECT_FALSE(parser.ParseTest("include include.构建文件\n", &err));
+  EXPECT_EQ("include.构建文件:1: expected path\n"
             "build\n"
             "     ^ near here"
             , err);

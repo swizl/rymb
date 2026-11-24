@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24...3.28)
 project(cxx_modules_install_bmi_and_interfaces CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 add_library(install_bmi_and_interfaces STATIC)
 target_sources(install_bmi_and_interfaces
@@ -24,4 +24,4 @@ add_test(NAME check-for-bmi
       "-Dprefix=${CMAKE_INSTALL_PREFIX}"
       "-Dbmi_destination=lib/cxx/bmi"
       "-Dfs_destination=lib/cxx/miu"
-      -P "${CMAKE_CURRENT_SOURCE_DIR}/check-for-bmi.cmake")
+      -P "${CMAKE_CURRENT_SOURCE_DIR}/check-for-bmi.配置脚本")

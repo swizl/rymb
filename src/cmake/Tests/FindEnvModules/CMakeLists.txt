@@ -1,3 +1,3 @@
 add_test(FindEnvModules.Test ${CMAKE_CMAKE_COMMAND}
-  -P ${CMAKE_CURRENT_LIST_DIR}/EnvModules.cmake
+  -P ${CMAKE_CURRENT_LIST_DIR}/EnvModules.配置脚本
 )

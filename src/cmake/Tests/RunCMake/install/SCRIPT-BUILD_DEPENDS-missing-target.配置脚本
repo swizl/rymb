@@ -1,0 +1,3 @@
+install(SCRIPT install_script.配置脚本
+  BUILD_DEPENDS missing_target
+)

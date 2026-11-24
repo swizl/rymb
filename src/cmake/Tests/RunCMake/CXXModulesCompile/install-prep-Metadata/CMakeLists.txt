@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 4.4)
 project(cxx_modules_install_prep_metadata CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 add_library(export_interfaces STATIC)
 target_sources(export_interfaces PUBLIC FILE_SET CXX_MODULES FILES importable.cxx)

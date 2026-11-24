@@ -1,0 +1,2 @@
+include(CMP0104-Common.配置脚本)
+set_property(TARGET cuda PROPERTY CUDA_ARCHITECTURES)

@@ -420,7 +420,7 @@ void cmFindBase::FillCMakeSystemVariablePath()
   //
   // When we need to remove `CMAKE_INSTALL_PREFIX` we remove the Nth occurrence
   // of `CMAKE_INSTALL_PREFIX` from `CMAKE_SYSTEM_PREFIX_PATH`, where `N` is
-  // computed by `CMakeSystemSpecificInformation.cmake` while constructing
+  // computed by `CMakeSystemSpecificInformation.配置脚本` while constructing
   // `CMAKE_SYSTEM_PREFIX_PATH`. This ensures that if projects / toolchains
   // have removed `CMAKE_INSTALL_PREFIX` from the list, we don't remove
   // some other entry by mistake ( likewise for `CMAKE_STAGING_PREFIX` )

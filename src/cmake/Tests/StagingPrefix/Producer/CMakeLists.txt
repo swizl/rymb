@@ -12,7 +12,7 @@ install(TARGETS foo EXPORT fooTargets
 )
 install(FILES foo.h DESTINATION include/foo)
 install(EXPORT fooTargets
-  FILE FooConfig.cmake
+  FILE FooConfig.配置脚本
   NAMESPACE Foo::
   DESTINATION lib/cmake/Foo
 )

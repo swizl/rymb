@@ -1,4 +1,4 @@
-CMake Error at CommandError2\.cmake:1:
+CMake Error at CommandError2\.配置脚本:1:
   Parse error\.  Expected a command name, got bracket argument with text
   "oops-not-a-comment"\.
 Call Stack \(most recent call first\):

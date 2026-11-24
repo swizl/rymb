@@ -2,18 +2,18 @@
 6
 8
 10
-CMake Error at .*/variable_watch\.cmake:[0-9]+ \(update_x\):
+CMake Error at .*/variable_watch\.配置脚本:[0-9]+ \(update_x\):
   Maximum recursion depth of 10 exceeded
 Call Stack \(most recent call first\):
-  .*/variable_watch\.cmake:5 \(set\)
-  .*/variable_watch\.cmake:[0-9]+ \(update_x\)
-  .*/variable_watch\.cmake:5 \(set\)
-  .*/variable_watch\.cmake:[0-9]+ \(update_x\)
-  .*/variable_watch\.cmake:5 \(set\)
-  .*/variable_watch\.cmake:[0-9]+ \(update_x\)
-  .*/variable_watch\.cmake:5 \(set\)
-  .*/variable_watch\.cmake:[0-9]+ \(update_x\)
-  .*/variable_watch\.cmake:9 \(set\)
+  .*/variable_watch\.配置脚本:5 \(set\)
+  .*/variable_watch\.配置脚本:[0-9]+ \(update_x\)
+  .*/variable_watch\.配置脚本:5 \(set\)
+  .*/variable_watch\.配置脚本:[0-9]+ \(update_x\)
+  .*/variable_watch\.配置脚本:5 \(set\)
+  .*/variable_watch\.配置脚本:[0-9]+ \(update_x\)
+  .*/variable_watch\.配置脚本:5 \(set\)
+  .*/variable_watch\.配置脚本:[0-9]+ \(update_x\)
+  .*/variable_watch\.配置脚本:9 \(set\)
   .*/CMakeLists\.txt:5 \(include\)
 
 

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(GlobalAutogenTarget)
-include("../AutogenCoreTest.cmake")
+include("../AutogenCoreTest.配置脚本")
 
 # This tests
 # CMAKE_GLOBAL_AUTOGEN_TARGET,

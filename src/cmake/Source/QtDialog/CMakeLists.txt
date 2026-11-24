@@ -293,7 +293,7 @@ if(APPLE)
     MACOSX_BUNDLE_SHORT_VERSION_STRING "${CMake_VERSION_MAJOR}.${CMake_VERSION_MINOR}.${CMake_VERSION_PATCH}"
     # TBD: MACOSX_BUNDLE_BUNDLE_VERSION "${CMake_VERSION_MAJOR}.${CMake_VERSION_MINOR}.${CMake_VERSION_PATCH}"
     MACOSX_BUNDLE_COPYRIGHT "${CMake_COPYRIGHT_LINE}"
-    MACOSX_BUNDLE_GUI_IDENTIFIER "org.cmake.cmake"
+    MACOSX_BUNDLE_GUI_IDENTIFIER "org.配置脚本.配置脚本"
     )
 
   # Create a symlink in the build tree to provide a "cmake-gui" next
@@ -365,4 +365,4 @@ if(CMake_INSTALL_DEPENDENCIES AND (APPLE OR WIN32))
 endif()
 
 set(CMAKE_PACKAGE_QTGUI TRUE)
-configure_file(QtDialogCPack.cmake.in QtDialogCPack.cmake @ONLY)
+configure_file(QtDialogCPack.配置脚本.in QtDialogCPack.配置脚本 @ONLY)

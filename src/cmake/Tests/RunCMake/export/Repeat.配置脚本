@@ -1,0 +1,5 @@
+add_library(foo INTERFACE)
+export(TARGETS foo FILE foo.配置脚本)
+export(TARGETS foo FILE foo.配置脚本)
+add_subdirectory(Repeat)
+include(CMakePackageConfigHelpers)

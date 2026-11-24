@@ -1,0 +1,4 @@
+include("${CMAKE_CURRENT_LIST_DIR}/../cxx-modules-find-bmi.配置脚本")
+
+report_dirs("${prefix}" "${destination}")
+check_for_bmi("${prefix}" "${destination}" importable)

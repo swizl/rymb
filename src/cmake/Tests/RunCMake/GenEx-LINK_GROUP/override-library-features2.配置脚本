@@ -1,0 +1,4 @@
+
+include(incompatible-library-features2.配置脚本)
+
+set_property(TARGET lib1 PROPERTY LINK_LIBRARY_OVERRIDE_dep1 "feat1")

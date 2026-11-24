@@ -1,4 +1,4 @@
-CMake Error at BadStrLess\.cmake:1 \(add_custom_target\):
+CMake Error at BadStrLess\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRLESS>
@@ -7,7 +7,7 @@ CMake Error at BadStrLess\.cmake:1 \(add_custom_target\):
   instead\.
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
-+CMake Error at BadStrLess\.cmake:1 \(add_custom_target\):
++CMake Error at BadStrLess\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRLESS:>
@@ -17,7 +17,7 @@ Call Stack \(most recent call first\):
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 +
-CMake Error at BadStrLess\.cmake:1 \(add_custom_target\):
+CMake Error at BadStrLess\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRLESS:,,>
@@ -27,7 +27,7 @@ CMake Error at BadStrLess\.cmake:1 \(add_custom_target\):
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 +
-CMake Error at BadStrLess\.cmake:1 \(add_custom_target\):
+CMake Error at BadStrLess\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRLESS:something,,>

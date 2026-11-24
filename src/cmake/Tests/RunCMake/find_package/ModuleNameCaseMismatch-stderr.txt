@@ -1,16 +1,16 @@
-^CMake Warning \(author\) at ModuleNameCaseMismatch\.cmake:[0-9]+ \(find_package\):
+^CMake Warning \(author\) at ModuleNameCaseMismatch\.配置脚本:[0-9]+ \(find_package\):
   The module name
 
-    Findcasemodule\.cmake
+    Findcasemodule\.配置脚本
 
   does not match the case of the module file name on disk
 
     [^
-]*/ModuleNameCaseMismatch/FindCaseModule\.cmake
+]*/ModuleNameCaseMismatch/FindCaseModule\.配置脚本
 
   This may fail on case-sensitive file systems\.  Use the module name
 
-    FindCaseModule\.cmake
+    FindCaseModule\.配置脚本
 
   instead\.
 Call Stack \(most recent call first\):

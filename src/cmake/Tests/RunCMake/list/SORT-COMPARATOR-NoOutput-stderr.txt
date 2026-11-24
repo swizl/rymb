@@ -1,4 +1,4 @@
-^CMake Error at SORT-COMPARATOR-NoOutput\.cmake:6 \(list\):
+^CMake Error at SORT-COMPARATOR-NoOutput\.配置脚本:6 \(list\):
   list sub-command SORT, COMPARATOR: function "bad_comparator" did not set
   the output variable\.
 Call Stack \(most recent call first\):

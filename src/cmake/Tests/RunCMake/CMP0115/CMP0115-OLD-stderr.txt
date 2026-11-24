@@ -9,7 +9,7 @@
 This warning is for project developers\.  Use -Wno-author or -Wno-deprecated
 to suppress it\.
 +
-CMake Error at CMP0115\.cmake:[0-9]+ \(add_executable\):
+CMake Error at CMP0115\.配置脚本:[0-9]+ \(add_executable\):
   Cannot find source file:
 
     noexist
@@ -17,14 +17,14 @@ CMake Error at CMP0115\.cmake:[0-9]+ \(add_executable\):
   Tried extensions ([^
 ]+
 )+Call Stack \(most recent call first\):
-  CMP0115-OLD\.cmake:[0-9]+ \(include\)
+  CMP0115-OLD\.配置脚本:[0-9]+ \(include\)
   CMakeLists\.txt:[0-9]+ \(include\)
 
 
-CMake Error at CMP0115\.cmake:[0-9]+ \(add_executable\):
+CMake Error at CMP0115\.配置脚本:[0-9]+ \(add_executable\):
   No SOURCES given to target: exe
 Call Stack \(most recent call first\):
-  CMP0115-OLD\.cmake:[0-9]+ \(include\)
+  CMP0115-OLD\.配置脚本:[0-9]+ \(include\)
   CMakeLists\.txt:[0-9]+ \(include\)
 
 

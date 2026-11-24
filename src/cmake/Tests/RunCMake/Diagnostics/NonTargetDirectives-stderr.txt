@@ -1,4 +1,4 @@
-CMake Warning \(non-target-directive\) at NonTargetDirectives\.cmake:[0-9]+ \(add_definitions\):
+CMake Warning \(non-target-directive\) at NonTargetDirectives\.配置脚本:[0-9]+ \(add_definitions\):
   Use of non-target directives is not recommended\.  Consider
   target_compile_definitions, target_compile_options, or
   target_include_directories instead\.
@@ -7,7 +7,7 @@ Call Stack \(most recent call first\):
 This warning is for project developers\.  Use -Wno-author or
 -Wno-non-target-directive to suppress it\.
 
-CMake Warning \(non-target-directive\) at NonTargetDirectives\.cmake:[0-9]+ \(add_compile_definitions\):
+CMake Warning \(non-target-directive\) at NonTargetDirectives\.配置脚本:[0-9]+ \(add_compile_definitions\):
   Use of non-target directives is not recommended\.  Consider
   target_compile_definitions instead\.
 Call Stack \(most recent call first\):
@@ -15,7 +15,7 @@ Call Stack \(most recent call first\):
 This warning is for project developers\.  Use -Wno-author or
 -Wno-non-target-directive to suppress it\.
 
-CMake Warning \(non-target-directive\) at NonTargetDirectives\.cmake:[0-9]+ \(add_compile_options\):
+CMake Warning \(non-target-directive\) at NonTargetDirectives\.配置脚本:[0-9]+ \(add_compile_options\):
   Use of non-target directives is not recommended\.  Consider
   target_compile_options instead\.
 Call Stack \(most recent call first\):
@@ -23,7 +23,7 @@ Call Stack \(most recent call first\):
 This warning is for project developers\.  Use -Wno-author or
 -Wno-non-target-directive to suppress it\.
 
-CMake Warning \(non-target-directive\) at NonTargetDirectives\.cmake:[0-9]+ \(add_link_options\):
+CMake Warning \(non-target-directive\) at NonTargetDirectives\.配置脚本:[0-9]+ \(add_link_options\):
   Use of non-target directives is not recommended\.  Consider
   target_link_options instead\.
 Call Stack \(most recent call first\):
@@ -31,7 +31,7 @@ Call Stack \(most recent call first\):
 This warning is for project developers\.  Use -Wno-author or
 -Wno-non-target-directive to suppress it\.
 
-CMake Warning \(non-target-directive\) at NonTargetDirectives\.cmake:[0-9]+ \(include_directories\):
+CMake Warning \(non-target-directive\) at NonTargetDirectives\.配置脚本:[0-9]+ \(include_directories\):
   Use of non-target directives is not recommended\.  Consider
   target_include_directories instead\.
 Call Stack \(most recent call first\):
@@ -39,7 +39,7 @@ Call Stack \(most recent call first\):
 This warning is for project developers\.  Use -Wno-author or
 -Wno-non-target-directive to suppress it\.
 
-CMake Warning \(non-target-directive\) at NonTargetDirectives\.cmake:[0-9]+ \(link_directories\):
+CMake Warning \(non-target-directive\) at NonTargetDirectives\.配置脚本:[0-9]+ \(link_directories\):
   Use of non-target directives is not recommended\.  Consider
   target_link_directories instead\.
 Call Stack \(most recent call first\):
@@ -47,7 +47,7 @@ Call Stack \(most recent call first\):
 This warning is for project developers\.  Use -Wno-author or
 -Wno-non-target-directive to suppress it\.
 
-CMake Warning \(non-target-directive\) at NonTargetDirectives\.cmake:[0-9]+ \(link_libraries\):
+CMake Warning \(non-target-directive\) at NonTargetDirectives\.配置脚本:[0-9]+ \(link_libraries\):
   Use of non-target directives is not recommended\.  Consider
   target_link_libraries instead\.
 Call Stack \(most recent call first\):

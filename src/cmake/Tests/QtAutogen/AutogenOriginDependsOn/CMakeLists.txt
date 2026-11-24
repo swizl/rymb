@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(AutogenOriginDependsOn)
-include("../AutogenCoreTest.cmake")
+include("../AutogenCoreTest.配置脚本")
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 set(CSD ${CMAKE_CURRENT_SOURCE_DIR})

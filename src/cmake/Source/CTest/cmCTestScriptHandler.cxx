@@ -255,13 +255,13 @@ int cmCTestScriptHandler::ReadInScript(std::string const& total_script_arg)
   // set a callback function to update the elapsed time
   this->Makefile->OnExecuteCommand([this] { this->UpdateElapsedTime(); });
 
-  /* Execute CTestScriptMode.cmake, which loads CMakeDetermineSystem and
+  /* Execute CTestScriptMode.配置脚本, which loads CMakeDetermineSystem and
   CMakeSystemSpecificInformation, so
   that variables like CMAKE_SYSTEM and also the search paths for libraries,
   header and executables are set correctly and can be used. Makes new-style
   ctest scripting easier. */
   std::string systemFile =
-    this->Makefile->GetModulesFile("CTestScriptMode.cmake");
+    this->Makefile->GetModulesFile("CTestScriptMode.配置脚本");
   if (!this->Makefile->ReadListFile(systemFile) ||
       cmSystemTools::GetErrorOccurredFlag()) {
     cmCTestLog(this->CTest, ERROR_MESSAGE, "Error in read:"_s, systemFile,

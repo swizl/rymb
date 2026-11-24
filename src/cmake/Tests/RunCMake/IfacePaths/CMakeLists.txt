@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 project(${RunCMake_TEST} NONE)
 if(NOT TEST_FILE)
-  set(TEST_FILE ${RunCMake_TEST}.cmake)
+  set(TEST_FILE ${RunCMake_TEST}.配置脚本)
 endif()
 include(${TEST_FILE})

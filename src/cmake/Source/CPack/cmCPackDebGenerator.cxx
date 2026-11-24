@@ -614,14 +614,14 @@ int cmCPackDebGenerator::PackageOnePack(std::string const& initialTopLevel,
   this->SetOption("CPACK_OUTPUT_FILE_NAME", outputFileName);
   /* replace the TEMPORARY package file name */
   this->SetOption("CPACK_TEMPORARY_PACKAGE_FILE_NAME", packageFileName);
-  // Tell CPackDeb.cmake the name of the component GROUP.
+  // Tell CPackDeb.配置脚本 the name of the component GROUP.
   this->SetOption("CPACK_DEB_PACKAGE_COMPONENT", packageName);
-  // Tell CPackDeb.cmake the path where the component is.
+  // Tell CPackDeb.配置脚本 the path where the component is.
   std::string component_path = cmStrCat('/', sanitizedPkgDirName);
   this->SetOption("CPACK_DEB_PACKAGE_COMPONENT_PART_PATH", component_path);
-  if (!this->ReadListFile("Internal/CPack/CPackDeb.cmake")) {
+  if (!this->ReadListFile("Internal/CPack/CPackDeb.配置脚本")) {
     cmCPackLogger(cmCPackLog::LOG_ERROR,
-                  "Error while execution CPackDeb.cmake" << std::endl);
+                  "Error while execution CPackDeb.配置脚本" << std::endl);
     return 0;
   }
 
@@ -706,13 +706,13 @@ int cmCPackDebGenerator::PackageComponentsAllInOne(
   this->SetOption("CPACK_TEMPORARY_PACKAGE_FILE_NAME", packageFileName);
 
   if (!compInstDirName.empty()) {
-    // Tell CPackDeb.cmake the path where the component is.
+    // Tell CPackDeb.配置脚本 the path where the component is.
     std::string component_path = cmStrCat('/', compInstDirName);
     this->SetOption("CPACK_DEB_PACKAGE_COMPONENT_PART_PATH", component_path);
   }
-  if (!this->ReadListFile("Internal/CPack/CPackDeb.cmake")) {
+  if (!this->ReadListFile("Internal/CPack/CPackDeb.配置脚本")) {
     cmCPackLogger(cmCPackLog::LOG_ERROR,
-                  "Error while execution CPackDeb.cmake" << std::endl);
+                  "Error while execution CPackDeb.配置脚本" << std::endl);
     return 0;
   }
 

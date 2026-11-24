@@ -3,6 +3,6 @@ ExternalData_Add_Test(DataNoSymlinks
   NAME DataNoSymlinksCheck
   COMMAND ${CMAKE_COMMAND}
     -D Data=DATA{Data.dat}
-    -P ${CMAKE_CURRENT_SOURCE_DIR}/DataNoSymlinksCheck.cmake
+    -P ${CMAKE_CURRENT_SOURCE_DIR}/DataNoSymlinksCheck.配置脚本
   )
 ExternalData_Add_Target(DataNoSymlinks)

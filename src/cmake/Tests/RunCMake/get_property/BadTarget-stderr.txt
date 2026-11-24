@@ -1,4 +1,4 @@
-^CMake Error at BadTarget\.cmake:1 \(get_property\):
+^CMake Error at BadTarget\.配置脚本:1 \(get_property\):
   get_property could not find TARGET FOO\.  Perhaps it has not yet been
   created\.
 Call Stack \(most recent call first\):

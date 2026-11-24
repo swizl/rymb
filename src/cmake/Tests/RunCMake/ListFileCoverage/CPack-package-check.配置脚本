@@ -1,0 +1,6 @@
+# cpack records its configuration file and the install scripts it runs.
+set(expect_sf_regex
+  "/CPackConfig\\.配置脚本$"
+  "/cmake_install\\.配置脚本$"
+  )
+include(${RunCMake_SOURCE_DIR}/check-lcov.配置脚本)

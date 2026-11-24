@@ -1,1 +1,0 @@
-include(Swift-common.cmake)

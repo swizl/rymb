@@ -10,5 +10,5 @@ add_test(NAME test_git
   "-DGIT_EXECUTABLE_TARGET=$<TARGET_FILE:Git::Git>"
   "-DGit_VERSION=${Git_VERSION}"
   "-DGIT_VERSION_STRING=${GIT_VERSION_STRING}"
-  -P "${CMAKE_CURRENT_LIST_DIR}/RunGit.cmake"
+  -P "${CMAKE_CURRENT_LIST_DIR}/RunGit.配置脚本"
   )

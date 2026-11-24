@@ -3,7 +3,7 @@ file(GENERATE OUTPUT "${out}" CONTENT "# file(GENERATE) produced:
 ${in_LINK_LIBRARIES}
 ")
 add_custom_target(check-CMP0189-OLD ALL VERBATIM
-  COMMAND ${CMAKE_COMMAND} -Dconfig=$<CONFIG> -Dout=${out} -P${CMAKE_CURRENT_SOURCE_DIR}/check-OLD.cmake
+  COMMAND ${CMAKE_COMMAND} -Dconfig=$<CONFIG> -Dout=${out} -P${CMAKE_CURRENT_SOURCE_DIR}/check-OLD.配置脚本
 )
 
 cmake_policy(SET CMP0189 NEW)
@@ -12,7 +12,7 @@ file(GENERATE OUTPUT "${out}" CONTENT "# file(GENERATE) produced:
 ${in_LINK_LIBRARIES}
 ")
 add_custom_target(check-CMP0189-NEW ALL VERBATIM
-  COMMAND ${CMAKE_COMMAND} -Dconfig=$<CONFIG> -Dout=${out} -P${CMAKE_CURRENT_SOURCE_DIR}/check-NEW.cmake
+  COMMAND ${CMAKE_COMMAND} -Dconfig=$<CONFIG> -Dout=${out} -P${CMAKE_CURRENT_SOURCE_DIR}/check-NEW.配置脚本
   COMMAND check-args
   "$<TARGET_PROPERTY:iface1,LINK_LIBRARIES>" ""
   "$<TARGET_PROPERTY:iface1,INTERFACE_LINK_LIBRARIES>" ""

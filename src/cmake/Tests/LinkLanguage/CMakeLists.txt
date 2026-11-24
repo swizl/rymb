@@ -6,7 +6,7 @@ add_executable(LinkLanguage LinkLanguage.c)
 
 # Export the target now to compute its link interface and implementation.
 # This tests that the link info is recomputed after the library is linked.
-export(TARGETS LinkLanguage FILE LinkLanguageTargets.cmake)
+export(TARGETS LinkLanguage FILE LinkLanguageTargets.配置脚本)
 
 target_link_libraries(LinkLanguage foo)
 

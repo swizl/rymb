@@ -1,4 +1,4 @@
-CMake Error at VersionLimit3\.cmake:[0-9]+ \(find_package\):
+CMake Error at VersionLimit3\.配置脚本:[0-9]+ \(find_package\):
   Could not find a configuration file for package "Sample" that is compatible
   with requested version range "1\.2\.0\.\.\.1\.2\.2"\.
 

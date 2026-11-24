@@ -1,0 +1,2 @@
+include(${CMAKE_CURRENT_LIST_DIR}/IncludeTwiceLib.配置脚本)
+include(${CMAKE_CURRENT_LIST_DIR}/IncludeTwiceLib.配置脚本)

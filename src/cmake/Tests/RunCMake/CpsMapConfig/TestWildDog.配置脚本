@@ -1,0 +1,6 @@
+project(TestTameDog CXX)
+
+set(ANIMAL_CONFIGS "WILD;DOG")
+include(TestMappedConfig.配置脚本)
+
+target_compile_definitions(test PRIVATE "EXPECTED=growl")

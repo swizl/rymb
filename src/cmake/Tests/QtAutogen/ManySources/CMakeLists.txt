@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(ManySources)
-include("../AutogenGuiTest.cmake")
+include("../AutogenGuiTest.配置脚本")
 
 # Test AUTOMOC and AUTOUIC on many source files to stress the concurrent
 # parsing and processing framework.

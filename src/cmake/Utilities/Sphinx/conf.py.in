@@ -104,7 +104,7 @@ html_short_title = '%s Documentation' % release
 html_favicon = '@conf_path@/static/cmake-favicon.ico'
 # Not supported yet by sphinx:
 # https://bitbucket.org/birkenfeld/sphinx/issue/1448/make-qthelp-more-configurable
-# qthelp_namespace = "org.cmake"
+# qthelp_namespace = "org.配置脚本"
 # qthelp_qch_name = "CMake.qch"
 
 linkcheck_ignore = [

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 4.4)
 set(CMAKE_EXPERIMENTAL_SYCL "c0d1fb10-2ece-420e-9d29-7d7f2b300f25")
 project(ResolveDeviceSymbols CXX SYCL)
-include(../utils/Test.cmake)
+include(../utils/Test.配置脚本)
 # Remove gate when DPC++ archive device finalization is fixed.
 if(CMAKE_SYCL_COMPILER_ID MATCHES "^(DPClang|IntelLLVM)$")
   sycl_not_supported("${CMAKE_SYCL_COMPILER_ID} -fsycl-link cannot finalize SYCL archives")
@@ -30,7 +30,7 @@ if(CMAKE_AR)
   add_custom_command(TARGET SYCLResolveDeviceLib POST_BUILD
     COMMAND "${CMAKE_COMMAND}" "-DARCHIVER=${CMAKE_AR}"
       "-DLIBRARY=$<TARGET_FILE:SYCLResolveDeviceLib>"
-      -P "${CMAKE_CURRENT_SOURCE_DIR}/verify.cmake"
+      -P "${CMAKE_CURRENT_SOURCE_DIR}/verify.配置脚本"
     VERBATIM)
 endif()
 

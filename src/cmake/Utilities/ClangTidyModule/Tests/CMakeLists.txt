@@ -6,7 +6,7 @@ function(add_run_clang_tidy_test check_name)
     "-DCLANG_TIDY_MODULE=$<TARGET_FILE:cmake-clang-tidy-module>"
     "-DCHECK_NAME=${check_name}"
     "-DRunClangTidy_BINARY_DIR=${CMAKE_CURRENT_BINARY_DIR}"
-    -P "${CMAKE_CURRENT_SOURCE_DIR}/RunClangTidy.cmake"
+    -P "${CMAKE_CURRENT_SOURCE_DIR}/RunClangTidy.配置脚本"
     )
 endfunction()
 

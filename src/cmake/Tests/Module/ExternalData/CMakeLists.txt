@@ -14,7 +14,7 @@ set(ExternalData_URL_TEMPLATES
   "ExternalDataCustomScript://MyScript1/%(algo)/%(hash)"
   )
 set(ExternalData_URL_ALGO_MD5_MyAlgoMap1 MyAlgoMap1-md5)
-set(ExternalData_CUSTOM_SCRIPT_MyScript1 "${CMAKE_CURRENT_SOURCE_DIR}/MyScript1.cmake")
+set(ExternalData_CUSTOM_SCRIPT_MyScript1 "${CMAKE_CURRENT_SOURCE_DIR}/MyScript1.配置脚本")
 set(ExternalData_BINARY_ROOT "${CMAKE_CURRENT_BINARY_DIR}/ExternalData")
 file(REMOVE_RECURSE ${ExternalData_BINARY_ROOT}) # clean test
 
@@ -48,7 +48,7 @@ ExternalData_Add_Test(Data1
     -D MultipleAlgorithmNoSHA1=DATA{MultipleAlgorithmNoSHA1.dat}
     -D MultipleAlgorithmNoMD5=DATA{MultipleAlgorithmNoMD5.dat}
     -D "Semicolons=DATA{Data.dat}\\;DATA{Data.dat}"
-    -P ${CMAKE_CURRENT_SOURCE_DIR}/Data1Check.cmake
+    -P ${CMAKE_CURRENT_SOURCE_DIR}/Data1Check.配置脚本
   )
 ExternalData_Add_Target(Data1)
 

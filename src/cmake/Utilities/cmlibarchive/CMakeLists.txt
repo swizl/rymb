@@ -103,7 +103,7 @@ set(MACHO_CURRENT_VERSION "${MACHO_COMPATIBILITY_VERSION}.${_revision}")
 
 # Enable CMAKE_PUSH_CHECK_STATE() and CMAKE_POP_CHECK_STATE() macros
 # saving and restoring the state of the variables.
-INCLUDE(${CMake_SOURCE_DIR}/Modules/CMakePushCheckState.cmake)
+INCLUDE(${CMake_SOURCE_DIR}/Modules/CMakePushCheckState.配置脚本)
 
 if(0) # XXX(cmake): do not let pkg-config override our search paths
 # Enable the pkg-config helpers.
@@ -374,7 +374,7 @@ MACRO (GENERATE_LIST_H _listfile _cmlist _target __list_sources)
   SET(_argv ${ARGV})
   # Remove _listfile, _cmlist, and _target from _argv
   LIST(REMOVE_AT _argv 0 1 2)
-  # Convert source paths to absolute so discover_tests.cmake can find them
+  # Convert source paths to absolute so discover_tests.配置脚本 can find them
   # regardless of the working directory when cmake -P runs.
   SET(_gl_abs_sources "")
   FOREACH(_gl_src ${_argv})
@@ -384,19 +384,19 @@ MACRO (GENERATE_LIST_H _listfile _cmlist _target __list_sources)
       LIST(APPEND _gl_abs_sources "${CMAKE_CURRENT_SOURCE_DIR}/${_gl_src}")
     ENDIF()
   ENDFOREACH()
-  # Stamp out discover_tests.cmake with source list and output path baked in.
+  # Stamp out discover_tests.配置脚本 with source list and output path baked in.
   SET(SOURCES "${_gl_abs_sources}")
   SET(OUTPUT "${_listfile}")
   CONFIGURE_FILE(
-    ${CMAKE_SOURCE_DIR}/build/cmake/discover_tests.cmake.in
-    ${CMAKE_CURRENT_BINARY_DIR}/discover_tests.cmake
+    ${CMAKE_SOURCE_DIR}/build/cmake/discover_tests.配置脚本.in
+    ${CMAKE_CURRENT_BINARY_DIR}/discover_tests.配置脚本
     @ONLY)
   UNSET(SOURCES)
   UNSET(OUTPUT)
   # list.h is regenerated at build time whenever any test .c file changes.
   ADD_CUSTOM_COMMAND(
     OUTPUT "${_listfile}"
-    COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/discover_tests.cmake
+    COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/discover_tests.配置脚本
     DEPENDS ${_gl_abs_sources}
     COMMENT "Generating ${_listfile}"
     VERBATIM)

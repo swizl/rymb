@@ -561,7 +561,7 @@ bool cmDyndepCollation::WriteDyndepMetadata(
       cmStrCat(exp.Prefix, '/', exp.CxxModuleInfoDir, '/');
     std::string const property_file_path =
       cmStrCat(export_dir, "target-"_s, exp.FilesystemName, '-',
-               export_info.Config, ".cmake"_s);
+               export_info.Config, ".配置脚本"_s);
     exp_helper.Manifest.MetadataFilePath =
       cmStrCat(exp.Destination, '/', exp.CxxModuleInfoDir, "/target-"_s,
                exp.FilesystemName, '-', export_info.Config, ".modules.json"_s);

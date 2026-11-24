@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24...3.28)
 project(cxx_modules_export_sepdir CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 add_subdirectory(subdir)
 
@@ -11,17 +11,17 @@ install(TARGETS export_sepdir
 install(EXPORT CXXModules
   NAMESPACE CXXModules::
   DESTINATION "lib/cmake/export_sepdir"
-  FILE "export_sepdir-targets.cmake"
+  FILE "export_sepdir-targets.配置脚本"
   CXX_MODULES_DIRECTORY "export_sepdir-cxx-modules")
 install(PACKAGE_INFO "export_sepdir_cps"
   EXPORT CXXModules
   DESTINATION "lib/cmake/export_sepdir_cps"
   CXX_MODULES_DIRECTORY "export_sepdir-cxx-modules-cps")
-file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_sepdir-config.cmake"
-  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_sepdir-targets.cmake\")
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_sepdir-config.配置脚本"
+  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_sepdir-targets.配置脚本\")
 set(\${CMAKE_FIND_PACKAGE_NAME}_FOUND 1)
 ")
-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/export_sepdir-config.cmake"
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/export_sepdir-config.配置脚本"
   DESTINATION "lib/cmake/export_sepdir")
 
 set(generator

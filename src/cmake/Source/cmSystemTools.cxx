@@ -3328,7 +3328,7 @@ bool FindCMakeResourcesInInstallTree(std::string const& exe_dir)
     // cmake::AddCMakePaths can print the location in its error message.
     cmSystemToolsCMakeRoot = cmStrCat(prefix, CMAKE_DATA_DIR);
     if (cmSystemTools::FileExists(
-          cmStrCat(cmSystemToolsCMakeRoot, "/Modules/CMake.cmake"_s))) {
+          cmStrCat(cmSystemToolsCMakeRoot, "/Modules/CMake.配置脚本"_s))) {
       if (cmSystemTools::FileExists(
             cmStrCat(prefix, CMAKE_DOC_DIR "/html/index.html"))) {
         cmSystemToolsHTMLDoc = cmStrCat(prefix, CMAKE_DOC_DIR "/html");

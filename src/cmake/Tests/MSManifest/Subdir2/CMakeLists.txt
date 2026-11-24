@@ -11,7 +11,7 @@ if((MSVC AND NOT MSVC_VERSION LESS 1400)
         AND CMAKE_C_SIMULATE_ID STREQUAL "MSVC"))
   add_test(NAME MSManifest.Multiple COMMAND
     ${CMAKE_COMMAND} -Dexe=$<TARGET_FILE:MSMultipleManifest>
-    -P ${CMAKE_CURRENT_SOURCE_DIR}/check.cmake)
+    -P ${CMAKE_CURRENT_SOURCE_DIR}/check.配置脚本)
   if(MSVC AND NOT MSVC_VERSION LESS 1400)
     add_executable(MSMultipleManifestNonIncremental main.c
       ${CMAKE_CURRENT_BINARY_DIR}/test_manifest1.manifest
@@ -20,6 +20,6 @@ if((MSVC AND NOT MSVC_VERSION LESS 1400)
     set_property(TARGET MSMultipleManifestNonIncremental PROPERTY LINK_FLAGS "/INCREMENTAL:NO")
     add_test(NAME MSManifest.Multiple.NonIncremental COMMAND
       ${CMAKE_COMMAND} -Dexe=$<TARGET_FILE:MSMultipleManifestNonIncremental>
-      -P ${CMAKE_CURRENT_SOURCE_DIR}/check.cmake)
+      -P ${CMAKE_CURRENT_SOURCE_DIR}/check.配置脚本)
   endif()
 endif()

@@ -1,16 +1,16 @@
-^CMake Warning \(author\) at CaseMismatch\.cmake:[0-9]+ \(include\):
+^CMake Warning \(author\) at CaseMismatch\.配置脚本:[0-9]+ \(include\):
   The module name
 
-    casemodule\.cmake
+    casemodule\.配置脚本
 
   does not match the case of the module file name on disk
 
     [^
-]*/CaseMismatch/CaseModule\.cmake
+]*/CaseMismatch/CaseModule\.配置脚本
 
   This may fail on case-sensitive file systems\.  Use the module name
 
-    CaseModule\.cmake
+    CaseModule\.配置脚本
 
   instead\.
 Call Stack \(most recent call first\):

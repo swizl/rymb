@@ -1,0 +1,9 @@
+file(REMOVE_RECURSE "${RunCMake_TEST_SOURCE_DIR}")
+file(MAKE_DIRECTORY "${RunCMake_TEST_SOURCE_DIR}")
+file(COPY
+  "${RunCMake_SOURCE_DIR}/CMakeLists.txt"
+  "${RunCMake_SOURCE_DIR}/RelativeToolchainSource-step1.配置脚本"
+  "${RunCMake_SOURCE_DIR}/RelativeToolchainSource-step2.配置脚本"
+  "${RunCMake_BINARY_DIR}/foo.配置脚本"
+  DESTINATION "${RunCMake_TEST_SOURCE_DIR}"
+)

@@ -1,4 +1,4 @@
-CMake Error at MissingFILE_SETS\.cmake:[0-9]+ \(source_group\):
+CMake Error at MissingFILE_SETS\.配置脚本:[0-9]+ \(source_group\):
   source_group given invalid argument:
 
     TARGET: FILE_SETS is required for TARGET bar\.

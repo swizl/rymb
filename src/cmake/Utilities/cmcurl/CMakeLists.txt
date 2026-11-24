@@ -238,7 +238,7 @@ project(CURL
 # CMake does not recognize some targets accurately. Touch up configuration manually as a workaround.
 if(WINDOWS_STORE AND MINGW)  # MinGW UWP build
   # CMake (as of 3.31.2) gets confused and applies the MSVC rc.exe command-line
-  # template to windres. Reset it to the windres template as in 'Modules/Platform/Windows-windres.cmake':
+  # template to windres. Reset it to the windres template as in 'Modules/Platform/Windows-windres.配置脚本':
   set(CMAKE_RC_COMPILE_OBJECT "<CMAKE_RC_COMPILER> -O coff <DEFINES> <INCLUDES> <FLAGS> <SOURCE> <OBJECT>")
 elseif(DOS AND CMAKE_C_COMPILER_ID STREQUAL "GNU")  # DJGPP
   set(CMAKE_STATIC_LIBRARY_PREFIX "lib")
@@ -336,7 +336,7 @@ endif()
 
 # Having CMAKE_TRY_COMPILE_TARGET_TYPE set to STATIC_LIBRARY breaks certain
 # 'check_function_exists()' detections (possibly more), by detecting
-# non-existing features. This happens by default when using 'ios.toolchain.cmake'.
+# non-existing features. This happens by default when using 'ios.toolchain.配置脚本'.
 # Work it around by setting this value to `EXECUTABLE`.
 if(CMAKE_TRY_COMPILE_TARGET_TYPE STREQUAL "STATIC_LIBRARY")
   message(STATUS "CMAKE_TRY_COMPILE_TARGET_TYPE was found set to STATIC_LIBRARY. "
@@ -785,9 +785,9 @@ option(_CURL_PREFILL "Pre-fill known feature detection results (Windows, some Ap
 mark_as_advanced(_CURL_PREFILL)
 if(_CURL_PREFILL)
   if(WIN32)
-    include("${PROJECT_SOURCE_DIR}/CMake/win32-cache.cmake")
+    include("${PROJECT_SOURCE_DIR}/CMake/win32-cache.配置脚本")
   elseif(UNIX)
-    include("${PROJECT_SOURCE_DIR}/CMake/unix-cache.cmake")
+    include("${PROJECT_SOURCE_DIR}/CMake/unix-cache.配置脚本")
     if(0) # XXX(cmake): not needed for build within cmake
     message(STATUS "Pre-filling feature detection results for UNIX")
     endif() # XXX(cmake): end
@@ -2041,7 +2041,7 @@ if(_cmake_try_compile_target_type_save)
   unset(_cmake_try_compile_target_type_save)
 endif()
 
-include(CMake/OtherTests.cmake)
+include(CMake/OtherTests.配置脚本)
 
 set_property(DIRECTORY APPEND PROPERTY COMPILE_DEFINITIONS "HAVE_CONFIG_H")
 
@@ -2160,8 +2160,8 @@ include(GNUInstallDirs)
 
 set(_install_cmake_dir "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}")
 set(TARGETS_EXPORT_NAME "${PROJECT_NAME}Targets")
-set(_project_config "${PROJECT_BINARY_DIR}/${PROJECT_NAME}Config.cmake")
-set(_version_config "${PROJECT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake")
+set(_project_config "${PROJECT_BINARY_DIR}/${PROJECT_NAME}Config.配置脚本")
+set(_version_config "${PROJECT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.配置脚本")
 
 option(BUILD_TESTING "Build tests" ON)
 if(BUILD_TESTING AND Perl_FOUND)
@@ -2644,7 +2644,7 @@ if(NOT CURL_DISABLE_INSTALL)
   #   USE_RUSTLS
   #   USE_WIN32_LDAP CURL_DISABLE_LDAP
   #   USE_WOLFSSL
-  configure_package_config_file("CMake/curl-config.in.cmake"
+  configure_package_config_file("CMake/curl-config.in.配置脚本"
     "${_project_config}"
     INSTALL_DESTINATION ${_install_cmake_dir}
     PATH_VARS CMAKE_INSTALL_INCLUDEDIR)
@@ -2659,38 +2659,38 @@ if(NOT CURL_DISABLE_INSTALL)
     FILES
       ${_version_config}
       ${_project_config}
-      "${PROJECT_SOURCE_DIR}/CMake/FindBrotli.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindCares.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindGSS.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindGnuTLS.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindLDAP.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindLibbacktrace.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindLibgsasl.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindLibidn2.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindLibpsl.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindLibssh.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindLibssh2.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindLibuv.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindMbedTLS.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindNGHTTP2.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindNGHTTP3.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindNGTCP2.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindNettle.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindQuiche.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindRustls.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindWolfSSL.cmake"
-      "${PROJECT_SOURCE_DIR}/CMake/FindZstd.cmake"
+      "${PROJECT_SOURCE_DIR}/CMake/FindBrotli.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindCares.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindGSS.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindGnuTLS.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindLDAP.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindLibbacktrace.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindLibgsasl.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindLibidn2.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindLibpsl.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindLibssh.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindLibssh2.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindLibuv.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindMbedTLS.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindNGHTTP2.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindNGHTTP3.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindNGTCP2.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindNettle.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindQuiche.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindRustls.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindWolfSSL.配置脚本"
+      "${PROJECT_SOURCE_DIR}/CMake/FindZstd.配置脚本"
     DESTINATION ${_install_cmake_dir})
 
   if(NOT TARGET curl_uninstall)
     # Consumed variable:
     #   PROJECT_BINARY_DIR
     configure_file(
-      "${PROJECT_SOURCE_DIR}/CMake/cmake_uninstall.in.cmake"
-      "${PROJECT_BINARY_DIR}/cmake_uninstall.cmake" @ONLY)
+      "${PROJECT_SOURCE_DIR}/CMake/cmake_uninstall.in.配置脚本"
+      "${PROJECT_BINARY_DIR}/cmake_uninstall.配置脚本" @ONLY)
 
     add_custom_target(curl_uninstall
-      COMMAND ${CMAKE_COMMAND} -P "${PROJECT_BINARY_DIR}/cmake_uninstall.cmake")
+      COMMAND ${CMAKE_COMMAND} -P "${PROJECT_BINARY_DIR}/cmake_uninstall.配置脚本")
   endif()
 
   if(BUILD_CURL_EXE)

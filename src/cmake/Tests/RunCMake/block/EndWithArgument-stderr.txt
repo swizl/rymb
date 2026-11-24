@@ -1,7 +1,7 @@
-CMake Warning \(author\) in EndWithArgument\.cmake:
+CMake Warning \(author\) in EndWithArgument\.配置脚本:
   A logical block closing on the line
 
-  .+/Tests/RunCMake/block/EndWithArgument\.cmake:[0-9]+ \(endblock\)
+  .+/Tests/RunCMake/block/EndWithArgument\.配置脚本:[0-9]+ \(endblock\)
 
   has unexpected arguments\.
 Call Stack \(most recent call first\):

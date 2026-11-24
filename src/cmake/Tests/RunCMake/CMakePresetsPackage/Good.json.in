@@ -83,7 +83,7 @@
         {
             "name": "config-file",
             "inherits": "minimal",
-            "configFile": "CPackConfigAlt.cmake"
+            "configFile": "CPackConfigAlt.配置脚本"
         },
         {
             "name": "debug",
@@ -127,7 +127,7 @@
                 "External"
             ],
             "variables": {
-                "CPACK_EXTERNAL_PACKAGE_SCRIPT": "${sourceDir}/build/default/external_package.cmake"
+                "CPACK_EXTERNAL_PACKAGE_SCRIPT": "${sourceDir}/build/default/external_package.配置脚本"
             },
             "vendorName": "some-vendor"
         }

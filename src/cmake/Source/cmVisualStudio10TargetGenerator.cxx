@@ -3728,7 +3728,7 @@ bool cmVisualStudio10TargetGenerator::ComputeClOptions(
   }
 
   if (isCXXwithC) {
-    // Modules/Compiler/Clang.cmake has a special case for clang-cl versions
+    // Modules/Compiler/Clang.配置脚本 has a special case for clang-cl versions
     // that do not have a -std:c++23 flag to pass the standard through to the
     // underlying clang directly.  Unfortunately that flag applies to all
     // sources in a single .vcxproj file, so if we have C sources too then we
@@ -3780,7 +3780,7 @@ bool cmVisualStudio10TargetGenerator::ComputeClOptions(
     this->LocalGenerator->AddCompileOptions(flagsC, this->GeneratorTarget, "C",
                                             configName);
 
-    // Modules/Compiler/Clang-C.cmake has a special case for clang-cl versions
+    // Modules/Compiler/Clang-C.配置脚本 has a special case for clang-cl versions
     // that do not have a -std:c23 flag to pass the standard through to the
     // underlying clang directly.  Unfortunately that flag applies to all
     // sources in a single .vcxproj file, so if we have CXX sources too then

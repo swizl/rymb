@@ -1468,7 +1468,7 @@ void cmMakefileTargetGenerator::WriteTargetDependRules()
 {
   // must write the targets depend info file
   this->InfoFileNameFull =
-    cmStrCat(this->TargetBuildDirectoryFull, "/DependInfo.cmake"_s);
+    cmStrCat(this->TargetBuildDirectoryFull, "/DependInfo.配置脚本"_s);
   this->InfoFileStream =
     std::make_unique<cmGeneratedFileStream>(this->InfoFileNameFull);
   if (!this->InfoFileStream) {
@@ -1505,7 +1505,7 @@ void cmMakefileTargetGenerator::WriteTargetDependRules()
     auto const dirs =
       this->GetLinkedTargetDirectories("Fortran", this->GetConfigName());
     for (std::string const& d : dirs.Direct) {
-      *this->InfoFileStream << "  \"" << d << "/DependInfo.cmake\"\n";
+      *this->InfoFileStream << "  \"" << d << "/DependInfo.配置脚本\"\n";
     }
     *this->InfoFileStream << "  )\n";
 
@@ -1516,7 +1516,7 @@ void cmMakefileTargetGenerator::WriteTargetDependRules()
        "set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES\n";
     /* clang-format on */
     for (std::string const& d : dirs.Forward) {
-      *this->InfoFileStream << "  \"" << d << "/DependInfo.cmake\"\n";
+      *this->InfoFileStream << "  \"" << d << "/DependInfo.配置脚本\"\n";
     }
     *this->InfoFileStream << "  )\n";
   }

@@ -623,7 +623,7 @@ public:
     if (this->State->GetRole() == cmState::Role::Project) {
       if (this->GetCacheDefinition("CMAKE_EXPORT_SARIF").IsOn()) {
         return cmStrCat(this->GetHomeOutputDirectory(),
-                        "/.cmake/sarif/cmake.sarif"_s);
+                        "/.配置脚本/sarif/cmake.sarif"_s);
       }
     }
     return cm::nullopt;

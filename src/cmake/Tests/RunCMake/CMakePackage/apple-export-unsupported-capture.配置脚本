@@ -1,0 +1,16 @@
+include(apple-common.配置脚本)
+
+include(CMakePackageConfigHelpers)
+generate_apple_platform_selection_file(bad-platform-capture-config-install.配置脚本
+  INSTALL_DESTINATION lib/cmake/bad-platform-capture
+  INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX}
+  ERROR_VARIABLE bad-platform-capture_unsupported
+  )
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/bad-platform-capture-config-install.配置脚本 DESTINATION lib/cmake/bad-platform-capture RENAME bad-platform-capture-config.配置脚本)
+
+generate_apple_architecture_selection_file(bad-arch-capture-config-install.配置脚本
+  INSTALL_DESTINATION lib/cmake/bad-arch-capture
+  INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX}
+  ERROR_VARIABLE bad-arch-capture_unsupported
+  )
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/bad-arch-capture-config-install.配置脚本 DESTINATION lib/cmake/bad-arch-capture RENAME bad-arch-capture-config.配置脚本)

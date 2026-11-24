@@ -1,4 +1,4 @@
-CMake Error at BadInstallPrefix\.cmake:1 \(add_custom_target\):
+CMake Error at BadInstallPrefix\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<INSTALL_PREFIX>

@@ -201,7 +201,7 @@ void cmLocalVisualStudio7Generator::GenerateTarget(cmGeneratorTarget* target)
 
   // add to the list of projects
   target->Target->SetProperty("GENERATOR_FILE_NAME", lname);
-  // create the dsp.cmake file
+  // create the dsp.配置脚本 file
   std::string fname;
   fname = cmStrCat(this->GetCurrentBinaryDirectory(), '/', lname);
   if (this->FortranProject) {

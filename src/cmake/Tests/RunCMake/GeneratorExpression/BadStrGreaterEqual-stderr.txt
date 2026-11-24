@@ -1,4 +1,4 @@
-CMake Error at BadStrGreaterEqual\.cmake:1 \(add_custom_target\):
+CMake Error at BadStrGreaterEqual\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRGREATER_EQUAL>
@@ -7,7 +7,7 @@ CMake Error at BadStrGreaterEqual\.cmake:1 \(add_custom_target\):
   got 0 instead\.
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
-+CMake Error at BadStrGreaterEqual\.cmake:1 \(add_custom_target\):
++CMake Error at BadStrGreaterEqual\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRGREATER_EQUAL:>
@@ -17,7 +17,7 @@ Call Stack \(most recent call first\):
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 +
-CMake Error at BadStrGreaterEqual\.cmake:1 \(add_custom_target\):
+CMake Error at BadStrGreaterEqual\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRGREATER_EQUAL:,,>
@@ -27,7 +27,7 @@ CMake Error at BadStrGreaterEqual\.cmake:1 \(add_custom_target\):
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 +
-CMake Error at BadStrGreaterEqual\.cmake:1 \(add_custom_target\):
+CMake Error at BadStrGreaterEqual\.配置脚本:1 \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRGREATER_EQUAL:something,,>

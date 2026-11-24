@@ -141,7 +141,7 @@ set_property(TARGET ${EXE_NAME} PROPERTY VS_SOURCE_SETTINGS_FXCompile
   "TargetProperty1=$<$<CONFIG:DEBUG>:TargetProperty1ValueDebug>$<$<CONFIG:RELEASE>:TargetProperty1ValueRelease>")
 
 add_custom_command(TARGET ${EXE_NAME} POST_BUILD
-  COMMAND ${CMAKE_COMMAND} -Dvcxproj="${CMAKE_CURRENT_BINARY_DIR}/${EXE_NAME}.vcxproj" -P "${CMAKE_CURRENT_SOURCE_DIR}/EnsurePropertiesSet.cmake")
+  COMMAND ${CMAKE_COMMAND} -Dvcxproj="${CMAKE_CURRENT_BINARY_DIR}/${EXE_NAME}.vcxproj" -P "${CMAKE_CURRENT_SOURCE_DIR}/EnsurePropertiesSet.配置脚本")
 
 string(SUBSTRING "${CMAKE_SYSTEM_VERSION}" 0, 4, SHORT_VERSION)
 

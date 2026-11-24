@@ -1,4 +1,4 @@
-CMake Error at UnterminatedBracket0\.cmake:2:
+CMake Error at UnterminatedBracket0\.配置脚本:2:
   Parse error\.  Function missing ending "\)"\.  Instead found unterminated
   bracket with text "\)
 

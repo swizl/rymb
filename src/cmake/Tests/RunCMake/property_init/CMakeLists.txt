@@ -7,6 +7,6 @@ cmake_policy(SET CMP0229 NEW)
 set(main_sources main.c)
 set(library_sources library.c)
 
-include(util.cmake)
+include(util.配置脚本)
 
-include(${RunCMake_TEST}.cmake)
+include(${RunCMake_TEST}.配置脚本)

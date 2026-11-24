@@ -44,7 +44,7 @@ static unsigned short const info_byte_order_little_endian[] = {
  *   Help/variable/CMAKE_LANG_COMPILER_ARCHITECTURE_ID.rst
  *   Modules/CMakeFortranCompilerABI.F
  *   Modules/CMakeFortranCompilerABI.F90
- *   Modules/Internal/CMakeParseCompilerArchitectureId.cmake
+ *   Modules/Internal/CMakeParseCompilerArchitectureId.配置脚本
  */
 #if defined(__APPLE__) && defined(__arm64__)
 #  if defined(__ARM64_ARCH_8_32__)

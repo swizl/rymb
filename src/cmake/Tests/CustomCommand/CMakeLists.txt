@@ -395,7 +395,7 @@ set_property(TARGET check_command_line
 add_custom_command(
   OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/command_line_check
   COMMAND ${CMAKE_COMMAND} -DMARK_FILE=${CMAKE_CURRENT_BINARY_DIR}/check_mark.txt
-  -P ${CMAKE_CURRENT_SOURCE_DIR}/check_mark.cmake
+  -P ${CMAKE_CURRENT_SOURCE_DIR}/check_mark.配置脚本
   COMMAND ${EXECUTABLE_OUTPUT_PATH}/${CMAKE_CFG_INTDIR}/${output_name}
   ${CHECK_ARGS} ""
   VERBATIM
@@ -547,7 +547,7 @@ add_custom_command(
   OUTPUT "${gen_file}"
   COMMAND ${CMAKE_COMMAND} ${AARGS}
     "-DB$<JOIN:$<TARGET_PROPERTY:command_expand_lists,CMPARGS>,;-DB>"
-    "-P" "${CMAKE_CURRENT_SOURCE_DIR}/compare_options.cmake"
+    "-P" "${CMAKE_CURRENT_SOURCE_DIR}/compare_options.配置脚本"
     COMMAND_EXPAND_LISTS
   VERBATIM
 )

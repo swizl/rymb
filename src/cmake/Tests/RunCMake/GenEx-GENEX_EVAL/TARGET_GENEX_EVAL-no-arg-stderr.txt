@@ -1,4 +1,4 @@
-^CMake Error at TARGET_GENEX_EVAL-no-arg\.cmake:4 \(add_custom_command\):
+^CMake Error at TARGET_GENEX_EVAL-no-arg\.配置脚本:4 \(add_custom_command\):
   Error evaluating generator expression:
 
     \$<TARGET_GENEX_EVAL:>

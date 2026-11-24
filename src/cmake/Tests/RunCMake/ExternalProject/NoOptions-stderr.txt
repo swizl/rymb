@@ -1,4 +1,4 @@
-^CMake Error at .*/Modules/ExternalProject/shared_internal_commands\.cmake:[0-9]+ \(message\):
+^CMake Error at .*/Modules/ExternalProject/shared_internal_commands\.配置脚本:[0-9]+ \(message\):
   No download info given for 'MyProj' and its source directory:
 
    .*/Tests/RunCMake/ExternalProject/NoOptions-build/MyProj-prefix/src/MyProj
@@ -13,6 +13,6 @@
    \* HG_REPOSITORY
    \* CVS_REPOSITORY and CVS_MODULE
 Call Stack \(most recent call first\):
-  .*/Modules/ExternalProject\.cmake:[0-9]+ \(_ep_add_download_command\)
-  NoOptions\.cmake:[0-9]+ \(ExternalProject_Add\)
+  .*/Modules/ExternalProject\.配置脚本:[0-9]+ \(_ep_add_download_command\)
+  NoOptions\.配置脚本:[0-9]+ \(ExternalProject_Add\)
   CMakeLists\.txt:[0-9]+ \(include\)$

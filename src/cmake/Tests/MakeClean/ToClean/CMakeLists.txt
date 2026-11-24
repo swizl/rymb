@@ -121,4 +121,4 @@ add_subdirectory(EmptySubDir)
 
 # Configure a file listing these build-time-generated files.
 get_property(TOCLEAN_FILES GLOBAL PROPERTY TOCLEAN_FILES)
-configure_file(${CSD}/ToCleanFiles.cmake.in ${CBD}/ToCleanFiles.cmake @ONLY)
+configure_file(${CSD}/ToCleanFiles.配置脚本.in ${CBD}/ToCleanFiles.配置脚本 @ONLY)

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24...3.28)
 project(cxx_modules_export_transitive_modules CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 find_package(export_transitive_modules1 REQUIRED)
 find_package(export_transitive_modules1_cps REQUIRED)
@@ -40,20 +40,20 @@ install(TARGETS export_transitive_modules_cps
 install(EXPORT CXXModules
   NAMESPACE CXXModules::
   DESTINATION "lib/cmake/export_transitive_modules"
-  FILE "export_transitive_modules-targets.cmake"
+  FILE "export_transitive_modules-targets.配置脚本"
   CXX_MODULES_DIRECTORY "export_transitive_modules-cxx-modules")
 install(PACKAGE_INFO "export_transitive_modules_cps"
   EXPORT CXXModules_cps
   DESTINATION "lib/cmake/export_transitive_modules_cps"
   CXX_MODULES_DIRECTORY "export_transitive_modules-cxx-modules-cps")
-file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_transitive_modules-config.cmake"
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_transitive_modules-config.配置脚本"
   "include(CMakeFindDependencyMacro)
 set(export_transitive_modules1_DIR \"${export_transitive_modules1_DIR}\")
 find_dependency(export_transitive_modules1)
-include(\"\${CMAKE_CURRENT_LIST_DIR}/export_transitive_modules-targets.cmake\")
+include(\"\${CMAKE_CURRENT_LIST_DIR}/export_transitive_modules-targets.配置脚本\")
 set(\${CMAKE_FIND_PACKAGE_NAME}_FOUND 1)
 ")
-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/export_transitive_modules-config.cmake"
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/export_transitive_modules-config.配置脚本"
   DESTINATION "lib/cmake/export_transitive_modules")
 
 set(generator

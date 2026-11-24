@@ -1,4 +1,4 @@
-CMake Error at CommandError0\.cmake:2:
+CMake Error at CommandError0\.配置脚本:2:
   Parse error\.  Expected "\(", got newline with text "
 
   "\.

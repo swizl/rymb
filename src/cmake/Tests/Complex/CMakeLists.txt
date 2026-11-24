@@ -100,8 +100,8 @@ separate_arguments(TEST_SEP)
 #
 # Include vars from a file and from a cache
 #
-if (EXISTS ${Complex_SOURCE_DIR}/VarTests.cmake)
-  include(${Complex_SOURCE_DIR}/VarTests.cmake)
+if (EXISTS ${Complex_SOURCE_DIR}/VarTests.配置脚本)
+  include(${Complex_SOURCE_DIR}/VarTests.配置脚本)
 endif ()
 include(fileshouldnotbehere OPTIONAL)
 load_cache(${Complex_SOURCE_DIR}/Cache

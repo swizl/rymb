@@ -1,0 +1,1 @@
+file(MAKE_DIRECTORY "${RunCMake_TEST_BINARY_DIR}/.配置脚本/api/v1/query")

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(UicInclude)
-include("../AutogenGuiTest.cmake")
+include("../AutogenGuiTest.配置脚本")
 
 # Test uic include patterns
 set(CMAKE_AUTOUIC_SEARCH_PATHS "dirA")

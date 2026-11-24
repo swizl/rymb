@@ -20,7 +20,7 @@ namespace {
 std::vector<cmListFileFunction> parse(std::string const& text)
 {
   cmListFile lf;
-  if (!lf.ParseString(text, "test.cmake", nullptr, cmListFileBacktrace())) {
+  if (!lf.ParseString(text, "test.配置脚本", nullptr, cmListFileBacktrace())) {
     std::cout << "ParseString failed\n";
   }
   return lf.Functions;
@@ -134,25 +134,25 @@ bool testRecording()
                                                           "  set(x 1)\n"
                                                           "endfunction()\n"
                                                           "f()\n");
-  cov->FileParsed("/s/a.cmake", functions);
-  cov->CommandRan(functions[0], "/s/a.cmake", 1);
-  cov->CommandRan(functions[3], "/s/a.cmake", 4);
-  cov->CommandRan(functions[1], "/s/a.cmake", 2);
-  cov->FunctionCalled("/s/a.cmake", 1);
+  cov->FileParsed("/s/a.配置脚本", functions);
+  cov->CommandRan(functions[0], "/s/a.配置脚本", 1);
+  cov->CommandRan(functions[3], "/s/a.配置脚本", 4);
+  cov->CommandRan(functions[1], "/s/a.配置脚本", 2);
+  cov->FunctionCalled("/s/a.配置脚本", 1);
 
   // Ignored: the file is not registered.
-  cov->CommandRan(functions[0], "/s/other.cmake", 1);
+  cov->CommandRan(functions[0], "/s/other.配置脚本", 1);
   // Ignored: endfunction is not an executable line.
-  cov->CommandRan(functions[2], "/s/a.cmake", 3);
+  cov->CommandRan(functions[2], "/s/a.配置脚本", 3);
   // Ignored: no function is defined on this line.
-  cov->FunctionCalled("/s/a.cmake", 99);
+  cov->FunctionCalled("/s/a.配置脚本", 99);
 
   std::string const text = writeText(cov->ToTracefile());
-  ASSERT_TRUE(contains(text, "SF:/s/a.cmake\n"));
+  ASSERT_TRUE(contains(text, "SF:/s/a.配置脚本\n"));
   ASSERT_TRUE(contains(text, "FN:1,f\n"));
   ASSERT_TRUE(contains(text, "FNDA:1,f\n"));
   ASSERT_TRUE(contains(text, "DA:1,1\nDA:2,1\nDA:4,1\nLF:3\nLH:3\n"));
-  ASSERT_TRUE(text.find("other.cmake") == std::string::npos);
+  ASSERT_TRUE(text.find("other.配置脚本") == std::string::npos);
   ASSERT_TRUE(text.find("DA:3,") == std::string::npos);
   ASSERT_TRUE(text.find("FN:99") == std::string::npos);
   return true;
@@ -168,9 +168,9 @@ bool testFileParsedTwice()
   ASSERT_TRUE(cov != nullptr);
 
   std::vector<cmListFileFunction> const first = parse("set(a 1)\n");
-  cov->FileParsed("/s/a.cmake", first);
-  cov->CommandRan(first[0], "/s/a.cmake", 1);
-  cov->FileParsed("/s/a.cmake", parse("set(a 1)\nset(b 2)\n"));
+  cov->FileParsed("/s/a.配置脚本", first);
+  cov->CommandRan(first[0], "/s/a.配置脚本", 1);
+  cov->FileParsed("/s/a.配置脚本", parse("set(a 1)\nset(b 2)\n"));
 
   std::string const text = writeText(cov->ToTracefile());
   ASSERT_TRUE(contains(text, "DA:1,1\nDA:2,0\nLF:2\nLH:1\n"));
@@ -186,16 +186,16 @@ bool testSyntheticCommand()
   cmListFileCoverage* cov = cmListFileCoverage::Get();
   ASSERT_TRUE(cov != nullptr);
 
-  cov->FileParsed("/s/a.cmake", parse("set(a 1)\n"));
+  cov->FileParsed("/s/a.配置脚本", parse("set(a 1)\n"));
   cmListFileFunction const synthetic("set", 1, 1, {});
   cmListFileFunction const real("set", 1, 1, {});
   {
     cmListFileCoverage::SyntheticCommandScope scope(synthetic);
-    cov->CommandRan(synthetic, "/s/a.cmake", 1);
-    cov->CommandRan(real, "/s/a.cmake", 1);
+    cov->CommandRan(synthetic, "/s/a.配置脚本", 1);
+    cov->CommandRan(real, "/s/a.配置脚本", 1);
   }
   // The scope has ended, so the object counts again.
-  cov->CommandRan(synthetic, "/s/a.cmake", 1);
+  cov->CommandRan(synthetic, "/s/a.配置脚本", 1);
 
   std::string const text = writeText(cov->ToTracefile());
   ASSERT_TRUE(contains(text, "DA:1,2\n"));
@@ -233,7 +233,7 @@ bool testFinishWithNoExecutableLines()
     ASSERT_TRUE(startCoverageIn(dir.Path));
     cmListFileCoverage* cov = cmListFileCoverage::Get();
     ASSERT_TRUE(cov != nullptr);
-    cov->FileParsed("/s/comments.cmake", parse("# Only a comment.\n"));
+    cov->FileParsed("/s/comments.配置脚本", parse("# Only a comment.\n"));
   }
   ASSERT_EQUAL(countEntries(dir.Path), 0);
   return true;

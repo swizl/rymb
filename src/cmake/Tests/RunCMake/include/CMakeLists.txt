@@ -21,9 +21,9 @@ project(${RunCMake_TEST} NONE)
 
 if(root_test)
   message(STATUS "CMakeLists\.txt: '${CMAKE_PARENT_LIST_FILE}'")
-  include(ParentVariableRoot/include1.cmake)
+  include(ParentVariableRoot/include1.配置脚本)
   message(STATUS "CMakeLists\.txt: '${CMAKE_PARENT_LIST_FILE}'")
   return()
 endif()
 
-include(${RunCMake_TEST}.cmake)
+include(${RunCMake_TEST}.配置脚本)

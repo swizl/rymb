@@ -50,7 +50,7 @@ cmFileAPI::cmFileAPI(cmake* cm)
   : CMakeInstance(cm)
 {
   this->APIv1 = cmStrCat(this->CMakeInstance->GetHomeOutputDirectory(),
-                         "/.cmake/api/v1"_s);
+                         "/.配置脚本/api/v1"_s);
 
   if (cm::optional<std::string> cmakeConfigDir =
         cmSystemTools::GetCMakeConfigDirectory()) {

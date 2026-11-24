@@ -3,7 +3,7 @@ project(CFBundleTest)
 
 #this is adapted from FireBreath (http://www.firebreath.org)
 
-include(PluginConfig.cmake)
+include(PluginConfig.配置脚本)
 
 message ("Creating Mac Browser Plugin project ${PROJECT_NAME}")
 set(SOURCES
@@ -61,4 +61,4 @@ set_source_files_properties(
     ${CMAKE_CURRENT_BINARY_DIR}/Localized.rsrc
     PROPERTIES MACOSX_PACKAGE_LOCATION "Resources/English.lproj")
 
-export(TARGETS CFBundleTest FILE ${CMAKE_CURRENT_BINARY_DIR}/exp.cmake)
+export(TARGETS CFBundleTest FILE ${CMAKE_CURRENT_BINARY_DIR}/exp.配置脚本)

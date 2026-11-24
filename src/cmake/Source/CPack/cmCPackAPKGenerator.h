@@ -10,7 +10,7 @@
  * The APK is assembled by driving the Android SDK build tools
  * (``aapt2``, ``d8``, ``zipalign`` and ``apksigner``) directly,
  * i.e. without Gradle.  The actual work is implemented by the
- * ``Internal/CPack/CPackAPK.cmake`` script.
+ * ``Internal/CPack/CPackAPK.配置脚本`` script.
  */
 class cmCPackAPKGenerator : public cmCPackGenerator
 {

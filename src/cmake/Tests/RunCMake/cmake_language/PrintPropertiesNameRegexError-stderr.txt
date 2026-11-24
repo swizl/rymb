@@ -1,3 +1,3 @@
-^CMake Error at PrintPropertiesNameRegexError\.cmake:[0-9]+ \(cmake_language\):
+^CMake Error at PrintPropertiesNameRegexError\.配置脚本:[0-9]+ \(cmake_language\):
   cmake_language PROPERTY_NAME_REGEX regular expression "\[unbalanced" cannot
   compile\.

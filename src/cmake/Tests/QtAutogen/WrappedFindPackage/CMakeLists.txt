@@ -4,7 +4,7 @@ project(WrappedFindPackage)
 # Wrap the find_package call in a function.
 # Test whether AutoMoc can retrieve the Qt version from the moc executable.
 function(find_qt_package)
-  include("../AutogenCoreTest.cmake")
+  include("../AutogenCoreTest.配置脚本")
   set(QT_LIBRARIES "${QT_LIBRARIES}" PARENT_SCOPE)
 endfunction()
 

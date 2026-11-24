@@ -1,4 +1,4 @@
-^CMake Error at defer_get_call_ids_invalid_directory\.cmake:2 \(cmake_language\):
+^CMake Error at defer_get_call_ids_invalid_directory\.配置脚本:2 \(cmake_language\):
   cmake_language DEFER GET_CALL_IDS may not access directory:
 
     [^

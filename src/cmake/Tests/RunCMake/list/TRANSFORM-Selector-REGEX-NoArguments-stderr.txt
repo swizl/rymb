@@ -1,4 +1,4 @@
-^CMake Error at TRANSFORM-Selector-REGEX-NoArguments\.cmake:2 \(list\):
+^CMake Error at TRANSFORM-Selector-REGEX-NoArguments\.配置脚本:2 \(list\):
   list sub-command TRANSFORM, selector REGEX expects 'regular expression'
   argument\.
 Call Stack \(most recent call first\):

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(RerunMocBasic)
-include("../AutogenCoreTest.cmake")
+include("../AutogenCoreTest.配置脚本")
 
 # Dummy executable to generate a clean target
 add_executable(dummy dummy.cpp)

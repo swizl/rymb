@@ -7,4 +7,4 @@ endif()
 set(CMAKE_POLICY_WARNING_CMP0082 ON)
 
 project(${RunCMake_TEST} NONE)
-include(${RunCMake_TEST}.cmake)
+include(${RunCMake_TEST}.配置脚本)

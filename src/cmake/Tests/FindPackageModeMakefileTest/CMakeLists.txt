@@ -17,8 +17,8 @@ if(UNIX  AND  "${CMAKE_GENERATOR}" MATCHES "Makefile" AND
     # build a library which we can search during the test
     add_library(foo STATIC foo.cpp)
 
-    # configure a FindFoo.cmake so it knows where the library can be found
-    configure_file(FindFoo.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/FindFoo.cmake @ONLY)
+    # configure a FindFoo.配置脚本 so it knows where the library can be found
+    configure_file(FindFoo.配置脚本.in ${CMAKE_CURRENT_BINARY_DIR}/FindFoo.配置脚本 @ONLY)
 
     set(EXTRA_FLAGS "")
     if(APPLE)

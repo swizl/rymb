@@ -1,4 +1,4 @@
-CMake Error at BadCompilerC\.cmake:2 \(enable_language\):
+CMake Error at BadCompilerC\.配置脚本:2 \(enable_language\):
   The CMAKE_C_COMPILER:
 
     no-C-compiler

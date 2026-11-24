@@ -206,7 +206,7 @@ struct LineReader {
 };
 
 LoadStatus BuildLog::Load(const std::string& path, std::string* err) {
-  METRIC_RECORD(".ninja_log load");
+  METRIC_RECORD(".构建日志 load");
   FILE* file = FileOpenUtf8(path, "r");
   if (!file) {
     if (errno == ENOENT)
@@ -339,7 +339,7 @@ bool BuildLog::WriteEntry(FILE* f, const LogEntry& entry) {
 
 bool BuildLog::Recompact(const std::string& path, const BuildLogUser& user,
                          std::string* err) {
-  METRIC_RECORD(".ninja_log recompact");
+  METRIC_RECORD(".构建日志 recompact");
 
   Close();
   std::string temp_path = path + ".recompact";
@@ -381,7 +381,7 @@ bool BuildLog::Restat(const StringPiece path,
                       const DiskInterface& disk_interface,
                       const int output_count, char** outputs,
                       std::string* const err) {
-  METRIC_RECORD(".ninja_log restat");
+  METRIC_RECORD(".构建日志 restat");
 
   Close();
   std::string temp_path = path.AsString() + ".restat";

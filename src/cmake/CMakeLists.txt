@@ -22,8 +22,8 @@ else()
   set(CMake_TEST_CXX 1)
   list(APPEND CMake_LANGUAGES C CXX)
 endif()
-set(CMAKE_USER_MAKE_RULES_OVERRIDE_C ${CMAKE_CURRENT_SOURCE_DIR}/Source/Modules/OverrideC.cmake)
-set(CMAKE_USER_MAKE_RULES_OVERRIDE_CXX ${CMAKE_CURRENT_SOURCE_DIR}/Source/Modules/OverrideCXX.cmake)
+set(CMAKE_USER_MAKE_RULES_OVERRIDE_C ${CMAKE_CURRENT_SOURCE_DIR}/Source/Modules/OverrideC.配置脚本)
+set(CMAKE_USER_MAKE_RULES_OVERRIDE_CXX ${CMAKE_CURRENT_SOURCE_DIR}/Source/Modules/OverrideCXX.配置脚本)
 project(CMake LANGUAGES ${CMake_LANGUAGES})
 unset(CMAKE_USER_MAKE_RULES_OVERRIDE_CXX)
 unset(CMAKE_USER_MAKE_RULES_OVERRIDE_C)
@@ -169,7 +169,7 @@ endif()
 
 # Use most-recent available language dialects with GNU and Clang
 if(NOT DEFINED CMAKE_C_STANDARD AND NOT CMake_NO_C_STANDARD)
-  include(${CMake_SOURCE_DIR}/Source/Checks/cm_c11_thread_local.cmake)
+  include(${CMake_SOURCE_DIR}/Source/Checks/cm_c11_thread_local.配置脚本)
   if(NOT CMake_C11_THREAD_LOCAL_BROKEN)
     set(CMAKE_C_STANDARD 11)
   else()
@@ -180,11 +180,11 @@ if(NOT DEFINED CMAKE_CXX_STANDARD AND NOT CMake_NO_CXX_STANDARD)
   if(CMAKE_CXX_COMPILER_ID STREQUAL SunPro AND CMAKE_CXX_COMPILER_VERSION VERSION_LESS 5.14)
     set(CMAKE_CXX_STANDARD 98)
   else()
-    include(${CMake_SOURCE_DIR}/Source/Checks/cm_cxx17_check.cmake)
+    include(${CMake_SOURCE_DIR}/Source/Checks/cm_cxx17_check.配置脚本)
     if(NOT CMake_CXX17_BROKEN)
       set(CMAKE_CXX_STANDARD 17)
     else()
-      include(${CMake_SOURCE_DIR}/Source/Checks/cm_cxx14_check.cmake)
+      include(${CMake_SOURCE_DIR}/Source/Checks/cm_cxx14_check.配置脚本)
       if(NOT CMake_CXX14_BROKEN)
         set(CMAKE_CXX_STANDARD 14)
       else()
@@ -195,10 +195,10 @@ if(NOT DEFINED CMAKE_CXX_STANDARD AND NOT CMake_NO_CXX_STANDARD)
 endif()
 if(NOT CMake_TEST_EXTERNAL_CMAKE)
   # include special compile flags for some compilers
-  include(CompileFlags.cmake)
+  include(CompileFlags.配置脚本)
 
   # check for available C++ features
-  include(${CMake_SOURCE_DIR}/Source/Checks/cm_cxx_features.cmake)
+  include(${CMake_SOURCE_DIR}/Source/Checks/cm_cxx_features.配置脚本)
 
   if(NOT CMake_HAVE_CXX_MAKE_UNIQUE)
     message(FATAL_ERROR "The C++ compiler does not support C++14 (e.g. std::make_unique).")
@@ -311,7 +311,7 @@ macro(CMAKE_SETUP_TESTING)
 
   # configure some files for testing
   configure_file(Tests/.NoDartCoverage Tests/.NoDartCoverage)
-  configure_file(CTestCustom.cmake.in CTestCustom.cmake @ONLY)
+  configure_file(CTestCustom.配置脚本.in CTestCustom.配置脚本 @ONLY)
 endmacro()
 
 
@@ -450,14 +450,14 @@ endif()
 # The main section of the CMakeLists file
 #
 #-----------------------------------------------------------------------
-include(Source/CMakeCopyright.cmake)
-include(Source/CMakeVersion.cmake)
+include(Source/CMakeCopyright.配置脚本)
+include(Source/CMakeVersion.配置脚本)
 
 include(CTest)
 
 # Set up test-time configuration.
 set_property(DIRECTORY APPEND PROPERTY
-  TEST_INCLUDE_FILES "${CMake_BINARY_DIR}/Tests/EnforceConfig.cmake")
+  TEST_INCLUDE_FILES "${CMake_BINARY_DIR}/Tests/EnforceConfig.配置脚本")
 
 if(NOT CMake_TEST_EXTERNAL_CMAKE)
   # where to write the resulting executables and libraries
@@ -467,10 +467,10 @@ if(NOT CMake_TEST_EXTERNAL_CMAKE)
     "Where to put the libraries for CMake")
 
   # Load install destinations.
-  include(Source/CMakeInstallDestinations.cmake)
+  include(Source/CMakeInstallDestinations.配置脚本)
 
   if(BUILD_TESTING)
-    include(${CMake_SOURCE_DIR}/Tests/CMakeInstall.cmake)
+    include(${CMake_SOURCE_DIR}/Tests/CMakeInstall.配置脚本)
   endif()
 
   # Checks for cmSystemTools.
@@ -521,11 +521,11 @@ if(NOT CMake_TEST_EXTERNAL_CMAKE)
   endif()
 
   # add the uninstall support
-  configure_file(cmake_uninstall.cmake.in cmake_uninstall.cmake @ONLY)
+  configure_file(cmake_uninstall.配置脚本.in cmake_uninstall.配置脚本 @ONLY)
   add_custom_target(uninstall
-    "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake")
+    "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.配置脚本")
 
-  include(CMakeCPack.cmake)
+  include(CMakeCPack.配置脚本)
 
 endif()
 
@@ -623,7 +623,7 @@ if(NOT CMake_TEST_EXTERNAL_CMAKE)
 
   # Optionally sign installed binaries.
   if(CMake_INSTALL_SIGNTOOL)
-    configure_file(Source/CMakeInstallSignTool.cmake.in Source/CMakeInstallSignTool.cmake @ONLY)
-    install(SCRIPT ${CMAKE_CURRENT_BINARY_DIR}/Source/CMakeInstallSignTool.cmake)
+    configure_file(Source/CMakeInstallSignTool.配置脚本.in Source/CMakeInstallSignTool.配置脚本 @ONLY)
+    install(SCRIPT ${CMAKE_CURRENT_BINARY_DIR}/Source/CMakeInstallSignTool.配置脚本)
   endif()
 endif()

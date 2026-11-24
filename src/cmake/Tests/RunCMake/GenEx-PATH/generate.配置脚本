@@ -1,0 +1,2 @@
+
+file(GENERATE OUTPUT "${PATH_TEST}.配置脚本" INPUT "${PATH_TEST}.配置脚本.in")

@@ -29,8 +29,8 @@ add_subdirectory(../COnly COnly)
 
 add_custom_command(
   OUTPUT OutDir.h
-  COMMAND ${CMAKE_COMMAND} -Dtop=${top} -Dcfg_dir=$<CONFIG> -P ${OutDir_SOURCE_DIR}/OutDir.cmake
-  DEPENDS COnly ${OutDir_SOURCE_DIR}/OutDir.cmake
+  COMMAND ${CMAKE_COMMAND} -Dtop=${top} -Dcfg_dir=$<CONFIG> -P ${OutDir_SOURCE_DIR}/OutDir.配置脚本
+  DEPENDS COnly ${OutDir_SOURCE_DIR}/OutDir.配置脚本
   )
 include_directories(${top})
 add_executable(OutDir OutDir.c OutDir.h)

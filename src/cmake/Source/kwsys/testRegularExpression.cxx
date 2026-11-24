@@ -553,7 +553,7 @@ int testRegularExpression(int, char*[])
 
   run("dialect.literal_braces.variable_reference",
       ExpectMatch("\\${[A-Za-z_0-9]*}", "x${FOO}y", "${FOO}", 1, 7));
-  run("dialect.literal_braces.cmake_named_curly",
+  run("dialect.literal_bracescmake_named_curly",
       ExpectMatch("^[A-Za-z0-9/_.+-]+{", "a/b{x", "a/b{", 0, 4));
 
   // -------------------------------------------------------------------------

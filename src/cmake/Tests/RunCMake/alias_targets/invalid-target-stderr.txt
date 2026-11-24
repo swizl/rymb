@@ -1,4 +1,4 @@
-CMake Error at invalid-target\.cmake:2 \(add_library\):
+CMake Error at invalid-target\.配置脚本:2 \(add_library\):
   add_library cannot create ALIAS target "alias" because target "foo" does
   not already exist\.
 Call Stack \(most recent call first\):

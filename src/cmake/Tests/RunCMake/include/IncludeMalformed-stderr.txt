@@ -1,12 +1,12 @@
-^CMake Error at malformedInclude\.cmake:1:
+^CMake Error at malformedInclude\.配置脚本:1:
   Parse error\.  Function missing ending "\)"\.  End of file reached\.
 Call Stack \(most recent call first\):
-  IncludeMalformed\.cmake:1 \(include\)
+  IncludeMalformed\.配置脚本:1 \(include\)
   CMakeLists\.txt:[0-9]+ \(include\)
 +
-CMake Error at IncludeMalformed\.cmake:1 \(include\):
+CMake Error at IncludeMalformed\.配置脚本:1 \(include\):
   include could not load requested file:
 
-    malformedInclude\.cmake
+    malformedInclude\.配置脚本
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)$

@@ -1,11 +1,11 @@
-SF:<SRC>/Child.cmake
+SF:<SRC>/Child.配置脚本
 FNF:0
 FNH:0
 DA:1,1
 LF:1
 LH:1
 end_of_record
-SF:<SRC>/ChildScript.cmake
+SF:<SRC>/ChildScript.配置脚本
 FNF:0
 FNH:0
 DA:1,1

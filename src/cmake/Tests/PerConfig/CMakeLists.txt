@@ -30,7 +30,7 @@ set(PerConfig_COMMAND
     -DpcShared_file=$<TARGET_FILE:pcShared>
     -DpcShared_linker_file=$<TARGET_LINKER_FILE:pcShared>
     ${soname_file}
-    -P ${PerConfig_SOURCE_DIR}/perconfig.cmake
+    -P ${PerConfig_SOURCE_DIR}/perconfig.配置脚本
     )
 set(PerConfig_COMMAND "${PerConfig_COMMAND}" PARENT_SCOPE)
-set(PerConfig_DEPENDS ${PerConfig_SOURCE_DIR}/perconfig.cmake perconfig pcStatic pcShared)
+set(PerConfig_DEPENDS ${PerConfig_SOURCE_DIR}/perconfig.配置脚本 perconfig pcStatic pcShared)

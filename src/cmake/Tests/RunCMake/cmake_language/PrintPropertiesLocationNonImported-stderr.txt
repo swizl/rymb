@@ -1,18 +1,18 @@
-CMake Warning at PrintPropertiesLocationNonImported\.cmake:[0-9]+ \(cmake_language\):
+CMake Warning at PrintPropertiesLocationNonImported\.配置脚本:[0-9]+ \(cmake_language\):
   The LOCATION property may not be read from non-imported target "mylib";
   skipping\.
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 
 
-CMake Warning at PrintPropertiesLocationNonImported\.cmake:[0-9]+ \(cmake_language\):
+CMake Warning at PrintPropertiesLocationNonImported\.配置脚本:[0-9]+ \(cmake_language\):
   The LOCATION_Debug property may not be read from non-imported target
   "mylib"; skipping\.
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 
 
-CMake Warning at PrintPropertiesLocationNonImported\.cmake:[0-9]+ \(cmake_language\):
+CMake Warning at PrintPropertiesLocationNonImported\.配置脚本:[0-9]+ \(cmake_language\):
   The Debug_LOCATION property may not be read from non-imported target
   "mylib"; skipping\.
 Call Stack \(most recent call first\):

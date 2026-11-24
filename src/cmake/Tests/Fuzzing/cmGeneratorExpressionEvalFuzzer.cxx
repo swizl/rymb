@@ -278,7 +278,7 @@ struct Fixture
     this->MF = mf.get();
     this->GG->AddMakefile(std::move(mf));
 
-    if (!this->MF->ReadListFileAsString(kToolchain, "fuzz_toolchain.cmake")) {
+    if (!this->MF->ReadListFileAsString(kToolchain, "fuzz_toolchain.配置脚本")) {
       return false;
     }
     this->GG->SetLanguageEnabled("C", this->MF);

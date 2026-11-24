@@ -1,0 +1,5 @@
+include(${CMAKE_CURRENT_LIST_DIR}/../Sbom/InstallExportPlusSbomSameSet.配置脚本)
+
+export(EXPORT export_set_a NAMESPACE A:: FILE export_set_a.配置脚本)
+export(SBOM mySbom EXPORTS export_set_a)
+export(EXPORT export_set_b FILE export_set_b.配置脚本)

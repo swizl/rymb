@@ -42,7 +42,7 @@ CMake Error at .*/Tests/RunCMake/MaxRecursionDepth/try_compile/CMakeLists\.txt:5
   Failed to configure test project build system\.
 
 
-CMake Error at try_compile\.cmake:1 \(try_compile\):
+CMake Error at try_compile\.配置脚本:1 \(try_compile\):
   Failed to configure test project build system\.
 Call Stack \(most recent call first\):
   CMakeLists\.txt:5 \(include\)$

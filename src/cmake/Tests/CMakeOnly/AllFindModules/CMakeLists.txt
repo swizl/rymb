@@ -6,10 +6,10 @@ message(STATUS "CTEST_FULL_OUTPUT")
 
 set(ORIGINAL_MODULE_PATH "${CMAKE_MODULE_PATH}")
 
-file(GLOB FIND_MODULES "${CMAKE_CURRENT_SOURCE_DIR}/../../../Modules/Find*.cmake" )
+file(GLOB FIND_MODULES "${CMAKE_CURRENT_SOURCE_DIR}/../../../Modules/Find*.配置脚本" )
 
 if(CMAKE_C_COMPILER_ID MATCHES "(Borland|Embarcadero|Watcom)")
-  list(FILTER FIND_MODULES EXCLUDE REGEX Modules/FindOpenCL.cmake)
+  list(FILTER FIND_MODULES EXCLUDE REGEX Modules/FindOpenCL.配置脚本)
 endif()
 
 macro(do_find MODULE_NAME)
@@ -32,12 +32,12 @@ foreach(FIND_MODULE IN LISTS OWN_TEST_MODULES)
     list(APPEND NO_FIND_MODULES "${_MOD_NAME}")
 endforeach()
 
-# These modules are named Find*.cmake, but are nothing that works in
+# These modules are named Find*.配置脚本, but are nothing that works in
 # find_package().
 list(APPEND NO_FIND_MODULES "PackageHandleStandardArgs" "PackageMessage")
 
 foreach(FIND_MODULE IN LISTS FIND_MODULES)
-    string(REGEX REPLACE ".*/Find(.*)\\.cmake$" "\\1" MODULE_NAME "${FIND_MODULE}")
+    string(REGEX REPLACE ".*/Find(.*)\\.配置脚本$" "\\1" MODULE_NAME "${FIND_MODULE}")
 
     list(FIND NO_QT4_MODULES ${MODULE_NAME} NO_QT4_INDEX)
     list(FIND NO_FIND_MODULES ${MODULE_NAME} NO_FIND_INDEX)

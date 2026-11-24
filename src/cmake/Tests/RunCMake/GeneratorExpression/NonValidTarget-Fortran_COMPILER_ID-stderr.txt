@@ -1,4 +1,4 @@
-CMake Error at NonValidTarget-Fortran_COMPILER_ID\.cmake:1 \(add_custom_command\):
+CMake Error at NonValidTarget-Fortran_COMPILER_ID\.配置脚本:1 \(add_custom_command\):
   Error evaluating generator expression:
 
     \$<Fortran_COMPILER_ID>

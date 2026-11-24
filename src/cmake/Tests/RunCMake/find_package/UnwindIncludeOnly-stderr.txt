@@ -1,5 +1,5 @@
-CMake Warning at UnwindInclude/UnwindOnly\.cmake:1 \(find_package\):
-  By not providing "Findfoo\.cmake" in CMAKE_MODULE_PATH this project has
+CMake Warning at UnwindInclude/UnwindOnly\.配置脚本:1 \(find_package\):
+  By not providing "Findfoo\.配置脚本" in CMAKE_MODULE_PATH this project has
   asked CMake to find a package configuration file provided by "foo", but
   CMake did not find one\.
 
@@ -7,23 +7,23 @@ CMake Warning at UnwindInclude/UnwindOnly\.cmake:1 \(find_package\):
   the following names:
 
     foo\.cps
-    fooConfig\.cmake
-    foo-config\.cmake
+    fooConfig\.配置脚本
+    foo-config\.配置脚本
 
   Add the installation prefix of "foo" to CMAKE_PREFIX_PATH or set "foo_DIR"
   to a directory containing one of the above files\.  If "foo" provides a
   separate development package or SDK, be sure it has been installed\.
 Call Stack \(most recent call first\):
-  UnwindInclude/PrimaryUnwindConfig\.cmake:1 \(include\)
-  UnwindIncludeOnly\.cmake:5 \(find_package\)
+  UnwindInclude/PrimaryUnwindConfig\.配置脚本:1 \(include\)
+  UnwindIncludeOnly\.配置脚本:5 \(find_package\)
   CMakeLists\.txt:3 \(include\)
 
 
-CMake Warning at UnwindIncludeOnly\.cmake:5 \(find_package\):
+CMake Warning at UnwindIncludeOnly\.配置脚本:5 \(find_package\):
   Found package configuration file:
 
     [^
-]*/Tests/RunCMake/find_package/UnwindInclude/PrimaryUnwindConfig\.cmake
+]*/Tests/RunCMake/find_package/UnwindInclude/PrimaryUnwindConfig\.配置脚本
 
   but it set PrimaryUnwind_FOUND to FALSE so package "PrimaryUnwind" is
   considered to be NOT FOUND\.

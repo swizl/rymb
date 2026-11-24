@@ -1,5 +1,5 @@
-CMake Error at PackageVarOverridesOptional\.cmake:[0-9]+ \(find_package\):
-  By not providing "FindFoo\.cmake" in CMAKE_MODULE_PATH this project has
+CMake Error at PackageVarOverridesOptional\.配置脚本:[0-9]+ \(find_package\):
+  By not providing "FindFoo\.配置脚本" in CMAKE_MODULE_PATH this project has
   asked CMake to find a package configuration file provided by "Foo", but
   CMake did not find one\.
 
@@ -8,8 +8,8 @@ CMake Error at PackageVarOverridesOptional\.cmake:[0-9]+ \(find_package\):
 
     Foo\.cps
     foo\.cps
-    FooConfig\.cmake
-    foo-config\.cmake
+    FooConfig\.配置脚本
+    foo-config\.配置脚本
 
   Add the installation prefix of "Foo" to CMAKE_PREFIX_PATH or set "Foo_DIR"
   to a directory containing one of the above files\.  If "Foo" provides a

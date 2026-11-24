@@ -1,4 +1,4 @@
-CMake Error at static\.cmake:[0-9]+ \(file\):
+CMake Error at static\.配置脚本:[0-9]+ \(file\):
   Error evaluating generator expression:
 
     \$<TARGET_RUNTIME_DLLS:static>

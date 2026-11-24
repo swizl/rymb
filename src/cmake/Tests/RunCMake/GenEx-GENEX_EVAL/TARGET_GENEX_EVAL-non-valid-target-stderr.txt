@@ -1,4 +1,4 @@
-^CMake Error at TARGET_GENEX_EVAL-non-valid-target\.cmake:2 \(add_custom_command\):
+^CMake Error at TARGET_GENEX_EVAL-non-valid-target\.配置脚本:2 \(add_custom_command\):
   Error evaluating generator expression:
 
     \$<TARGET_GENEX_EVAL:bad-target,>

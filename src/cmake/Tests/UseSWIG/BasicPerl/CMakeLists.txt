@@ -8,7 +8,7 @@ if(NOT DEFINED language)
   set(language "perl")
 endif()
 
-include (../BasicConfiguration.cmake)
+include (../BasicConfiguration.配置脚本)
 
 add_test (NAME BasicPerl
   COMMAND "${PERL_EXECUTABLE}" "-I${CMAKE_CURRENT_BINARY_DIR}"

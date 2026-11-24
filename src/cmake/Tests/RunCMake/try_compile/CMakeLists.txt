@@ -5,4 +5,4 @@ elseif(RunCMake_TEST STREQUAL "CMP0067")
   cmake_policy(VERSION 3.7) # old enough to not set CMP0067
 endif()
 project(${RunCMake_TEST} NONE)
-include(${RunCMake_TEST}.cmake)
+include(${RunCMake_TEST}.配置脚本)

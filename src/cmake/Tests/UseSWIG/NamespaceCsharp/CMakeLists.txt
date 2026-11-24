@@ -22,4 +22,4 @@ target_link_libraries(ns_csharp PRIVATE ns_example)
 
 get_target_property(NS_CSHARP_SUPPORT_FILES_DIR ns_csharp SWIG_SUPPORT_FILES_DIRECTORY)
 
-add_test(NAME NamespaceCsharp COMMAND "${CMAKE_COMMAND}" "-DSUPPORT_FILES_DIRECTORY=${NS_CSHARP_SUPPORT_FILES_DIR}" -P "${CMAKE_CURRENT_SOURCE_DIR}/ValidateSupportFiles.cmake")
+add_test(NAME NamespaceCsharp COMMAND "${CMAKE_COMMAND}" "-DSUPPORT_FILES_DIRECTORY=${NS_CSHARP_SUPPORT_FILES_DIR}" -P "${CMAKE_CURRENT_SOURCE_DIR}/ValidateSupportFiles.配置脚本")

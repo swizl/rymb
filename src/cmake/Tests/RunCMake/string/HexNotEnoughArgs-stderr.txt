@@ -1,4 +1,4 @@
-^CMake Error at HexNotEnoughArgs\.cmake:[0-9]+ \(string\):
+^CMake Error at HexNotEnoughArgs\.配置脚本:[0-9]+ \(string\):
   string Incorrect number of arguments
 Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)$

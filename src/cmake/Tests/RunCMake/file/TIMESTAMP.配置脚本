@@ -1,0 +1,2 @@
+file(TIMESTAMP "TIMESTAMP.配置脚本" output UTC)
+message(STATUS "'${output}'")

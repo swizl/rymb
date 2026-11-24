@@ -1,4 +1,4 @@
-SF:<SRC>/Functions.cmake
+SF:<SRC>/Functions.配置脚本
 FN:1,F1
 FN:4,m1
 FN:7,unused

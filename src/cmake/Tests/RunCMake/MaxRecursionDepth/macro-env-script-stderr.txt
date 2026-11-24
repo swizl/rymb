@@ -6,16 +6,16 @@
 8
 9
 10
-CMake Error at .*/macro\.cmake:2 \(message\):
+CMake Error at .*/macro\.配置脚本:2 \(message\):
   Maximum recursion depth of 10 exceeded
 Call Stack \(most recent call first\):
-  .*/macro\.cmake:4 \(recursive\)
-  .*/macro\.cmake:4 \(recursive\)
-  .*/macro\.cmake:4 \(recursive\)
-  .*/macro\.cmake:4 \(recursive\)
-  .*/macro\.cmake:4 \(recursive\)
-  .*/macro\.cmake:4 \(recursive\)
-  .*/macro\.cmake:4 \(recursive\)
-  .*/macro\.cmake:4 \(recursive\)
-  .*/macro\.cmake:7 \(recursive\)
+  .*/macro\.配置脚本:4 \(recursive\)
+  .*/macro\.配置脚本:4 \(recursive\)
+  .*/macro\.配置脚本:4 \(recursive\)
+  .*/macro\.配置脚本:4 \(recursive\)
+  .*/macro\.配置脚本:4 \(recursive\)
+  .*/macro\.配置脚本:4 \(recursive\)
+  .*/macro\.配置脚本:4 \(recursive\)
+  .*/macro\.配置脚本:4 \(recursive\)
+  .*/macro\.配置脚本:7 \(recursive\)
   .*/CMakeLists\.txt:5 \(include\)$

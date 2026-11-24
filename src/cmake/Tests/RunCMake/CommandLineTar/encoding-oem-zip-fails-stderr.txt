@@ -3,4 +3,4 @@
 CMake Error: Problem creating tar:
 [^
 ]*/bad\.zip
-CMake Error at roundtrip\.cmake:[0-9]+ \(message\):
+CMake Error at roundtrip\.配置脚本:[0-9]+ \(message\):

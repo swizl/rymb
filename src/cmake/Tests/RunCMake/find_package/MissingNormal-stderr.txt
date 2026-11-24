@@ -1,5 +1,5 @@
-CMake Warning at MissingNormal\.cmake:1 \(find_package\):
-  By not providing "FindNotHere\.cmake" in CMAKE_MODULE_PATH this project has
+CMake Warning at MissingNormal\.配置脚本:1 \(find_package\):
+  By not providing "FindNotHere\.配置脚本" in CMAKE_MODULE_PATH this project has
   asked CMake to find a package configuration file provided by "NotHere", but
   CMake did not find one\.
 
@@ -8,8 +8,8 @@ CMake Warning at MissingNormal\.cmake:1 \(find_package\):
 
     NotHere\.cps
     nothere\.cps
-    NotHereConfig\.cmake
-    nothere-config\.cmake
+    NotHereConfig\.配置脚本
+    nothere-config\.配置脚本
 
   Add the installation prefix of "NotHere" to CMAKE_PREFIX_PATH or set
   "NotHere_DIR" to a directory containing one of the above files\.  If
@@ -19,7 +19,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 
 
-CMake Warning at MissingNormal\.cmake:2 \(message\):
+CMake Warning at MissingNormal\.配置脚本:2 \(message\):
   This warning must be reachable\.
 Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)$

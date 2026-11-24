@@ -58,7 +58,7 @@ echo_var(MSVC_IDE)
 
 if(MSVC)
   #
-  # MSVC is set in cl.cmake when cl is the compiler...
+  # MSVC is set in cl.配置脚本 when cl is the compiler...
   #
   # Exactly one of the numbered variables should also be set
   # indicating which version of the cl compiler / Visual Studio

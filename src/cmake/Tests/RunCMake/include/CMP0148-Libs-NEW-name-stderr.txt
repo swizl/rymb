@@ -1,4 +1,4 @@
-^CMake Error at CMP0148-Libs-NEW-name\.cmake:[0-9]+ \(include\):
+^CMake Error at CMP0148-Libs-NEW-name\.配置脚本:[0-9]+ \(include\):
   include could not find requested file:
 
     FindPythonLibs

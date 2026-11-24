@@ -1,4 +1,4 @@
-CMake Error at REPLACE-WrongArguments\.cmake:[0-9]+ \(add_custom_target\):
+CMake Error at REPLACE-WrongArguments\.配置脚本:[0-9]+ \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRING:REPLACE,FOO,string,\.\+,>
@@ -8,7 +8,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 
 
-CMake Error at REPLACE-WrongArguments\.cmake:[0-9]+ \(add_custom_target\):
+CMake Error at REPLACE-WrongArguments\.配置脚本:[0-9]+ \(add_custom_target\):
   Error evaluating generator expression:
 
     \$<STRING:REPLACE,REGEX,string,\(,>

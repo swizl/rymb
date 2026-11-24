@@ -1,2 +1,2 @@
-CMake Error at call_unknown_function\.cmake:1 \(unknown\):
+CMake Error at call_unknown_function\.配置脚本:1 \(unknown\):
   Unknown CMake command "unknown"\.

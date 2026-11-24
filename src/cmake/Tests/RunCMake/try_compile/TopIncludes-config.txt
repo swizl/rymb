@@ -15,9 +15,9 @@ events:(
   -
     kind: "try_compile-v1"
     backtrace:
-      - "[^"]*/Modules/CMakeDetermineCompilerABI\.cmake:[0-9]+ \(try_compile\)"
-      - "[^"]*/Modules/CMakeTestCCompiler\.cmake:[0-9]+ \(CMAKE_DETERMINE_COMPILER_ABI\)"
-      - "TopIncludes\.cmake:[0-9]+ \(enable_language\)"
+      - "[^"]*/Modules/CMakeDetermineCompilerABI\.配置脚本:[0-9]+ \(try_compile\)"
+      - "[^"]*/Modules/CMakeTestCCompiler\.配置脚本:[0-9]+ \(CMAKE_DETERMINE_COMPILER_ABI\)"
+      - "TopIncludes\.配置脚本:[0-9]+ \(enable_language\)"
       - "CMakeLists\.txt:[0-9]+ \(include\)"
     checks:
       - "Detecting C compiler ABI info"
@@ -46,7 +46,7 @@ events:(
   -
     kind: "try_compile-v1"
     backtrace:
-      - "TopIncludes\.cmake:[0-9]+ \(try_compile\)"
+      - "TopIncludes\.配置脚本:[0-9]+ \(try_compile\)"
       - "CMakeLists\.txt:[0-9]+ \(include\)"
     description: "Project without property set\."
     directories:
@@ -60,14 +60,14 @@ events:(
   -
     kind: "try_compile-v1"
     backtrace:
-      - "TopIncludes\.cmake:[0-9]+ \(try_compile\)"
+      - "TopIncludes\.配置脚本:[0-9]+ \(try_compile\)"
       - "CMakeLists\.txt:[0-9]+ \(include\)"
     description: "Project with property set\."
     directories:
       source: "[^"]*/Tests/RunCMake/try_compile/proj"
       binary: "[^"]*/Tests/RunCMake/try_compile/TopIncludes-build/CMakeFiles/CMakeScratch/TryCompile-[^/"]+"
     cmakeVariables:
-      CMAKE_PROJECT_TOP_LEVEL_INCLUDES: "[^"]*/Tests/RunCMake/try_compile/include_pass1.cmake;[^"]*/Tests/RunCMake/try_compile/include_pass2.cmake"
+      CMAKE_PROJECT_TOP_LEVEL_INCLUDES: "[^"]*/Tests/RunCMake/try_compile/include_pass1.配置脚本;[^"]*/Tests/RunCMake/try_compile/include_pass2.配置脚本"
     buildResult:
       variable: "result"
       cached: true
@@ -76,7 +76,7 @@ events:(
   -
     kind: "try_compile-v1"
     backtrace:
-      - "TopIncludes\.cmake:[0-9]+ \(try_compile\)"
+      - "TopIncludes\.配置脚本:[0-9]+ \(try_compile\)"
       - "CMakeLists\.txt:[0-9]+ \(include\)"
     description: "Source file with property set\."
     directories:

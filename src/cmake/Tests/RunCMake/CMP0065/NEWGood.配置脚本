@@ -1,0 +1,4 @@
+enable_language(C)
+include(BuildTargetInSubProject.配置脚本)
+
+BuildTargetInSubProject(TestPolicyCMP0065 FooNEWGood TRUE)

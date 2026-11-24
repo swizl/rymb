@@ -1,0 +1,7 @@
+add_library(doubleexported INTERFACE)
+install(TARGETS doubleexported EXPORT exportset)
+export(TARGETS doubleexported FILE "${CMAKE_CURRENT_BINARY_DIR}/manual.配置脚本")
+export(EXPORT exportset FILE "${CMAKE_CURRENT_BINARY_DIR}/exportset.配置脚本")
+add_library(exported INTERFACE)
+target_link_libraries(exported INTERFACE doubleexported)
+export(TARGETS exported FILE "${CMAKE_CURRENT_BINARY_DIR}/exports.配置脚本")

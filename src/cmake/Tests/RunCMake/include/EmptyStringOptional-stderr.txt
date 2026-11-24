@@ -1,4 +1,4 @@
-^CMake Warning \(author\) at EmptyStringOptional\.cmake:1 \(include\):
+^CMake Warning \(author\) at EmptyStringOptional\.配置脚本:1 \(include\):
   include\(\) given empty file name \(ignored\)\.
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)

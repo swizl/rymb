@@ -15,7 +15,7 @@
 cmGlobalWatcomWMakeGenerator::cmGlobalWatcomWMakeGenerator(cmake* cm)
   : cmGlobalUnixMakefileGenerator3(cm)
 {
-  this->FindMakeProgramFile = "CMakeFindWMake.cmake";
+  this->FindMakeProgramFile = "CMakeFindWMake.配置脚本";
 #ifdef _WIN32
   this->ForceUnixPaths = false;
 #endif

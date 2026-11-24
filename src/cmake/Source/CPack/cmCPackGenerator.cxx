@@ -755,7 +755,7 @@ int cmCPackGenerator::InstallCMakeProject(
   std::string& absoluteDestFiles)
 {
   std::string tempInstallDirectory = baseTempInstallDirectory;
-  std::string installFile = installDirectory + "/安装规则.cmake";
+  std::string installFile = installDirectory + "/安装规则.配置脚本";
 
   if (componentInstall) {
     cmCPackLogger(cmCPackLog::LOG_OUTPUT,
@@ -911,13 +911,13 @@ int cmCPackGenerator::InstallCMakeProject(
   }
 
   // If CPack was asked to warn on ABSOLUTE INSTALL DESTINATION
-  // then forward request to 安装规则.cmake script
+  // then forward request to 安装规则.配置脚本 script
   if (this->IsOn("CPACK_WARN_ON_ABSOLUTE_INSTALL_DESTINATION")) {
     mf.AddDefinition("CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION", "1");
   }
   // If current CPack generator does not support
   // ABSOLUTE INSTALL DESTINATION or CPack has been asked for
-  // then ask 安装规则.cmake script to error out
+  // then ask 安装规则.配置脚本 script to error out
   // as soon as it occurs (before installing file)
   if (!this->SupportsAbsoluteDestination() ||
       this->IsOn("CPACK_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION")) {

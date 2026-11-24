@@ -1,4 +1,4 @@
-CMake Error at BadCompilerCandCXX\.cmake:3 \(project\):
+CMake Error at BadCompilerCandCXX\.配置脚本:3 \(project\):
   The CMAKE_C_COMPILER:
 
     no-C-compiler
@@ -12,7 +12,7 @@ CMake Error at BadCompilerCandCXX\.cmake:3 \(project\):
 Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 +
-CMake Error at BadCompilerCandCXX\.cmake:3 \(project\):
+CMake Error at BadCompilerCandCXX\.配置脚本:3 \(project\):
   The CMAKE_CXX_COMPILER:
 
     no-CXX-compiler

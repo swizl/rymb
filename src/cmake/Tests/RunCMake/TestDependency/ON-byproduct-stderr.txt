@@ -1,4 +1,4 @@
-CMake Warning at ON-byproduct\.cmake:[0-9]+ \(add_test\):
+CMake Warning at ON-byproduct\.配置脚本:[0-9]+ \(add_test\):
   Test "ByproductTest" BUILD_DEPENDS file
 
     .*/TestDependencyByproduct-built\.txt

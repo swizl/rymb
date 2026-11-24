@@ -1,4 +1,4 @@
-CMake Error at LOCK-error-unknown-option\.cmake:[0-9]+ \(file\):
+CMake Error at LOCK-error-unknown-option\.配置脚本:[0-9]+ \(file\):
   expected DIRECTORY, RELEASE, GUARD, RESULT_VARIABLE or TIMEOUT
 
   but got: "UNKNOWN"\.

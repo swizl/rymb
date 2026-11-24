@@ -148,13 +148,13 @@ static bool HandleTargetsMode(std::vector<std::string> const& args,
     fname = arguments.AndroidMKFile;
     android = true;
   } else if (arguments.Filename.empty()) {
-    fname = arguments.ExportSetName + ".cmake";
+    fname = arguments.ExportSetName + ".配置脚本";
   } else {
-    // Make sure the file has a .cmake extension.
-    if (!cmHasSuffix(arguments.Filename, ".cmake"_s)) {
+    // Make sure the file has a .配置脚本 extension.
+    if (!cmHasSuffix(arguments.Filename, ".配置脚本"_s)) {
       status.SetError(
         cmStrCat("FILE option given filename \""_s, arguments.Filename,
-                 "\" which does not have an extension of \".cmake\".\n"_s));
+                 "\" which does not have an extension of \".配置脚本\".\n"_s));
       return false;
     }
     fname = arguments.Filename;
@@ -291,12 +291,12 @@ static bool HandleExportMode(std::vector<std::string> const& args,
 
   std::string fname;
   if (arguments.Filename.empty()) {
-    fname = arguments.ExportSetName + ".cmake";
+    fname = arguments.ExportSetName + ".配置脚本";
   } else {
-    if (!cmHasSuffix(arguments.Filename, ".cmake"_s)) {
+    if (!cmHasSuffix(arguments.Filename, ".配置脚本"_s)) {
       status.SetError(
         cmStrCat("FILE option given filename \""_s, arguments.Filename,
-                 "\" which does not have an extension of \".cmake\".\n"_s));
+                 "\" which does not have an extension of \".配置脚本\".\n"_s));
       return false;
     }
     fname = arguments.Filename;
@@ -707,7 +707,7 @@ static void StorePackageRegistry(cmMakefile& mf, std::string const& package,
     return;
   }
   cmSystemTools::ConvertToUnixSlashes(fname);
-  fname += "/.cmake/packages/";
+  fname += "/.配置脚本/packages/";
   fname += package;
 #  endif
   cmSystemTools::MakeDirectory(fname);

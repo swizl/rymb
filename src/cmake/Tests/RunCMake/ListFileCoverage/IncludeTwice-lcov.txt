@@ -1,4 +1,4 @@
-SF:<SRC>/IncludeTwice.cmake
+SF:<SRC>/IncludeTwice.配置脚本
 FNF:0
 FNH:0
 DA:1,1
@@ -6,7 +6,7 @@ DA:2,1
 LF:2
 LH:2
 end_of_record
-SF:<SRC>/IncludeTwiceLib.cmake
+SF:<SRC>/IncludeTwiceLib.配置脚本
 FNF:0
 FNH:0
 DA:1,2

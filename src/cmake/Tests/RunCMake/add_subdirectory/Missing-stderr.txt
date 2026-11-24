@@ -1,4 +1,4 @@
-^CMake Error at Missing\.cmake:1 \(add_subdirectory\):
+^CMake Error at Missing\.配置脚本:1 \(add_subdirectory\):
   The source directory
 
     .*/Tests/RunCMake/add_subdirectory/Missing

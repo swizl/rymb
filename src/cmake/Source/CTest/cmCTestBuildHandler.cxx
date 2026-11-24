@@ -783,7 +783,7 @@ void cmCTestBuildHandler::LaunchHelper::WriteLauncherConfig()
 
   // Give some testing configuration information to the launcher.
   std::string fname =
-    cmStrCat(this->Handler->CTestLaunchDir, "/CTestLaunchConfig.cmake"_s);
+    cmStrCat(this->Handler->CTestLaunchDir, "/CTestLaunchConfig.配置脚本"_s);
   cmGeneratedFileStream fout(fname);
   std::string srcdir = this->CTest->GetCTestConfiguration("SourceDirectory");
   fout << "set(CTEST_SOURCE_DIRECTORY \"" << srcdir << "\")\n";

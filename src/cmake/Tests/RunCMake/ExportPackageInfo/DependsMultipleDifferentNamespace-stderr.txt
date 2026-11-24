@@ -3,7 +3,7 @@ CMake Error in CMakeLists\.txt:
   this export set, but in another export set which is exported multiple times
   with different namespaces:.*
   .*/Tests/RunCMake/ExportPackageInfo/DependsMultipleDifferentNamespace-build/cps/foo/foo\.cps,.*
-  .*/Tests/RunCMake/ExportPackageInfo/DependsMultipleDifferentNamespace-build/foo\.cmake\.
+  .*/Tests/RunCMake/ExportPackageInfo/DependsMultipleDifferentNamespace-build/foo\.配置脚本\.
 
   An exported target cannot depend upon another target which is exported in
   more than one export set or with more than one namespace\.  Consider
@@ -15,7 +15,7 @@ CMake Error in CMakeLists\.txt:
   this export set, but in another export set which is exported multiple times
   with different namespaces:.*
   .*/Tests/RunCMake/ExportPackageInfo/DependsMultipleDifferentNamespace-build/cps/foo/foo\.cps,.*
-  .*/Tests/RunCMake/ExportPackageInfo/DependsMultipleDifferentNamespace-build/foo\.cmake\.
+  .*/Tests/RunCMake/ExportPackageInfo/DependsMultipleDifferentNamespace-build/foo\.配置脚本\.
 
   An exported target cannot depend upon another target which is exported in
   more than one export set or with more than one namespace\.  Consider

@@ -2562,17 +2562,17 @@ bool HandleExportMode(std::vector<std::string> const& args,
   }
 
   // Check the file extension.
-  if (!fname.empty() && !cmHasSuffix(fname, ".cmake"_s)) {
+  if (!fname.empty() && !cmHasSuffix(fname, ".配置脚本"_s)) {
     status.SetError(cmStrCat(
       args[0], " given invalid export file name \""_s, fname,
       "\".  "
-      "The FILE argument must specify a name ending in \".cmake\"."_s));
+      "The FILE argument must specify a name ending in \".配置脚本\"."_s));
     return false;
   }
 
   // Construct the file name.
   if (fname.empty()) {
-    fname = cmStrCat(exp, ".cmake"_s);
+    fname = cmStrCat(exp, ".配置脚本"_s);
 
     if (fname.find_first_of(":/\\") != std::string::npos) {
       status.SetError(cmStrCat(

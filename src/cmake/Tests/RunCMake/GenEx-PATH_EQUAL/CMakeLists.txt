@@ -2,4 +2,4 @@ cmake_minimum_required(VERSION 3.18...3.24)
 
 project(${RunCMake_TEST} NONE)
 
-include(${RunCMake_TEST}.cmake)
+include(${RunCMake_TEST}.配置脚本)

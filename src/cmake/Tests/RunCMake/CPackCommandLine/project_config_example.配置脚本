@@ -1,0 +1,1 @@
+message(STATUS "project_config_example.配置脚本 is included")

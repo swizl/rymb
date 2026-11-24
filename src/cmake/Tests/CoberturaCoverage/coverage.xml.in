@@ -6,9 +6,9 @@
 		<source>${CMake_BINARY_DIR}/Testing/CoberturaCoverage/src/main/java/</source>
 	</sources>
 	<packages>
-		<package name="org.cmake.Coverage" line-rate="0.7222222222222222" branch-rate="0.875" complexity="0.0">
+		<package name="org.配置脚本.Coverage" line-rate="0.7222222222222222" branch-rate="0.875" complexity="0.0">
 			<classes>
-				<class name="org.cmake.Coverage.CoverageTest" filename="org/cmake/CoverageTest.java" line-rate="0.7222222222222222" branch-rate="0.875" complexity="0.0">
+				<class name="org.配置脚本.Coverage.CoverageTest" filename="org/cmake/CoverageTest.java" line-rate="0.7222222222222222" branch-rate="0.875" complexity="0.0">
 					<methods>
 						<method name="&lt;clinit&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
 							<lines>

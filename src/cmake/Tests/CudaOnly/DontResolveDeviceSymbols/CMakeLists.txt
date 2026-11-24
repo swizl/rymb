@@ -44,6 +44,6 @@ add_custom_command(TARGET CUDANoDeviceResolve POST_BUILD
   -DDUMP_ARGS=${dump_args}
   -DSYMBOL_NAME=${symbol_name}
   -DTEST_LIBRARY_PATH=$<TARGET_FILE:CUDANoDeviceResolve>
-  -P ${CMAKE_CURRENT_SOURCE_DIR}/verify.cmake
+  -P ${CMAKE_CURRENT_SOURCE_DIR}/verify.配置脚本
   )
 endif()

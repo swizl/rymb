@@ -1,0 +1,5 @@
+message(STATUS "ParentVariableSubDir/include1.配置脚本: '${CMAKE_PARENT_LIST_FILE}'")
+include("Inc/include2.配置脚本")
+message(STATUS "ParentVariableSubDir/include1.配置脚本: '${CMAKE_PARENT_LIST_FILE}'")
+include("Inc/CMakeLists.txt")
+message(STATUS "ParentVariableSubDir/include1.配置脚本: '${CMAKE_PARENT_LIST_FILE}'")

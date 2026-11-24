@@ -67,7 +67,7 @@ add_test(NAME CMakeGUI COMMAND ${CMAKE_CMAKE_COMMAND}
   "-DCMakeGUITest_SOURCE_DIR=${CMAKE_CURRENT_SOURCE_DIR}"
   "-DCMakeGUITest_BINARY_DIR=${CMAKE_CURRENT_BINARY_DIR}"
   "-DCMakeGUITest_GENERATOR=${CMAKE_GENERATOR}"
-  -P "${CMAKE_CURRENT_LIST_DIR}/CMakeGUITest.cmake"
+  -P "${CMAKE_CURRENT_LIST_DIR}/CMakeGUITest.配置脚本"
   )
 
 function(add_cmake_gui_lib_test name)

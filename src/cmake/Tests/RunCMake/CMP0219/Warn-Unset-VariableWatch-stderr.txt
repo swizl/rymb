@@ -1,4 +1,4 @@
-CMake Warning \(policy\) at .*/Warn-Unset-VariableWatch\.cmake:[0-9]+ \(set\):
+CMake Warning \(policy\) at .*/Warn-Unset-VariableWatch\.配置脚本:[0-9]+ \(set\):
   Policy CMP0219 is not set: Macro invocations preserve backslashes in
   arguments\.  Run "cmake --help-policy CMP0219" for policy details\.  Use the
   cmake_policy command to set the policy and suppress this warning\.

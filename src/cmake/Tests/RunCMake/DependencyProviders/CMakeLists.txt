@@ -10,4 +10,4 @@ if(DEFINED include_after_project)
   include("${include_after_project}")
 endif()
 
-include(${RunCMake_TEST}.cmake OPTIONAL)
+include(${RunCMake_TEST}.配置脚本 OPTIONAL)

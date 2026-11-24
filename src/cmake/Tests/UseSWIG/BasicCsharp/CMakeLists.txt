@@ -6,7 +6,7 @@ include(CTest)
 
 set(language "csharp")
 
-include (../BasicConfiguration.cmake)
+include (../BasicConfiguration.配置脚本)
 
 set_source_files_properties(Square.cs Circle.cs Shape.cs PROPERTIES GENERATED 1)
 add_library(example_cs SHARED  $<TARGET_PROPERTY:example,SWIG_SUPPORT_FILES> Square.cs Circle.cs Shape.cs)

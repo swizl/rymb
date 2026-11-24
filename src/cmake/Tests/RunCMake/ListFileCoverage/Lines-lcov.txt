@@ -1,4 +1,4 @@
-SF:<SRC>/Lines.cmake
+SF:<SRC>/Lines.配置脚本
 FNF:0
 FNH:0
 DA:2,1

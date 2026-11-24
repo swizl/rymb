@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24...3.28)
 project(cxx_modules_export_transitive_targets CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 add_library(usage_reqs INTERFACE
   include/include.h
@@ -49,13 +49,13 @@ install(DIRECTORY includes
 install(EXPORT CXXModules
   NAMESPACE CXXModules::
   DESTINATION "lib/cmake/export_transitive_targets"
-  FILE "export_transitive_targets-targets.cmake"
+  FILE "export_transitive_targets-targets.配置脚本"
   CXX_MODULES_DIRECTORY "export_transitive_targets-cxx-modules")
-file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_transitive_targets-config.cmake"
-  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_transitive_targets-targets.cmake\")
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_transitive_targets-config.配置脚本"
+  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_transitive_targets-targets.配置脚本\")
 set(\${CMAKE_FIND_PACKAGE_NAME}_FOUND 1)
 ")
-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/export_transitive_targets-config.cmake"
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/export_transitive_targets-config.配置脚本"
   DESTINATION "lib/cmake/export_transitive_targets")
 
 set(generator

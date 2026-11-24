@@ -1,5 +1,5 @@
 CMake Warning \(deprecated\) at [^
-]+/Tests/RunCMake/CMP0218/CMP0218-OLD\.cmake:[0-9]+ \(cmake_policy\):
+]+/Tests/RunCMake/CMP0218/CMP0218-OLD\.配置脚本:[0-9]+ \(cmake_policy\):
   The OLD behavior for policy CMP0153 will be removed from a future version
   of CMake\.
 
@@ -11,7 +11,7 @@ This warning is for project developers\.  Use -Wno-author or -Wno-deprecated
 to suppress it\.
 +
 CMake Error \(deprecated\) at [^
-]+/Tests/RunCMake/CMP0218/CMP0218-OLD\.cmake:[0-9]+ \(message\):
+]+/Tests/RunCMake/CMP0218/CMP0218-OLD\.配置脚本:[0-9]+ \(message\):
   Test
 This error is for project developers\.  Use -Wno-error=author or
 -Wno-error=deprecated to suppress it\.

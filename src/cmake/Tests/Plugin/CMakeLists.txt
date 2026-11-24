@@ -37,7 +37,7 @@ if(CMAKE_SHARED_LIBRARY_SONAME_C_FLAG AND
     "${CMAKE_C_CREATE_SHARED_MODULE}" MATCHES "SONAME_FLAG")
   # Verify that targets export with proper IMPORTED SONAME properties.
   export(TARGETS example_mod_1 example_exe NAMESPACE exp_
-    FILE ${CMAKE_CURRENT_BINARY_DIR}/mods.cmake)
+    FILE ${CMAKE_CURRENT_BINARY_DIR}/mods.配置脚本)
 
   include(ExternalProject)
   ExternalProject_Add(PluginTest

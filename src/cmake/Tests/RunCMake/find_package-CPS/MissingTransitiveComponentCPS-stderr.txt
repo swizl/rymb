@@ -9,10 +9,10 @@ CMake Error in cps/[Tt]ransitive[Mm]issing[Cc][Pp][Ss]\.cps:
       Required component was not found: DoesNotExist\.)+
 
 Call Stack \(most recent call first\):
-  MissingTransitiveComponentCPS\.cmake:[0-9]+ \(find_package\)
+  MissingTransitiveComponentCPS\.配置脚本:[0-9]+ \(find_package\)
   CMakeLists\.txt:[0-9]+ \(include\)
 +
-CMake Error at MissingTransitiveComponentCPS\.cmake:[0-9]+ \(find_package\):
+CMake Error at MissingTransitiveComponentCPS\.配置脚本:[0-9]+ \(find_package\):
   find_package could not find ComponentTest, required by
   TransitiveMissingCPS\.
 Call Stack \(most recent call first\):

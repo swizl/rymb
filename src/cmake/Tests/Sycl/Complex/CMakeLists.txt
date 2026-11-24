@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 4.4)
 set(CMAKE_EXPERIMENTAL_SYCL "c0d1fb10-2ece-420e-9d29-7d7f2b300f25")
 project(Complex CXX SYCL)
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
-include(Test.cmake)
+include(Test.配置脚本)
 # Remove gate when DPC++ archive device finalization is fixed.
 if(CMAKE_SYCL_COMPILER_ID MATCHES "^(DPClang|IntelLLVM)$")
   sycl_not_supported("${CMAKE_SYCL_COMPILER_ID} -fsycl-link cannot finalize SYCL archives")

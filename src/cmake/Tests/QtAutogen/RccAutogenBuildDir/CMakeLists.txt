@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(RccAutogenBuildDir)
-include("../AutogenCoreTest.cmake")
+include("../AutogenCoreTest.配置脚本")
 
 set(PROJECTS_ROOT ${CMAKE_BINARY_DIR})
 

@@ -574,42 +574,42 @@ bool cmGlobalGenerator::CheckLanguages(
 //
 // First figure out what OS we are running on:
 //
-// CMakeSystem.cmake - configured file created by CMakeDetermineSystem.cmake
-//   CMakeDetermineSystem.cmake - figure out os info and create
-//                                CMakeSystem.cmake IF CMAKE_SYSTEM
+// CMakeSystem.配置脚本 - configured file created by CMakeDetermineSystem.配置脚本
+//   CMakeDetermineSystem.配置脚本 - figure out os info and create
+//                                CMakeSystem.配置脚本 IF CMAKE_SYSTEM
 //                                not set
-//   CMakeSystem.cmake - configured file created by
-//                       CMakeDetermineSystem.cmake IF CMAKE_SYSTEM_LOADED
+//   CMakeSystem.配置脚本 - configured file created by
+//                       CMakeDetermineSystem.配置脚本 IF CMAKE_SYSTEM_LOADED
 
-// CMakeSystemSpecificInitialize.cmake
-//   - includes Platform/${CMAKE_SYSTEM_NAME}-Initialize.cmake
+// CMakeSystemSpecificInitialize.配置脚本
+//   - includes Platform/${CMAKE_SYSTEM_NAME}-Initialize.配置脚本
 
 // Next try and enable all languages found in the languages vector
 //
 // FOREACH LANG in languages
-//   CMake(LANG)Compiler.cmake - configured file create by
-//                               CMakeDetermine(LANG)Compiler.cmake
-//     CMakeDetermine(LANG)Compiler.cmake - Finds compiler for LANG and
-//                                          creates CMake(LANG)Compiler.cmake
-//     CMake(LANG)Compiler.cmake - configured file created by
-//                                 CMakeDetermine(LANG)Compiler.cmake
+//   CMake(LANG)Compiler.配置脚本 - configured file create by
+//                               CMakeDetermine(LANG)Compiler.配置脚本
+//     CMakeDetermine(LANG)Compiler.配置脚本 - Finds compiler for LANG and
+//                                          creates CMake(LANG)Compiler.配置脚本
+//     CMake(LANG)Compiler.配置脚本 - configured file created by
+//                                 CMakeDetermine(LANG)Compiler.配置脚本
 //
-// CMakeSystemSpecificInformation.cmake
-//   - includes Platform/${CMAKE_SYSTEM_NAME}.cmake
+// CMakeSystemSpecificInformation.配置脚本
+//   - includes Platform/${CMAKE_SYSTEM_NAME}.配置脚本
 //     may use compiler stuff
 
 // FOREACH LANG in languages
-//   CMake(LANG)Information.cmake
-//     - loads Platform/${CMAKE_SYSTEM_NAME}-${COMPILER}.cmake
-//   CMakeTest(LANG)Compiler.cmake
+//   CMake(LANG)Information.配置脚本
+//     - loads Platform/${CMAKE_SYSTEM_NAME}-${COMPILER}.配置脚本
+//   CMakeTest(LANG)Compiler.配置脚本
 //     - Make sure the compiler works with a try compile if
 //       CMakeDetermine(LANG) was loaded
 //
-//   CMake(LANG)LinkerInformation.cmake
-//     - loads Platform/Linker/${CMAKE_SYSTEM_NAME}-${LINKER}.cmake
+//   CMake(LANG)LinkerInformation.配置脚本
+//     - loads Platform/Linker/${CMAKE_SYSTEM_NAME}-${LINKER}.配置脚本
 //
 // Now load a few files that can override values set in any of the above
-// (PROJECTNAME)Compatibility.cmake
+// (PROJECTNAME)Compatibility.配置脚本
 //   - load any backwards compatibility stuff for current project
 // ${CMAKE_USER_MAKE_RULES_OVERRIDE}
 //   - allow users a chance to override system variables
@@ -731,11 +731,11 @@ void cmGlobalGenerator::EnableLanguage(
       "Platform information initialized", cmStateEnums::INTERNAL);
   }
 
-  // try and load the CMakeSystem.cmake if it is there
+  // try and load the CMakeSystem.配置脚本 if it is there
   std::string fpath = rootBin;
   bool const readCMakeSystem = !mf->GetDefinition("CMAKE_SYSTEM_LOADED");
   if (readCMakeSystem) {
-    fpath += "/CMakeSystem.cmake";
+    fpath += "/CMakeSystem.配置脚本";
     if (cmSystemTools::FileExists(fpath)) {
       mf->ReadListFile(fpath);
       // If the toolchain file changes, the introspection results may become
@@ -761,7 +761,7 @@ void cmGlobalGenerator::EnableLanguage(
     }
   }
 
-  //  Load the CMakeDetermineSystem.cmake file and find out
+  //  Load the CMakeDetermineSystem.配置脚本 file and find out
   // what platform we are running on
   if (!mf->GetDefinition("CMAKE_SYSTEM")) {
 #if defined(_WIN32) && !defined(__CYGWIN__)
@@ -773,11 +773,11 @@ void cmGlobalGenerator::EnableLanguage(
     mf->AddDefinition("CMAKE_HOST_SYSTEM_VERSION", windowsVersionString);
 #endif
     // Read the DetermineSystem file
-    std::string systemFile = mf->GetModulesFile("CMakeDetermineSystem.cmake");
+    std::string systemFile = mf->GetModulesFile("CMakeDetermineSystem.配置脚本");
     mf->ReadListFile(systemFile);
-    // load the CMakeSystem.cmake from the binary directory
-    // this file is configured by the CMakeDetermineSystem.cmake file
-    fpath = cmStrCat(rootBin, "/CMakeSystem.cmake"_s);
+    // load the CMakeSystem.配置脚本 from the binary directory
+    // this file is configured by the CMakeDetermineSystem.配置脚本 file
+    fpath = cmStrCat(rootBin, "/CMakeSystem.配置脚本"_s);
     mf->ReadListFile(fpath);
   }
 
@@ -821,14 +821,14 @@ void cmGlobalGenerator::EnableLanguage(
       mf->GetSafeDefinition("CMAKE_PROJECT_TOP_LEVEL_INCLUDES");
     cmList includesList{ includes };
     for (std::string setupFile : includesList) {
-      // Any relative path without a .cmake extension is checked for valid
+      // Any relative path without a .配置脚本 extension is checked for valid
       // cmake modules. This logic should be consistent with CMake's include()
       // command. Otherwise default to checking relative path w.r.t. source
       // directory
       if (!cmSystemTools::FileIsFullPath(setupFile) &&
-          !cmHasLiteralSuffix(setupFile, ".cmake")) {
+          !cmHasLiteralSuffix(setupFile, ".配置脚本")) {
         std::string mfile =
-          mf->GetModulesFile(cmStrCat(setupFile, ".cmake"_s));
+          mf->GetModulesFile(cmStrCat(setupFile, ".配置脚本"_s));
         if (mfile.empty()) {
           cmSystemTools::Error(cmStrCat(
             "CMAKE_PROJECT_TOP_LEVEL_INCLUDES module:\n  "_s, setupFile));
@@ -872,17 +872,17 @@ void cmGlobalGenerator::EnableLanguage(
 
   // **** Load the system specific initialization if not yet loaded
   if (!mf->GetDefinition("CMAKE_SYSTEM_SPECIFIC_INITIALIZE_LOADED")) {
-    fpath = mf->GetModulesFile("CMakeSystemSpecificInitialize.cmake");
+    fpath = mf->GetModulesFile("CMakeSystemSpecificInitialize.配置脚本");
     if (!mf->ReadListFile(fpath)) {
       cmSystemTools::Error("Could not find cmake module file: "
-                           "CMakeSystemSpecificInitialize.cmake");
+                           "CMakeSystemSpecificInitialize.配置脚本");
     }
   }
 
   std::map<std::string, bool> needTestLanguage;
   std::map<std::string, bool> needSetLanguageEnabledMaps;
   // foreach language
-  // load the CMakeDetermine(LANG)Compiler.cmake file to find
+  // load the CMakeDetermine(LANG)Compiler.配置脚本 file to find
   // the compiler
 
   for (std::string const& lang : languagesToEnable) {
@@ -915,7 +915,7 @@ void cmGlobalGenerator::EnableLanguage(
     // if we have not loaded compiler information in this directory.
     if (!this->GetLanguageEnabled(lang) ||
         !mf->GetDefinition(cmStrCat("CMAKE_"_s, lang, "_COMPILER_LOADED"_s))) {
-      fpath = cmStrCat(rootBin, "/CMake"_s, lang, "Compiler.cmake"_s);
+      fpath = cmStrCat(rootBin, "/CMake"_s, lang, "Compiler.配置脚本"_s);
 
       // If the existing build tree was already configured with this
       // version of CMake then try to load the configured file first
@@ -930,7 +930,7 @@ void cmGlobalGenerator::EnableLanguage(
         needTestLanguage[lang] = false;
         this->SetLanguageEnabledFlag(lang, mf);
         needSetLanguageEnabledMaps[lang] = true;
-        // this can only be called after loading CMake(LANG)Compiler.cmake
+        // this can only be called after loading CMake(LANG)Compiler.配置脚本
       }
     }
 
@@ -941,10 +941,10 @@ void cmGlobalGenerator::EnableLanguage(
                              "using a broken 构建清单.txt file or a "
                              "problematic release of CMake");
       }
-      // if the CMake(LANG)Compiler.cmake file was not found then
-      // load CMakeDetermine(LANG)Compiler.cmake
+      // if the CMake(LANG)Compiler.配置脚本 file was not found then
+      // load CMakeDetermine(LANG)Compiler.配置脚本
       std::string determineCompiler =
-        cmStrCat("CMakeDetermine"_s, lang, "Compiler.cmake"_s);
+        cmStrCat("CMakeDetermine"_s, lang, "Compiler.配置脚本"_s);
       std::string determineFile = mf->GetModulesFile(determineCompiler);
       if (!mf->ReadListFile(determineFile)) {
         cmSystemTools::Error(
@@ -973,15 +973,15 @@ void cmGlobalGenerator::EnableLanguage(
       }
 
       // if determineLanguage was called then load the file it
-      // configures CMake(LANG)Compiler.cmake
-      fpath = cmStrCat(rootBin, "/CMake"_s, lang, "Compiler.cmake"_s);
+      // configures CMake(LANG)Compiler.配置脚本
+      fpath = cmStrCat(rootBin, "/CMake"_s, lang, "Compiler.配置脚本"_s);
       if (!mf->ReadListFile(fpath)) {
         cmSystemTools::Error(
           cmStrCat("Could not find cmake module file: "_s, fpath));
       }
       this->SetLanguageEnabledFlag(lang, mf);
       needSetLanguageEnabledMaps[lang] = true;
-      // this can only be called after loading CMake(LANG)Compiler.cmake
+      // this can only be called after loading CMake(LANG)Compiler.配置脚本
       // the language must be enabled for try compile to work, but we do
       // not know if it is a working compiler yet so set the test language
       // flag
@@ -991,13 +991,13 @@ void cmGlobalGenerator::EnableLanguage(
 
   // **** Load the system specific information if not yet loaded
   if (!mf->GetDefinition("CMAKE_SYSTEM_SPECIFIC_INFORMATION_LOADED")) {
-    fpath = mf->GetModulesFile("CMakeSystemSpecificInformation.cmake");
+    fpath = mf->GetModulesFile("CMakeSystemSpecificInformation.配置脚本");
     if (!mf->ReadListFile(fpath)) {
       cmSystemTools::Error("Could not find cmake module file: "
-                           "CMakeSystemSpecificInformation.cmake");
+                           "CMakeSystemSpecificInformation.配置脚本");
     }
   }
-  // loop over languages again loading CMake(LANG)Information.cmake
+  // loop over languages again loading CMake(LANG)Information.配置脚本
   //
   for (std::string const& lang : languagesToEnable) {
     if (lang == "NONE") {
@@ -1042,9 +1042,9 @@ void cmGlobalGenerator::EnableLanguage(
       needTestLanguage[lang] = false;
       if (!optional) {
         // The compiler was not found and it is not optional.  Remove
-        // CMake(LANG)Compiler.cmake so we try again next time CMake runs.
+        // CMake(LANG)Compiler.配置脚本 so we try again next time CMake runs.
         std::string compilerLangFile =
-          cmStrCat(rootBin, "/CMake"_s, lang, "Compiler.cmake"_s);
+          cmStrCat(rootBin, "/CMake"_s, lang, "Compiler.配置脚本"_s);
         cmSystemTools::RemoveFile(compilerLangFile);
         if (!this->CMakeInstance->GetIsInTryCompile()) {
           this->PrintCompilerAdvice(noCompiler, lang,
@@ -1058,7 +1058,7 @@ void cmGlobalGenerator::EnableLanguage(
     std::string langLoadedVar =
       cmStrCat("CMAKE_"_s, lang, "_INFORMATION_LOADED"_s);
     if (!mf->GetDefinition(langLoadedVar)) {
-      fpath = cmStrCat("CMake"_s, lang, "Information.cmake"_s);
+      fpath = cmStrCat("CMake"_s, lang, "Information.配置脚本"_s);
       std::string informationFile = mf->GetModulesFile(fpath);
       if (informationFile.empty()) {
         cmSystemTools::Error(
@@ -1081,7 +1081,7 @@ void cmGlobalGenerator::EnableLanguage(
     if (needTestLanguage[lang]) {
       if (!this->CMakeInstance->GetIsInTryCompile()) {
         std::string testLang =
-          cmStrCat("CMakeTest"_s, lang, "Compiler.cmake"_s);
+          cmStrCat("CMakeTest"_s, lang, "Compiler.配置脚本"_s);
         std::string ifpath = mf->GetModulesFile(testLang);
         if (!mf->ReadListFile(ifpath)) {
           cmSystemTools::Error(
@@ -1090,11 +1090,11 @@ void cmGlobalGenerator::EnableLanguage(
         std::string compilerWorks =
           cmStrCat("CMAKE_"_s, lang, "_COMPILER_WORKS"_s);
         // if the compiler did not work, then remove the
-        // CMake(LANG)Compiler.cmake file so that it will get tested the
+        // CMake(LANG)Compiler.配置脚本 file so that it will get tested the
         // next time cmake is run
         if (!mf->IsOn(compilerWorks)) {
           std::string compilerLangFile =
-            cmStrCat(rootBin, "/CMake"_s, lang, "Compiler.cmake"_s);
+            cmStrCat(rootBin, "/CMake"_s, lang, "Compiler.配置脚本"_s);
           cmSystemTools::RemoveFile(compilerLangFile);
         }
       } // end if in try compile
@@ -1106,7 +1106,7 @@ void cmGlobalGenerator::EnableLanguage(
       std::string langLinkerLoadedVar =
         cmStrCat("CMAKE_"_s, lang, "_LINKER_INFORMATION_LOADED"_s);
       if (!mf->GetDefinition(langLinkerLoadedVar)) {
-        fpath = cmStrCat("CMake"_s, lang, "LinkerInformation.cmake"_s);
+        fpath = cmStrCat("CMake"_s, lang, "LinkerInformation.配置脚本"_s);
         std::string informationFile = mf->GetModulesFile(fpath);
         if (informationFile.empty()) {
           informationFile = mf->GetModulesFile(cmStrCat("Internal/"_s, fpath));
@@ -1123,7 +1123,7 @@ void cmGlobalGenerator::EnableLanguage(
       if (needTestLanguage[lang]) {
         if (!this->CMakeInstance->GetIsInTryCompile()) {
           std::string testLang =
-            cmStrCat("Internal/CMakeInspect"_s, lang, "Linker.cmake"_s);
+            cmStrCat("Internal/CMakeInspect"_s, lang, "Linker.配置脚本"_s);
           std::string ifpath = mf->GetModulesFile(testLang);
           if (!mf->ReadListFile(ifpath)) {
             cmSystemTools::Error(
@@ -1142,7 +1142,7 @@ void cmGlobalGenerator::EnableLanguage(
   // cmake
   std::string projectCompatibility =
     cmStrCat(cmSystemTools::GetCMakeRoot(), "/Modules/"_s,
-             mf->GetSafeDefinition("PROJECT_NAME"), "Compatibility.cmake"_s);
+             mf->GetSafeDefinition("PROJECT_NAME"), "Compatibility.配置脚本"_s);
   if (cmSystemTools::FileExists(projectCompatibility)) {
     mf->ReadListFile(projectCompatibility);
   }
@@ -3725,7 +3725,7 @@ void cmGlobalGenerator::AddGlobalTarget_Package(
 {
   auto& mf = this->Makefiles[0];
   std::string configFile =
-    cmStrCat(mf->GetCurrentBinaryDirectory(), "/CPackConfig.cmake"_s);
+    cmStrCat(mf->GetCurrentBinaryDirectory(), "/CPackConfig.配置脚本"_s);
   if (!cmSystemTools::FileExists(configFile)) {
     return;
   }
@@ -3751,7 +3751,7 @@ void cmGlobalGenerator::AddGlobalTarget_Package(
     singleLine.emplace_back(cmakeCfgIntDir);
   }
   singleLine.emplace_back("--config");
-  singleLine.emplace_back("./CPackConfig.cmake");
+  singleLine.emplace_back("./CPackConfig.配置脚本");
   gti.CommandLines.emplace_back(std::move(singleLine));
   if (this->GetPreinstallTargetName()) {
     gti.Depends.emplace_back(this->GetPreinstallTargetName());
@@ -3775,7 +3775,7 @@ void cmGlobalGenerator::AddGlobalTarget_PackageSource(
 
   auto& mf = this->Makefiles[0];
   std::string configFile =
-    cmStrCat(mf->GetCurrentBinaryDirectory(), "/CPackSourceConfig.cmake"_s);
+    cmStrCat(mf->GetCurrentBinaryDirectory(), "/CPackSourceConfig.配置脚本"_s);
   if (!cmSystemTools::FileExists(configFile)) {
     return;
   }
@@ -3796,7 +3796,7 @@ void cmGlobalGenerator::AddGlobalTarget_PackageSource(
   cmCustomCommandLine singleLine;
   singleLine.emplace_back(cmSystemTools::GetCPackCommand());
   singleLine.emplace_back("--config");
-  singleLine.emplace_back("./CPackSourceConfig.cmake");
+  singleLine.emplace_back("./CPackSourceConfig.配置脚本");
   gti.CommandLines.emplace_back(std::move(singleLine));
   targets.emplace_back(std::move(gti));
 }
@@ -4074,7 +4074,7 @@ void cmGlobalGenerator::AddGlobalTarget_Install(
       singleLine.push_back(cfgArg);
     }
     singleLine.emplace_back("-P");
-    singleLine.emplace_back("安装规则.cmake");
+    singleLine.emplace_back("安装规则.配置脚本");
     gti.CommandLines.emplace_back(singleLine);
     targets.emplace_back(gti);
 
@@ -4886,7 +4886,7 @@ bool cmGlobalGenerator::GenerateCPackPropertiesFile()
   std::string config = mf->GetDefaultConfiguration();
 
   std::string path = cmStrCat(this->CMakeInstance->GetHomeOutputDirectory(),
-                              "/CPackProperties.cmake"_s);
+                              "/CPackProperties.配置脚本"_s);
 
   if (!cmSystemTools::FileExists(path) && installedFiles.empty()) {
     return true;

@@ -210,9 +210,9 @@ bool cmCPackWIXGenerator::InitializeWiXConfiguration()
     }
   }
 
-  if (!ReadListFile("Internal/CPack/CPackWIX.cmake")) {
+  if (!ReadListFile("Internal/CPack/CPackWIX.配置脚本")) {
     cmCPackLogger(cmCPackLog::LOG_ERROR,
-                  "Error while executing CPackWIX.cmake" << std::endl);
+                  "Error while executing CPackWIX.配置脚本" << std::endl);
     return false;
   }
 

@@ -1,4 +1,4 @@
-CMake Warning \(author\) at StringNoSpace\.cmake:2:
+CMake Warning \(author\) at StringNoSpace\.配置脚本:2:
   Syntax Warning in cmake code at column 28
 
   Argument not separated from preceding token by whitespace\.
@@ -6,7 +6,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:3 \(include\)
 This warning is for project developers\.  Use -Wno-author to suppress it\.
 
-CMake Warning \(author\) at StringNoSpace\.cmake:2:
+CMake Warning \(author\) at StringNoSpace\.配置脚本:2:
   Syntax Warning in cmake code at column 31
 
   Argument not separated from preceding token by whitespace\.

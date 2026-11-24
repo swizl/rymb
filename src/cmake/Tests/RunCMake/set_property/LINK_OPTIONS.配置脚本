@@ -1,0 +1,3 @@
+include(Common.配置脚本)
+test_target_property(LINK_OPTIONS)
+test_directory_property(LINK_OPTIONS)

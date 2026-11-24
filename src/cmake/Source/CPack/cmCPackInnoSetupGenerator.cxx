@@ -910,7 +910,7 @@ bool cmCPackInnoSetupGenerator::BuildDownloadedComponentArchive(
 
   // Find a ZIP program
   if (!IsSet("ZIP_EXECUTABLE")) {
-    ReadListFile("Internal/CPack/CPackZIP.cmake");
+    ReadListFile("Internal/CPack/CPackZIP.配置脚本");
 
     if (!IsSet("ZIP_EXECUTABLE")) {
       cmCPackLogger(cmCPackLog::LOG_ERROR,

@@ -1,4 +1,4 @@
-^CMake Error at MacroUnmatchedForeach\.cmake:[0-9]+ \(endmacro\):
+^CMake Error at MacroUnmatchedForeach\.配置脚本:[0-9]+ \(endmacro\):
   Flow control statements are not properly nested\.
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)$

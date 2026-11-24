@@ -1,7 +1,7 @@
-CMake Warning at SetFoundFALSE\.cmake:2 \(find_package\):
+CMake Warning at SetFoundFALSE\.配置脚本:2 \(find_package\):
   Found package configuration file:
 
-    .*/Tests/RunCMake/find_package/SetFoundFALSEConfig\.cmake
+    .*/Tests/RunCMake/find_package/SetFoundFALSEConfig\.配置脚本
 
   but it set SetFoundFALSE_FOUND to FALSE so package "SetFoundFALSE" is
   considered to be NOT FOUND\.

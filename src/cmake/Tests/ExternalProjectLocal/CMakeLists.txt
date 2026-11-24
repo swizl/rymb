@@ -81,7 +81,7 @@ ExternalProject_Add(${proj}
   URL "${CMAKE_CURRENT_SOURCE_DIR}/Step1.tar"
   URL_MD5 e3774630066d0df5b9074cb777d72802
   LIST_SEPARATOR ::
-  PATCH_COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_SOURCE_DIR}/Step1Patch.cmake
+  PATCH_COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_SOURCE_DIR}/Step1Patch.配置脚本
   CMAKE_GENERATOR "${CMAKE_GENERATOR}"
   CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=<INSTALL_DIR>
              -DTEST_LIST:STRING=A::B::C
@@ -103,7 +103,7 @@ ExternalProject_Add(${proj}
 set_property(TARGET ${proj} PROPERTY FOLDER "Local/TAR")
 ExternalProject_Add_Step(${proj} mypatch
   COMMAND ${CMAKE_COMMAND} -E echo "This is a custom external project step."
-  COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_SOURCE_DIR}/Step1Patch.cmake
+  COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_SOURCE_DIR}/Step1Patch.配置脚本
   WORKING_DIRECTORY <SOURCE_DIR>
   DEPENDEES download
   DEPENDERS configure

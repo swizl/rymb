@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.28)
 project(AutogenTimestampDeps)
-include("../AutogenCoreTest.cmake")
+include("../AutogenCoreTest.配置脚本")
 
 set(CMAKE_AUTOMOC ON)
 
 add_custom_target(ProjectInfo
-  COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_SOURCE_DIR}/cmake/UpdateProjectInfo.cmake
+  COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_SOURCE_DIR}/cmake/UpdateProjectInfo.配置脚本
   BYPRODUCTS ${CMAKE_BINARY_DIR}/ProjectInfo.hpp)
 
 set(ext_lib ${CMAKE_CURRENT_BINARY_DIR}/ext-build/${CMAKE_STATIC_LIBRARY_PREFIX}ext${CMAKE_STATIC_LIBRARY_SUFFIX})

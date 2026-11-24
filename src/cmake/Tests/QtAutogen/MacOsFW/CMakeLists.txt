@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(MacOsFW)
-include("../AutogenGuiTest.cmake")
+include("../AutogenGuiTest.配置脚本")
 
 find_package(Qt${QT_TEST_VERSION}Test REQUIRED)
 

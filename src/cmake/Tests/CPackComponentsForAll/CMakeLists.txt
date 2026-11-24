@@ -185,10 +185,10 @@ set(CPACK_NUGET_DEVELOPMENT_PACKAGE_TAGS "nuget" "unit" "test" "development")
 # (Behavior would be different for RPM or TGZ or DEB ...)
 if (NOT ("${CPackComponentWay}" STREQUAL "default"))
   # Setup project specific CPack-time CPack Config file.
-  configure_file(${CPackComponentsForAll_SOURCE_DIR}/MyLibCPackConfig-${CPackComponentWay}.cmake.in
-    ${CPackComponentsForAll_BINARY_DIR}/MyLibCPackConfig-${CPackComponentWay}.cmake
+  configure_file(${CPackComponentsForAll_SOURCE_DIR}/MyLibCPackConfig-${CPackComponentWay}.配置脚本.in
+    ${CPackComponentsForAll_BINARY_DIR}/MyLibCPackConfig-${CPackComponentWay}.配置脚本
     @ONLY)
-  set(CPACK_PROJECT_CONFIG_FILE ${CPackComponentsForAll_BINARY_DIR}/MyLibCPackConfig-${CPackComponentWay}.cmake)
+  set(CPACK_PROJECT_CONFIG_FILE ${CPackComponentsForAll_BINARY_DIR}/MyLibCPackConfig-${CPackComponentWay}.配置脚本)
 endif ()
 # Include CPack to introduce the appropriate targets
 include(CPack)

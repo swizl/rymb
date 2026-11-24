@@ -1,4 +1,4 @@
-^CMake Warning \(deprecated\) at CMP0118-OLD-Test1b\.cmake:[0-9]+ \(cmake_policy\):
+^CMake Warning \(deprecated\) at CMP0118-OLD-Test1b\.配置脚本:[0-9]+ \(cmake_policy\):
   The OLD behavior for policy CMP0118 will be removed from a future version
   of CMake\.
 
@@ -12,12 +12,12 @@ This warning is for project developers\.  Use -Wno-author or -Wno-deprecated
 to suppress it\.
 +
 prop: `NOTFOUND`
-CMake Error at CMP0118-Common-Test1b\.cmake:[0-9]+ \(target_sources\):
+CMake Error at CMP0118-Common-Test1b\.配置脚本:[0-9]+ \(target_sources\):
   Cannot find source file:
 
 [ \t]*.*Tests/RunCMake/CMP0118/CMP0118-OLD-Test1b-build/GeneratedMain\.txt
 Call Stack \(most recent call first\):
-  CMP0118-OLD-Test1b\.cmake:[0-9]+ \(include\)
+  CMP0118-OLD-Test1b\.配置脚本:[0-9]+ \(include\)
   CMakeLists\.txt:[0-9]+ \(include\)
 +
 CMake Generate step failed\.  Build files cannot be regenerated correctly\.$

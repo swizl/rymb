@@ -130,14 +130,14 @@ set(CMAKE_IGNORE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lib/cmake/zot-3.1)
 
 # Look for packages with new-style signatures.
 find_package(foo NO_MODULE)
-find_package(Foo CONFIGS FooConfig.cmake)
+find_package(Foo CONFIGS FooConfig.配置脚本)
 find_package(Bar)
 set(CMAKE_DISABLE_FIND_PACKAGE_Blub TRUE)
 find_package(Blub NO_MODULE)
-find_package(TFramework CONFIGS TFrameworkConfig.cmake)
+find_package(TFramework CONFIGS TFrameworkConfig.配置脚本)
 find_package(Tframework)
 find_package(TApp)
-find_package(Tapp CONFIGS tapp-config.cmake)
+find_package(Tapp CONFIGS tapp-config.配置脚本)
 find_package(Special NAMES Suffix SuffixTest PATH_SUFFIXES test)
 find_package(VersionedA 2 NAMES zot)
 find_package(VersionedB 3.1 EXACT NAMES zot)
@@ -184,7 +184,7 @@ find_package(RecursiveC 3.1 EXACT)
 # Test architecture-specific search directories.
 set(CMAKE_LIBRARY_ARCHITECTURE arch)
 find_package(ArchA NAMES Bar)
-find_package(ArchB NAMES Foo CONFIGS FooConfig.cmake)
+find_package(ArchB NAMES Foo CONFIGS FooConfig.配置脚本)
 find_package(ArchC 3.1 EXACT NAMES zot)
 find_package(ArchD 4.0 EXACT NAMES zot)
 unset(CMAKE_LIBRARY_ARCHITECTURE)
@@ -244,45 +244,45 @@ if(CMakeTestSystemPackage)
 endif()
 
 # Expected locations at which packages should be found.
-set(foo_EXPECTED "lib/foo-1.2/foo-config.cmake")
-set(Foo_EXPECTED "lib/foo-1.2/CMake/FooConfig.cmake")
-set(Bar_EXPECTED "lib/Bar/BarConfig.cmake")
+set(foo_EXPECTED "lib/foo-1.2/foo-config.配置脚本")
+set(Foo_EXPECTED "lib/foo-1.2/CMake/FooConfig.配置脚本")
+set(Bar_EXPECTED "lib/Bar/BarConfig.配置脚本")
 set(Blub_MISSING "")
-set(Special_EXPECTED "lib/suffix/test/SuffixTestConfig.cmake")
+set(Special_EXPECTED "lib/suffix/test/SuffixTestConfig.配置脚本")
 set(TFramework_EXPECTED
-  "TFramework.framework/Versions/A/Resources/CMake/TFrameworkConfig.cmake")
+  "TFramework.framework/Versions/A/Resources/CMake/TFrameworkConfig.配置脚本")
 set(Tframework_EXPECTED
-  "TFramework.framework/Versions/A/Resources/tframework-config.cmake")
+  "TFramework.framework/Versions/A/Resources/tframework-config.配置脚本")
 set(TApp_EXPECTED
-  "TApp.app/Contents/Resources/TAppConfig.cmake")
+  "TApp.app/Contents/Resources/TAppConfig.配置脚本")
 set(Tapp_EXPECTED
-  "TApp.app/Contents/Resources/cmake/tapp-config.cmake")
-set(VersionedA_EXPECTED "lib/zot-2.0/zot-config.cmake")
-set(VersionedB_EXPECTED "lib/zot-3.1/zot-config.cmake")
-set(VersionedC_EXPECTED "lib/cmake/zot-4.0/zot-config.cmake")
-set(VersionedD_EXPECTED "Baz 1.1/BazConfig.cmake")
-set(VersionedE_EXPECTED "Baz 1.2/CMake/BazConfig.cmake")
-set(VersionedF_EXPECTED "Baz 1.3/lib/cmake/Baz/BazConfig.cmake")
-set(VersionedG_EXPECTED "Baz 2.0/share/Baz 2/BazConfig.cmake")
-set(VersionedH_EXPECTED "Baz 2.1/lib/Baz 2/cmake/BazConfig.cmake")
+  "TApp.app/Contents/Resources/cmake/tapp-config.配置脚本")
+set(VersionedA_EXPECTED "lib/zot-2.0/zot-config.配置脚本")
+set(VersionedB_EXPECTED "lib/zot-3.1/zot-config.配置脚本")
+set(VersionedC_EXPECTED "lib/cmake/zot-4.0/zot-config.配置脚本")
+set(VersionedD_EXPECTED "Baz 1.1/BazConfig.配置脚本")
+set(VersionedE_EXPECTED "Baz 1.2/CMake/BazConfig.配置脚本")
+set(VersionedF_EXPECTED "Baz 1.3/lib/cmake/Baz/BazConfig.配置脚本")
+set(VersionedG_EXPECTED "Baz 2.0/share/Baz 2/BazConfig.配置脚本")
+set(VersionedH_EXPECTED "Baz 2.1/lib/Baz 2/cmake/BazConfig.配置脚本")
 set(WrongA_EXPECTED "${VersionedE_EXPECTED}")
 set(WrongB_EXPECTED "${VersionedE_EXPECTED}")
 set(WrongC_MISSING "WrongC_DIR-NOTFOUND")
 set(WrongD_MISSING "WrongD_DIR-NOTFOUND")
-set(wibbleA_EXPECTED "A/wibble-config.cmake")
-set(wibbleB_EXPECTED "B/wibble-config.cmake")
-set(RecursiveA_EXPECTED "lib/RecursiveA/recursivea-config.cmake")
-set(RecursiveB_EXPECTED "lib/zot-2.0/zot-config.cmake")
-set(RecursiveC_EXPECTED "lib/zot-3.1/zot-config.cmake")
-set(ArchA_EXPECTED "lib/arch/Bar/BarConfig.cmake")
-set(ArchB_EXPECTED "lib/arch/foo-1.2/CMake/FooConfig.cmake")
-set(ArchC_EXPECTED "lib/arch/zot-3.1/zot-config.cmake")
-set(ArchD_EXPECTED "lib/arch/cmake/zot-4.0/zot-config.cmake")
-set(EnvA_EXPECTED "lib/zot-3.1/zot-config.cmake")
+set(wibbleA_EXPECTED "A/wibble-config.配置脚本")
+set(wibbleB_EXPECTED "B/wibble-config.配置脚本")
+set(RecursiveA_EXPECTED "lib/RecursiveA/recursivea-config.配置脚本")
+set(RecursiveB_EXPECTED "lib/zot-2.0/zot-config.配置脚本")
+set(RecursiveC_EXPECTED "lib/zot-3.1/zot-config.配置脚本")
+set(ArchA_EXPECTED "lib/arch/Bar/BarConfig.配置脚本")
+set(ArchB_EXPECTED "lib/arch/foo-1.2/CMake/FooConfig.配置脚本")
+set(ArchC_EXPECTED "lib/arch/zot-3.1/zot-config.配置脚本")
+set(ArchD_EXPECTED "lib/arch/cmake/zot-4.0/zot-config.配置脚本")
+set(EnvA_EXPECTED "lib/zot-3.1/zot-config.配置脚本")
 set(EnvB_MISSING "EnvB_DIR-NOTFOUND")
-set(SetFoundTRUE_EXPECTED "cmake/SetFoundTRUEConfig.cmake")
+set(SetFoundTRUE_EXPECTED "cmake/SetFoundTRUEConfig.配置脚本")
 set(SetFoundFALSE_MISSING "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
-set(CMakeTestSystemPackage_EXPECTED "SystemPackage/CMakeTestSystemPackageConfig.cmake")
+set(CMakeTestSystemPackage_EXPECTED "SystemPackage/CMakeTestSystemPackageConfig.配置脚本")
 
 # Check the results.
 foreach(p ${PACKAGES})
@@ -485,14 +485,14 @@ set(INCLUDE_INSTALL_DIR include )
 set(SHARE_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/share/" )
 set(CURRENT_BUILD_DIR "${CMAKE_CURRENT_BINARY_DIR}" )
 
-configure_package_config_file(RelocatableConfig.cmake.in "${CMAKE_CURRENT_BINARY_DIR}/RelocatableConfig.cmake"
+configure_package_config_file(RelocatableConfig.配置脚本.in "${CMAKE_CURRENT_BINARY_DIR}/RelocatableConfig.配置脚本"
                               INSTALL_DESTINATION "${CMAKE_INSTALL_PREFIX}"
                               PATH_VARS INCLUDE_INSTALL_DIR SHARE_INSTALL_DIR CURRENT_BUILD_DIR
                              )
 
 set(Relocatable_FIND_COMPONENTS AComp BComp CComp)
 set(Relocatable_FIND_REQUIRED_BComp 1)
-include("${CMAKE_CURRENT_BINARY_DIR}/RelocatableConfig.cmake")
+include("${CMAKE_CURRENT_BINARY_DIR}/RelocatableConfig.配置脚本")
 
 if(NOT "${RELOC_INCLUDE_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}/include")
   message(SEND_ERROR "RELOC_INCLUDE_DIR set by configure_package_config_file() is set to\n  \"${RELOC_INCLUDE_DIR}\"\nnot the expected\n  \"${CMAKE_CURRENT_BINARY_DIR}/include\"")
@@ -519,7 +519,7 @@ set(INCLUDE_INSTALL_DIR include )
 set(SHARE_INSTALL_DIR "${CMAKE_CURRENT_BINARY_DIR}/share/" )
 set(CURRENT_BUILD_DIR "${CMAKE_CURRENT_BINARY_DIR}" )
 
-configure_package_config_file(RelocatableConfig.cmake.in "${CMAKE_CURRENT_BINARY_DIR}/RelocatableConfig.cmake"
+configure_package_config_file(RelocatableConfig.配置脚本.in "${CMAKE_CURRENT_BINARY_DIR}/RelocatableConfig.配置脚本"
                               INSTALL_DESTINATION "${CMAKE_CURRENT_BINARY_DIR}"
                               PATH_VARS INCLUDE_INSTALL_DIR SHARE_INSTALL_DIR CURRENT_BUILD_DIR
                               INSTALL_PREFIX "${CMAKE_CURRENT_BINARY_DIR}"
@@ -527,7 +527,7 @@ configure_package_config_file(RelocatableConfig.cmake.in "${CMAKE_CURRENT_BINARY
 
 set(Relocatable_FIND_COMPONENTS AComp BComp CComp)
 set(Relocatable_FIND_REQUIRED_BComp 1)
-include("${CMAKE_CURRENT_BINARY_DIR}/RelocatableConfig.cmake")
+include("${CMAKE_CURRENT_BINARY_DIR}/RelocatableConfig.配置脚本")
 
 if(NOT "${RELOC_INCLUDE_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}/include")
   message(SEND_ERROR "RELOC_INCLUDE_DIR set by configure_package_config_file() is set to\n  \"${RELOC_INCLUDE_DIR}\"\nnot the expected\n  \"${CMAKE_CURRENT_BINARY_DIR}/include\"")

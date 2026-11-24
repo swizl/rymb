@@ -1,9 +1,9 @@
 
 # Import targets from the exported build tree.
-include(${Import_BINARY_DIR}/../Export/ExportInterfaceBuildTree.cmake)
+include(${Import_BINARY_DIR}/../Export/ExportInterfaceBuildTree.配置脚本)
 
 # Import targets from the exported install tree.
-include(${CMAKE_INSTALL_PREFIX}/lib/exp/expInterface.cmake)
+include(${CMAKE_INSTALL_PREFIX}/lib/exp/expInterface.配置脚本)
 
 add_library(define_iface INTERFACE)
 set_property(TARGET define_iface PROPERTY

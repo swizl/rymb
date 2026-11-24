@@ -1,4 +1,4 @@
-CMake Error at create-executable\.cmake:[0-9]+ \(target_link_libraries\):
+CMake Error at create-executable\.配置脚本:[0-9]+ \(target_link_libraries\):
   Unable to find suitable library in:
 
     [^
@@ -6,6 +6,6 @@ CMake Error at create-executable\.cmake:[0-9]+ \(target_link_libraries\):
 
   for system name "Darwin"
 Call Stack \(most recent call first\):
-  create-executable-link-phase\.cmake:[0-9]+ \(include\)
-  create-executable-incomplete-link-phase\.cmake:[0-9]+ \(include\)
+  create-executable-link-phase\.配置脚本:[0-9]+ \(include\)
+  create-executable-incomplete-link-phase\.配置脚本:[0-9]+ \(include\)
   CMakeLists\.txt:[0-9]+ \(include\)

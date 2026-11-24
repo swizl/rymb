@@ -56,7 +56,7 @@ public:
   /** Register the executable lines and the function and macro definitions
       of a parsed file.  A second call for the same path adds new lines and
       functions and keeps existing counts.  A relative path, as ctest uses
-      for its top CTestTestfile.cmake, is made absolute with the current
+      for its top CTestTestfile.配置脚本, is made absolute with the current
       working directory, here and in CommandRan and FunctionCalled.  */
   void FileParsed(std::string const& path,
                   std::vector<cmListFileFunction> const& functions);

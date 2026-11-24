@@ -1,0 +1,4 @@
+include(${CMAKE_CURRENT_LIST_DIR}/findAttribute.配置脚本)
+
+findAttribute(${test} "RemoveHeadersOnCopy" TRUE)
+findAttribute(${test} "CodeSignOnCopy" TRUE)

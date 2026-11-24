@@ -211,9 +211,9 @@ install(
 )
 
 # Test control over direct linking.
-include(../../InterfaceLinkLibrariesDirect/testStaticLibPlugin.cmake)
-include(../../InterfaceLinkLibrariesDirect/testSharedLibWithHelper.cmake)
-include(../../InterfaceLinkLibrariesDirect/testExeWithPluginHelper.cmake)
+include(../../InterfaceLinkLibrariesDirect/testStaticLibPlugin.配置脚本)
+include(../../InterfaceLinkLibrariesDirect/testSharedLibWithHelper.配置脚本)
+include(../../InterfaceLinkLibrariesDirect/testExeWithPluginHelper.配置脚本)
 if(NOT maybe_OBJECTS_DESTINATION)
   target_compile_definitions(testSharedLibHelperObj INTERFACE testSharedLibHelperObj_NO_OBJECT)
   target_compile_definitions(testExePluginHelperObj INTERFACE testExePluginHelperObj_NO_OBJECT)
@@ -499,7 +499,7 @@ install(TARGETS
           testStaticLibRequiredPrivate
         EXPORT RequiredExp DESTINATION lib
 )
-install(EXPORT RequiredExp NAMESPACE Req:: FILE testLibRequiredTargets.cmake DESTINATION lib/cmake/testLibRequired)
+install(EXPORT RequiredExp NAMESPACE Req:: FILE testLibRequiredTargets.配置脚本 DESTINATION lib/cmake/testLibRequired)
 
 file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/installIncludesTest")
 file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/installIncludesTest/installIncludesTest.h" "/* No content */\n")
@@ -552,25 +552,25 @@ install(FILES
 )
 
 install(TARGETS testLibDepends testSharedLibDepends EXPORT DependsExp DESTINATION lib )
-install(EXPORT DependsExp FILE testLibDependsTargets.cmake DESTINATION lib/cmake/testLibDepends)
+install(EXPORT DependsExp FILE testLibDependsTargets.配置脚本 DESTINATION lib/cmake/testLibDepends)
 
 file(WRITE
-  "${CMAKE_CURRENT_BINARY_DIR}/testLibRequiredConfig.cmake"
+  "${CMAKE_CURRENT_BINARY_DIR}/testLibRequiredConfig.配置脚本"
   "
 if(\${CMAKE_FIND_PACKAGE_NAME}_FIND_VERSION VERSION_LESS 2.3 AND NOT \${CMAKE_FIND_PACKAGE_NAME}_INTERFACES)
   set(\${CMAKE_FIND_PACKAGE_NAME}_NO_INTERFACES 1)
 endif()
-include(\"\${CMAKE_CURRENT_LIST_DIR}/testLibRequiredTargets.cmake\")
+include(\"\${CMAKE_CURRENT_LIST_DIR}/testLibRequiredTargets.配置脚本\")
 set(\${CMAKE_FIND_PACKAGE_NAME}_INCLUDE_DIRS \"${CMAKE_CURRENT_BINARY_DIR}\" \"${CMAKE_CURRENT_SOURCE_DIR}\" )
 "
 )
 
 include(CMakePackageConfigHelpers)
-write_basic_package_version_file( testLibRequiredConfigVersion.cmake VERSION 2.5 COMPATIBILITY AnyNewerVersion)
+write_basic_package_version_file( testLibRequiredConfigVersion.配置脚本 VERSION 2.5 COMPATIBILITY AnyNewerVersion)
 
 install(FILES
-  "${CMAKE_CURRENT_BINARY_DIR}/testLibRequiredConfig.cmake"
-  "${CMAKE_CURRENT_BINARY_DIR}/testLibRequiredConfigVersion.cmake"
+  "${CMAKE_CURRENT_BINARY_DIR}/testLibRequiredConfig.配置脚本"
+  "${CMAKE_CURRENT_BINARY_DIR}/testLibRequiredConfigVersion.配置脚本"
   DESTINATION lib/cmake/testLibRequired
 )
 
@@ -659,7 +659,7 @@ export(TARGETS testExe1 testLib1 testLib2 testLib3
   testInterfaceIncludeUser
   testInterfaceIncludeUser2
   NAMESPACE bld_
-  FILE ExportBuildTree.cmake
+  FILE ExportBuildTree.配置脚本
   )
 export(TARGETS testExe2 testLib4 testLib5 testLib6 testLib7 testExe3 testExe4 testExe2lib
   testLib8
@@ -676,7 +676,7 @@ export(TARGETS testExe2 testLib4 testLib5 testLib6 testLib7 testExe3 testExe4 te
   testLibPerConfigDest
   testSharedObjectAIX
   NAMESPACE bld_
-  APPEND FILE ExportBuildTree.cmake
+  APPEND FILE ExportBuildTree.配置脚本
   )
 
 add_subdirectory(Interface)
@@ -704,7 +704,7 @@ target_link_options(testLinkOptions INTERFACE INTERFACE_FLAG)
 
 install(TARGETS testLinkOptions
         EXPORT RequiredExp DESTINATION lib)
-export(TARGETS testLinkOptions NAMESPACE bld_ APPEND FILE ExportBuildTree.cmake)
+export(TARGETS testLinkOptions NAMESPACE bld_ APPEND FILE ExportBuildTree.配置脚本)
 
 
 #------------------------------------------------------------------------------
@@ -716,7 +716,7 @@ target_link_directories(testLinkDirectories INTERFACE
 
 install(TARGETS testLinkDirectories
         EXPORT RequiredExp DESTINATION lib)
-export(TARGETS testLinkDirectories NAMESPACE bld_ APPEND FILE ExportBuildTree.cmake)
+export(TARGETS testLinkDirectories NAMESPACE bld_ APPEND FILE ExportBuildTree.配置脚本)
 
 
 #------------------------------------------------------------------------------
@@ -729,7 +729,7 @@ if(CMAKE_GENERATOR MATCHES "Make|Ninja|FASTBuild")
 
   install(TARGETS testLinkDepends
     EXPORT RequiredExp DESTINATION lib)
-  export(TARGETS testLinkDepends NAMESPACE bld_ APPEND FILE ExportBuildTree.cmake)
+  export(TARGETS testLinkDepends NAMESPACE bld_ APPEND FILE ExportBuildTree.配置脚本)
 endif()
 
 #------------------------------------------------------------------------------
@@ -741,7 +741,7 @@ if(CMake_TEST_CUDA)
 
   install(TARGETS cudaInterfaceLib
     EXPORT RequiredExp DESTINATION lib)
-  export(TARGETS cudaInterfaceLib NAMESPACE bld_ APPEND FILE ExportBuildTree.cmake)
+  export(TARGETS cudaInterfaceLib NAMESPACE bld_ APPEND FILE ExportBuildTree.配置脚本)
 endif()
 
 # Test the presence of targets named the same as languages.

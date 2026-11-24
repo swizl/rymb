@@ -25,4 +25,4 @@ add_subdirectory(c_code)
 # use a cmake script to run the executable so that PATH
 # can be set with the MinGW/bin in it, and the fortran
 # runtime libraries can be found.
-configure_file(runtest.cmake.in runtest.cmake @ONLY)
+configure_file(runtest.配置脚本.in runtest.配置脚本 @ONLY)

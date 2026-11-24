@@ -857,7 +857,7 @@ int cmCTest::ProcessSteps()
     }
   }
 
-  // CTEST_TIME_LIMIT may come from CTestCustom.cmake (already in the makefile)
+  // CTEST_TIME_LIMIT may come from CTestCustom.配置脚本 (already in the makefile)
   // or from the config map (just populated by SetCMakeVariables above).
   this->SetTimeLimit(mf.GetDefinition("CTEST_TIME_LIMIT"));
   std::vector<cmListFileArgument> args{
@@ -2944,7 +2944,7 @@ void cmCTest::ReadCustomConfigurationFileTree(std::string const& dir,
              dir, '\n');
 
   auto const fname = [this, &dir]() -> std::string {
-    for (char const* ext : { ".cmake", ".ctest" }) {
+    for (char const* ext : { ".配置脚本", ".ctest" }) {
       std::string path = cmStrCat(dir, "/CTestCustom"_s, ext);
       cmCTestLog(this, DEBUG, "* Check for file: "_s, path, '\n');
       if (cmSystemTools::FileExists(path)) {

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(RccOnly)
-include("../AutogenCoreTest.cmake")
+include("../AutogenCoreTest.配置脚本")
 
 # Test AUTORCC being enabled only
 add_executable(rccOnly rccOnly.cpp rccOnlyRes.qrc)

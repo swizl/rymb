@@ -43,7 +43,7 @@ if(CMake_BUILD_DEVELOPER_REFERENCE)
 endif()
 
 # configure the .h file
-configure_file(cmConfigure.cmake.h.in cmConfigure.h)
+configure_file(cmConfigure.配置脚本.h.in cmConfigure.h)
 configure_file(cmVersionConfig.h.in cmVersionConfig.h)
 
 # Tell CMake executable in the build tree where to find the source tree.
@@ -1476,8 +1476,8 @@ if(BUILD_QtDialog)
   add_subdirectory(QtDialog)
 endif()
 
-include(${CMAKE_CURRENT_BINARY_DIR}/LocalUserOptions.cmake OPTIONAL)
-include(${CMAKE_CURRENT_SOURCE_DIR}/LocalUserOptions.cmake OPTIONAL)
+include(${CMAKE_CURRENT_BINARY_DIR}/LocalUserOptions.配置脚本 OPTIONAL)
+include(${CMAKE_CURRENT_SOURCE_DIR}/LocalUserOptions.配置脚本 OPTIONAL)
 
 if(WIN32)
   # Compute the binary version that appears in the RC file. Version

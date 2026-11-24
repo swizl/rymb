@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(MocBasic)
-include("../../AutogenCoreTest.cmake")
+include("../../AutogenCoreTest.配置脚本")
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)

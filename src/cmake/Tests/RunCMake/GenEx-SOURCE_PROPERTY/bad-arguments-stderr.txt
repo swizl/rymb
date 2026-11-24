@@ -1,4 +1,4 @@
-CMake Error at bad-arguments\.cmake:[0-9]+ \(file\):
+CMake Error at bad-arguments\.配置脚本:[0-9]+ \(file\):
   Error evaluating generator expression:
 
     \$<SOURCE_PROPERTY:src,opt,prop,foo>

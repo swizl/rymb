@@ -2,7 +2,7 @@ cmake_language(DEFER ID id1 CALL message STATUS "Deferred Message In Subdirector
 cmake_language(DEFER ID id2 CALL
   cmake_language DEFER ID id3 CALL
   message WARNING "Double-Deferred Warning In Subdirectory:\n '${CMAKE_CURRENT_LIST_FILE}:${CMAKE_CURRENT_LIST_LINE}'")
-cmake_language(DEFER ID id4 CALL include "${CMAKE_CURRENT_LIST_DIR}/include.cmake")
+cmake_language(DEFER ID id4 CALL include "${CMAKE_CURRENT_LIST_DIR}/include.配置脚本")
 
 set(subdir_message "This should not be printed because variable evaluation is in deferred scope.")
 cmake_language(DEFER DIRECTORY .. CALL message STATUS "${subdir_message}")

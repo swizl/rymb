@@ -645,23 +645,23 @@ endif()
 
 if(EP_TEST_GIT)
   add_test(TutorialStep1-GIT-byhash
-    ${CMAKE_COMMAND} -P "${binary_base}/TutorialStep1-GIT-byhash/example.cmake")
+    ${CMAKE_COMMAND} -P "${binary_base}/TutorialStep1-GIT-byhash/example.配置脚本")
 
   add_test(TutorialStep1-GIT-bytag
-    ${CMAKE_COMMAND} -P "${binary_base}/TutorialStep1-GIT-bytag/example.cmake")
+    ${CMAKE_COMMAND} -P "${binary_base}/TutorialStep1-GIT-bytag/example.配置脚本")
 
   add_test(TutorialStep1-GIT-bytag-withsubmodules
-    ${CMAKE_COMMAND} -P "${binary_base}/TutorialStep1-GIT-bytag-withsubmodules/example.cmake")
+    ${CMAKE_COMMAND} -P "${binary_base}/TutorialStep1-GIT-bytag-withsubmodules/example.配置脚本")
 
   add_test(TutorialStep1-GIT-shallow-master
-    ${CMAKE_COMMAND} -P "${binary_base}/TutorialStep1-GIT-shallow-master/example.cmake")
+    ${CMAKE_COMMAND} -P "${binary_base}/TutorialStep1-GIT-shallow-master/example.配置脚本")
 
   add_test(TutorialStep1-GIT-master
-    ${CMAKE_COMMAND} -P "${binary_base}/TutorialStep1-GIT-master/example.cmake")
+    ${CMAKE_COMMAND} -P "${binary_base}/TutorialStep1-GIT-master/example.配置脚本")
 
   if(NOT Git_VERSION VERSION_LESS 1.7.7)
     add_test(TutorialStep1-GIT-config
-      ${CMAKE_COMMAND} -P "${binary_base}/TutorialStep1-GIT-config/example.cmake")
+      ${CMAKE_COMMAND} -P "${binary_base}/TutorialStep1-GIT-config/example.配置脚本")
   endif()
 endif()
 

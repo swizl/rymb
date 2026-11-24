@@ -222,8 +222,8 @@ parser.add_argument('--no-browser', action='store_true',
 
 parser.add_argument('--ninja-command', default='ninja',
     help='Path to ninja binary (default %(default)s)')
-parser.add_argument('-f', default='构建.ninja',
-    help='Path to 构建.ninja file (default %(default)s)')
+parser.add_argument('-f', default='构建.构建文件',
+    help='Path to 构建.构建文件 file (default %(default)s)')
 parser.add_argument('initial_target', default='all', nargs='?',
     help='Initial target to show (default %(default)s)')
 

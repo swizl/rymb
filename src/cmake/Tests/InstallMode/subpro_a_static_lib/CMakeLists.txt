@@ -33,28 +33,28 @@ set(INSTALL_CMAKE_DIR "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}")
 include(CMakePackageConfigHelpers)
 
 configure_package_config_file(
-  "cmake/PackageConfig.cmake.in"
-  "${PROJECT_NAME}Config.cmake"
+  "cmake/PackageConfig.配置脚本.in"
+  "${PROJECT_NAME}Config.配置脚本"
   INSTALL_DESTINATION "${INSTALL_CMAKE_DIR}"
   PATH_VARS
     CMAKE_INSTALL_INCLUDEDIR
     CMAKE_INSTALL_LIBDIR
 )
 
-write_basic_package_version_file("${PROJECT_NAME}Version.cmake"
+write_basic_package_version_file("${PROJECT_NAME}Version.配置脚本"
   VERSION       "${PROJECT_VERSION}"
   COMPATIBILITY SameMajorVersion
 )
 
 install(
   EXPORT      main
-  FILE        "${PROJECT_NAME}Targets.cmake"
+  FILE        "${PROJECT_NAME}Targets.配置脚本"
   DESTINATION "${INSTALL_CMAKE_DIR}"
 )
 
 install(
   FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Version.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.配置脚本"
+    "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Version.配置脚本"
   DESTINATION "${INSTALL_CMAKE_DIR}"
 )

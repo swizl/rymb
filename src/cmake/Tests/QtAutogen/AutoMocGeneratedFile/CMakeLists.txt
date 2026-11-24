@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.26)
 project(AutoMocGeneratedFile)
 
-include("../AutogenCoreTest.cmake")
+include("../AutogenCoreTest.配置脚本")
 
 file(GENERATE OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/myConfig.h
     CONTENT

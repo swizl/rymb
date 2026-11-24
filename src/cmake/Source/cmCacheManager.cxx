@@ -24,7 +24,7 @@
 
 void cmCacheManager::CleanCMakeFiles(std::string const& path)
 {
-  std::string glob = cmStrCat(path, "/CMakeFiles/*.cmake"_s);
+  std::string glob = cmStrCat(path, "/CMakeFiles/*.配置脚本"_s);
   cmsys::Glob globIt;
   globIt.FindFiles(glob);
   std::vector<std::string> files = globIt.GetFiles();

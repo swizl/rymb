@@ -5474,7 +5474,7 @@ std::string cmGlobalXCodeGenerator::GetTestBuildDependencyPath(
   cmGeneratorTarget const* target, std::string const& config) const
 {
   // Replicates the CMake-language logic that computes _test_bundle_dir in
-  // xctest_add_test() in Modules/FindXCTest.cmake.
+  // xctest_add_test() in Modules/FindXCTest.配置脚本.
   if (!target->IsImported() && target->IsXCTestOnApple() &&
       this->XcodeVersion >= 73) {
     cmValue testeeName = target->GetProperty("XCTEST_TESTEE");

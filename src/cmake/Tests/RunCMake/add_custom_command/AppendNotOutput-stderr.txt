@@ -1,4 +1,4 @@
-CMake Error at AppendNotOutput\.cmake:1 \(add_custom_command\):
+CMake Error at AppendNotOutput\.配置脚本:1 \(add_custom_command\):
   Attempt to APPEND to custom command with output
 
     .*RunCMake/add_custom_command/AppendNotOutput-build/out

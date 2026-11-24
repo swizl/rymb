@@ -1,4 +1,4 @@
-^CMake Error at FunctionUnmatchedForeach\.cmake:[0-9]+ \(endfunction\):
+^CMake Error at FunctionUnmatchedForeach\.配置脚本:[0-9]+ \(endfunction\):
   Flow control statements are not properly nested\.
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)$

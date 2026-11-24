@@ -1,4 +1,4 @@
-^CMake Error at define_property-INITIALIZE_FROM_VARIABLE-no_underscore\.cmake:[0-9]+ \(define_property\):
+^CMake Error at define_property-INITIALIZE_FROM_VARIABLE-no_underscore\.配置脚本:[0-9]+ \(define_property\):
   define_property Property name "PROP1" defined with INITIALIZE_FROM_VARIABLE
   does not contain underscore
 Call Stack \(most recent call first\):

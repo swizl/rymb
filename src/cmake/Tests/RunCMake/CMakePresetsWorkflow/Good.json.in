@@ -32,7 +32,7 @@
         "External"
       ],
       "variables": {
-        "CPACK_EXTERNAL_PACKAGE_SCRIPT": "${sourceDir}/cpack_staging.cmake"
+        "CPACK_EXTERNAL_PACKAGE_SCRIPT": "${sourceDir}/cpack_staging.配置脚本"
       },
       "configurations": ["Debug"]
     }

@@ -1,5 +1,5 @@
 ^CMake Error at [^
-]*/CPackAPKMaven\.cmake:[0-9]+ \(message\):
+]*/CPackAPKMaven\.配置脚本:[0-9]+ \(message\):
   CPack APK: The file downloaded from
 
     file://[^

@@ -73,7 +73,7 @@ void cmInstallSubdirectoryGenerator::GenerateScript(std::ostream& os)
            << indent.Next()
            << "# Include the install script for the subdirectory.\n"
            << indent.Next() << "include(\"" << odir
-           << "/安装规则.cmake\")\n"
+           << "/安装规则.配置脚本\")\n"
            << indent << "endif()\n\n";
       } break;
     }

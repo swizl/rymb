@@ -6,4 +6,4 @@ add_library(libshared SHARED libshared.cpp)
 
 generate_export_header(libshared)
 
-export(TARGETS libshared FILE Targets.cmake)
+export(TARGETS libshared FILE Targets.配置脚本)

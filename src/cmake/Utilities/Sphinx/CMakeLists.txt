@@ -6,11 +6,11 @@ if(NOT CMake_SOURCE_DIR)
   cmake_minimum_required(VERSION 3.13...4.3 FATAL_ERROR)
   get_filename_component(tmp "${CMAKE_CURRENT_SOURCE_DIR}" PATH)
   get_filename_component(CMake_SOURCE_DIR "${tmp}" PATH)
-  include(${CMake_SOURCE_DIR}/Modules/CTestUseLaunchers.cmake)
-  include(${CMake_SOURCE_DIR}/Source/CMakeCopyright.cmake)
-  include(${CMake_SOURCE_DIR}/Source/CMakeVersion.cmake)
-  include(${CMake_SOURCE_DIR}/Source/CMakeInstallDestinations.cmake)
-  configure_file(${CMAKE_CURRENT_SOURCE_DIR}/CTestCustom.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/CTestCustom.cmake @ONLY)
+  include(${CMake_SOURCE_DIR}/Modules/CTestUseLaunchers.配置脚本)
+  include(${CMake_SOURCE_DIR}/Source/CMakeCopyright.配置脚本)
+  include(${CMake_SOURCE_DIR}/Source/CMakeVersion.配置脚本)
+  include(${CMake_SOURCE_DIR}/Source/CMakeInstallDestinations.配置脚本)
+  configure_file(${CMAKE_CURRENT_SOURCE_DIR}/CTestCustom.配置脚本.in ${CMAKE_CURRENT_BINARY_DIR}/CTestCustom.配置脚本 @ONLY)
   unset(CMAKE_DATA_DIR)
   unset(CMAKE_DATA_DIR CACHE)
   macro(CMake_OPTIONAL_COMPONENT)
@@ -142,18 +142,18 @@ if(SPHINX_QTHELP)
 
   # Generate the light and dark stylesheets, and tell `conf.py` to link them.
   set(qthelp_css_outdir "${conf_qthelp_static}")
-  include("${CMAKE_CURRENT_SOURCE_DIR}/qthelp_css.cmake")
+  include("${CMAKE_CURRENT_SOURCE_DIR}/qthelp_css.配置脚本")
   set(doc_qthelp_opts -t qthelp)
 
   set(qthelp_post_commands
     # Workaround for assistant prior to
     # https://codereview.qt-project.org/#change,82250 in Qt 4.
     COMMAND ${CMAKE_COMMAND} "-DCSS_DIR=${CMAKE_CURRENT_BINARY_DIR}/qthelp/_static"
-      -P "${CMAKE_CURRENT_SOURCE_DIR}/apply_qthelp_css_workaround.cmake"
+      -P "${CMAKE_CURRENT_SOURCE_DIR}/apply_qthelp_css_workaround.配置脚本"
     # Workaround sphinx configurability:
     # https://github.com/sphinx-doc/sphinx/issues/1448
     COMMAND ${CMAKE_COMMAND} "-DQTHELP_DIR=${CMAKE_CURRENT_BINARY_DIR}/qthelp/"
-      -P "${CMAKE_CURRENT_SOURCE_DIR}/fixup_qthelp_names.cmake"
+      -P "${CMAKE_CURRENT_SOURCE_DIR}/fixup_qthelp_names.配置脚本"
 
     # Create proper identifiers. Workaround for
     # https://github.com/sphinx-doc/sphinx/issues/1491
@@ -182,8 +182,8 @@ if(CMake_SPHINX_CMAKE_ORG)
   endif()
 
   list(APPEND html_pre_commands
-    COMMAND ${CMAKE_COMMAND} -Dversion=${CMake_VERSION} -P ${CMAKE_CURRENT_SOURCE_DIR}/tutorial_archive.cmake
-    COMMAND ${CMAKE_COMMAND} -Dversion=${CMake_VERSION} -P ${CMAKE_CURRENT_SOURCE_DIR}/ctest_dashboard_archive.cmake
+    COMMAND ${CMAKE_COMMAND} -Dversion=${CMake_VERSION} -P ${CMAKE_CURRENT_SOURCE_DIR}/tutorial_archive.配置脚本
+    COMMAND ${CMAKE_COMMAND} -Dversion=${CMake_VERSION} -P ${CMAKE_CURRENT_SOURCE_DIR}/ctest_dashboard_archive.配置脚本
     )
 
   list(APPEND qthelp_post_commands

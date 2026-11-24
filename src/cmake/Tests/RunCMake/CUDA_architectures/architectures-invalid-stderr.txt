@@ -1,4 +1,4 @@
-^CMake Error at .*/Internal/CMakeCUDAArchitecturesValidate\.cmake:[0-9]+ \(message\):
+^CMake Error at .*/Internal/CMakeCUDAArchitecturesValidate\.配置脚本:[0-9]+ \(message\):
   CMAKE_CUDA_ARCHITECTURES:
 
     invalid
@@ -11,6 +11,6 @@
 
 Call Stack \(most recent call first\):
   [^
-]*/Modules/CMakeDetermineCUDACompiler\.cmake:[0-9]+ \(cmake_cuda_architectures_validate\)
-  architectures-invalid\.cmake:2 \(enable_language\)
+]*/Modules/CMakeDetermineCUDACompiler\.配置脚本:[0-9]+ \(cmake_cuda_architectures_validate\)
+  architectures-invalid\.配置脚本:2 \(enable_language\)
   CMakeLists\.txt:3 \(include\)$

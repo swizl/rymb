@@ -1,5 +1,5 @@
 ^CMake Error at [^
-]*/write-only\.cmake:[0-9]+ \(file\):
+]*/write-only\.配置脚本:[0-9]+ \(file\):
   file failed to open for reading \(Permission denied\):
 
     [^

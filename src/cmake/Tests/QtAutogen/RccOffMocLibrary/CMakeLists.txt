@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(RccOffMocLibrary)
-include("../AutogenCoreTest.cmake")
+include("../AutogenCoreTest.配置脚本")
 
 # Add not_generated_file.qrc to the source list to get the file-level
 # dependency, but don't generate a c++ file from it.  Disable the AUTORCC

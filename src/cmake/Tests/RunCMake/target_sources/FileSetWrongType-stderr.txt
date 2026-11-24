@@ -1,4 +1,4 @@
-^CMake Error at FileSetWrongType\.cmake:[0-9]+ \(target_sources\):
+^CMake Error at FileSetWrongType\.配置脚本:[0-9]+ \(target_sources\):
   target_sources File set TYPE may only be one of the built-in types
   "HEADERS", "SOURCES", "SYCL", "SYCL_HEADERS", "CXX_MODULES" or a RULE
   visible from the current directory\.

@@ -1,10 +1,10 @@
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Test.cmake.in
-               ${CMAKE_CURRENT_BINARY_DIR}/Test.cmake @ONLY)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Test.配置脚本.in
+               ${CMAKE_CURRENT_BINARY_DIR}/Test.配置脚本 @ONLY)
 
 macro(add_CMakeOnly_test test)
   add_test(CMakeOnly.${test} ${CMAKE_CMAKE_COMMAND}
     -DTEST=${test}
-    -P ${CMAKE_CURRENT_BINARY_DIR}/Test.cmake
+    -P ${CMAKE_CURRENT_BINARY_DIR}/Test.配置脚本
     )
 endmacro()
 
@@ -43,7 +43,7 @@ endif()
 add_test(CMakeOnly.AllFindModules ${CMAKE_CMAKE_COMMAND}
   -DTEST=AllFindModules
   -DCMAKE_ARGS=-DCMake_TEST_CMakeOnly.AllFindModules_NO_VERSION=${CMake_TEST_CMakeOnly.AllFindModules_NO_VERSION}
-  -P ${CMAKE_CURRENT_BINARY_DIR}/Test.cmake
+  -P ${CMAKE_CURRENT_BINARY_DIR}/Test.配置脚本
   )
 
 add_CMakeOnly_test(SelectLibraryConfigurations)
@@ -55,26 +55,26 @@ add_CMakeOnly_test(find_path)
 
 add_test(CMakeOnly.ProjectInclude ${CMAKE_CMAKE_COMMAND}
   -DTEST=ProjectInclude
-  -DCMAKE_ARGS=-DCMAKE_PROJECT_ProjectInclude_INCLUDE=${CMAKE_CURRENT_SOURCE_DIR}/ProjectInclude/include.cmake
-  -P ${CMAKE_CURRENT_BINARY_DIR}/Test.cmake
+  -DCMAKE_ARGS=-DCMAKE_PROJECT_ProjectInclude_INCLUDE=${CMAKE_CURRENT_SOURCE_DIR}/ProjectInclude/include.配置脚本
+  -P ${CMAKE_CURRENT_BINARY_DIR}/Test.配置脚本
   )
 
 add_test(CMakeOnly.ProjectIncludeAny ${CMAKE_CMAKE_COMMAND}
   -DTEST=ProjectIncludeAny
-  -DCMAKE_ARGS=-DCMAKE_PROJECT_INCLUDE=${CMAKE_CURRENT_SOURCE_DIR}/ProjectInclude/include.cmake
-  -P ${CMAKE_CURRENT_BINARY_DIR}/Test.cmake
+  -DCMAKE_ARGS=-DCMAKE_PROJECT_INCLUDE=${CMAKE_CURRENT_SOURCE_DIR}/ProjectInclude/include.配置脚本
+  -P ${CMAKE_CURRENT_BINARY_DIR}/Test.配置脚本
   )
 
 add_test(CMakeOnly.ProjectIncludeBefore ${CMAKE_CMAKE_COMMAND}
   -DTEST=ProjectIncludeBefore
-  -DCMAKE_ARGS=-DCMAKE_PROJECT_ProjectInclude_INCLUDE_BEFORE=${CMAKE_CURRENT_SOURCE_DIR}/ProjectIncludeBefore/include.cmake
-  -P ${CMAKE_CURRENT_BINARY_DIR}/Test.cmake
+  -DCMAKE_ARGS=-DCMAKE_PROJECT_ProjectInclude_INCLUDE_BEFORE=${CMAKE_CURRENT_SOURCE_DIR}/ProjectIncludeBefore/include.配置脚本
+  -P ${CMAKE_CURRENT_BINARY_DIR}/Test.配置脚本
   )
 
 add_test(CMakeOnly.ProjectIncludeBeforeAny ${CMAKE_CMAKE_COMMAND}
   -DTEST=ProjectIncludeBeforeAny
-  -DCMAKE_ARGS=-DCMAKE_PROJECT_INCLUDE_BEFORE=${CMAKE_CURRENT_SOURCE_DIR}/ProjectIncludeBefore/include.cmake
-  -P ${CMAKE_CURRENT_BINARY_DIR}/Test.cmake
+  -DCMAKE_ARGS=-DCMAKE_PROJECT_INCLUDE_BEFORE=${CMAKE_CURRENT_SOURCE_DIR}/ProjectIncludeBefore/include.配置脚本
+  -P ${CMAKE_CURRENT_BINARY_DIR}/Test.配置脚本
   )
 
 include(CMakeParseArguments)
@@ -87,7 +87,7 @@ function(add_major_test module)
         -DTEST=MajorVersionSelection-${module}_${_version}
         -DTEST_SOURCE=MajorVersionSelection
         "-DCMAKE_ARGS=-DMAJOR_TEST_MODULE=${module};-DMAJOR_TEST_VERSION=${_version};-DMAJOR_TEST_NO_LANGUAGES=${MAJOR_TEST_NOLANG};-DMAJOR_TEST_VERSION_VAR=${MAJOR_TEST_VERSION_VAR}"
-        -P ${CMAKE_CURRENT_BINARY_DIR}/Test.cmake
+        -P ${CMAKE_CURRENT_BINARY_DIR}/Test.配置脚本
       )
   endforeach ()
 endfunction()

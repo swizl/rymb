@@ -1,5 +1,5 @@
 ^CMake Warning \(policy\) at [^
-]*/Modules/CheckIncludeFile\.cmake:[0-9]+ \(cmake_policy\):
+]*/Modules/CheckIncludeFile\.配置脚本:[0-9]+ \(cmake_policy\):
   Policy CMP0075 is not set: Include file check macros honor
   CMAKE_REQUIRED_LIBRARIES\.  Run "cmake --help-policy CMP0075" for policy
   details\.  Use the cmake_policy command to set the policy and suppress this
@@ -11,13 +11,13 @@
 
   For compatibility with CMake 3\.11 and below this check is ignoring it\.
 Call Stack \(most recent call first\):
-  CMP0075\.cmake:11 \(check_include_file\)
+  CMP0075\.配置脚本:11 \(check_include_file\)
   CMakeLists\.txt:[0-9]+ \(include\)
 This warning is for project developers\.  Use -Wno-author or -Wno-policy to
 suppress it\.
 +
 CMake Warning \(policy\) at [^
-]*/Modules/CheckIncludeFileCXX\.cmake:[0-9]+ \(cmake_policy\):
+]*/Modules/CheckIncludeFileCXX\.配置脚本:[0-9]+ \(cmake_policy\):
   Policy CMP0075 is not set: Include file check macros honor
   CMAKE_REQUIRED_LIBRARIES\.  Run "cmake --help-policy CMP0075" for policy
   details\.  Use the cmake_policy command to set the policy and suppress this
@@ -29,13 +29,13 @@ CMake Warning \(policy\) at [^
 
   For compatibility with CMake 3\.11 and below this check is ignoring it\.
 Call Stack \(most recent call first\):
-  CMP0075\.cmake:26 \(check_include_file_cxx\)
+  CMP0075\.配置脚本:26 \(check_include_file_cxx\)
   CMakeLists\.txt:[0-9]+ \(include\)
 This warning is for project developers\.  Use -Wno-author or -Wno-policy to
 suppress it\.
 +
 CMake Warning \(policy\) at [^
-]*/Modules/CheckIncludeFiles\.cmake:[0-9]+ \(cmake_policy\):
+]*/Modules/CheckIncludeFiles\.配置脚本:[0-9]+ \(cmake_policy\):
   Policy CMP0075 is not set: Include file check macros honor
   CMAKE_REQUIRED_LIBRARIES\.  Run "cmake --help-policy CMP0075" for policy
   details\.  Use the cmake_policy command to set the policy and suppress this
@@ -47,12 +47,12 @@ CMake Warning \(policy\) at [^
 
   For compatibility with CMake 3\.11 and below this check is ignoring it\.
 Call Stack \(most recent call first\):
-  CMP0075\.cmake:41 \(check_include_files\)
+  CMP0075\.配置脚本:41 \(check_include_files\)
   CMakeLists\.txt:[0-9]+ \(include\)
 This warning is for project developers\.  Use -Wno-author or -Wno-policy to
 suppress it\.
 +
-CMake Warning \(deprecated\) at CMP0075\.cmake:[0-9]+ \(cmake_policy\):
+CMake Warning \(deprecated\) at CMP0075\.配置脚本:[0-9]+ \(cmake_policy\):
   The OLD behavior for policy CMP0075 will be removed from a future version
   of CMake\.
 

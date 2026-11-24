@@ -16,6 +16,6 @@ install(TARGETS mybin RUNTIME DESTINATION bin)
 add_custom_command(TARGET mybin
   POST_BUILD
   COMMAND ${CMAKE_COMMAND} "-DMULTI_CONFIG=${MULTI_CONFIG}"
-    -P ${CMAKE_CURRENT_SOURCE_DIR}/ExpectInstallFail.cmake
+    -P ${CMAKE_CURRENT_SOURCE_DIR}/ExpectInstallFail.配置脚本
   COMMENT "Install Project"
 )

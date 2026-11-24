@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.29)
 
 project(cxx_modules_import_std_transitive CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 if (EXPORT_NO_STD)
   set(package "import_std_export_no_std")

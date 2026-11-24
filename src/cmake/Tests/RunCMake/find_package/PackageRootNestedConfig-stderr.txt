@@ -34,7 +34,7 @@ FOO_TEST_FILE_ZOT :<base>/foo/cmake_root/include/zot/zot\.h
 FOO_TEST_PATH_FOO :<base>/foo/cmake_root/include
 FOO_TEST_PATH_ZOT :<base>/foo/cmake_root/include/zot
 FOO_TEST_PROG_FOO :<base>/foo/cmake_root/bin/foo\.exe
-BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.cmake
+BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.配置脚本
 BAR_TEST_FILE_FOO :<base>/foo/cmake_root/include/foo\.h
 BAR_TEST_FILE_BAR :<base>/foo/cmake_root/include/bar\.h
 BAR_TEST_FILE_ZOT :<base>/foo/cmake_root/include/zot/zot\.h
@@ -57,7 +57,7 @@ FOO_TEST_FILE_ZOT :<base>/foo/cmake_root/include/zot/zot\.h
 FOO_TEST_PATH_FOO :<base>/foo/cmake_root/include
 FOO_TEST_PATH_ZOT :<base>/foo/cmake_root/include/zot
 FOO_TEST_PROG_FOO :<base>/foo/cmake_root/bin/foo\.exe
-BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.cmake
+BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.配置脚本
 BAR_TEST_FILE_FOO :<base>/foo/cmake_root/include/foo\.h
 BAR_TEST_FILE_BAR :<base>/bar/cmake_root/include/bar\.h
 BAR_TEST_FILE_ZOT :<base>/bar/cmake_root/include/zot/zot\.h
@@ -80,7 +80,7 @@ FOO_TEST_FILE_ZOT :<base>/foo/cmake_root/include/zot/zot\.h
 FOO_TEST_PATH_FOO :<base>/foo/cmake_root/include
 FOO_TEST_PATH_ZOT :<base>/foo/cmake_root/include/zot
 FOO_TEST_PROG_FOO :<base>/foo/cmake_root/bin/foo\.exe
-BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.cmake
+BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.配置脚本
 BAR_TEST_FILE_FOO :<base>/foo/cmake_root/include/foo\.h
 BAR_TEST_FILE_BAR :<base>/bar/env_root/include/bar\.h
 BAR_TEST_FILE_ZOT :<base>/bar/env_root/include/zot/zot\.h
@@ -103,7 +103,7 @@ FOO_TEST_FILE_ZOT :<base>/foo/cmake_root/include/zot/zot\.h
 FOO_TEST_PATH_FOO :<base>/foo/cmake_root/include
 FOO_TEST_PATH_ZOT :<base>/foo/cmake_root/include/zot
 FOO_TEST_PROG_FOO :<base>/foo/cmake_root/bin/foo\.exe
-BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.cmake
+BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.配置脚本
 BAR_TEST_FILE_FOO :<base>/foo/cmake_root/include/foo\.h
 BAR_TEST_FILE_BAR :<base>/bar/cmake_root/include/bar\.h
 BAR_TEST_FILE_ZOT :<base>/bar/cmake_root/include/zot/zot\.h
@@ -126,7 +126,7 @@ FOO_TEST_FILE_ZOT :<base>/foo/cmake_root/include/zot/zot\.h
 FOO_TEST_PATH_FOO :<base>/foo/cmake_root/include
 FOO_TEST_PATH_ZOT :<base>/foo/cmake_root/include/zot
 FOO_TEST_PROG_FOO :<base>/foo/cmake_root/bin/foo\.exe
-BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.cmake
+BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.配置脚本
 BAR_TEST_FILE_FOO :<base>/foo/cmake_root/include/foo\.h
 BAR_TEST_FILE_BAR :<base>/foo/cmake_root/include/bar\.h
 BAR_TEST_FILE_ZOT :<base>/foo/cmake_root/include/zot/zot\.h
@@ -149,7 +149,7 @@ FOO_TEST_FILE_ZOT :<base>/foo/cmake_root/include/zot/zot\.h
 FOO_TEST_PATH_FOO :<base>/foo/cmake_root/include
 FOO_TEST_PATH_ZOT :<base>/foo/cmake_root/include/zot
 FOO_TEST_PROG_FOO :<base>/foo/cmake_root/bin/foo\.exe
-BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.cmake
+BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.配置脚本
 BAR_TEST_FILE_FOO :<base>/foo/cmake_root/include/foo\.h
 BAR_TEST_FILE_BAR :<base>/bar/cmake_root/include/bar\.h
 BAR_TEST_FILE_ZOT :<base>/bar/cmake_root/include/zot/zot\.h
@@ -172,7 +172,7 @@ FOO_TEST_FILE_ZOT :<base>/foo/cmake_root/include/zot/zot\.h
 FOO_TEST_PATH_FOO :<base>/foo/cmake_root/include
 FOO_TEST_PATH_ZOT :<base>/foo/cmake_root/include/zot
 FOO_TEST_PROG_FOO :<base>/foo/cmake_root/bin/foo\.exe
-BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.cmake
+BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.配置脚本
 BAR_TEST_FILE_FOO :<base>/foo/cmake_root/include/foo\.h
 BAR_TEST_FILE_BAR :<base>/bar/env_root/include/bar\.h
 BAR_TEST_FILE_ZOT :<base>/bar/env_root/include/zot/zot\.h
@@ -195,7 +195,7 @@ FOO_TEST_FILE_ZOT :<base>/foo/cmake_root/include/zot/zot\.h
 FOO_TEST_PATH_FOO :<base>/foo/cmake_root/include
 FOO_TEST_PATH_ZOT :<base>/foo/cmake_root/include/zot
 FOO_TEST_PROG_FOO :<base>/foo/cmake_root/bin/foo\.exe
-BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.cmake
+BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.配置脚本
 BAR_TEST_FILE_FOO :<base>/foo/cmake_root/include/foo\.h
 BAR_TEST_FILE_BAR :<base>/bar/cmake_root/include/bar\.h
 BAR_TEST_FILE_ZOT :<base>/bar/cmake_root/include/zot/zot\.h
@@ -218,7 +218,7 @@ FOO_TEST_FILE_ZOT :<base>/foo/cmake_root/include/zot/zot\.h
 FOO_TEST_PATH_FOO :<base>/foo/cmake_root/include
 FOO_TEST_PATH_ZOT :<base>/foo/cmake_root/include/zot
 FOO_TEST_PROG_FOO :<base>/foo/cmake_root/bin/foo\.exe
-BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.cmake
+BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.配置脚本
 BAR_TEST_FILE_FOO :<base>/foo/cmake_root/include/foo\.h
 BAR_TEST_FILE_BAR :<base>/foo/cmake_root/include/bar\.h
 BAR_TEST_FILE_ZOT :<base>/foo/cmake_root/include/zot/zot\.h
@@ -241,7 +241,7 @@ FOO_TEST_FILE_ZOT :<base>/foo/cmake_root/include/zot/zot\.h
 FOO_TEST_PATH_FOO :<base>/foo/cmake_root/include
 FOO_TEST_PATH_ZOT :<base>/foo/cmake_root/include/zot
 FOO_TEST_PROG_FOO :<base>/foo/cmake_root/bin/foo\.exe
-BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.cmake
+BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.配置脚本
 BAR_TEST_FILE_FOO :<base>/foo/cmake_root/include/foo\.h
 BAR_TEST_FILE_BAR :<base>/bar/cmake_root/include/bar\.h
 BAR_TEST_FILE_ZOT :<base>/bar/cmake_root/include/zot/zot\.h
@@ -264,7 +264,7 @@ FOO_TEST_FILE_ZOT :<base>/foo/cmake_root/include/zot/zot\.h
 FOO_TEST_PATH_FOO :<base>/foo/cmake_root/include
 FOO_TEST_PATH_ZOT :<base>/foo/cmake_root/include/zot
 FOO_TEST_PROG_FOO :<base>/foo/cmake_root/bin/foo\.exe
-BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.cmake
+BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.配置脚本
 BAR_TEST_FILE_FOO :<base>/foo/cmake_root/include/foo\.h
 BAR_TEST_FILE_BAR :<base>/bar/env_root/include/bar\.h
 BAR_TEST_FILE_ZOT :<base>/bar/env_root/include/zot/zot\.h
@@ -287,7 +287,7 @@ FOO_TEST_FILE_ZOT :<base>/foo/cmake_root/include/zot/zot\.h
 FOO_TEST_PATH_FOO :<base>/foo/cmake_root/include
 FOO_TEST_PATH_ZOT :<base>/foo/cmake_root/include/zot
 FOO_TEST_PROG_FOO :<base>/foo/cmake_root/bin/foo\.exe
-BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.cmake
+BAR_CMAKE_FILE    :<base>/foo/cmake_root/cmake/BarConfig\.配置脚本
 BAR_TEST_FILE_FOO :<base>/foo/cmake_root/include/foo\.h
 BAR_TEST_FILE_BAR :<base>/bar/cmake_root/include/bar\.h
 BAR_TEST_FILE_ZOT :<base>/bar/cmake_root/include/zot/zot\.h

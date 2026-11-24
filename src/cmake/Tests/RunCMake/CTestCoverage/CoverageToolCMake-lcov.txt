@@ -1,12 +1,12 @@
 TN:test_one
-SF:<SRC>/CoverageChild.cmake
+SF:<SRC>/CoverageChild.配置脚本
 FNF:0
 FNH:0
 DA:1,2
 LF:1
 LH:1
 end_of_record
-SF:<SRC>/CoverageScript.cmake
+SF:<SRC>/CoverageScript.配置脚本
 FNF:0
 FNH:0
 DA:1,1

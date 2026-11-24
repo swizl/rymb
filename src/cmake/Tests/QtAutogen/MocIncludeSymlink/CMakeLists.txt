@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(MocIncludeSymlink)
-get_filename_component(AUTOGEN_CORE_TEST_CMAKE "../AutogenCoreTest.cmake" ABSOLUTE)
+get_filename_component(AUTOGEN_CORE_TEST_CMAKE "../AutogenCoreTest.配置脚本" ABSOLUTE)
 include("${AUTOGEN_CORE_TEST_CMAKE}")
 
 #

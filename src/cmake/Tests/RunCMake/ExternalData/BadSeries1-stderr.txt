@@ -1,4 +1,4 @@
-CMake Error at .*/Modules/ExternalData\.cmake:[0-9]+ \(message\):
+CMake Error at .*/Modules/ExternalData\.配置脚本:[0-9]+ \(message\):
   ExternalData_SERIES_PARSE is set to
 
     NotASeriesRegex
@@ -15,5 +15,5 @@ CMake Error at .*/Modules/ExternalData\.cmake:[0-9]+ \(message\):
 
 Call Stack \(most recent call first\):
   .*
-  BadSeries1\.cmake:[0-9]+ \(ExternalData_Expand_Arguments\)
+  BadSeries1\.配置脚本:[0-9]+ \(ExternalData_Expand_Arguments\)
   CMakeLists\.txt:[0-9]+ \(include\)

@@ -1,4 +1,4 @@
-^CMake Debug Log at DebugRoot\.cmake:[0-9]+ \(find_package\):
+^CMake Debug Log at DebugRoot\.配置脚本:[0-9]+ \(find_package\):
   The internally managed CMAKE_FIND_PACKAGE_REDIRECTS_DIR\.
 
     [^
@@ -37,9 +37,9 @@
   module:
 
     [^
-]*/Tests/RunCMake/find_package/DebugRoot/NoExist/DebugRoot/DebugRootConfig\.cmake
+]*/Tests/RunCMake/find_package/DebugRoot/NoExist/DebugRoot/DebugRootConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/DebugRoot/NoExist/DebugRoot/debugroot-config\.cmake
+]*/Tests/RunCMake/find_package/DebugRoot/NoExist/DebugRoot/debugroot-config\.配置脚本
     [^
 ]*/Tests/RunCMake/find_package/DebugRoot/NoExist/DebugRoot/lib/cps/DebugRoot\.cps
     [^
@@ -49,12 +49,12 @@
     [^
 ]*/Tests/RunCMake/find_package/DebugRoot/NoExist/DebugRoot/share/cps/debugroot\.cps
     [^
-]*/Tests/RunCMake/find_package/DebugRoot/Exist/DebugRoot/DebugRootConfig\.cmake
+]*/Tests/RunCMake/find_package/DebugRoot/Exist/DebugRoot/DebugRootConfig\.配置脚本
 
   The file was found at
 
     [^
-]*/Tests/RunCMake/find_package/DebugRoot/Exist/DebugRoot/DebugRootConfig\.cmake
+]*/Tests/RunCMake/find_package/DebugRoot/Exist/DebugRoot/DebugRootConfig\.配置脚本
 
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)$

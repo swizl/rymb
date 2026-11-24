@@ -1,4 +1,4 @@
-CMake Error at FROM_RULE-InvalidOption-FOR_SOURCE\.cmake:[0-9]+ \(add_custom_rule\):
+CMake Error at FROM_RULE-InvalidOption-FOR_SOURCE\.配置脚本:[0-9]+ \(add_custom_rule\):
   add_custom_rule cannot create RULE "rule" because the "CHAIN" and
   "OVERRIDE" options of CONFIGURATOR "for_sf" are mutually exclusive\.
 Call Stack \(most recent call first\):

@@ -83,7 +83,7 @@ else ()
 endif ()
 
 # check return from a file
-include(include_return.cmake)
+include(include_return.配置脚本)
 if ("${include_returnResult}" EQUAL 1)
   pass ("include_return")
 else ()

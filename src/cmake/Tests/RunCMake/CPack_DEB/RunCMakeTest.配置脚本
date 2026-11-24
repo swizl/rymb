@@ -1,0 +1,7 @@
+include(RunCPack)
+
+set(RunCPack_GENERATORS DEB)
+set(RunCPack_GLOB *.deb)
+set(RunCPack_VERIFY ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_LIST_DIR}/verify.配置脚本 --)
+
+run_cpack(Basic)

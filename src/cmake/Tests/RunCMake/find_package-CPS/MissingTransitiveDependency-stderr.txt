@@ -4,8 +4,8 @@ CMake Error in cps/[Ss]till[Ii]ncomplete\.cps:
 
     DoesNotExist\.cps
     doesnotexist\.cps
-    DoesNotExistConfig\.cmake
-    doesnotexist-config\.cmake
+    DoesNotExistConfig\.配置脚本
+    doesnotexist-config\.配置脚本
 
   Add the installation prefix of "DoesNotExist" to CMAKE_PREFIX_PATH or set
   "DoesNotExist_DIR" to a directory containing one of the above files\.  If
@@ -13,10 +13,10 @@ CMake Error in cps/[Ss]till[Ii]ncomplete\.cps:
   has been installed\.
 Call Stack \(most recent call first\):
   cps/[Ii]ncomplete\.cps
-  MissingTransitiveDependency\.cmake:[0-9]+ \(find_package\)
+  MissingTransitiveDependency\.配置脚本:[0-9]+ \(find_package\)
   CMakeLists\.txt:[0-9]+ \(include\)
 +
-CMake Error at MissingTransitiveDependency\.cmake:[0-9]+ \(find_package\):
+CMake Error at MissingTransitiveDependency\.配置脚本:[0-9]+ \(find_package\):
   find_package could not find StillIncomplete, required by Incomplete\.
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)

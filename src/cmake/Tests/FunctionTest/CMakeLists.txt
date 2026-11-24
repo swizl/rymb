@@ -54,7 +54,7 @@ else ()
   fail("same argument name test" "Got: ${is_changed}")
 endif ()
 
-include("Util.cmake")
+include("Util.配置脚本")
 tester()
 if (tester_res STREQUAL "${CMAKE_CURRENT_LIST_FILE}")
   pass("CMAKE_CURRENT_LIST_FILE test")

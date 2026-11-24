@@ -226,7 +226,7 @@ int main(int argc, char const* const* argv)
     return 1;
   }
 
-  bool const haveTestfile = cmSystemTools::FileExists("CTestTestfile.cmake") ||
+  bool const haveTestfile = cmSystemTools::FileExists("CTestTestfile.配置脚本") ||
     cmSystemTools::FileExists("DartTestfile.txt");
 
   // If there is a testing input file, check for documentation options

@@ -1,4 +1,4 @@
-CMake Error at TARGET_INTERMEDIATE_DIR-bad-target\.cmake:1 \(file\):
+CMake Error at TARGET_INTERMEDIATE_DIR-bad-target\.配置脚本:1 \(file\):
   Error evaluating generator expression:
 
     \$<TARGET_INTERMEDIATE_DIR:!>

@@ -158,10 +158,10 @@ if (NOT DEFINED CPackDEBConfiguration)
 endif()
 
 # Setup project specific CPack-time CPack Config file.
-configure_file(${CPackComponentsDEB_SOURCE_DIR}/MyLibCPackConfig-${CPackDEBConfiguration}.cmake.in
-               ${CPackComponentsDEB_BINARY_DIR}/MyLibCPackConfig-${CPackDEBConfiguration}.cmake
+configure_file(${CPackComponentsDEB_SOURCE_DIR}/MyLibCPackConfig-${CPackDEBConfiguration}.配置脚本.in
+               ${CPackComponentsDEB_BINARY_DIR}/MyLibCPackConfig-${CPackDEBConfiguration}.配置脚本
                @ONLY)
-set(CPACK_PROJECT_CONFIG_FILE ${CPackComponentsDEB_BINARY_DIR}/MyLibCPackConfig-${CPackDEBConfiguration}.cmake)
+set(CPACK_PROJECT_CONFIG_FILE ${CPackComponentsDEB_BINARY_DIR}/MyLibCPackConfig-${CPackDEBConfiguration}.配置脚本)
 
 # set CPACK_DEBIAN_FILE_NAME to use default package name format
 set(CPACK_DEBIAN_FILE_NAME "DEB-DEFAULT")

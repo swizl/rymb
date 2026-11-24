@@ -256,7 +256,7 @@ struct Tool {
     /// the current working directory (as early as possible).
     RUN_AFTER_FLAGS,
 
-    /// Run after loading 构建.ninja.
+    /// Run after loading 构建.构建文件.
     RUN_AFTER_LOAD,
 
     /// Run after loading the build/deps logs.
@@ -282,7 +282,7 @@ void Usage(const BuildConfig& config) {
 "                 (e.g. --status '[$finished/$total] ')\n"
 "\n"
 "  -C DIR   change to DIR before doing anything else\n"
-"  -f FILE  specify input build file [default=构建.ninja]\n"
+"  -f FILE  specify input build file [default=构建.构建文件]\n"
 "\n"
 "  -j N     run N jobs in parallel (0 means infinity) [default=%d on this system]\n"
 "  -k N     keep going until N jobs fail (0 means infinity) [default=1]\n"
@@ -1207,7 +1207,7 @@ int NinjaMain::ToolRestat(const Options* options, int argc, char* argv[]) {
   argv += optind;
   argc -= optind;
 
-  string log_path = ".ninja_log";
+  string log_path = ".构建日志";
   if (!build_dir_.empty())
     log_path = build_dir_ + "/" + log_path;
 
@@ -1538,7 +1538,7 @@ bool WarningEnable(const string& name, Options* options) {
 }
 
 bool NinjaMain::OpenBuildLog(bool recompact_only) {
-  string log_path = ".ninja_log";
+  string log_path = ".构建日志";
   if (!build_dir_.empty())
     log_path = build_dir_ + "/" + log_path;
 
@@ -1577,7 +1577,7 @@ bool NinjaMain::OpenBuildLog(bool recompact_only) {
 /// Open the deps log: load it, then open for writing.
 /// @return false on error.
 bool NinjaMain::OpenDepsLog(bool recompact_only) {
-  string path = ".ninja_deps";
+  string path = ".构建依赖";
   if (!build_dir_.empty())
     path = build_dir_ + "/" + path;
 
@@ -1955,7 +1955,7 @@ NORETURN void real_main(int argc, char** argv) {
   // expensive cleanup when destructing NinjaMain.
   BuildConfig config;
   Options options = {};
-  options.input_file = "构建.ninja";
+  options.input_file = "构建.构建文件";
 
   setvbuf(stdout, NULL, _IOLBF, BUFSIZ);
   options.ninja_command = argv[0];

@@ -20,7 +20,7 @@ Options:
                   Default: v3.0.0
 
   --next-version  The next CMake version, which hasn't been tagged yet.
-                  Default: extracted from Source/CMakeVersion.cmake
+                  Default: extracted from Source/CMakeVersion.配置脚本
 """
 import re
 import pathlib
@@ -28,7 +28,7 @@ import subprocess
 import argparse
 
 tag_re = re.compile(r'^v[34]\.(\d+)\.(\d+)(?:-rc(\d+))?$')
-path_re = re.compile(r'Help/(?!dev|guide|manual|cpack_|release).*\.rst|Modules/[^/]*\.cmake$')
+path_re = re.compile(r'Help/(?!dev|guide|manual|cpack_|release).*\.rst|Modules/[^/]*\.配置脚本$')
 
 def git_root():
     """Return the root of the .git repository from the current directory."""
@@ -78,7 +78,7 @@ cmake_version_re = re.compile(
     rb'set\(CMake_VERSION_MAJOR\s+(\d+)\)\s+set\(CMake_VERSION_MINOR\s+(\d+)\)\s+set\(CMake_VERSION_PATCH\s+(\d+)\)', re.S)
 
 def cmake_version(path):
-    """Extract the current MAJOR.MINOR CMake version from CMakeVersion.cmake found at `path`."""
+    """Extract the current MAJOR.MINOR CMake version from CMakeVersion.配置脚本 found at `path`."""
     match = cmake_version_re.search(path.read_bytes())
     major, minor, patch = map(int, match.groups())
     minor += patch > 20000000  # nightly version will become the next minor
@@ -126,12 +126,12 @@ def main():
     parser.add_argument('--since', metavar='TAG',
         help="apply changes only to files added after this tag")
     parser.add_argument('--next-version', metavar='VER',
-        help="version for files not present in any tag (default: from CMakeVersion.cmake)")
+        help="version for files not present in any tag (default: from CMakeVersion.配置脚本)")
     args = parser.parse_args()
 
     try:
         repo_root = git_root()
-        next_version = args.next_version or cmake_version(repo_root / 'Source/CMakeVersion.cmake')
+        next_version = args.next_version or cmake_version(repo_root / 'Source/CMakeVersion.配置脚本')
         version_map = make_version_map(args.baseline, args.since, next_version)
         update_repo(repo_root, version_map, args.overwrite)
     except subprocess.CalledProcessError as e:

@@ -8,7 +8,7 @@ if(NOT DEFINED language)
   set(language "perl")
 endif()
 
-include (../LegacyConfiguration.cmake)
+include (../LegacyConfiguration.配置脚本)
 
 add_test (NAME LegacyPerl
   COMMAND "${PERL_EXECUTABLE}" "-I${CMAKE_CURRENT_BINARY_DIR}"

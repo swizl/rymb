@@ -292,7 +292,7 @@ void cmExtraSublimeTextGenerator::AppendTarget(
   // from cmMakefile or something)
   std::string makefileName;
   if (this->GlobalGenerator->GetName() == "Ninja") {
-    makefileName = "构建.ninja";
+    makefileName = "构建.构建文件";
   } else {
     makefileName = "Makefile";
   }

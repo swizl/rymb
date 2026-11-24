@@ -1,4 +1,4 @@
-^CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
+^CMake Debug Log at ConfigureLogParameters2\.配置脚本:[0-9]+ \(find_package\):
   The internally managed CMAKE_FIND_PACKAGE_REDIRECTS_DIR\.
 
     [^
@@ -64,9 +64,9 @@
   Config module:
 
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/parametercheckconfig-config\.配置脚本
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/lib/cps/ParameterCheckConfig\.cps
     [^
@@ -76,13 +76,13 @@
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/share/cps/parametercheckconfig\.cps
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/parametercheckconfig-config\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/cmake/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/cmake/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/cmake/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/cmake/parametercheckconfig-config\.配置脚本
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLog/lib/cps/ParameterCheckConfig\.cps
     [^
@@ -92,18 +92,18 @@
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLog/share/cps/parametercheckconfig\.cps
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.配置脚本
 
   The file was found at
 
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.配置脚本
 
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 
 
-CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
+CMake Debug Log at ConfigureLogParameters2\.配置脚本:[0-9]+ \(find_package\):
   The internally managed CMAKE_FIND_PACKAGE_REDIRECTS_DIR\.
 
     [^
@@ -168,17 +168,17 @@ CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
   Config module:
 
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/parametercheckconfig-config\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/suffix1/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/suffix1/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/suffix1/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/suffix1/parametercheckconfig-config\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/suffix2/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/suffix2/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/suffix2/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/suffix2/parametercheckconfig-config\.配置脚本
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/lib/cps/ParameterCheckConfig\.cps
     [^
@@ -204,29 +204,29 @@ CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/share/cps/suffix2/parametercheckconfig\.cps
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/parametercheckconfig-config\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/suffix1/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/suffix1/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/suffix1/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/suffix1/parametercheckconfig-config\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/suffix2/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/suffix2/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/suffix2/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/suffix2/parametercheckconfig-config\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/cmake/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/cmake/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/cmake/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/cmake/parametercheckconfig-config\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/cmake/suffix1/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/cmake/suffix1/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/cmake/suffix1/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/cmake/suffix1/parametercheckconfig-config\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/cmake/suffix2/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/cmake/suffix2/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/cmake/suffix2/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/cmake/suffix2/parametercheckconfig-config\.配置脚本
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLog/lib/cps/ParameterCheckConfig\.cps
     [^
@@ -252,18 +252,18 @@ CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLog/share/cps/suffix2/parametercheckconfig\.cps
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.配置脚本
 
   The file was found at
 
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.配置脚本
 
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 
 
-CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
+CMake Debug Log at ConfigureLogParameters2\.配置脚本:[0-9]+ \(find_package\):
   The internally managed CMAKE_FIND_PACKAGE_REDIRECTS_DIR\.
 
     [^
@@ -281,9 +281,9 @@ CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
   Config module:
 
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/parametercheckconfig-config\.配置脚本
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/lib/cps/ParameterCheckConfig\.cps
     [^
@@ -299,7 +299,7 @@ Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 
 
-CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
+CMake Debug Log at ConfigureLogParameters2\.配置脚本:[0-9]+ \(find_package\):
   The internally managed CMAKE_FIND_PACKAGE_REDIRECTS_DIR\.
 
     [^
@@ -364,9 +364,9 @@ CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
   Config module:
 
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/parametercheckconfig-config\.配置脚本
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/lib/cps/ParameterCheckConfig\.cps
     [^
@@ -376,13 +376,13 @@ CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/share/cps/parametercheckconfig\.cps
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/parametercheckconfig-config\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/cmake/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/cmake/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/cmake/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/cmake/parametercheckconfig-config\.配置脚本
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLog/lib/cps/ParameterCheckConfig\.cps
     [^
@@ -392,18 +392,18 @@ CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLog/share/cps/parametercheckconfig\.cps
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.配置脚本
 
   The file was found at
 
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.配置脚本
 
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 
 
-CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
+CMake Debug Log at ConfigureLogParameters2\.配置脚本:[0-9]+ \(find_package\):
   The internally managed CMAKE_FIND_PACKAGE_REDIRECTS_DIR\.
 
     [^
@@ -468,9 +468,9 @@ CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
   Config module:
 
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/parametercheckconfig-config\.配置脚本
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/lib/cps/ParameterCheckConfig\.cps
     [^
@@ -480,13 +480,13 @@ CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/share/cps/parametercheckconfig\.cps
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/parametercheckconfig-config\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/cmake/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/cmake/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/cmake/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/cmake/parametercheckconfig-config\.配置脚本
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLog/lib/cps/ParameterCheckConfig\.cps
     [^
@@ -496,18 +496,18 @@ CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLog/share/cps/parametercheckconfig\.cps
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.配置脚本
 
   The file was found at
 
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.配置脚本
 
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 
 
-CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
+CMake Debug Log at ConfigureLogParameters2\.配置脚本:[0-9]+ \(find_package\):
   The internally managed CMAKE_FIND_PACKAGE_REDIRECTS_DIR\.
 
     [^
@@ -572,9 +572,9 @@ CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
   Config module:
 
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/parametercheckconfig-config\.配置脚本
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/lib/cps/ParameterCheckConfig\.cps
     [^
@@ -584,13 +584,13 @@ CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/share/cps/parametercheckconfig\.cps
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/parametercheckconfig-config\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/cmake/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/cmake/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/cmake/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/cmake/parametercheckconfig-config\.配置脚本
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLog/lib/cps/ParameterCheckConfig\.cps
     [^
@@ -600,18 +600,18 @@ CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLog/share/cps/parametercheckconfig\.cps
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.配置脚本
 
   The file was found at
 
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.配置脚本
 
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)
 
 
-CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
+CMake Debug Log at ConfigureLogParameters2\.配置脚本:[0-9]+ \(find_package\):
   The internally managed CMAKE_FIND_PACKAGE_REDIRECTS_DIR\.
 
     [^
@@ -676,13 +676,13 @@ CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
   Config module:
 
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/BogusParameterCheckConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/BogusParameterCheckConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/bogusparametercheck-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/bogusparametercheck-config\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/parametercheckconfig-config\.配置脚本
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/lib/cps/BogusParameterCheck\.cps
     [^
@@ -700,21 +700,21 @@ CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLogParameters2-build/CMakeFiles/pkgRedirects/share/cps/parametercheckconfig\.cps
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/BogusParameterCheckConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/BogusParameterCheckConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/bogusparametercheck-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/bogusparametercheck-config\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/parametercheckconfig-config\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/cmake/BogusParameterCheckConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/cmake/BogusParameterCheckConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/cmake/bogusparametercheck-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/cmake/bogusparametercheck-config\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/cmake/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/cmake/ParameterCheckConfigConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/cmake/parametercheckconfig-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/cmake/parametercheckconfig-config\.配置脚本
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLog/lib/cps/BogusParameterCheck\.cps
     [^
@@ -732,16 +732,16 @@ CMake Debug Log at ConfigureLogParameters2\.cmake:[0-9]+ \(find_package\):
     [^
 ]*/Tests/RunCMake/find_package/ConfigureLog/share/cps/parametercheckconfig\.cps
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/BogusParameterCheckConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/BogusParameterCheckConfig\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/bogusparametercheck-config\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/bogusparametercheck-config\.配置脚本
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.配置脚本
 
   The file was found at
 
     [^
-]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.cmake
+]*/Tests/RunCMake/find_package/ConfigureLog/lib/cmake/ParameterCheckConfig/ParameterCheckConfigConfig\.配置脚本
 
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)$

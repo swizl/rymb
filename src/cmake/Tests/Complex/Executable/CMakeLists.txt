@@ -68,8 +68,8 @@ if ("${P_VALUE}" STREQUAL "${CMAKE_SOURCE_DIR}")
 endif ()
 
 # get the stack of listfiles
-include(Included.cmake)
-if ("${LF_VALUE}" STREQUAL "${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.txt;${CMAKE_CURRENT_SOURCE_DIR}/Included.cmake")
+include(Included.配置脚本)
+if ("${LF_VALUE}" STREQUAL "${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.txt;${CMAKE_CURRENT_SOURCE_DIR}/Included.配置脚本")
   add_definitions(-DCMAKE_FOUND_LISTFILE_STACK)
 endif ()
 

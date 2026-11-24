@@ -200,7 +200,7 @@ bool cmDependsFortran::Finalize(std::ostream& makeDepends,
   // Create a script to clean the modules.
   if (!provides.empty()) {
     std::string fcName =
-      cmStrCat(this->TargetDirectory, "/cmake_clean_Fortran.cmake"_s);
+      cmStrCat(this->TargetDirectory, "/cmake_clean_Fortran.配置脚本"_s);
     cmGeneratedFileStream fcStream(fcName);
     fcStream << "# Remove fortran modules provided by this target.\n";
     fcStream << "FILE(REMOVE";

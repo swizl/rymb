@@ -46,7 +46,7 @@ add_custom_command(
     "-DBIN_TO_C_COMMAND=${bin_to_c}"
     "-DOBJECTS=$<TARGET_OBJECTS:CudaPTX>"
     "-DOUTPUT=${output_file}"
-    -P ${CMAKE_CURRENT_SOURCE_DIR}/../utils/bin2c_wrapper.cmake
+    -P ${CMAKE_CURRENT_SOURCE_DIR}/../utils/bin2c_wrapper.配置脚本
   VERBATIM
   DEPENDS ${DEP}
   COMMENT "Converting Object files to a C header"

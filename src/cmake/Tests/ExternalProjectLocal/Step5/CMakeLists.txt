@@ -6,7 +6,7 @@ set (Tutorial_VERSION_MAJOR 1)
 set (Tutorial_VERSION_MINOR 0)
 
 # does this system provide the log and exp functions?
-include (${CMAKE_ROOT}/Modules/CheckFunctionExists.cmake)
+include (${CMAKE_ROOT}/Modules/CheckFunctionExists.配置脚本)
 check_function_exists (log HAVE_LOG)
 check_function_exists (exp HAVE_EXP)
 

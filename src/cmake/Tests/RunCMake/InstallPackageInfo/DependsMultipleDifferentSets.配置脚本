@@ -1,0 +1,5 @@
+project(DependsMultipleDifferentSets CXX)
+include(DependsMultipleCommon.配置脚本)
+
+install(TARGETS foo EXPORT foo-alt)
+install(EXPORT foo-alt DESTINATION cmake)

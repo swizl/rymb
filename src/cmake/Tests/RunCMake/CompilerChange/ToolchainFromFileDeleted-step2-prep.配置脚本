@@ -1,0 +1,5 @@
+file(REMOVE "${RunCMake_BINARY_DIR}/baz.配置脚本")
+file(WRITE
+  "${RunCMake_TEST_BINARY_DIR}/toolchain.txt"
+  "${RunCMake_BINARY_DIR}/bar.配置脚本\n"
+)

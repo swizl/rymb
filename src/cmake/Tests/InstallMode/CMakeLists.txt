@@ -4,7 +4,7 @@ project(superpro LANGUAGES NONE)
 
 add_subdirectory(superpro)
 
-include(Subproject.cmake)
+include(Subproject.配置脚本)
 add_subproject(static_lib   DIR subpro_a_static_lib)
 add_subproject(shared_lib   DIR subpro_b_shared_lib)
 add_subproject(nested_lib   DIR subpro_c_nested_lib NO_INSTALL)
@@ -29,7 +29,7 @@ if(BUILD_TESTING)
         "-DFILE_PATH=${CMAKE_INSTALL_PREFIX}/${_path}"
         "-DEXPECT_SYMLINK:BOOL=${_symlink}"
         "-DEXPECT_ABSOLUTE:BOOL=${ARGN}"
-        "-P" "${CMAKE_SOURCE_DIR}/Test.cmake"
+        "-P" "${CMAKE_SOURCE_DIR}/Test.配置脚本"
     )
   endmacro()
 

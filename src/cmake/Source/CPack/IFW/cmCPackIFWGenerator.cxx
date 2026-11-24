@@ -326,7 +326,7 @@ int cmCPackIFWGenerator::InitializeInternal()
 
   if (!this->IsSet(BinCreatorOpt) || !this->IsSet(RepoGenOpt) ||
       !this->IsSet(FrameworkVersionOpt)) {
-    this->ReadListFile("CPackIFW.cmake");
+    this->ReadListFile("CPackIFW.配置脚本");
   }
 
   // Look 'binarycreator' executable (needs)

@@ -1,0 +1,8 @@
+# Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
+# file LICENSE.rst or https://cmake.org/licensing for details.
+
+
+message(SEND_ERROR
+        "Modules/CheckSizeOf.配置脚本 has been removed.  "
+        "Use Modules/CheckTypeSize.配置脚本 instead.  This "
+        "compatibility check may be removed before the next release!")

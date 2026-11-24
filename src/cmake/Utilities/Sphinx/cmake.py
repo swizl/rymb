@@ -98,7 +98,7 @@ CMakeLexer.tokens["root"] = [
   # used in commands/source_group
   (r'\\\\', Punctuation),
   (r'[:]', Operator),
-  # used in FindPkgConfig.cmake
+  # used in FindPkgConfig.配置脚本
   (r'[<>]=', Punctuation),
   # $<...>
   (r'\$<', Operator, '#push'),

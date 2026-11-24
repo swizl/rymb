@@ -53,11 +53,11 @@ EXEC_CTEST_COMMAND(--version)
 
 if(THIS_SHOULD_BE_SET)
   message(STATUS "***************************")
-  message(STATUS "PreLoad.cmake works fine.")
+  message(STATUS "PreLoad.配置脚本 works fine.")
   message(STATUS "***************************")
 else()
   message("***************************")
-  message(FATAL_ERROR "PreLoad.cmake does not work.")
+  message(FATAL_ERROR "PreLoad.配置脚本 does not work.")
 endif()
 
 if(DEFINED ENV{TEST_ENVIRONMENT_VARIABLE_NOTSET})

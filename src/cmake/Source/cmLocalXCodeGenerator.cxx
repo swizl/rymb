@@ -60,7 +60,7 @@ void cmLocalXCodeGenerator::AddGeneratorSpecificInstallSetup(std::ostream& os)
     target->HasMacOSXRpathInstallNameDir("");
   }
 
-  // CMakeIOSInstallCombined.cmake needs to know the location of the top of
+  // CMakeIOSInstallCombined.配置脚本 needs to know the location of the top of
   // the build directory
   os << "set(CMAKE_BINARY_DIR \"" << this->GetBinaryDirectory() << "\")\n\n";
 

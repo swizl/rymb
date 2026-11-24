@@ -5,7 +5,7 @@
             "name": "GoodToolchainDefault",
             "generator": "@RunCMake_GENERATOR@",
             "binaryDir": "${sourceDir}/build/${presetName}",
-            "toolchainFile": "${sourceDir}/toolchain.cmake"
+            "toolchainFile": "${sourceDir}/toolchain.配置脚本"
         },
         {
             "name": "GoodToolchainInherit",
@@ -13,14 +13,14 @@
             "cacheVariables": {
                 "CMAKE_TOOLCHAIN_FILE": {
                 "type": "FILEPATH",
-                "value": "${sourceDir}/toolchain_bad.cmake"
+                "value": "${sourceDir}/toolchain_bad.配置脚本"
                 }
             }
         },
         {
             "name": "GoodToolchainOverride",
             "inherits": "GoodToolchainInherit",
-            "toolchainFile": "override_toolchain.cmake"
+            "toolchainFile": "override_toolchain.配置脚本"
         },
         {
             "name": "GoodToolchainCommandLine",

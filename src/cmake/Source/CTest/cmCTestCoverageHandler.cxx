@@ -1430,9 +1430,9 @@ int cmCTestCoverageHandler::HandleCMakeListFileCoverage(
   gl.RecurseOn();
   gl.RecurseThroughSymlinksOff();
   std::string const covGlob =
-    cmStrCat(this->CTest->GetBinaryDir(), "/*.cmake-coverage.info"_s);
+    cmStrCat(this->CTest->GetBinaryDir(), "/*.配置脚本-coverage.info"_s);
   cmCTestOptionalLog(this->CTest, HANDLER_VERBOSE_OUTPUT, this->Quiet,
-                     "   looking for .cmake-coverage.info files in: "_s,
+                     "   looking for .配置脚本-coverage.info files in: "_s,
                      covGlob, '\n');
   gl.FindFiles(covGlob);
   std::vector<std::string> files = gl.GetFiles();

@@ -29,8 +29,8 @@ macro(ADD_TEST_MACRO NAME)
   list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/${dir}")
 endmacro()
 
-include(${CMAKE_CURRENT_SOURCE_DIR}/CheckFortran.cmake)
-include(${CMAKE_CURRENT_SOURCE_DIR}/CheckSwift.cmake)
+include(${CMAKE_CURRENT_SOURCE_DIR}/CheckFortran.配置脚本)
+include(${CMAKE_CURRENT_SOURCE_DIR}/CheckSwift.配置脚本)
 
 # Isolate tests from user-wide configuration.
 set(TEST_HOME "${CMake_BINARY_DIR}/Tests/CMakeFiles/TestHome")
@@ -71,8 +71,8 @@ if(NOT _isMultiConfig AND CMAKE_BUILD_TYPE)
   set(CTestTest_CONFIG ${CMAKE_BUILD_TYPE})
 endif()
 
-configure_file(${CMake_SOURCE_DIR}/Tests/EnforceConfig.cmake.in
-               ${CMake_BINARY_DIR}/Tests/EnforceConfig.cmake @ONLY)
+configure_file(${CMake_SOURCE_DIR}/Tests/EnforceConfig.配置脚本.in
+               ${CMake_BINARY_DIR}/Tests/EnforceConfig.配置脚本 @ONLY)
 
 # Fuzzing targets (outside BUILD_TESTING for OSS-Fuzz compatibility)
 if(CMake_BUILD_FUZZING AND NOT CMake_TEST_EXTERNAL_CMAKE)
@@ -438,7 +438,7 @@ if(BUILD_TESTING)
   add_subdirectory(FindPackageModeMakefileTest)
 
   add_test(NAME CMake.Copyright
-    COMMAND ${CMAKE_CMAKE_COMMAND} -P ${CMAKE_CURRENT_SOURCE_DIR}/CMakeCopyright.cmake)
+    COMMAND ${CMAKE_CMAKE_COMMAND} -P ${CMAKE_CURRENT_SOURCE_DIR}/CMakeCopyright.配置脚本)
 
   # add a bunch of standard build-and-test style tests
   ADD_TEST_MACRO(CommandLineTest CommandLineTest)
@@ -538,7 +538,7 @@ if(BUILD_TESTING)
     endif()
     if(NOT CMAKE_SKIP_VSGNUFortran)
       set(VSGNUFortran_CTEST_OPTIONS --build-config $<CONFIG>)
-      ADD_TEST_MACRO(VSGNUFortran ${CMAKE_CMAKE_COMMAND} -P runtest.cmake)
+      ADD_TEST_MACRO(VSGNUFortran ${CMAKE_CMAKE_COMMAND} -P runtest.配置脚本)
       set_property(TEST VSGNUFortran APPEND PROPERTY LABELS "Fortran")
     endif()
   endif()
@@ -720,19 +720,19 @@ if(BUILD_TESTING)
   set(CMAKE_BUILD_TEST_SOURCE_DIR "${CMake_SOURCE_DIR}/Tests/COnly")
   set(CMAKE_BUILD_TEST_BINARY_DIR "${CMake_BINARY_DIR}/Tests/CMakeBuildCOnly")
   set(CMAKE_BUILD_TEST_EXE COnly)
-  configure_file("${CMake_SOURCE_DIR}/Tests/CMakeBuildTest.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CMakeBuildTest.cmake" @ONLY)
+  configure_file("${CMake_SOURCE_DIR}/Tests/CMakeBuildTest.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CMakeBuildTest.配置脚本" @ONLY)
   add_test(CMakeBuildTest ${CMAKE_CMAKE_COMMAND} -P
-    "${CMake_BINARY_DIR}/Tests/CMakeBuildTest.cmake")
+    "${CMake_BINARY_DIR}/Tests/CMakeBuildTest.配置脚本")
   list(APPEND TEST_BUILD_DIRS ${CMAKE_BUILD_TEST_BINARY_DIR})
   # now do it again for a project that has two project commands
   set(CMAKE_BUILD_TEST_SOURCE_DIR "${CMake_SOURCE_DIR}/Tests/DoubleProject")
   set(CMAKE_BUILD_TEST_BINARY_DIR "${CMake_BINARY_DIR}/Tests/DoubleProject")
   set(CMAKE_BUILD_TEST_EXE just_silly)
-  configure_file("${CMake_SOURCE_DIR}/Tests/CMakeBuildTest.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CMakeBuildDoubleProjectTest.cmake" @ONLY)
+  configure_file("${CMake_SOURCE_DIR}/Tests/CMakeBuildTest.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CMakeBuildDoubleProjectTest.配置脚本" @ONLY)
   add_test(CMakeDoubleProject ${CMAKE_CMAKE_COMMAND} -P
-    "${CMake_BINARY_DIR}/Tests/CMakeBuildDoubleProjectTest.cmake")
+    "${CMake_BINARY_DIR}/Tests/CMakeBuildDoubleProjectTest.配置脚本")
   list(APPEND TEST_BUILD_DIRS ${CMAKE_BUILD_TEST_BINARY_DIR})
 
   set(Module.CheckIPOSupported-C_BUILD_OPTIONS -DCMake_TEST_IPO_WORKS_C=${CMake_TEST_IPO_WORKS_C})
@@ -1036,7 +1036,7 @@ if(BUILD_TESTING)
       --test-command ${CMAKE_CMAKE_COMMAND}
       "-DCPackInnoSetupGenerator_BINARY_DIR:PATH=${CMake_BINARY_DIR}/Tests/CPackInnoSetupGenerator"
       "-Dconfig=\${CTEST_CONFIGURATION_TYPE}"
-      -P "${CMake_SOURCE_DIR}/Tests/CPackInnoSetupGenerator/RunCPackVerifyResult.cmake")
+      -P "${CMake_SOURCE_DIR}/Tests/CPackInnoSetupGenerator/RunCPackVerifyResult.配置脚本")
 
     set_property(TEST CPackInnoSetupGenerator PROPERTY
       ATTACHED_FILES_ON_FAIL
@@ -1061,7 +1061,7 @@ if(BUILD_TESTING)
       --test-command ${CMAKE_CMAKE_COMMAND}
         "-DCPackNSISGenerator_BINARY_DIR:PATH=${CMake_BINARY_DIR}/Tests/CPackNSISGenerator"
         "-Dconfig=\${CTEST_CONFIGURATION_TYPE}"
-        -P "${CMake_SOURCE_DIR}/Tests/CPackNSISGenerator/RunCPackVerifyResult.cmake")
+        -P "${CMake_SOURCE_DIR}/Tests/CPackNSISGenerator/RunCPackVerifyResult.配置脚本")
 
     set_property(TEST CPackNSISGenerator PROPERTY
       ATTACHED_FILES_ON_FAIL
@@ -1084,7 +1084,7 @@ if(BUILD_TESTING)
       --test-command ${CMAKE_CMAKE_COMMAND}
       "-DCPackIFWGenerator_BINARY_DIR:PATH=${CMake_BINARY_DIR}/Tests/CPackIFWGenerator"
       "-Dconfig=\${CTEST_CONFIGURATION_TYPE}"
-      -P "${CMake_SOURCE_DIR}/Tests/CPackIFWGenerator/RunCPackVerifyResult.cmake")
+      -P "${CMake_SOURCE_DIR}/Tests/CPackIFWGenerator/RunCPackVerifyResult.配置脚本")
 
     set_property(TEST CPackIFWGenerator PROPERTY
       ATTACHED_FILES_ON_FAIL
@@ -1164,7 +1164,7 @@ if(BUILD_TESTING)
         --graphviz=CPackComponents.dot
       --test-command ${CMAKE_CMAKE_COMMAND}
         "-DCPackComponents_BINARY_DIR:PATH=${CMake_BINARY_DIR}/Tests/CPackComponents"
-        -P "${CMake_SOURCE_DIR}/Tests/CPackComponents/VerifyResult.cmake")
+        -P "${CMake_SOURCE_DIR}/Tests/CPackComponents/VerifyResult.配置脚本")
     list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/CPackComponents")
   endif()
 
@@ -1225,7 +1225,7 @@ if(BUILD_TESTING)
             "-DCPackComponentsForAll_BINARY_DIR:PATH=${CMake_BINARY_DIR}/Tests/CPackComponentsForAll/build${CPackGen}-${CPackComponentWay}"
             "${CPackRun_CPackGen}"
             "${CPackRun_CPackComponentWay}"
-            -P "${CMake_SOURCE_DIR}/Tests/CPackComponentsForAll/RunCPackVerifyResult.cmake")
+            -P "${CMake_SOURCE_DIR}/Tests/CPackComponentsForAll/RunCPackVerifyResult.配置脚本")
         list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/CPackComponentsForAll/build${CPackGen}-${CPackComponentWay}")
       endforeach()
     endforeach()
@@ -1295,7 +1295,7 @@ if(BUILD_TESTING)
               "${CPackRun_CPackGen}"
               "${CPackRun_CPackDEBConfiguration}"
               "-DCONFIG=$<CONFIG>"
-              -P "${CMake_SOURCE_DIR}/Tests/${DEB_TEST_NAMES}/RunCPackVerifyResult-${CPackDEBConfiguration}.cmake")
+              -P "${CMake_SOURCE_DIR}/Tests/${DEB_TEST_NAMES}/RunCPackVerifyResult-${CPackDEBConfiguration}.配置脚本")
           list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/${DEB_TEST_NAMES}/build${CPackGen}-${CPackDEBConfiguration}")
       endforeach()
     endif()
@@ -1327,7 +1327,7 @@ if(BUILD_TESTING)
       --test-command
       ${CMAKE_CMAKE_COMMAND}
         -D dir=${CMake_BINARY_DIR}/Tests/CPackTestAllGenerators
-        -P ${CMake_SOURCE_DIR}/Tests/CPackTestAllGenerators/RunCPack.cmake
+        -P ${CMake_SOURCE_DIR}/Tests/CPackTestAllGenerators/RunCPack.配置脚本
       )
     list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/CPackTestAllGenerators")
   endif()
@@ -1388,7 +1388,7 @@ if(BUILD_TESTING)
     add_test(CMakeTestAllGenerators ${CMAKE_CMAKE_COMMAND}
         -D dir=${CMake_BINARY_DIR}/Tests/CMakeTestAllGenerators
         -D CMake_SOURCE_DIR=${CMake_SOURCE_DIR}
-        -P ${CMake_SOURCE_DIR}/Tests/CMakeTestAllGenerators/RunCMake.cmake
+        -P ${CMake_SOURCE_DIR}/Tests/CMakeTestAllGenerators/RunCMake.配置脚本
       )
     list(APPEND TEST_BUILD_DIRS
       "${CMake_BINARY_DIR}/Tests/CMakeTestAllGenerators")
@@ -1730,7 +1730,7 @@ if(BUILD_TESTING)
     -DCMAKE_GENERATOR_PLATFORM=${CMAKE_GENERATOR_PLATFORM}
     -DCMAKE_GENERATOR_TOOLSET=${CMAKE_GENERATOR_TOOLSET}
     -DCMAKE_CTEST_COMMAND=${CMAKE_CTEST_COMMAND}
-    -P ${CMake_SOURCE_DIR}/Tests/ExternalProjectUpdate/ExternalProjectUpdateTest.cmake
+    -P ${CMake_SOURCE_DIR}/Tests/ExternalProjectUpdate/ExternalProjectUpdateTest.配置脚本
     )
   list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/ExternalProjectUpdate")
   set_tests_properties(ExternalProjectUpdate PROPERTIES
@@ -2241,7 +2241,7 @@ if(BUILD_TESTING)
              -D "activeConfig=${config}"
              -D "allConfigs=${CMAKE_CONFIGURATION_TYPES}"
              -D "dir=${CMake_BINARY_DIR}/Tests/VSExcludeFromDefaultBuild"
-             -P "${CMake_SOURCE_DIR}/Tests/VSExcludeFromDefaultBuild/ResultTest.cmake")
+             -P "${CMake_SOURCE_DIR}/Tests/VSExcludeFromDefaultBuild/ResultTest.配置脚本")
         if(_last_test)
           set_property(TEST VSExcludeFromDefaultBuild-${config} PROPERTY DEPENDS ${_last_test})
         endif()
@@ -2279,7 +2279,7 @@ if(BUILD_TESTING)
                         -DCMAKE_SYSTEM_VERSION=${systemVersion}
         --test-command
           ${CMAKE_CMAKE_COMMAND} -DAPP_PACKAGE_DIR="${CMake_BINARY_DIR}/Tests/VSWinStorePhone/${name}"
-                                 -P "${CMake_SOURCE_DIR}/Tests/VSWinStorePhone/VerifyAppPackage.cmake"
+                                 -P "${CMake_SOURCE_DIR}/Tests/VSWinStorePhone/VerifyAppPackage.配置脚本"
         )
       list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/VSWinStorePhone/${name}")
     endmacro()
@@ -2386,13 +2386,13 @@ if(BUILD_TESTING)
       add_test_GhsMulti(unsupported_targets GhsMultiUnsupportedTargets "" "")
       add_test_GhsMulti(object_library GhsMultiObjectLibrary "" "")
       add_test_GhsMulti(exclude GhsMultiExclude "" ""
-        ${CMAKE_CMAKE_COMMAND} -P ${CMake_SOURCE_DIR}/Tests/GhsMulti/GhsMultiExclude/verify.cmake)
+        ${CMAKE_CMAKE_COMMAND} -P ${CMake_SOURCE_DIR}/Tests/GhsMulti/GhsMultiExclude/verify.配置脚本)
       add_test_GhsMulti(interface GhsMultiInterface "" "")
       add_test_GhsMulti(transitive_link_test GhsMultiLinkTest TransitiveLink "-DRUN_TEST=NO_FLAGS")
       add_test_GhsMulti(flags_link_test GhsMultiLinkTest FlagsCheck "-DRUN_TEST=CHECK_FLAGS")
       add_test_GhsMulti(sub_link_test GhsMultiLinkTestSub "" "")
       add_test_GhsMulti(multiple_projects GhsMultiMultipleProjects "" ""
-        ${CMAKE_CMAKE_COMMAND} -P ${CMake_SOURCE_DIR}/Tests/GhsMulti/GhsMultiMultipleProjects/verify.cmake)
+        ${CMAKE_CMAKE_COMMAND} -P ${CMake_SOURCE_DIR}/Tests/GhsMulti/GhsMultiMultipleProjects/verify.配置脚本)
       add_test_GhsMulti(compiler_options_none GhsMultiCompilerOptions None "-DRUN_TEST=RELEASE_FLAGS -DRUN_TEST_BUILD_TYPE=\"\"")
       add_test_GhsMulti(compiler_options_kernel GhsMultiCompilerOptions Kernel "-DRUN_TEST=KERNEL_FLAGS -DRUN_TEST_BUILD_TYPE=DEBUG")
       add_test_GhsMulti(try_compile_copy GhsMultiCopyFile "" "")
@@ -2471,7 +2471,7 @@ if(BUILD_TESTING)
         ${CMAKE_CMAKE_COMMAND} -DCTEST_CONFIGURATION_TYPE=$<CONFIGURATION>
         -Ddir=${CMake_BINARY_DIR}/Tests/CFBundleTest
         -Dgen=${CMAKE_GENERATOR}
-        -P ${CMake_SOURCE_DIR}/Tests/CFBundleTest/VerifyResult.cmake)
+        -P ${CMake_SOURCE_DIR}/Tests/CFBundleTest/VerifyResult.配置脚本)
       list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/CFBundleTest")
     endif()
   endif()
@@ -2548,10 +2548,10 @@ if(BUILD_TESTING)
     ${CMAKE_CMAKE_COMMAND} -E echo_append "This line has no newline!")
 
   # A simple test for ctest in script mode
-  configure_file("${CMake_SOURCE_DIR}/Tests/CTestScriptMode/CTestTestScriptMode.cmake.in"
-          "${CMake_BINARY_DIR}/Tests/CTestScriptMode/CTestTestScriptMode.cmake" @ONLY)
+  configure_file("${CMake_SOURCE_DIR}/Tests/CTestScriptMode/CTestTestScriptMode.配置脚本.in"
+          "${CMake_BINARY_DIR}/Tests/CTestScriptMode/CTestTestScriptMode.配置脚本" @ONLY)
   add_test(CTest.ScriptMode ${CMAKE_CTEST_COMMAND}
-    -S "${CMake_BINARY_DIR}/Tests/CTestScriptMode/CTestTestScriptMode.cmake"
+    -S "${CMake_BINARY_DIR}/Tests/CTestScriptMode/CTestTestScriptMode.配置脚本"
     )
 
   # Test CTest Update with Subversion
@@ -2577,10 +2577,10 @@ if(BUILD_TESTING)
       message(FATAL_ERROR "CMake_TEST_CTestUpdate_SVN enabled but Subversion is not found.")
     endif()
     set(CTestUpdateSVN_DIR "CTest UpdateSVN")
-    configure_file("${CMake_SOURCE_DIR}/Tests/CTestUpdateSVN.cmake.in"
-      "${CMake_BINARY_DIR}/Tests/CTestUpdateSVN.cmake" @ONLY)
+    configure_file("${CMake_SOURCE_DIR}/Tests/CTestUpdateSVN.配置脚本.in"
+      "${CMake_BINARY_DIR}/Tests/CTestUpdateSVN.配置脚本" @ONLY)
     add_test(CTest.UpdateSVN ${CMAKE_CMAKE_COMMAND}
-      -P "${CMake_BINARY_DIR}/Tests/CTestUpdateSVN.cmake"
+      -P "${CMake_BINARY_DIR}/Tests/CTestUpdateSVN.配置脚本"
       )
     list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/${CTestUpdateSVN_DIR}")
   endif()
@@ -2599,10 +2599,10 @@ if(BUILD_TESTING)
       message(FATAL_ERROR "CMake_TEST_CTestUpdate_CVS enabled but CVS_EXECUTABLE is not found.")
     endif()
     set(CTestUpdateCVS_DIR "CTest UpdateCVS")
-    configure_file("${CMake_SOURCE_DIR}/Tests/CTestUpdateCVS.cmake.in"
-      "${CMake_BINARY_DIR}/Tests/CTestUpdateCVS.cmake" @ONLY)
+    configure_file("${CMake_SOURCE_DIR}/Tests/CTestUpdateCVS.配置脚本.in"
+      "${CMake_BINARY_DIR}/Tests/CTestUpdateCVS.配置脚本" @ONLY)
     add_test(CTest.UpdateCVS ${CMAKE_CMAKE_COMMAND}
-      -P "${CMake_BINARY_DIR}/Tests/CTestUpdateCVS.cmake"
+      -P "${CMake_BINARY_DIR}/Tests/CTestUpdateCVS.配置脚本"
       )
     list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/${CTestUpdateCVS_DIR}")
   endif()
@@ -2618,17 +2618,17 @@ if(BUILD_TESTING)
       message(FATAL_ERROR "CMake_TEST_CTestUpdate_BZR enabled but BZR_EXECUTABLE is not found.")
     endif()
     set(CTestUpdateBZR_DIR "CTest UpdateBZR")
-    configure_file("${CMake_SOURCE_DIR}/Tests/CTestUpdateBZR.cmake.in"
-      "${CMake_BINARY_DIR}/Tests/CTestUpdateBZR.cmake" @ONLY)
+    configure_file("${CMake_SOURCE_DIR}/Tests/CTestUpdateBZR.配置脚本.in"
+      "${CMake_BINARY_DIR}/Tests/CTestUpdateBZR.配置脚本" @ONLY)
     add_test(CTest.UpdateBZR ${CMAKE_CMAKE_COMMAND}
-      -P "${CMake_BINARY_DIR}/Tests/CTestUpdateBZR.cmake"
+      -P "${CMake_BINARY_DIR}/Tests/CTestUpdateBZR.配置脚本"
       )
     list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/${CTestUpdateBZR_DIR}")
     set(CTestUpdateBZR_DIR "CTest UpdateBZR_CLocale")
-    configure_file("${CMake_SOURCE_DIR}/Tests/CTestUpdateBZR.cmake.in"
-      "${CMake_BINARY_DIR}/Tests/CTestUpdateBZR_CLocale.cmake" @ONLY)
+    configure_file("${CMake_SOURCE_DIR}/Tests/CTestUpdateBZR.配置脚本.in"
+      "${CMake_BINARY_DIR}/Tests/CTestUpdateBZR_CLocale.配置脚本" @ONLY)
     add_test(CTest.UpdateBZR.CLocale ${CMAKE_CMAKE_COMMAND}
-      -P "${CMake_BINARY_DIR}/Tests/CTestUpdateBZR_CLocale.cmake"
+      -P "${CMake_BINARY_DIR}/Tests/CTestUpdateBZR_CLocale.配置脚本"
       )
     set_tests_properties(CTest.UpdateBZR.CLocale PROPERTIES ENVIRONMENT LC_ALL=C)
     list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/${CTestUpdateBZR_DIR}")
@@ -2644,10 +2644,10 @@ if(BUILD_TESTING)
       message(FATAL_ERROR "CMake_TEST_CTestUpdate_GIT enabled but GIT_EXECUTABLE is not found.")
     endif()
     set(CTestUpdateGIT_DIR "CTest UpdateGIT")
-    configure_file("${CMake_SOURCE_DIR}/Tests/CTestUpdateGIT.cmake.in"
-      "${CMake_BINARY_DIR}/Tests/CTestUpdateGIT.cmake" @ONLY)
+    configure_file("${CMake_SOURCE_DIR}/Tests/CTestUpdateGIT.配置脚本.in"
+      "${CMake_BINARY_DIR}/Tests/CTestUpdateGIT.配置脚本" @ONLY)
     add_test(CTest.UpdateGIT ${CMAKE_CMAKE_COMMAND}
-      -P "${CMake_BINARY_DIR}/Tests/CTestUpdateGIT.cmake"
+      -P "${CMake_BINARY_DIR}/Tests/CTestUpdateGIT.配置脚本"
       )
     list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/${CTestUpdateGIT_DIR}")
     set_property(TEST CTest.UpdateGIT PROPERTY ENVIRONMENT GIT_ALLOW_PROTOCOL=file)
@@ -2670,10 +2670,10 @@ if(BUILD_TESTING)
       message(FATAL_ERROR "CMake_TEST_CTestUpdate_HG enabled but HG_EXECUTABLE is not found.")
     endif()
     set(CTestUpdateHG_DIR "CTest UpdateHG")
-    configure_file("${CMake_SOURCE_DIR}/Tests/CTestUpdateHG.cmake.in"
-      "${CMake_BINARY_DIR}/Tests/CTestUpdateHG.cmake" @ONLY)
+    configure_file("${CMake_SOURCE_DIR}/Tests/CTestUpdateHG.配置脚本.in"
+      "${CMake_BINARY_DIR}/Tests/CTestUpdateHG.配置脚本" @ONLY)
     add_test(CTest.UpdateHG ${CMAKE_CMAKE_COMMAND}
-      -P "${CMake_BINARY_DIR}/Tests/CTestUpdateHG.cmake"
+      -P "${CMake_BINARY_DIR}/Tests/CTestUpdateHG.配置脚本"
       )
     list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/${CTestUpdateHG_DIR}")
   endif()
@@ -2687,21 +2687,21 @@ if(BUILD_TESTING)
       message(FATAL_ERROR "CMake_TEST_CTestUpdate_HG enabled but P4_EXECUTABLE and P4D_EXECUTABLE are not both not found.")
     endif()
     set(CTestUpdateP4_DIR "CTest UpdateP4")
-    configure_file("${CMake_SOURCE_DIR}/Tests/CTestUpdateP4.cmake.in"
-      "${CMake_BINARY_DIR}/Tests/CTestUpdateP4.cmake" @ONLY)
+    configure_file("${CMake_SOURCE_DIR}/Tests/CTestUpdateP4.配置脚本.in"
+      "${CMake_BINARY_DIR}/Tests/CTestUpdateP4.配置脚本" @ONLY)
     add_test(CTest.UpdateP4 ${CMAKE_CMAKE_COMMAND}
-      -P "${CMake_BINARY_DIR}/Tests/CTestUpdateP4.cmake"
+      -P "${CMake_BINARY_DIR}/Tests/CTestUpdateP4.配置脚本"
       )
     list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/${CTestUpdateP4_DIR}")
   endif()
 
   if(NOT CMake_TEST_NO_NETWORK)
     configure_file(
-      "${CMake_SOURCE_DIR}/Tests/CTestTestUpload/test.cmake.in"
-      "${CMake_BINARY_DIR}/Tests/CTestTestUpload/test.cmake"
+      "${CMake_SOURCE_DIR}/Tests/CTestTestUpload/test.配置脚本.in"
+      "${CMake_BINARY_DIR}/Tests/CTestTestUpload/test.配置脚本"
       @ONLY ESCAPE_QUOTES)
     add_test(CTestTestUpload ${CMAKE_CTEST_COMMAND}
-      -S "${CMake_BINARY_DIR}/Tests/CTestTestUpload/test.cmake" -V
+      -S "${CMake_BINARY_DIR}/Tests/CTestTestUpload/test.配置脚本" -V
       --output-log "${CMake_BINARY_DIR}/Tests/CTestTestUpload/testOut.log"
       )
     set_tests_properties(CTestTestUpload PROPERTIES
@@ -2709,21 +2709,21 @@ if(BUILD_TESTING)
   endif()
 
   configure_file(
-    "${CMake_SOURCE_DIR}/Tests/CTestCoverageCollectGCOV/test.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CTestCoverageCollectGCOV/test.cmake"
+    "${CMake_SOURCE_DIR}/Tests/CTestCoverageCollectGCOV/test.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CTestCoverageCollectGCOV/test.配置脚本"
     @ONLY ESCAPE_QUOTES)
   add_test(CTestCoverageCollectGCOV ${CMAKE_CTEST_COMMAND}
     -C \${CTEST_CONFIGURATION_TYPE}
-    -S "${CMake_BINARY_DIR}/Tests/CTestCoverageCollectGCOV/test.cmake" -VV
+    -S "${CMake_BINARY_DIR}/Tests/CTestCoverageCollectGCOV/test.配置脚本" -VV
     --output-log "${CMake_BINARY_DIR}/Tests/CTestCoverageCollectGCOV/testOut.log"
     )
 
   configure_file(
-    "${CMake_SOURCE_DIR}/Tests/CTestTestEmptyBinaryDirectory/test.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CTestTestEmptyBinaryDirectory/test.cmake"
+    "${CMake_SOURCE_DIR}/Tests/CTestTestEmptyBinaryDirectory/test.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CTestTestEmptyBinaryDirectory/test.配置脚本"
     @ONLY ESCAPE_QUOTES)
   add_test(CTestTestEmptyBinaryDirectory ${CMAKE_CTEST_COMMAND}
-    -S "${CMake_BINARY_DIR}/Tests/CTestTestEmptyBinaryDirectory/test.cmake" -V
+    -S "${CMake_BINARY_DIR}/Tests/CTestTestEmptyBinaryDirectory/test.配置脚本" -V
     --output-log "${CMake_BINARY_DIR}/Tests/CTestTestEmptyBinaryDirectory/testOut.log"
     )
   set_tests_properties(CTestTestEmptyBinaryDirectory PROPERTIES
@@ -2865,12 +2865,12 @@ if(BUILD_TESTING)
 
     # Test -S script with a -C config arg to ctest:
     configure_file(
-      "${CMake_SOURCE_DIR}/Tests/CTestConfig/script.cmake.in"
-      "${base}/${cfg}-script.cmake"
+      "${CMake_SOURCE_DIR}/Tests/CTestConfig/script.配置脚本.in"
+      "${base}/${cfg}-script.配置脚本"
       @ONLY ESCAPE_QUOTES)
     add_test(CTestConfig.Script.${cfg} ${CMAKE_CTEST_COMMAND}
       -C ${cfg}
-      -S "${base}/${cfg}-script.cmake" -VV
+      -S "${base}/${cfg}-script.配置脚本" -VV
       --output-log "${base}/${cfg}-script.log"
       )
 
@@ -2878,11 +2878,11 @@ if(BUILD_TESTING)
     # (Actual commands inside a cmake -P script because we need to be able to set
     #  the working directory reliably...)
     configure_file(
-      "${CMake_SOURCE_DIR}/Tests/CTestConfig/dashboard.cmake.in"
-      "${base}/${cfg}-dashboard.cmake"
+      "${CMake_SOURCE_DIR}/Tests/CTestConfig/dashboard.配置脚本.in"
+      "${base}/${cfg}-dashboard.配置脚本"
       @ONLY ESCAPE_QUOTES)
     add_test(CTestConfig.Dashboard.${cfg} ${CMAKE_CMAKE_COMMAND}
-      -P "${base}/${cfg}-dashboard.cmake" -VV
+      -P "${base}/${cfg}-dashboard.配置脚本" -VV
       )
   endfunction()
 
@@ -2900,7 +2900,7 @@ if(BUILD_TESTING)
     "-Darg4=this is the fourth"
     -Darg5=the_fifth
     -Darg6:STRING=value-with-type
-    -S "${CMake_SOURCE_DIR}/Tests/CTestConfig/ScriptWithArgs.cmake" -VV
+    -S "${CMake_SOURCE_DIR}/Tests/CTestConfig/ScriptWithArgs.配置脚本" -VV
     --output-log "${CMake_BINARY_DIR}/Tests/CTestConfig/ScriptWithArgs.log"
     )
 
@@ -2918,11 +2918,11 @@ if(BUILD_TESTING)
   ADD_TEST_MACRO(CMakeCommands.target_link_directories)
 
   configure_file(
-    "${CMake_SOURCE_DIR}/Tests/CTestTestCrash/test.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CTestTestCrash/test.cmake"
+    "${CMake_SOURCE_DIR}/Tests/CTestTestCrash/test.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CTestTestCrash/test.配置脚本"
     @ONLY ESCAPE_QUOTES)
   add_test(CTestTestCrash ${CMAKE_CTEST_COMMAND}
-    -S "${CMake_BINARY_DIR}/Tests/CTestTestCrash/test.cmake" -V
+    -S "${CMake_BINARY_DIR}/Tests/CTestTestCrash/test.配置脚本" -V
     --output-log "${CMake_BINARY_DIR}/Tests/CTestTestCrash/testOutput.log"
     )
   # With Watcom and OrangeC the SEGFAULT is not found, it just fails
@@ -2935,11 +2935,11 @@ if(BUILD_TESTING)
   endif()
 
   configure_file(
-    "${CMake_SOURCE_DIR}/Tests/CTestTestBadExe/test.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CTestTestBadExe/test.cmake"
+    "${CMake_SOURCE_DIR}/Tests/CTestTestBadExe/test.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CTestTestBadExe/test.配置脚本"
     @ONLY ESCAPE_QUOTES)
   add_test(CTestTestBadExe ${CMAKE_CTEST_COMMAND}
-    -S "${CMake_BINARY_DIR}/Tests/CTestTestBadExe/test.cmake" -V
+    -S "${CMake_BINARY_DIR}/Tests/CTestTestBadExe/test.配置脚本" -V
     --output-log "${CMake_BINARY_DIR}/Tests/CTestTestBadExe/testOutput.log"
     )
   set(CTestTestBadExe_REGEX "BAD_COMMAND")
@@ -2952,30 +2952,30 @@ if(BUILD_TESTING)
     PASS_REGULAR_EXPRESSION "${CTestTestBadExe_REGEX}")
 
   configure_file(
-    "${CMake_SOURCE_DIR}/Tests/CTestTestBadGenerator/test.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CTestTestBadGenerator/test.cmake"
+    "${CMake_SOURCE_DIR}/Tests/CTestTestBadGenerator/test.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CTestTestBadGenerator/test.配置脚本"
     @ONLY ESCAPE_QUOTES)
   add_test(CTestTestBadGenerator ${CMAKE_CTEST_COMMAND}
     -C "\${CTestTest_CONFIG}"
-    -S "${CMake_BINARY_DIR}/Tests/CTestTestBadGenerator/test.cmake" -V
+    -S "${CMake_BINARY_DIR}/Tests/CTestTestBadGenerator/test.配置脚本" -V
     --output-log "${CMake_BINARY_DIR}/Tests/CTestTestBadGenerator/testOutput.log"
     )
   set_property(TEST CTestTestBadGenerator PROPERTY
     PASS_REGULAR_EXPRESSION "could not create generator named \"Bad Generator\"")
 
   configure_file(
-    "${CMake_SOURCE_DIR}/Tests/CTestTestParallel/test.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CTestTestParallel/test.cmake"
+    "${CMake_SOURCE_DIR}/Tests/CTestTestParallel/test.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CTestTestParallel/test.配置脚本"
     @ONLY ESCAPE_QUOTES)
   add_test(CTestTestParallel ${CMAKE_CTEST_COMMAND}
-    -S "${CMake_BINARY_DIR}/Tests/CTestTestParallel/test.cmake" -V
+    -S "${CMake_BINARY_DIR}/Tests/CTestTestParallel/test.配置脚本" -V
     --output-log "${CMake_BINARY_DIR}/Tests/CTestTestParallel/testOutput.log"
     )
 
-  configure_file("${CMake_SOURCE_DIR}/Tests/CTestTestVerboseOutput/test.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CTestTestVerboseOutput/test.cmake" @ONLY ESCAPE_QUOTES)
+  configure_file("${CMake_SOURCE_DIR}/Tests/CTestTestVerboseOutput/test.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CTestTestVerboseOutput/test.配置脚本" @ONLY ESCAPE_QUOTES)
   add_test(CTestTestVerboseOutput ${CMAKE_CTEST_COMMAND}
-    -S "${CMake_BINARY_DIR}/Tests/CTestTestVerboseOutput/test.cmake" -VV
+    -S "${CMake_BINARY_DIR}/Tests/CTestTestVerboseOutput/test.配置脚本" -VV
     --output-log "${CMake_BINARY_DIR}/Tests/CTestTestVerboseOutput/testOutput.log"
     -C "\${CTestTest_CONFIG}"
     )
@@ -2998,22 +2998,22 @@ if(BUILD_TESTING)
   endif()
 
   configure_file(
-    "${CMake_SOURCE_DIR}/Tests/CTestTestLabelRegExp/test.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CTestTestLabelRegExp/test.cmake"
+    "${CMake_SOURCE_DIR}/Tests/CTestTestLabelRegExp/test.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CTestTestLabelRegExp/test.配置脚本"
     @ONLY ESCAPE_QUOTES)
   add_test(NAME CTestTestLabelRegExp
     COMMAND ${CMAKE_CMAKE_COMMAND}
       -DSOURCE_DIR=${CMAKE_SOURCE_DIR}/Tests/CTestTestLabelRegExp
-      -P ${CMAKE_BINARY_DIR}/Tests/CTestTestLabelRegExp/test.cmake
+      -P ${CMAKE_BINARY_DIR}/Tests/CTestTestLabelRegExp/test.配置脚本
     WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/Tests/CTestTestLabelRegExp
   )
 
   configure_file(
-    "${CMake_SOURCE_DIR}/Tests/CTestTestScheduler/test.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CTestTestScheduler/test.cmake"
+    "${CMake_SOURCE_DIR}/Tests/CTestTestScheduler/test.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CTestTestScheduler/test.配置脚本"
     @ONLY ESCAPE_QUOTES)
   add_test(CTestTestScheduler ${CMAKE_CTEST_COMMAND}
-    -S "${CMake_BINARY_DIR}/Tests/CTestTestScheduler/test.cmake" -V
+    -S "${CMake_BINARY_DIR}/Tests/CTestTestScheduler/test.配置脚本" -V
     --output-log "${CMake_BINARY_DIR}/Tests/CTestTestScheduler/testOutput.log"
     )
   set_tests_properties(CTestTestScheduler PROPERTIES
@@ -3021,11 +3021,11 @@ if(BUILD_TESTING)
     RESOURCE_LOCK "CostData")
 
   configure_file(
-    "${CMake_SOURCE_DIR}/Tests/CTestTestCostSerial/test.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CTestTestCostSerial/test.cmake"
+    "${CMake_SOURCE_DIR}/Tests/CTestTestCostSerial/test.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CTestTestCostSerial/test.配置脚本"
     @ONLY ESCAPE_QUOTES)
   add_test(CTestTestCostSerial ${CMAKE_CTEST_COMMAND}
-    -S "${CMake_BINARY_DIR}/Tests/CTestTestCostSerial/test.cmake" -V
+    -S "${CMake_BINARY_DIR}/Tests/CTestTestCostSerial/test.配置脚本" -V
     --output-log "${CMake_BINARY_DIR}/Tests/CTestTestCostSerial/testOutput.log"
     )
   set_tests_properties(CTestTestCostSerial PROPERTIES
@@ -3033,26 +3033,26 @@ if(BUILD_TESTING)
     RESOURCE_LOCK "CostData")
 
   configure_file(
-    "${CMake_SOURCE_DIR}/Tests/CTestTestStopTime/test.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CTestTestStopTime/test.cmake"
+    "${CMake_SOURCE_DIR}/Tests/CTestTestStopTime/test.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CTestTestStopTime/test.配置脚本"
     @ONLY ESCAPE_QUOTES)
   configure_file(
-    "${CMake_SOURCE_DIR}/Tests/CTestTestStopTime/GetDate.cmake"
-    "${CMake_BINARY_DIR}/Tests/CTestTestStopTime/GetDate.cmake"
+    "${CMake_SOURCE_DIR}/Tests/CTestTestStopTime/GetDate.配置脚本"
+    "${CMake_BINARY_DIR}/Tests/CTestTestStopTime/GetDate.配置脚本"
     COPYONLY)
   add_test(CTestTestStopTime ${CMAKE_CTEST_COMMAND}
-    -S "${CMake_BINARY_DIR}/Tests/CTestTestStopTime/test.cmake" -V
+    -S "${CMake_BINARY_DIR}/Tests/CTestTestStopTime/test.配置脚本" -V
     --output-log "${CMake_BINARY_DIR}/Tests/CTestTestStopTime/testOutput.log"
     )
   set_tests_properties(CTestTestStopTime PROPERTIES
     PASS_REGULAR_EXPRESSION "The stop time has been passed")
 
   configure_file(
-    "${CMake_SOURCE_DIR}/Tests/CTestTestSubdir/test.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CTestTestSubdir/test.cmake"
+    "${CMake_SOURCE_DIR}/Tests/CTestTestSubdir/test.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CTestTestSubdir/test.配置脚本"
     @ONLY ESCAPE_QUOTES)
   add_test(CTestTestSubdir ${CMAKE_CTEST_COMMAND}
-    -S "${CMake_BINARY_DIR}/Tests/CTestTestSubdir/test.cmake" -V
+    -S "${CMake_BINARY_DIR}/Tests/CTestTestSubdir/test.配置脚本" -V
     --output-log "${CMake_BINARY_DIR}/Tests/CTestTestSubdir/testOutput.log"
     )
   #make sure all 3 subdirs were added
@@ -3060,48 +3060,48 @@ if(BUILD_TESTING)
     PASS_REGULAR_EXPRESSION "100% tests passed out of 3")
 
   configure_file(
-    "${CMake_SOURCE_DIR}/Tests/CTestTestDepends/test.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CTestTestDepends/test.cmake"
+    "${CMake_SOURCE_DIR}/Tests/CTestTestDepends/test.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CTestTestDepends/test.配置脚本"
     @ONLY ESCAPE_QUOTES)
   add_test(CTestTestDepends ${CMAKE_CTEST_COMMAND}
     -C "\${CTestTest_CONFIG}"
-    -S "${CMake_BINARY_DIR}/Tests/CTestTestDepends/test.cmake" -V
+    -S "${CMake_BINARY_DIR}/Tests/CTestTestDepends/test.配置脚本" -V
     --output-log "${CMake_BINARY_DIR}/Tests/CTestTestDepends/testOutput.log"
     )
 
   configure_file(
-    "${CMake_SOURCE_DIR}/Tests/CTestTestCycle/test.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CTestTestCycle/test.cmake"
+    "${CMake_SOURCE_DIR}/Tests/CTestTestCycle/test.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CTestTestCycle/test.配置脚本"
     @ONLY ESCAPE_QUOTES)
   add_test(CTestTestCycle ${CMAKE_CTEST_COMMAND}
     -C "\${CTestTest_CONFIG}"
-    -S "${CMake_BINARY_DIR}/Tests/CTestTestCycle/test.cmake" -V
+    -S "${CMake_BINARY_DIR}/Tests/CTestTestCycle/test.配置脚本" -V
     --output-log "${CMake_BINARY_DIR}/Tests/CTestTestCycle/testOutput.log"
     )
   set_tests_properties(CTestTestCycle PROPERTIES
     PASS_REGULAR_EXPRESSION "a cycle exists in the test dependency graph")
 
   configure_file(
-    "${CMake_SOURCE_DIR}/Tests/CTestTestRunScript/test.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CTestTestRunScript/test.cmake"
+    "${CMake_SOURCE_DIR}/Tests/CTestTestRunScript/test.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CTestTestRunScript/test.配置脚本"
     @ONLY ESCAPE_QUOTES)
   configure_file(
-    "${CMake_SOURCE_DIR}/Tests/CTestTestRunScript/hello.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CTestTestRunScript/hello.cmake"
+    "${CMake_SOURCE_DIR}/Tests/CTestTestRunScript/hello.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CTestTestRunScript/hello.配置脚本"
     @ONLY ESCAPE_QUOTES)
   add_test(CTestTestRunScript ${CMAKE_CTEST_COMMAND}
-    -S "${CMake_BINARY_DIR}/Tests/CTestTestRunScript/test.cmake" -V
+    -S "${CMake_BINARY_DIR}/Tests/CTestTestRunScript/test.配置脚本" -V
     --output-log "${CMake_BINARY_DIR}/Tests/CTestTestRunScript/testOutput.log"
     )
 
   add_test(CTestTestShowOnly ${CMAKE_CTEST_COMMAND} -N)
 
   configure_file(
-    "${CMake_SOURCE_DIR}/Tests/CTestTestFdSetSize/test.cmake.in"
-    "${CMake_BINARY_DIR}/Tests/CTestTestFdSetSize/test.cmake"
+    "${CMake_SOURCE_DIR}/Tests/CTestTestFdSetSize/test.配置脚本.in"
+    "${CMake_BINARY_DIR}/Tests/CTestTestFdSetSize/test.配置脚本"
     @ONLY ESCAPE_QUOTES)
   add_test(CTestTestFdSetSize ${CMAKE_CTEST_COMMAND}
-    -S "${CMake_BINARY_DIR}/Tests/CTestTestFdSetSize/test.cmake" -j20 -V --timeout 120
+    -S "${CMake_BINARY_DIR}/Tests/CTestTestFdSetSize/test.配置脚本" -j20 -V --timeout 120
     --output-log "${CMake_BINARY_DIR}/Tests/CTestTestFdSetSize/testOutput.log"
     )
 
@@ -3123,38 +3123,38 @@ if(BUILD_TESTING)
 
 
   if(CTEST_TEST_CTEST AND CMAKE_RUN_LONG_TESTS AND CMAKE_TESTS_CDASH_SERVER)
-    configure_file("${CMake_SOURCE_DIR}/Tests/CTestTest/test.cmake.in"
-      "${CMake_BINARY_DIR}/Tests/CTestTest/test.cmake" @ONLY ESCAPE_QUOTES)
+    configure_file("${CMake_SOURCE_DIR}/Tests/CTestTest/test.配置脚本.in"
+      "${CMake_BINARY_DIR}/Tests/CTestTest/test.配置脚本" @ONLY ESCAPE_QUOTES)
     add_test(CTestTest ${CMAKE_CTEST_COMMAND}
-      -S "${CMake_BINARY_DIR}/Tests/CTestTest/test.cmake" -V
+      -S "${CMake_BINARY_DIR}/Tests/CTestTest/test.配置脚本" -V
       --output-log "${CMake_BINARY_DIR}/Tests/CTestTest/testOutput.log"
       )
 
     if(NOT CMake_TEST_EXTERNAL_CMAKE)
-      configure_file("${CMake_SOURCE_DIR}/Tests/CTestTest2/test.cmake.in"
-        "${CMake_BINARY_DIR}/Tests/CTestTest2/test.cmake" @ONLY ESCAPE_QUOTES)
+      configure_file("${CMake_SOURCE_DIR}/Tests/CTestTest2/test.配置脚本.in"
+        "${CMake_BINARY_DIR}/Tests/CTestTest2/test.配置脚本" @ONLY ESCAPE_QUOTES)
       add_test(NAME CTestTest2 COMMAND ${CMAKE_CTEST_COMMAND} -C $<CONFIG>
-        -S "${CMake_BINARY_DIR}/Tests/CTestTest2/test.cmake" -V
+        -S "${CMake_BINARY_DIR}/Tests/CTestTest2/test.配置脚本" -V
         --output-log "${CMake_BINARY_DIR}/Tests/CTestTest2/testOutput.log"
         )
     endif()
 
     if("${CMAKE_GENERATOR}" MATCHES "Makefiles|Ninja|FASTBuild")
-      configure_file("${CMake_SOURCE_DIR}/Tests/CTestTestLaunchers/test.cmake.in"
-        "${CMake_BINARY_DIR}/Tests/CTestTestLaunchers/test.cmake" @ONLY ESCAPE_QUOTES)
+      configure_file("${CMake_SOURCE_DIR}/Tests/CTestTestLaunchers/test.配置脚本.in"
+        "${CMake_BINARY_DIR}/Tests/CTestTestLaunchers/test.配置脚本" @ONLY ESCAPE_QUOTES)
       add_test(CTestTestLaunchers ${CMAKE_CTEST_COMMAND}
-        -S "${CMake_BINARY_DIR}/Tests/CTestTestLaunchers/test.cmake" -V
+        -S "${CMake_BINARY_DIR}/Tests/CTestTestLaunchers/test.配置脚本" -V
         --output-log "${CMake_BINARY_DIR}/Tests/CTestTestLaunchers/testOutput.log"
         )
       set_tests_properties(CTestTestLaunchers PROPERTIES
         PASS_REGULAR_EXPRESSION "CTEST_TEST_LAUNCHER_SUCCESS")
     endif()
 
-    configure_file("${CMake_SOURCE_DIR}/Tests/CTestTestChecksum/test.cmake.in"
-      "${CMake_BINARY_DIR}/Tests/CTestTestChecksum/test.cmake" @ONLY
+    configure_file("${CMake_SOURCE_DIR}/Tests/CTestTestChecksum/test.配置脚本.in"
+      "${CMake_BINARY_DIR}/Tests/CTestTestChecksum/test.配置脚本" @ONLY
       ESCAPE_QUOTES)
     add_test(CTestTestChecksum ${CMAKE_CTEST_COMMAND}
-      -S "${CMake_BINARY_DIR}/Tests/CTestTestChecksum/test.cmake" -V
+      -S "${CMake_BINARY_DIR}/Tests/CTestTestChecksum/test.配置脚本" -V
       --output-log
       "${CMake_BINARY_DIR}/Tests/CTestTestChecksum/testOutput.log"
       )
@@ -3207,7 +3207,7 @@ if(BUILD_TESTING)
         -D "bin_dir=${CMake_BINARY_DIR}/Tests/BootstrapTest"
         -D "generator=${CMAKE_GENERATOR}"
         -D "args=${CMake_TEST_BOOTSTRAP_ARGS}"
-        -P ${CMAKE_CURRENT_SOURCE_DIR}/BootstrapTest.cmake
+        -P ${CMAKE_CURRENT_SOURCE_DIR}/BootstrapTest.配置脚本
       )
     list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/BootstrapTest")
     # This test will use all processors.
@@ -3255,10 +3255,10 @@ if(BUILD_TESTING)
 
     # FortranCInterface tests.
     if(UNIX)
-      configure_file(${CMAKE_CURRENT_SOURCE_DIR}/FortranC/Flags.cmake.in
-        ${CMAKE_CURRENT_BINARY_DIR}/FortranC/Flags.cmake @ONLY)
+      configure_file(${CMAKE_CURRENT_SOURCE_DIR}/FortranC/Flags.配置脚本.in
+        ${CMAKE_CURRENT_BINARY_DIR}/FortranC/Flags.配置脚本 @ONLY)
       add_test(FortranC.Flags ${CMAKE_CMAKE_COMMAND} -P
-        ${CMAKE_CURRENT_BINARY_DIR}/FortranC/Flags.cmake)
+        ${CMAKE_CURRENT_BINARY_DIR}/FortranC/Flags.配置脚本)
       list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/FortranC/Flags")
       set_property(TEST FortranC.Flags APPEND PROPERTY LABELS "Fortran")
     else()
@@ -3369,12 +3369,12 @@ if(BUILD_TESTING)
   # named "CMake_TEST_CONTRACT_<project>".  For each Contract test,
   # the project should provide a directory with a CMakeLists.txt file
   # that uses ExternalProject to download and configure the project.
-  # The directory should also contain a Configure.cmake file that
+  # The directory should also contain a Configure.配置脚本 file that
   # sets "CMake_TEST_CONTRACT_<project>_<var>" variables to configure
   # the code below.
   foreach(project IN ITEMS PLplot Trilinos VTK)
     if(CMake_TEST_CONTRACT_${project})
-      include(Contracts/${project}/Configure.cmake)
+      include(Contracts/${project}/Configure.配置脚本)
       ADD_TEST_MACRO(Contracts.${project} ${CMake_TEST_CONTRACT_${project}_RUN_TEST})
       # The external projects may take a long time to build.
       if(DEFINED CMake_TEST_CONTRACT_${project}_TIMEOUT)
@@ -3457,10 +3457,10 @@ if(BUILD_TESTING)
   # all the test build directories. This must come at the end after
   # all the above logic has finished adding to TEST_BUILD_DIRS
   if(NOT EXISTS "${CMake_BINARY_DIR}/CMakeLists.txt")
-    configure_file(${CMake_SOURCE_DIR}/Tests/test_clean.cmake.in
-                   ${CMake_BINARY_DIR}/Tests/test_clean.cmake @ONLY)
+    configure_file(${CMake_SOURCE_DIR}/Tests/test_clean.配置脚本.in
+                   ${CMake_BINARY_DIR}/Tests/test_clean.配置脚本 @ONLY)
     add_custom_target(test_clean
-      COMMAND ${CMAKE_COMMAND} -P ${CMake_BINARY_DIR}/Tests/test_clean.cmake
+      COMMAND ${CMAKE_COMMAND} -P ${CMake_BINARY_DIR}/Tests/test_clean.配置脚本
       COMMENT "Removing test build directories."
       )
   endif()

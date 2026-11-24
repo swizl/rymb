@@ -84,7 +84,7 @@
 #endif
 
 // Select a recursion limit that fits within the stack size.
-// See stack size flags in '../CompileFlags.cmake'.
+// See stack size flags in '../CompileFlags.配置脚本'.
 #ifndef CMake_DEFAULT_RECURSION_LIMIT
 #  if __has_feature(address_sanitizer)
 #    define CMake_DEFAULT_RECURSION_LIMIT 400
@@ -345,7 +345,7 @@ void cmMakefile::MaybeWarnCMP0144(std::string const& rootVar, cmValue rootDef,
                    " is set to:\n  "_s, *rootEnv, '\n');
     }
     e += "For compatibility, find_package is ignoring the variable, but "
-         "code in a .cmake module might still use it.";
+         "code in a .配置脚本 module might still use it.";
     this->IssuePolicyWarning(cmPolicies::CMP0144, {}, e);
   }
 }

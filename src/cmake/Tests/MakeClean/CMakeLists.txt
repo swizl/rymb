@@ -21,7 +21,7 @@ else()
 endif()
 
 # Get the set of files to check from the ToClean project.
-include(${MakeClean_BINARY_DIR}/ToClean/ToCleanFiles.cmake)
+include(${MakeClean_BINARY_DIR}/ToClean/ToCleanFiles.配置脚本)
 
 # Check for the existence of the files.
 foreach(f ${TOCLEAN_FILES})

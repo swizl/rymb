@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.29)
 project(cxx_modules_import_std_shared CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 add_library(import_std_shared SHARED)
 target_sources(import_std_shared
@@ -21,9 +21,9 @@ install(TARGETS import_std_shared
   FILE_SET use_std DESTINATION "lib/cxx/miu")
 export(EXPORT export
   NAMESPACE CXXModules::
-  FILE "${CMAKE_CURRENT_BINARY_DIR}/import_std_shared-targets.cmake")
-file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/import_std_shared-config.cmake"
-  "include(\"\${CMAKE_CURRENT_LIST_DIR}/import_std_shared-targets.cmake\")
+  FILE "${CMAKE_CURRENT_BINARY_DIR}/import_std_shared-targets.配置脚本")
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/import_std_shared-config.配置脚本"
+  "include(\"\${CMAKE_CURRENT_LIST_DIR}/import_std_shared-targets.配置脚本\")
 set(\${CMAKE_FIND_PACKAGE_NAME}_FOUND 1)
 ")
 

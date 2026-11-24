@@ -1,4 +1,4 @@
-^CMake Error at TRANSFORM-Selector-FOR-ZeroStepArgument\.cmake:2 \(list\):
+^CMake Error at TRANSFORM-Selector-FOR-ZeroStepArgument\.配置脚本:2 \(list\):
   list sub-command TRANSFORM, selector FOR expects positive numeric value for
   <step>\.
 Call Stack \(most recent call first\):

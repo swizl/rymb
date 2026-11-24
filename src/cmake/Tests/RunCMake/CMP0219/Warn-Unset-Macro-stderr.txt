@@ -1,4 +1,4 @@
-CMake Warning \(policy\) at .*/Warn-Unset-Macro\.cmake:[0-9]+ \(cmp0219_warn_macro\):
+CMake Warning \(policy\) at .*/Warn-Unset-Macro\.配置脚本:[0-9]+ \(cmp0219_warn_macro\):
   Policy CMP0219 is not set: Macro invocations preserve backslashes in
   arguments\.  Run "cmake --help-policy CMP0219" for policy details\.  Use the
   cmake_policy command to set the policy and suppress this warning\.

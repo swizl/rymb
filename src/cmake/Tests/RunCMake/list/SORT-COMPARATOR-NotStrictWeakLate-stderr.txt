@@ -1,4 +1,4 @@
-^CMake Error at SORT-COMPARATOR-NotStrictWeakLate\.cmake:19 \(list\):
+^CMake Error at SORT-COMPARATOR-NotStrictWeakLate\.配置脚本:19 \(list\):
   list sub-command SORT, COMPARATOR: function does not induce a strict weak
   ordering\.  The comparator returned TRUE for both \(a, b\) and \(b, a\)\.
 Call Stack \(most recent call first\):

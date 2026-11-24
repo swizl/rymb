@@ -1,4 +1,4 @@
-CMake Error at BadFileSetTarget\.cmake:[0-9]+ \(get_property\):
+CMake Error at BadFileSetTarget\.配置脚本:[0-9]+ \(get_property\):
   get_property given non-existent TARGET FOO
 Call Stack \(most recent call first\):
   CMakeLists\.txt:[0-9]+ \(include\)

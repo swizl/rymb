@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 4.3)
 project(cxx_modules_export_interface_config CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 add_library(export_interface_config STATIC)
 target_sources(export_interface_config
@@ -22,7 +22,7 @@ install(TARGETS export_interface_config
 install(EXPORT CXXModules
   NAMESPACE CXXModules::
   DESTINATION "lib/cmake/export_interface_config"
-  FILE "export_interface_config-targets.cmake"
+  FILE "export_interface_config-targets.配置脚本"
   CXX_MODULES_DIRECTORY "export_interface_config-cxx-modules"
   )
 install(PACKAGE_INFO "export_interface_config_cps"
@@ -31,11 +31,11 @@ install(PACKAGE_INFO "export_interface_config_cps"
   CXX_MODULES_DIRECTORY "export_interface_config-cxx-modules-cps"
   )
 
-file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_interface_config-config.cmake"
-  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_interface_config-targets.cmake\")\n"
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_interface_config-config.配置脚本"
+  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_interface_config-targets.配置脚本\")\n"
   "set(\${CMAKE_FIND_PACKAGE_NAME}_FOUND 1)\n"
   )
-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/export_interface_config-config.cmake"
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/export_interface_config-config.配置脚本"
   DESTINATION "lib/cmake/export_interface_config"
   )
 

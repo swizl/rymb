@@ -1,0 +1,2 @@
+include(Common.配置脚本)
+test_target_property(LINK_LIBRARIES)

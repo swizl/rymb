@@ -1,4 +1,4 @@
 cmake_minimum_required(VERSION 3.23)
 project(${RunCMake_TEST} CXX)
 
-include(${RunCMake_TEST}.cmake)
+include(${RunCMake_TEST}.配置脚本)

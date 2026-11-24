@@ -1,5 +1,5 @@
-CMake Error at roundtrip\.cmake:[0-9]+ \(file\):
+CMake Error at roundtrip\.配置脚本:[0-9]+ \(file\):
   file archive format rar not supported
 Call Stack \(most recent call first\):
-  unsupported-format\.cmake:5 \(include\)
+  unsupported-format\.配置脚本:5 \(include\)
   CMakeLists\.txt:3 \(include\)

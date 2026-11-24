@@ -4,8 +4,8 @@ CMake Error in cps/componenttest-extra\.cps:
 
     DoesNotExist\.cps
     doesnotexist\.cps
-    DoesNotExistConfig\.cmake
-    doesnotexist-config\.cmake
+    DoesNotExistConfig\.配置脚本
+    doesnotexist-config\.配置脚本
 
   Add the installation prefix of "DoesNotExist" to CMAKE_PREFIX_PATH or set
   "DoesNotExist_DIR" to a directory containing one of the above files\.  If
@@ -14,10 +14,10 @@ CMake Error in cps/componenttest-extra\.cps:
 Call Stack \(most recent call first\):
   cps/[Cc]omponent[Tt]est\.cps
   cps/[Tt]ransitive[Ii]ncomplete\.cps
-  MissingTransitiveComponentDependency\.cmake:[0-9]+ \(find_package\)
+  MissingTransitiveComponentDependency\.配置脚本:[0-9]+ \(find_package\)
   CMakeLists\.txt:[0-9]+ \(include\)
 +
-CMake Error at MissingTransitiveComponentDependency\.cmake:[0-9]+ \(find_package\):
+CMake Error at MissingTransitiveComponentDependency\.配置脚本:[0-9]+ \(find_package\):
   find_package could not find ComponentTest, required by
   TransitiveIncomplete\.
 Call Stack \(most recent call first\):

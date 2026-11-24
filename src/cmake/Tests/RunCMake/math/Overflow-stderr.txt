@@ -1,5 +1,5 @@
 ^CMake Warning \(author\) at [^
-]+/Tests/RunCMake/math/Overflow\.cmake:[0-9]+ \(math\):
+]+/Tests/RunCMake/math/Overflow\.配置脚本:[0-9]+ \(math\):
   left shift of negative value in:
 
     -4 << 1
@@ -7,7 +7,7 @@
 This warning is for project developers\.  Use -Wno-author to suppress it\.
 +
 CMake Warning \(author\) at [^
-]+/Tests/RunCMake/math/Overflow\.cmake:[0-9]+ \(math\):
+]+/Tests/RunCMake/math/Overflow\.配置脚本:[0-9]+ \(math\):
   shift exponent is negative in:
 
     4 << -63
@@ -15,7 +15,7 @@ CMake Warning \(author\) at [^
 This warning is for project developers\.  Use -Wno-author to suppress it\.
 +
 CMake Warning \(author\) at [^
-]+/Tests/RunCMake/math/Overflow\.cmake:[0-9]+ \(math\):
+]+/Tests/RunCMake/math/Overflow\.配置脚本:[0-9]+ \(math\):
   shift exponent is negative in:
 
     4 >> -63
@@ -23,7 +23,7 @@ CMake Warning \(author\) at [^
 This warning is for project developers\.  Use -Wno-author to suppress it\.
 +
 CMake Warning \(author\) at [^
-]+/Tests/RunCMake/math/Overflow\.cmake:[0-9]+ \(math\):
+]+/Tests/RunCMake/math/Overflow\.配置脚本:[0-9]+ \(math\):
   shift exponent is too large in:
 
     4 << 65
@@ -31,7 +31,7 @@ CMake Warning \(author\) at [^
 This warning is for project developers\.  Use -Wno-author to suppress it\.
 +
 CMake Warning \(author\) at [^
-]+/Tests/RunCMake/math/Overflow\.cmake:[0-9]+ \(math\):
+]+/Tests/RunCMake/math/Overflow\.配置脚本:[0-9]+ \(math\):
   shift exponent is too large in:
 
     4 >> 65
@@ -39,7 +39,7 @@ CMake Warning \(author\) at [^
 This warning is for project developers\.  Use -Wno-author to suppress it\.
 +
 CMake Warning \(author\) at [^
-]+/Tests/RunCMake/math/Overflow\.cmake:[0-9]+ \(math\):
+]+/Tests/RunCMake/math/Overflow\.配置脚本:[0-9]+ \(math\):
   signed integer overflow in:
 
     9223372036854775807 \+ 1
@@ -47,7 +47,7 @@ CMake Warning \(author\) at [^
 This warning is for project developers\.  Use -Wno-author to suppress it\.
 +
 CMake Warning \(author\) at [^
-]+/Tests/RunCMake/math/Overflow\.cmake:[0-9]+ \(math\):
+]+/Tests/RunCMake/math/Overflow\.配置脚本:[0-9]+ \(math\):
   signed integer overflow in:
 
     -9223372036854775807 - 2
@@ -55,7 +55,7 @@ CMake Warning \(author\) at [^
 This warning is for project developers\.  Use -Wno-author to suppress it\.
 +
 CMake Warning \(author\) at [^
-]+/Tests/RunCMake/math/Overflow\.cmake:[0-9]+ \(math\):
+]+/Tests/RunCMake/math/Overflow\.配置脚本:[0-9]+ \(math\):
   signed integer overflow in:
 
     9223372036854775807 \* 2
@@ -63,7 +63,7 @@ CMake Warning \(author\) at [^
 This warning is for project developers\.  Use -Wno-author to suppress it\.
 
 CMake Warning \(author\) at [^
-]+/Tests/RunCMake/math/Overflow\.cmake:[0-9]+ \(math\):
+]+/Tests/RunCMake/math/Overflow\.配置脚本:[0-9]+ \(math\):
   signed integer cannot negate:
 
     -9223372036854775808
@@ -71,23 +71,23 @@ CMake Warning \(author\) at [^
 This warning is for project developers\.  Use -Wno-author to suppress it\.
 
 CMake Warning \(author\) at [^
-]+/Tests/RunCMake/math/Overflow\.cmake:[0-9]+ \(math\):
+]+/Tests/RunCMake/math/Overflow\.配置脚本:[0-9]+ \(math\):
   signed integer overflow while incrementing:
 
     9223372036854775807
 
 Call Stack \(most recent call first\):
   [^
-]+/Tests/RunCMake/math/Overflow\.cmake:[0-9]+ \(inc_dec\)
+]+/Tests/RunCMake/math/Overflow\.配置脚本:[0-9]+ \(inc_dec\)
 This warning is for project developers\.  Use -Wno-author to suppress it\.
 
 CMake Warning \(author\) at [^
-]+/Tests/RunCMake/math/Overflow\.cmake:[0-9]+ \(math\):
+]+/Tests/RunCMake/math/Overflow\.配置脚本:[0-9]+ \(math\):
   signed integer overflow while decrementing:
 
     -9223372036854775808
 
 Call Stack \(most recent call first\):
   [^
-]+/Tests/RunCMake/math/Overflow\.cmake:[0-9]+ \(inc_dec\)
+]+/Tests/RunCMake/math/Overflow\.配置脚本:[0-9]+ \(inc_dec\)
 This warning is for project developers\.  Use -Wno-author to suppress it\.$

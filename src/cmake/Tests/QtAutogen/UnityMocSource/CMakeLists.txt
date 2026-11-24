@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(UnityMocSource)
-include("../AutogenGuiTest.cmake")
+include("../AutogenGuiTest.配置脚本")
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_UNITY_BUILD ON)

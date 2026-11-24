@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24...3.28)
 project(cxx_modules_export_usage CXX)
 
-include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.cmake")
+include("${CMAKE_SOURCE_DIR}/../cxx-modules-rules.配置脚本")
 
 add_library(export_usage STATIC)
 target_sources(export_usage
@@ -76,15 +76,15 @@ install(TARGETS export_usage
   FILE_SET modules DESTINATION "lib/cxx/miu")
 export(EXPORT CXXModules
   NAMESPACE CXXModules::
-  FILE "${CMAKE_CURRENT_BINARY_DIR}/export_usage-targets.cmake")
+  FILE "${CMAKE_CURRENT_BINARY_DIR}/export_usage-targets.配置脚本")
 install(TARGETS export_used export_build export_install
   EXPORT CXXModulesDeps)
 export(EXPORT CXXModulesDeps
   NAMESPACE CXXModules::
-  FILE "${CMAKE_CURRENT_BINARY_DIR}/export_usage-dep-targets.cmake")
-file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_usage-config.cmake"
-  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_usage-dep-targets.cmake\")
-include(\"\${CMAKE_CURRENT_LIST_DIR}/export_usage-targets.cmake\")
+  FILE "${CMAKE_CURRENT_BINARY_DIR}/export_usage-dep-targets.配置脚本")
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/export_usage-config.配置脚本"
+  "include(\"\${CMAKE_CURRENT_LIST_DIR}/export_usage-dep-targets.配置脚本\")
+include(\"\${CMAKE_CURRENT_LIST_DIR}/export_usage-targets.配置脚本\")
 set(\${CMAKE_FIND_PACKAGE_NAME}_FOUND 1)
 ")
 

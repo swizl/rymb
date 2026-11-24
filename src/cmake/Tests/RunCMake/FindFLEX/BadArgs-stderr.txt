@@ -1,9 +1,9 @@
 ^CMake Error at [^
-]*/Modules/FindFLEX\.cmake:[0-9]+ \(message\):
+]*/Modules/FindFLEX\.配置脚本:[0-9]+ \(message\):
   Unrecognized arguments: UNKNOWN
 
   Usage:
 .*
 Call Stack \(most recent call first\):
-  BadArgs\.cmake:2 \(flex_target\)
+  BadArgs\.配置脚本:2 \(flex_target\)
   CMakeLists\.txt:3 \(include\)$

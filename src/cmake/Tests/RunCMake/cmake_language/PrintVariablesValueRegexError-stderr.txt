@@ -1,2 +1,2 @@
-CMake Error at PrintVariablesValueRegexError\.cmake:[0-9]+ \(cmake_language\):
+CMake Error at PrintVariablesValueRegexError\.配置脚本:[0-9]+ \(cmake_language\):
   cmake_language VALUE_REGEX regular expression "\[" cannot compile\.

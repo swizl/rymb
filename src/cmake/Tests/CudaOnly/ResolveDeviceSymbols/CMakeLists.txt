@@ -44,7 +44,7 @@ add_custom_command(TARGET CUDAResolveDeviceLib POST_BUILD
   -DDUMP_COMMAND=${dump_command}
   -DDUMP_ARGS=${dump_args}
   -DTEST_LIBRARY_PATH=$<TARGET_FILE:CUDAResolveDeviceLib>
-  -P ${CMAKE_CURRENT_SOURCE_DIR}/verify.cmake
+  -P ${CMAKE_CURRENT_SOURCE_DIR}/verify.配置脚本
   )
 endif()
 

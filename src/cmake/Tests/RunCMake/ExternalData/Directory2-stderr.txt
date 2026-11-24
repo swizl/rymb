@@ -1,4 +1,4 @@
-CMake Error at .*/Modules/ExternalData\.cmake:[0-9]+ \(message\):
+CMake Error at .*/Modules/ExternalData\.配置脚本:[0-9]+ \(message\):
   Data directory referenced by argument
 
     DATA{Directory2/}
@@ -6,5 +6,5 @@ CMake Error at .*/Modules/ExternalData\.cmake:[0-9]+ \(message\):
   must list associated files\.
 Call Stack \(most recent call first\):
   .*
-  Directory2\.cmake:[0-9]+ \(ExternalData_Add_Test\)
+  Directory2\.配置脚本:[0-9]+ \(ExternalData_Add_Test\)
   CMakeLists\.txt:[0-9]+ \(include\)

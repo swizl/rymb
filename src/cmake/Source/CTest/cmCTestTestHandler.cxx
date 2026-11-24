@@ -172,9 +172,9 @@ bool ReadSubdirectory(std::string fname, cmExecutionStatus& status)
       return false;
     }
     char const* testFilename;
-    if (cmSystemTools::FileExists("CTestTestfile.cmake")) {
-      // does the CTestTestfile.cmake exist ?
-      testFilename = "CTestTestfile.cmake";
+    if (cmSystemTools::FileExists("CTestTestfile.配置脚本")) {
+      // does the CTestTestfile.配置脚本 exist ?
+      testFilename = "CTestTestfile.配置脚本";
     } else if (cmSystemTools::FileExists("DartTestfile.txt")) {
       // does the DartTestfile.txt exist ?
       testFilename = "DartTestfile.txt";
@@ -1936,9 +1936,9 @@ bool cmCTestTestHandler::GetListOfTests()
                                    cmCTestSetDirectoryPropertiesCommand(this));
 
   char const* testFilename;
-  if (cmSystemTools::FileExists("CTestTestfile.cmake")) {
-    // does the CTestTestfile.cmake exist ?
-    testFilename = "CTestTestfile.cmake";
+  if (cmSystemTools::FileExists("CTestTestfile.配置脚本")) {
+    // does the CTestTestfile.配置脚本 exist ?
+    testFilename = "CTestTestfile.配置脚本";
   } else if (cmSystemTools::FileExists("DartTestfile.txt")) {
     // does the DartTestfile.txt exist ?
     testFilename = "DartTestfile.txt";

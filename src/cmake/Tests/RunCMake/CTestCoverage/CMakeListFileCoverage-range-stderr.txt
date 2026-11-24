@@ -1,2 +1,2 @@
 Skipping unreadable CMake listfile coverage file: [^
-]*trunc\.cmake-coverage\.info
+]*trunc\.配置脚本-coverage\.info
