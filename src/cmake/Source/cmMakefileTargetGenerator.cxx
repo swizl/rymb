@@ -907,7 +907,7 @@ void cmMakefileTargetGenerator::WriteObjectRuleFiles(
     cmLocalUnixMakefileGenerator3::EchoProgress progress;
     this->MakeEchoProgress(progress);
     std::string buildEcho =
-      cmStrCat("Building "_s, lang, " object "_s, relativeObj);
+      cmStrCat("编译 "_s, lang, " 对象 "_s, relativeObj);
     this->LocalGenerator->AppendEcho(commands, buildEcho,
                                      cmLocalUnixMakefileGenerator3::EchoBuild,
                                      &progress);

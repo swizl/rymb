@@ -593,22 +593,22 @@ void cmMakefileLibraryTargetGenerator::WriteLibraryRules(
     cmLocalUnixMakefileGenerator3::EchoProgress progress;
     this->MakeEchoProgress(progress);
     // Add the link message.
-    std::string buildEcho = cmStrCat("Linking "_s, linkLanguage);
+    std::string buildEcho = cmStrCat("链接 "_s, linkLanguage);
     switch (this->GeneratorTarget->GetType()) {
       case cm::TargetType::STATIC_LIBRARY:
-        buildEcho += " static library ";
+        buildEcho += " 静态库 ";
         break;
       case cm::TargetType::SHARED_LIBRARY:
-        buildEcho += " shared library ";
+        buildEcho += " 动态库 ";
         break;
       case cm::TargetType::MODULE_LIBRARY:
         if (this->GeneratorTarget->IsCFBundleOnApple()) {
           buildEcho += " CFBundle";
         }
-        buildEcho += " shared module ";
+        buildEcho += " 共享模块 ";
         break;
       default:
-        buildEcho += " library ";
+        buildEcho += " 库 ";
         break;
     }
     buildEcho += targetOutPath;

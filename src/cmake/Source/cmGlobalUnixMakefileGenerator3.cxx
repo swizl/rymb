@@ -753,7 +753,7 @@ void cmGlobalUnixMakefileGenerator3::WriteConvenienceRules2(
       }
 
       if (targetMessages) {
-        lg.AppendEcho(commands, "Built target " + name,
+        lg.AppendEcho(commands, "已构建目标 " + name,
                       cmLocalUnixMakefileGenerator3::EchoNormal, &progress);
       }
 

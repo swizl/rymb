@@ -1562,7 +1562,7 @@ bool cmLocalUnixMakefileGenerator3::UpdateDependencies(
       // The dependencies must be regenerated.
       if (verbose) {
         std::string message =
-          cmStrCat("Scanning dependencies of target "_s, targetName);
+          cmStrCat("扫描目标 "_s, targetName, " 的依赖"_s);
         echoColor(message);
       }
 
@@ -1595,8 +1595,8 @@ bool cmLocalUnixMakefileGenerator3::UpdateDependencies(
       // regenerate dependencies files
       if (verbose) {
         auto message =
-          cmStrCat("Consolidate compiler generated dependencies of target "_s,
-                   targetName);
+          cmStrCat("合并目标 "_s, targetName,
+                   " 的编译器生成依赖"_s);
         echoColor(message);
       }
 

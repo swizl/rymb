@@ -891,7 +891,7 @@ void cmNinjaTargetGenerator::WriteCompileRule(std::string const& lang,
           cmStrCat("Scanning $in for "_s, lang, " dependencies"_s);
       } else {
         scanRule.Description =
-          cmStrCat("Building "_s, lang, " preprocessed $out"_s);
+          cmStrCat("预处理 "_s, lang, " $out"_s);
       }
 
       this->GetGlobalGenerator()->AddRule(scanRule);
@@ -920,7 +920,7 @@ void cmNinjaTargetGenerator::WriteCompileRule(std::string const& lang,
         cmStrCat("Rule for generating "_s, lang,
                  " dependencies on non-preprocessed files."_s);
       scanRule.Description =
-        cmStrCat("Generating "_s, lang, " dependencies for $in"_s);
+        cmStrCat("生成 "_s, lang, " 依赖 $in"_s);
 
       this->GetGlobalGenerator()->AddRule(scanRule);
     }
@@ -957,7 +957,7 @@ void cmNinjaTargetGenerator::WriteCompileRule(std::string const& lang,
     }
     rule.Comment =
       cmStrCat("Rule to generate ninja dyndep files for "_s, lang, '.');
-    rule.Description = cmStrCat("Generating "_s, lang, " dyndep file $out"_s);
+    rule.Description = cmStrCat("生成 "_s, lang, " dyndep 文件 $out"_s);
     this->GetGlobalGenerator()->AddRule(rule);
   }
 
@@ -1064,7 +1064,7 @@ void cmNinjaTargetGenerator::WriteCompileRule(std::string const& lang,
 
   // Write the rule for compiling file of the given language.
   rule.Comment = cmStrCat("Rule for compiling "_s, lang, " files."_s);
-  rule.Description = cmStrCat("Building "_s, lang, " object $out"_s);
+  rule.Description = cmStrCat("编译 "_s, lang, " 对象 $out"_s);
   this->GetGlobalGenerator()->AddRule(rule);
 }
 

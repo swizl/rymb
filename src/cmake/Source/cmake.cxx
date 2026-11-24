@@ -2891,13 +2891,13 @@ int cmake::ActualConfigure()
   if (this->State->GetRole() == cmState::Role::Project) {
     std::string msg;
     if (cmSystemTools::GetErrorOccurredFlag()) {
-      msg = "Configuring incomplete, errors occurred!";
+      msg = "配置未完成，发生错误！";
     } else {
       auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(
         endTime - startTime);
       msg.resize(128);
       // NOLINTNEXTLINE(readability-container-data-pointer)
-      msg.resize(snprintf(&msg[0], msg.size(), "Configuring done (%.1fs)",
+      msg.resize(snprintf(&msg[0], msg.size(), "配置完成 (%.1fs)",
                           static_cast<double>(ms.count()) * 1e-3));
     }
     this->UpdateProgress(msg, -1);
@@ -3352,7 +3352,7 @@ int cmake::Run(std::vector<std::string> const& args, bool noconfigure)
                            "Build files cannot be regenerated correctly.");
     return ret;
   }
-  std::string message = cmStrCat("Build files have been written to: "_s,
+  std::string message = cmStrCat("构建文件已写入: "_s,
                                  this->GetHomeOutputDirectory());
   this->UpdateProgress(message, -1);
   return ret;
@@ -3403,7 +3403,7 @@ int cmake::Generate()
     std::string msg;
     msg.resize(128);
     // NOLINTNEXTLINE(readability-container-data-pointer)
-    msg.resize(snprintf(&msg[0], msg.size(), "Generating done (%.1fs)",
+    msg.resize(snprintf(&msg[0], msg.size(), "生成完成 (%.1fs)",
                         static_cast<double>(ms.count()) * 1e-3));
     this->UpdateProgress(msg, -1);
   }
@@ -4289,7 +4289,7 @@ int cmake::Build(cmBuildArgs buildArgs, std::vector<std::string> targets,
                              "Build files cannot be regenerated correctly.");
       return ret;
     }
-    std::string message = cmStrCat("Build files have been written to: "_s,
+    std::string message = cmStrCat("构建文件已写入: "_s,
                                    this->GetHomeOutputDirectory());
     this->UpdateProgress(message, -1);
   }

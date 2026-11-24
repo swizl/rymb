@@ -4516,7 +4516,7 @@ std::string cmLocalGenerator::ConstructComment(
   // Construct a reasonable default comment if possible.
   if (!ccg.GetOutputs().empty()) {
     std::string comment;
-    comment = "Generating ";
+    comment = "生成 ";
     char const* sep = "";
     for (std::string const& o : ccg.GetOutputs()) {
       comment += sep;

@@ -373,7 +373,7 @@ void cmMakefileExecutableTargetGenerator::WriteExecutableRule(bool relink)
     this->MakeEchoProgress(progress);
     // Add the link message.
     std::string buildEcho =
-      cmStrCat("Linking "_s, linkLanguage, " executable "_s, targetOutPath);
+      cmStrCat("链接 "_s, linkLanguage, " 可执行文件 "_s, targetOutPath);
     this->LocalGenerator->AppendEcho(
       commands, buildEcho, cmLocalUnixMakefileGenerator3::EchoLink, &progress);
   }

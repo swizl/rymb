@@ -187,16 +187,16 @@ char const* cmNinjaNormalTargetGenerator::GetVisibleTypeName() const
 {
   switch (this->GetGeneratorTarget()->GetType()) {
     case cm::TargetType::STATIC_LIBRARY:
-      return "static library";
+      return "静态库";
     case cm::TargetType::SHARED_LIBRARY:
-      return "shared library";
+      return "动态库";
     case cm::TargetType::MODULE_LIBRARY:
       if (this->GetGeneratorTarget()->IsCFBundleOnApple()) {
-        return "CFBundle shared module";
+        return "CFBundle 共享模块";
       }
-      return "shared module";
+      return "共享模块";
     case cm::TargetType::EXECUTABLE:
-      return "executable";
+      return "可执行文件";
     default:
       return nullptr;
   }
@@ -378,7 +378,7 @@ void cmNinjaNormalTargetGenerator::WriteDriverDeviceLinkRule(
       cmStrCat("Rule for linking "_s, this->TargetLinkLanguage(config), ' ',
                this->GetVisibleTypeName(), '.');
     rule.Description =
-      cmStrCat("Linking "_s, this->TargetLinkLanguage(config), ' ',
+      cmStrCat("链接 "_s, this->TargetLinkLanguage(config), ' ',
                this->GetVisibleTypeName(), " $TARGET_FILE"_s);
     rule.Restat = "$RESTAT";
 
@@ -397,7 +397,7 @@ void cmNinjaNormalTargetGenerator::WriteDeviceLinkRules(
                " -arch=$ARCH $REGISTER -o=$out $in"_s) },
     config, config);
   rule.Comment = "Rule for CUDA device linking.";
-  rule.Description = "Linking CUDA $out";
+  rule.Description = "链接 CUDA $out";
   this->GetGlobalGenerator()->AddRule(rule);
 
   cmRulePlaceholderExpander::RuleVariables vars;
@@ -642,7 +642,7 @@ void cmNinjaNormalTargetGenerator::WriteLinkRule(
       postsep = "; ";
     }
     rule.Description = cmStrCat(
-      prelink, presep, "Linking "_s, this->TargetLinkLanguage(config), ' ',
+      prelink, presep, "链接 "_s, this->TargetLinkLanguage(config), ' ',
       this->GetVisibleTypeName(), " $TARGET_FILE"_s, postsep, postbuild);
     rule.Restat = "$RESTAT";
     this->GetGlobalGenerator()->AddRule(rule);
@@ -663,7 +663,7 @@ void cmNinjaNormalTargetGenerator::WriteLinkRule(
         rule.Command =
           this->GetLocalGenerator()->BuildCommandLine(cmd, config, config);
       }
-      rule.Description = "Creating executable symlink $out";
+      rule.Description = "创建可执行文件符号链接 $out";
       rule.Comment = "Rule for creating executable symlink.";
       this->GetGlobalGenerator()->AddRule(rule);
     } else {
@@ -676,7 +676,7 @@ void cmNinjaNormalTargetGenerator::WriteLinkRule(
         rule.Command =
           this->GetLocalGenerator()->BuildCommandLine(cmd, config, config);
       }
-      rule.Description = "Creating library symlink $out";
+      rule.Description = "创建库符号链接 $out";
       rule.Comment = "Rule for creating library symlink.";
       this->GetGlobalGenerator()->AddRule(rule);
     }
@@ -687,7 +687,7 @@ void cmNinjaNormalTargetGenerator::WriteLinkRule(
     cmNinjaRule rule(this->TextStubsGeneratorRule(config));
     rule.Comment = cmStrCat("Rule for generating text-based stubs for "_s,
                             this->GetVisibleTypeName(), '.');
-    rule.Description = "Creating text-based stubs $out";
+    rule.Description = "创建文本存根 $out";
 
     std::string cmd =
       this->GetMakefile()->GetDefinition("CMAKE_CREATE_TEXT_STUBS");
