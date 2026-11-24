@@ -15,7 +15,7 @@ Configure a project for testing with CTest or old Dart Tcl Client
 This file is the backwards-compatibility version of the CTest module.
 It supports using the old Dart 1 Tcl client for driving dashboard
 submissions as well as testing with CTest.  This module should be
-included in the CMakeLists.txt file at the top of a project.  Typical
+included in the 构建清单.txt file at the top of a project.  Typical
 usage:
 
 .. code-block:: cmake

@@ -136,7 +136,7 @@ When find module provides components with multiple build configurations:
 A project can then use this find module as follows:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   find_package(Foo)
   target_link_libraries(project_target PRIVATE ${Foo_LIBRARIES})

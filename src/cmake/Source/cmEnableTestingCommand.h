@@ -13,8 +13,8 @@ class cmExecutionStatus;
  * \brief Enable testing for this directory and below.
  *
  * Produce the output testfile. This produces a file in the build directory
- * called CMakeTestfile with a syntax similar to CMakeLists.txt.  It contains
- * the subdirs() and add_test() commands from the source CMakeLists.txt
+ * called CMakeTestfile with a syntax similar to 构建清单.txt.  It contains
+ * the subdirs() and add_test() commands from the source 构建清单.txt
  * file with CMake variables expanded.  Only the subdirs and tests
  * within the valid control structures are replicated in Testfile
  * (i.e. subdirs() and add_test() commands within IF() commands that are

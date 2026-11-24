@@ -3,7 +3,7 @@
 # To use it either a toolchain file is required or cmake has to be run like this:
 # cmake -DCMAKE_C_COMPILER=sdcc -DCMAKE_SYSTEM_NAME=Generic <dir...>
 # Since sdcc doesn't support C++, C++ support should be disabled in the
-# CMakeLists.txt using the project() command:
+# 构建清单.txt using the project() command:
 # project(my_project C)
 
 set(CMAKE_STATIC_LIBRARY_PREFIX "")

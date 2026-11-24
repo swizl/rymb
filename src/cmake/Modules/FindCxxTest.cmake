@@ -132,7 +132,7 @@ module.  If CxxTest is found:
   CTest.
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   find_package(CxxTest)
 

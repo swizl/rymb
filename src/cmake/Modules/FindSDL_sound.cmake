@@ -226,7 +226,7 @@ if(SDL_FOUND AND SDL_SOUND_INCLUDE_DIR AND SDL_SOUND_LIBRARY)
   # I could go back and modify the FindSDL.cmake module, but that's kind of painful.
   # The solution would be to try something like:
   # string(APPEND SDL_TRY_COMPILE_LIBRARY_LIST "\;${CMAKE_THREAD_LIBS_INIT}")
-  # Instead, it was suggested on the mailing list to write a temporary CMakeLists.txt
+  # Instead, it was suggested on the mailing list to write a temporary 构建清单.txt
   # with a temporary test project and invoke that with TRY_COMPILE.
   # See message thread "Figuring out dependencies for a library in order to build"
   # 2005-07-16
@@ -279,12 +279,12 @@ if(SDL_FOUND AND SDL_SOUND_INCLUDE_DIR AND SDL_SOUND_LIBRARY)
   endforeach()
 
 
-  # Write the CMakeLists.txt and test project
+  # Write the 构建清单.txt and test project
   # Weird, this is still sketchy. If I don't quote the variables
   # in the TARGET_LINK_LIBRARIES, I seem to loose everything
   # in the SDL_LIBRARY string after the "-framework".
   # But if I quote the stuff in INCLUDE_DIRECTORIES, it doesn't work.
-  file(WRITE ${PROJECT_BINARY_DIR}/CMakeTmp/CMakeLists.txt
+  file(WRITE ${PROJECT_BINARY_DIR}/CMakeTmp/构建清单.txt
     "cmake_minimum_required(VERSION ${CMAKE_VERSION})
      project(DetermineSoundLibs)
      include_directories(${SDL_INCLUDE_DIR} ${SDL_SOUND_INCLUDE_DIR})

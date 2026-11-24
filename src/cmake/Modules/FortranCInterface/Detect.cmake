@@ -13,7 +13,7 @@ if(NOT EXISTS ${FortranCInterface_BINARY_DIR}/Output.cmake
     OR NOT ${FortranCInterface_BINARY_DIR}/Output.cmake
       IS_NEWER_THAN ${FortranCInterface_SOURCE_DIR}/Output.cmake.in
     OR NOT ${FortranCInterface_BINARY_DIR}/Output.cmake
-      IS_NEWER_THAN ${FortranCInterface_SOURCE_DIR}/CMakeLists.txt
+      IS_NEWER_THAN ${FortranCInterface_SOURCE_DIR}/构建清单.txt
     OR NOT ${FortranCInterface_BINARY_DIR}/Output.cmake
       IS_NEWER_THAN ${CMAKE_CURRENT_LIST_FILE}
     )

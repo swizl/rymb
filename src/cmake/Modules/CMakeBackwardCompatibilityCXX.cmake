@@ -40,7 +40,7 @@ Including this module provides backward compatibility cache variables, which
 can be used in C++.  For example:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   include(CMakeBackwardCompatibilityCXX)
   file(

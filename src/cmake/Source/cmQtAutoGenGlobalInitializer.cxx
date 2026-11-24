@@ -150,7 +150,7 @@ cmQtAutoGenGlobalInitializer::cmQtAutoGenGlobalInitializer(
             target->GetName(), ".  "_s,
             cmQtAutoGen::Tools(mocDisabled, uicDisabled, rccDisabled),
             " disabled.  Consider adding:\n  find_package(Qt"_s, version,
-            " COMPONENTS "_s, component, ")\nto your CMakeLists.txt file."_s);
+            " COMPONENTS "_s, component, ")\nto your 构建清单.txt file."_s);
           target->Makefile->IssueDiagnostic(cmDiagnostics::CMD_AUTHOR, msg);
         }
         if (mocIsValid || uicIsValid || rccIsValid) {

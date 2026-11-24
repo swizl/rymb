@@ -91,7 +91,7 @@ available in the C library, but its declaration is not provided in the
 ``unistd.h`` system header.
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   include(CheckFunctionExists)
   include(CheckSymbolExists)

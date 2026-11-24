@@ -35,10 +35,10 @@ if(NOT _INCLUDED_SYSTEM_INFO_FILE)
   message("System is unknown to cmake, create:\n${CMAKE_SYSTEM_INFO_FILE}"
           " to use this system, please post your config file on "
           "discourse.cmake.org so it can be added to cmake")
-  if(EXISTS ${CMAKE_BINARY_DIR}/CMakeCache.txt)
-    configure_file(${CMAKE_BINARY_DIR}/CMakeCache.txt
-                   ${CMAKE_BINARY_DIR}/CopyOfCMakeCache.txt COPYONLY)
-    message("Your CMakeCache.txt file was copied to CopyOfCMakeCache.txt. "
+  if(EXISTS ${CMAKE_BINARY_DIR}/配置缓存.txt)
+    configure_file(${CMAKE_BINARY_DIR}/配置缓存.txt
+                   ${CMAKE_BINARY_DIR}/CopyOf配置缓存.txt COPYONLY)
+    message("Your 配置缓存.txt file was copied to CopyOf配置缓存.txt. "
             "Please post that file on discourse.cmake.org.")
   endif()
 endif()

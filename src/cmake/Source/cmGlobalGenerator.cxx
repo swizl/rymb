@@ -717,7 +717,7 @@ void cmGlobalGenerator::EnableLanguage(
   if (!this->CMakeInstance->GetIsInTryCompile()) {
     // Keep a mark in the cache to indicate that we've initialized the
     // platform information directory.  If the platform information
-    // directory exists but the mark is missing then CMakeCache.txt
+    // directory exists but the mark is missing then 配置缓存.txt
     // has been removed or replaced without also removing the CMakeFiles/
     // directory.  In this case remove the platform information directory
     // so that it will be re-initialized and the relevant information
@@ -938,7 +938,7 @@ void cmGlobalGenerator::EnableLanguage(
       if (this->CMakeInstance->GetIsInTryCompile()) {
         cmSystemTools::Error("This should not have happened. "
                              "If you see this message, you are probably "
-                             "using a broken CMakeLists.txt file or a "
+                             "using a broken 构建清单.txt file or a "
                              "problematic release of CMake");
       }
       // if the CMake(LANG)Compiler.cmake file was not found then
@@ -3850,7 +3850,7 @@ void cmGlobalGenerator::AddGlobalTarget_Test(
 
 void cmGlobalGenerator::ReserveGlobalTargetCodegen()
 {
-  // Read the policy value at the end of the top-level CMakeLists.txt file
+  // Read the policy value at the end of the top-level 构建清单.txt file
   // since it's a global policy that affects the whole project.
   auto& mf = this->Makefiles[0];
   auto const policyStatus = mf->GetPolicyStatus(cmPolicies::CMP0171);
@@ -4074,7 +4074,7 @@ void cmGlobalGenerator::AddGlobalTarget_Install(
       singleLine.push_back(cfgArg);
     }
     singleLine.emplace_back("-P");
-    singleLine.emplace_back("cmake_install.cmake");
+    singleLine.emplace_back("安装规则.cmake");
     gti.CommandLines.emplace_back(singleLine);
     targets.emplace_back(gti);
 

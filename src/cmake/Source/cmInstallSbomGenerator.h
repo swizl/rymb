@@ -23,7 +23,7 @@ class cmSbomArguments;
  * \brief Generate installation rules for SBOM files.
  *
  * At generate time it builds each configuration's SBOM in a temporary file;
- * the cmake_install.cmake script then copies that file to the install
+ * the 安装规则.cmake script then copies that file to the install
  * destination.
  */
 class cmInstallSbomGenerator : public cmInstallGenerator

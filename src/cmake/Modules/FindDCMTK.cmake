@@ -281,7 +281,7 @@ endif()
 # SPECIFIC CASE FOR DCMTK BUILD DIR as DCMTK_DIR
 # (as opposed to a DCMTK install dir)
 # Have to find the source directory.
-if(EXISTS ${DCMTK_DIR}/CMakeCache.txt)
+if(EXISTS ${DCMTK_DIR}/配置缓存.txt)
           load_cache(${DCMTK_DIR} READ_WITH_PREFIX "EXT"
           DCMTK_SOURCE_DIR)
   if(NOT EXISTS ${EXTDCMTK_SOURCE_DIR})

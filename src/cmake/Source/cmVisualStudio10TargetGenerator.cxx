@@ -1759,13 +1759,13 @@ void cmVisualStudio10TargetGenerator::WriteCustomCommands(Elem& e0)
   for (cmGeneratorTarget::AllConfigSource const& si :
        this->GeneratorTarget->GetAllConfigSources()) {
     if (si.Source == srcCMakeLists) {
-      // Skip explicit reference to CMakeLists.txt source.
+      // Skip explicit reference to 构建清单.txt source.
       continue;
     }
     this->WriteCustomCommand(e0, si.Source);
   }
 
-  // Add CMakeLists.txt file with rule to re-run CMake for user convenience.
+  // Add 构建清单.txt file with rule to re-run CMake for user convenience.
   if (this->GeneratorTarget->GetType() != cm::TargetType::GLOBAL_TARGET &&
       this->GeneratorTarget->GetName() != CMAKE_CHECK_BUILD_SYSTEM_TARGET) {
     if (srcCMakeLists) {
@@ -2541,7 +2541,7 @@ void cmVisualStudio10TargetGenerator::WriteSource(Elem& e2,
     // First we check if the file is in a source group, then we check if the
     // file path is relative to current source- or binary-dir, otherwise it is
     // added with the plain filename without any path. This means the file will
-    // show up at root-level of the csproj (where CMakeLists.txt etc. are).
+    // show up at root-level of the csproj (where 构建清单.txt etc. are).
     std::string link = this->GetCSharpSourceLink(sf);
     if (link.empty()) {
       link = cmsys::SystemTools::GetFilenameName(sf->GetFullPath());
@@ -2611,7 +2611,7 @@ void cmVisualStudio10TargetGenerator::WriteAllSources(Elem& e0)
 
   for (cmGeneratorTarget::AllConfigSource const& si : sources) {
     if (si.Source == srcCMakeLists) {
-      // Skip explicit reference to CMakeLists.txt source.
+      // Skip explicit reference to 构建清单.txt source.
       continue;
     }
 

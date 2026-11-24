@@ -394,8 +394,8 @@ void TopLevelCMakeVarCondSet(cmMakefile& mf, std::string const& name,
 {
   // Set the CMAKE_PROJECT_XXX variable to be the highest-level
   // project name in the tree. If there are two project commands
-  // in the same CMakeLists.txt file, and it is the top level
-  // CMakeLists.txt file, then go with the last one.
+  // in the same 构建清单.txt file, and it is the top level
+  // 构建清单.txt file, then go with the last one.
   if (!mf.GetDefinition(name) || mf.IsRootMakefile()) {
     mf.RemoveDefinition(name);
     mf.AddCacheDefinition(name, value, "Value Computed by CMake",

@@ -1,7 +1,7 @@
 #-----------------------------------------------------------------------
 # Build the utilities used by CMake
 #
-# Originally it was a macro in the root `CMakeLists.txt` with the comment
+# Originally it was a macro in the root `构建清单.txt` with the comment
 # "Simply to improve readability...".
 # However, as part of the modernization refactoring it was moved into a
 # separate file cuz adding library aliases wasn't possible inside the

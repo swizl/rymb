@@ -206,7 +206,7 @@ cmSpdxCreationInfo cmSbomBuilder::GenerateCreationInfo() const
   ci.SpdxId = "_:Build#CreationInfo";
   ci.Created = cmSystemTools::GetCurrentDateTime("%FT%TZ");
   ci.CreatedBy = { "https://gitlab.kitware.com/cmake/cmake" };
-  ci.Comment = "This SBOM was generated from the CMakeLists.txt File";
+  ci.Comment = "This SBOM was generated from the 构建清单.txt File";
   ci.SpecVersion = "3.0.1";
   return ci;
 }

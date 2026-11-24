@@ -326,7 +326,7 @@ void cmGlobalUnixMakefileGenerator3::WriteMainCMakefile()
     cmakefileStream
       << "# The top level Makefile was generated from the following files:\n"
       << "set(CMAKE_MAKEFILE_DEPENDS\n"
-      << "  \"CMakeCache.txt\"\n";
+      << "  \"配置缓存.txt\"\n";
     for (std::string const& f : lfiles) {
       cmakefileStream << "  \"" << lg.MaybeRelativeToCurBinDir(f) << "\"\n";
     }

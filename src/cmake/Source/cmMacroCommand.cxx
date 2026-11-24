@@ -35,7 +35,7 @@ class cmMacroHelperCommand
 public:
   /**
    * This is called when the command is first encountered in
-   * the CMakeLists.txt file.
+   * the 构建清单.txt file.
    */
   bool operator()(std::vector<cmListFileArgument> const& args,
                   cmExecutionStatus& inStatus) const;

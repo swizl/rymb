@@ -256,7 +256,7 @@ struct Tool {
     /// the current working directory (as early as possible).
     RUN_AFTER_FLAGS,
 
-    /// Run after loading build.ninja.
+    /// Run after loading 构建.ninja.
     RUN_AFTER_LOAD,
 
     /// Run after loading the build/deps logs.
@@ -282,7 +282,7 @@ void Usage(const BuildConfig& config) {
 "                 (e.g. --status '[$finished/$total] ')\n"
 "\n"
 "  -C DIR   change to DIR before doing anything else\n"
-"  -f FILE  specify input build file [default=build.ninja]\n"
+"  -f FILE  specify input build file [default=构建.ninja]\n"
 "\n"
 "  -j N     run N jobs in parallel (0 means infinity) [default=%d on this system]\n"
 "  -k N     keep going until N jobs fail (0 means infinity) [default=1]\n"
@@ -1955,7 +1955,7 @@ NORETURN void real_main(int argc, char** argv) {
   // expensive cleanup when destructing NinjaMain.
   BuildConfig config;
   Options options = {};
-  options.input_file = "build.ninja";
+  options.input_file = "构建.ninja";
 
   setvbuf(stdout, NULL, _IOLBF, BUFSIZ);
   options.ninja_command = argv[0];

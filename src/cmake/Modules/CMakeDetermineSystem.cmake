@@ -142,7 +142,7 @@ endif()
 
 # if a toolchain file is used, the user wants to cross compile.
 # in this case read the toolchain file and keep the CMAKE_HOST_SYSTEM_*
-# variables around so they can be used in CMakeLists.txt.
+# variables around so they can be used in 构建清单.txt.
 # In all other cases, the host and target platform are the same.
 if(CMAKE_TOOLCHAIN_FILE)
   # Retain input value to detect changes requiring re-configuration.

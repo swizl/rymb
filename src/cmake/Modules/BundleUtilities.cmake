@@ -17,7 +17,7 @@ Load this module in a CMake installation with:
 
 .. note::
 
-  Do not use this module at configure time (from ``CMakeLists.txt``).
+  Do not use this module at configure time (from ``构建清单.txt``).
   Instead, include it and invoke its commands from an :command:`install(CODE)`
   or :command:`install(SCRIPT)`.
 
@@ -491,7 +491,7 @@ Using this module inside the installation code that is executed at the
 installation phase:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   # ...
 

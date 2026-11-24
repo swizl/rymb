@@ -28,9 +28,9 @@ class cmake;
 
 /**
  * \class cmLocalNinjaGenerator
- * \brief Write a local build.ninja file.
+ * \brief Write a local 构建.ninja file.
  *
- * cmLocalNinjaGenerator produces a local build.ninja file from its
+ * cmLocalNinjaGenerator produces a local 构建.ninja file from its
  * member Makefile.
  */
 class cmLocalNinjaGenerator : public cmLocalCommonGenerator

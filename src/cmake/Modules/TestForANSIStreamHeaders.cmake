@@ -37,7 +37,7 @@ Including this module will check how the C++ standard headers can be included
 and define the ``CMAKE_NO_ANSI_STREAM_HEADERS`` cache variable:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   include(TestForANSIStreamHeaders)
   file(

@@ -118,7 +118,7 @@ macro(check_language lang)
       string(APPEND _output_variables "set(CMAKE_${lang}_PLATFORM \\\"\${CMAKE_${lang}_PLATFORM}\\\")\n")
     endif()
 
-    file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles/Check${lang}/CMakeLists.txt"
+    file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles/Check${lang}/构建清单.txt"
       "cmake_minimum_required(VERSION ${CMAKE_VERSION})
 ${_input_variables}
 project(Check${lang} LANGUAGES ${lang})

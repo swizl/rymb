@@ -402,7 +402,7 @@ Example using both the :command:`configure_package_config_file` and
 :command:`write_basic_package_version_file()` commands:
 
 .. code-block:: cmake
-   :caption: ``CMakeLists.txt``
+   :caption: ``构建清单.txt``
 
    include(GNUInstallDirs)
    set(INCLUDE_INSTALL_DIR ${CMAKE_INSTALL_INCLUDEDIR}/Foo

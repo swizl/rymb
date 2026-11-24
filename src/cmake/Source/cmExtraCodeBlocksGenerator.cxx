@@ -452,7 +452,7 @@ void cmExtraCodeBlocksGenerator::CreateNewProjectFile(
     xml.EndElement();
   }
 
-  // Add CMakeLists.txt
+  // Add 构建清单.txt
   tree.BuildUnit(xml, mf->GetHomeDirectory() + '/');
 
   xml.EndElement(); // Project

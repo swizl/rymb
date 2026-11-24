@@ -340,9 +340,9 @@ Commands
       updated to support this functionality.
       See `Integrating With find_package()`_ for examples.
 
-  * If the top directory of the populated content contains a ``CMakeLists.txt``
+  * If the top directory of the populated content contains a ``构建清单.txt``
     file, call :command:`add_subdirectory` to add it to the main build.
-    It is not an error for there to be no ``CMakeLists.txt`` file, which
+    It is not an error for there to be no ``构建清单.txt`` file, which
     allows the command to be used for dependencies that make downloaded
     content available at a known location, but which do not need or support
     being added directly to the build.
@@ -353,9 +353,9 @@ Commands
       ``SOURCE_SUBDIR`` is used by the :command:`ExternalProject_Add`
       command).  The path provided with ``SOURCE_SUBDIR`` must be relative,
       and it will be treated as relative to the top directory.  It can also
-      point to a directory that does not contain a ``CMakeLists.txt`` file,
+      point to a directory that does not contain a ``构建清单.txt`` file,
       or even to a directory that doesn't exist.  This can be used to avoid
-      adding a project that contains a ``CMakeLists.txt`` file in its top
+      adding a project that contains a ``构建清单.txt`` file in its top
       directory.
 
     .. versionadded:: 3.25
@@ -960,10 +960,10 @@ a typical ``find_package(GTest)`` call.
   ]=])
   endif()
 
-Overriding Where To Find CMakeLists.txt
+Overriding Where To Find 构建清单.txt
 """""""""""""""""""""""""""""""""""""""
 
-If the sub-project's ``CMakeLists.txt`` file is not at the top level of its
+If the sub-project's ``构建清单.txt`` file is not at the top level of its
 source tree, the ``SOURCE_SUBDIR`` option can be used to tell ``FetchContent``
 where to find it.  The following example shows how to use that option, and
 it also sets a variable which is meaningful to the subproject before pulling
@@ -991,7 +991,7 @@ it depends directly on projects ``projB`` and ``projC``.  Both ``projB`` and
 ``projC`` can be built standalone and they also both depend on another project
 ``projD``.  ``projB`` additionally depends on ``projE``.  This example assumes
 that all five projects are available on a company git server.  The
-``CMakeLists.txt`` of each project might have sections like the following:
+``构建清单.txt`` of each project might have sections like the following:
 
 .. code-block:: cmake
   :caption: *projA*
@@ -1106,7 +1106,7 @@ so:
 
   cmake -DCMAKE_TOOLCHAIN_FILE=_deps/mycom_toolchains-src/toolchain_arm.cmake /path/to/src
 
-When CMake processes the ``CMakeLists.txt`` file, it will download and unpack
+When CMake processes the ``构建清单.txt`` file, it will download and unpack
 the tarball into ``_deps/mycompany_toolchains-src`` relative to the build
 directory.  The :variable:`CMAKE_TOOLCHAIN_FILE` variable is not used until
 the :command:`project` command is reached, at which point CMake looks for the
@@ -1776,7 +1776,7 @@ function(__FetchContent_populateSubbuild)
 
   # The unparsed arguments may contain spaces, so build up ARG_EXTRA
   # in such a way that it correctly substitutes into the generated
-  # CMakeLists.txt file with each argument quoted.
+  # 构建清单.txt file with each argument quoted.
   unset(ARG_EXTRA)
   foreach(arg IN LISTS ARG_UNPARSED_ARGUMENTS)
     set(ARG_EXTRA "${ARG_EXTRA} \"${arg}\"")
@@ -1876,7 +1876,7 @@ ExternalProject_Add_Step(${contentName}-populate copyfile
   )
   foreach(var IN LISTS __passthrough_vars)
     if(DEFINED ${var})
-      # Embed directly in the generated CMakeLists.txt file to avoid making
+      # Embed directly in the generated 构建清单.txt file to avoid making
       # the cmake command line excessively long. It also makes debugging and
       # testing easier.
       string(APPEND __FETCHCONTENT_CACHED_INFO "set(${var} [==[${${var}}]==])\n")
@@ -1905,7 +1905,7 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
   # has this set to something not findable on the PATH. We also ensured above
   # that the Debug config will be defined for multi-config generators.
   configure_file("${CMAKE_CURRENT_FUNCTION_LIST_DIR}/FetchContent/CMakeLists.cmake.in"
-                 "${ARG_SUBBUILD_DIR}/CMakeLists.txt"
+                 "${ARG_SUBBUILD_DIR}/构建清单.txt"
                  @ONLY
   )
   execute_process(
@@ -2421,7 +2421,7 @@ macro(FetchContent_MakeAvailable)
         string(APPEND __cmake_srcdir "/${__cmake_arg_SOURCE_SUBDIR}")
       endif()
 
-      if(EXISTS ${__cmake_srcdir}/CMakeLists.txt)
+      if(EXISTS ${__cmake_srcdir}/构建清单.txt)
         if(DEFINED CMAKE_EXPORT_FIND_PACKAGE_NAME)
           list(APPEND __cmake_fcCurrentVarsStack "${CMAKE_EXPORT_FIND_PACKAGE_NAME}")
         else()

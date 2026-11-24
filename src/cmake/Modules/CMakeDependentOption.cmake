@@ -94,7 +94,7 @@ Example: Basic Usage
 Using this module in a project to conditionally set an option:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   include(CMakeDependentOption)
 
@@ -107,7 +107,7 @@ Extending the previous example, this demonstrates how the module allows
 user-configurable options based on a condition during the configuration phase:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   include(CMakeDependentOption)
 
@@ -162,7 +162,7 @@ runs, the previous value of ``USE_FOO`` is preserved so that when it becomes
 available again, it retains its last set value.
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   include(CMakeDependentOption)
 
@@ -179,7 +179,7 @@ in the GUI.  The value of ``USE_FOO`` is preserved across configuration runs,
 similar to the previous example.
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   include(CMakeDependentOption)
 
@@ -189,7 +189,7 @@ Another example demonstrates how an option can be conditionally available based
 on the target system:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   include(CMakeDependentOption)
 

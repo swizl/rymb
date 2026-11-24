@@ -1393,7 +1393,7 @@ void cmLocalVisualStudio7Generator::WriteVCProjFile(std::ostream& fout,
 
   cmSourceGroupFiles sourceGroupFiles;
 
-  // Add CMakeLists.txt file with rule to re-run CMake for user convenience.
+  // Add 构建清单.txt file with rule to re-run CMake for user convenience.
   if (target->GetType() != cm::TargetType::GLOBAL_TARGET &&
       target->GetName() != CMAKE_CHECK_BUILD_SYSTEM_TARGET) {
     if (cmSourceFile* sf = this->CreateVCProjBuildRule()) {

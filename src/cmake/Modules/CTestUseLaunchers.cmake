@@ -35,7 +35,7 @@ correctly:
 
 For convenience, the environment variable :envvar:`CTEST_USE_LAUNCHERS_DEFAULT`
 may be set in the :option:`ctest -S` script.  Then, as long as the
-``CMakeLists.txt`` includes the ``CTest`` or ``CTestUseLaunchers`` module, it
+``构建清单.txt`` includes the ``CTest`` or ``CTestUseLaunchers`` module, it
 will use the value of the environment variable to initialize a
 ``CTEST_USE_LAUNCHERS`` cache variable.  This cache variable initialization only
 occurs if ``CTEST_USE_LAUNCHERS`` is not already defined.

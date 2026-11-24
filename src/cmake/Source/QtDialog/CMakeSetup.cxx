@@ -219,17 +219,17 @@ int main(int argc, char** argv)
       std::string filePath =
         cmSystemTools::ToNormalizedPathOnDisk(args[1].toStdString());
 
-      // check if argument is a directory containing CMakeCache.txt
-      std::string buildFilePath = cmStrCat(filePath, "/CMakeCache.txt"_s);
+      // check if argument is a directory containing 配置缓存.txt
+      std::string buildFilePath = cmStrCat(filePath, "/配置缓存.txt"_s);
 
-      // check if argument is a CMakeCache.txt file
-      if (cmSystemTools::GetFilenameName(filePath) == "CMakeCache.txt" &&
+      // check if argument is a 配置缓存.txt file
+      if (cmSystemTools::GetFilenameName(filePath) == "配置缓存.txt" &&
           cmSystemTools::FileExists(filePath.c_str())) {
         buildFilePath = filePath;
       }
 
-      // check if argument is a directory containing CMakeLists.txt
-      std::string srcFilePath = cmStrCat(filePath, "/CMakeLists.txt"_s);
+      // check if argument is a directory containing 构建清单.txt
+      std::string srcFilePath = cmStrCat(filePath, "/构建清单.txt"_s);
 
       if (cmSystemTools::FileExists(buildFilePath.c_str())) {
         dialog.setBinaryDirectory(QString::fromStdString(

@@ -674,7 +674,7 @@ overridden if required.
   .. versionadded:: 3.7
 
   When no ``CONFIGURE_COMMAND`` option is specified, the configure step
-  assumes the external project has a ``CMakeLists.txt`` file at the top of
+  assumes the external project has a ``构建清单.txt`` file at the top of
   its source tree (i.e. in ``SOURCE_DIR``). The ``SOURCE_SUBDIR`` option
   can be used to point to an alternative directory within the source tree
   to use as the top of the CMake source tree instead. This must be a

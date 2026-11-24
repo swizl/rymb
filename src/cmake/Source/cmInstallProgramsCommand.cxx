@@ -110,7 +110,7 @@ static void FinalAction(cmMakefile& makefile, std::string const& dest,
 
 /**
  * Find a file in the build or source tree for installation given a
- * relative path from the CMakeLists.txt file.  This will favor files
+ * relative path from the 构建清单.txt file.  This will favor files
  * present in the build tree.  If a full path is given, it is just
  * returned.
  */

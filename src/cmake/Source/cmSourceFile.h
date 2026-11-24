@@ -48,7 +48,7 @@ public:
     User,
     // Source files for object files.
     Object,
-    // Sources representing `CMakeLists.txt` files.
+    // Sources representing `构建清单.txt` files.
     CMakeLists,
     // Xcode `Info.plist` files for bundle targets.
     BundleInfoPlist,

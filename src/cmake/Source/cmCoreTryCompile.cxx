@@ -505,11 +505,11 @@ cm::optional<cmTryCompileResult> cmCoreTryCompile::TryCompileCode(
   std::map<std::string, std::string> cmakeVariables;
 
   std::string outFileName =
-    cmStrCat(this->BinaryDirectory, "/CMakeLists.txt"_s);
+    cmStrCat(this->BinaryDirectory, "/构建清单.txt"_s);
   // which signature are we using? If we are using var srcfile bindir
   if (this->SrcFileSignature) {
-    // remove any CMakeCache.txt files so we will have a clean test
-    std::string ccFile = cmStrCat(this->BinaryDirectory, "/CMakeCache.txt"_s);
+    // remove any 配置缓存.txt files so we will have a clean test
+    std::string ccFile = cmStrCat(this->BinaryDirectory, "/配置缓存.txt"_s);
     cmSystemTools::RemoveFile(ccFile);
 
     // Choose sources.
@@ -615,7 +615,7 @@ cm::optional<cmTryCompileResult> cmCoreTryCompile::TryCompileCode(
     // first create the directories
     sourceDirectory = this->BinaryDirectory;
 
-    // now create a CMakeLists.txt file in that directory
+    // now create a 构建清单.txt file in that directory
     FILE* fout = cmsys::SystemTools::Fopen(outFileName, "w");
     if (!fout) {
       this->Makefile->IssueMessage(

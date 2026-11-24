@@ -103,7 +103,7 @@ cmInstallScriptHandler::cmInstallScriptHandler(
     }
   } else {
     for (auto const& component : Components) {
-      addScript(cmStrCat(this->BinaryDir, "/cmake_install.cmake"_s), component,
+      addScript(cmStrCat(this->BinaryDir, "/安装规则.cmake"_s), component,
                 installConfig);
     }
   }

@@ -182,7 +182,7 @@ public:
 
   /**
    * Set the home directory from `-S` or from a known location
-   * that contains a CMakeLists.txt. Will generate warnings
+   * that contains a 构建清单.txt. Will generate warnings
    * when overriding an existing source directory.
    *
    *  |    args           | src dir| warning        |
@@ -283,7 +283,7 @@ public:
     return this->GlobalGenerator.get();
   }
 
-  //! Return the full path to where the CMakeCache.txt file should be.
+  //! Return the full path to where the 配置缓存.txt file should be.
   static std::string FindCacheFile(std::string const& binaryDir);
 
   //! Return the global generator assigned to this instance of cmake

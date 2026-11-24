@@ -298,7 +298,7 @@ and ``EXAMPLE_DEPRECATED_NO_EXPORT``, and is installed along with the
 library's other public headers:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
   :emphasize-lines: 10,11
 
   cmake_minimum_required(VERSION 3.24)
@@ -492,7 +492,7 @@ In earlier versions of CMake, ``add_compiler_export_flags()`` command was
 used to add symbol visibility compile options:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   add_library(example example.cxx)
 
@@ -508,7 +508,7 @@ In new code, the following target properties are used to achieve the same
 functionality:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   add_library(example example.cxx)
 

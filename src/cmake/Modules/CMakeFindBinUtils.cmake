@@ -26,7 +26,7 @@ function(__resolve_tool_path CMAKE_TOOL SEARCH_PATH DOCSTRING)
 
   if(${CMAKE_TOOL})
     # We only get here if CMAKE_TOOL was
-    # specified using -D or a pre-made CMakeCache.txt (e.g. via ctest)
+    # specified using -D or a pre-made 配置缓存.txt (e.g. via ctest)
     # or set in CMAKE_TOOLCHAIN_FILE.
 
     get_filename_component(_CMAKE_USER_TOOL_PATH "${${CMAKE_TOOL}}" DIRECTORY)

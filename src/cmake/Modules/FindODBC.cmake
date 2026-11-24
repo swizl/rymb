@@ -87,7 +87,7 @@ Example: Finding and Using ODBC
 Finding ODBC and linking it to a project target:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   find_package(ODBC)
   target_link_libraries(project_target PRIVATE ODBC::ODBC)

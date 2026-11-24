@@ -45,7 +45,7 @@ CPack Generators
 ^^^^^^^^^^^^^^^^
 
 The :variable:`CPACK_GENERATOR` variable has different meanings in different
-contexts.  In a ``CMakeLists.txt`` file, :variable:`CPACK_GENERATOR` is a
+contexts.  In a ``构建清单.txt`` file, :variable:`CPACK_GENERATOR` is a
 *list of generators*: and when :manual:`cpack <cpack(1)>` is run with no other
 arguments, it will iterate over that list and produce one package for each
 generator.  In a :variable:`CPACK_PROJECT_CONFIG_FILE`,
@@ -97,7 +97,7 @@ or ``ninja package_source``.
 Variables common to all CPack Generators
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Before including this CPack module in your ``CMakeLists.txt`` file, there
+Before including this CPack module in your ``构建清单.txt`` file, there
 are a variety of variables that can be set to customize the resulting
 installers.  The most commonly-used variables are:
 
@@ -122,7 +122,7 @@ installers.  The most commonly-used variables are:
 
   Package major version.  This variable will always be set, but its default
   value depends on whether or not version details were given to the
-  :command:`project` command in the top level CMakeLists.txt file.  If version
+  :command:`project` command in the top level 构建清单.txt file.  If version
   details were given, the default value will be
   :variable:`CMAKE_PROJECT_VERSION_MAJOR`.  If no version details were given,
   a default version of 0.1.1 will be assumed, leading to
@@ -132,7 +132,7 @@ installers.  The most commonly-used variables are:
 
   Package minor version.  The default value is determined based on whether or
   not version details were given to the :command:`project` command in the top
-  level CMakeLists.txt file.  If version details were given, the default
+  level 构建清单.txt file.  If version details were given, the default
   value will be :variable:`CMAKE_PROJECT_VERSION_MINOR`, but if no minor
   version component was specified then ``CPACK_PACKAGE_VERSION_MINOR`` will be
   left unset.  If no project version was given at all, a default version of
@@ -143,7 +143,7 @@ installers.  The most commonly-used variables are:
 
   Package patch version.  The default value is determined based on whether or
   not version details were given to the :command:`project` command in the top
-  level CMakeLists.txt file.  If version details were given, the default
+  level 构建清单.txt file.  If version details were given, the default
   value will be :variable:`CMAKE_PROJECT_VERSION_PATCH`, but if no patch
   version component was specified then ``CPACK_PACKAGE_VERSION_PATCH`` will be
   left unset.  If no project version was given at all, a default version of
@@ -233,7 +233,7 @@ installers.  The most commonly-used variables are:
   like NSIS.  If you want to use UTF-8 characters, the file needs to be encoded
   in UTF-8 BOM.  If you want to install a license file (may be the same as this
   one) along with your project, you must add an appropriate CMake
-  :command:`install` command in your ``CMakeLists.txt``.
+  :command:`install` command in your ``构建清单.txt``.
 
 .. variable:: CPACK_RESOURCE_FILE_README
 

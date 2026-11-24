@@ -680,7 +680,7 @@ void cmLocalGenerator::GenerateInstallRules()
   if (file == homedir) {
     toplevel_install = 1;
   }
-  file += "/cmake_install.cmake";
+  file += "/安装规则.cmake";
   this->GetGlobalGenerator()->AddInstallScript(file);
   cmGeneratedFileStream fout(file);
 
@@ -875,7 +875,7 @@ void cmLocalGenerator::GenerateInstallRules()
           if (!c.GetDirectory().GetPropertyAsBool("EXCLUDE_FROM_ALL")) {
             std::string odir = c.GetDirectory().GetCurrentBinary();
             cmSystemTools::ConvertToUnixSlashes(odir);
-            fout << "  include(\"" << odir << "/cmake_install.cmake\")\n";
+            fout << "  include(\"" << odir << "/安装规则.cmake\")\n";
           }
         }
         fout << "\n";

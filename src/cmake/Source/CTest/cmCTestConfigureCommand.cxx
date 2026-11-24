@@ -202,10 +202,10 @@ bool cmCTestConfigureCommand::ExecuteConfigure(ConfigureArguments const& args,
     ? args.Source
     : mf.GetDefinition("CTEST_SOURCE_DIRECTORY");
   if (sourceDirectory.empty() ||
-      !cmSystemTools::FileExists(sourceDirectory + "/CMakeLists.txt")) {
+      !cmSystemTools::FileExists(sourceDirectory + "/构建清单.txt")) {
     status.SetError("called with invalid source directory.  "
                     "CTEST_SOURCE_DIRECTORY must be set to a directory "
-                    "that contains CMakeLists.txt.");
+                    "that contains 构建清单.txt.");
     return false;
   }
 

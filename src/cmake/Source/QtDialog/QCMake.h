@@ -143,7 +143,7 @@ Q_SIGNALS:
   /// signal when the generator changes
   void generatorChanged(QString const& gen);
   /// signal when the source directory changes (binary directory already
-  /// containing a CMakeCache.txt file)
+  /// containing a 配置缓存.txt file)
   void sourceDirChanged(QString const& dir);
   /// signal when the binary directory changes
   void binaryDirChanged(QString const& dir);

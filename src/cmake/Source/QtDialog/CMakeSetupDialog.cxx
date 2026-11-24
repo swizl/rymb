@@ -650,7 +650,7 @@ void CMakeSetupDialog::doHelp()
     "software projects.   The basic steps for configuring a project are as "
     "follows:\r\n\r\n1. Select the source directory for the project.  This "
     "should "
-    "contain the CMakeLists.txt files for the project.\r\n\r\n2. Select the "
+    "contain the 构建清单.txt files for the project.\r\n\r\n2. Select the "
     "build "
     "directory for the project.   This is the directory where the project "
     "will be "
@@ -1137,8 +1137,8 @@ void CMakeSetupDialog::dragEnterEvent(QDragEnterEvent* e)
   QList<QUrl> urls = dat->urls();
   QString file = urls.count() ? urls[0].toLocalFile() : QString();
   if (!file.isEmpty() &&
-      (file.endsWith("CMakeCache.txt", Qt::CaseInsensitive) ||
-       file.endsWith("CMakeLists.txt", Qt::CaseInsensitive))) {
+      (file.endsWith("配置缓存.txt", Qt::CaseInsensitive) ||
+       file.endsWith("构建清单.txt", Qt::CaseInsensitive))) {
     e->accept();
   } else {
     e->ignore();
@@ -1155,13 +1155,13 @@ void CMakeSetupDialog::dropEvent(QDropEvent* e)
   QMimeData const* dat = e->mimeData();
   QList<QUrl> urls = dat->urls();
   QString file = urls.count() ? urls[0].toLocalFile() : QString();
-  if (file.endsWith("CMakeCache.txt", Qt::CaseInsensitive)) {
+  if (file.endsWith("配置缓存.txt", Qt::CaseInsensitive)) {
     QFileInfo info(file);
     if (this->CMakeThread->cmakeInstance()->binaryDirectory() !=
         info.absolutePath()) {
       this->setBinaryDirectory(info.absolutePath());
     }
-  } else if (file.endsWith("CMakeLists.txt", Qt::CaseInsensitive)) {
+  } else if (file.endsWith("构建清单.txt", Qt::CaseInsensitive)) {
     QFileInfo info(file);
     if (this->CMakeThread->cmakeInstance()->binaryDirectory() !=
         info.absolutePath()) {

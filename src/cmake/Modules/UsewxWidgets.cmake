@@ -28,7 +28,7 @@ Include this module in a project after finding wxWidgets to configure its
 usage requirements:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   # Note that for MinGW users the order of libraries is important.
   find_package(wxWidgets COMPONENTS net gl core base)
@@ -51,7 +51,7 @@ they are linked to, avoiding unnecessary propagation to all targets in the
 current directory.
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   find_package(wxWidgets COMPONENTS net gl core base)
 

@@ -110,7 +110,7 @@ bool cmGlobalGhsMultiGenerator::SetGeneratorToolset(std::string const& ts,
                "Does not match the previously used build tool: "_s,
                *prevTool,
                "\n"
-               "Either remove the CMakeCache.txt file and CMakeFiles "
+               "Either remove the 配置缓存.txt file and CMakeFiles "
                "directory or choose a different binary directory."_s);
     mf->IssueMessage(MessageType::FATAL_ERROR, e);
     return false;
@@ -679,7 +679,7 @@ bool cmGlobalGhsMultiGenerator::AddCheckTarget()
     // Add the cache file.
     listFiles.emplace_back(
       cmStrCat(this->GetCMakeInstance()->GetHomeOutputDirectory(),
-               "/CMakeCache.txt"_s));
+               "/配置缓存.txt"_s));
 
     // Print not implemented warning.
     if (this->GetCMakeInstance()->DoWriteGlobVerifyTarget()) {

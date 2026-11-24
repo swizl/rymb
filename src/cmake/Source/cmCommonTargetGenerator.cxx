@@ -735,7 +735,7 @@ bool cmCommonTargetGenerator::HaveRequiredLanguages(
                  " was requested for compilation but was not enabled."
                  " To enable a language it needs to be specified in a"
                  " 'project' or 'enable_language' command in the root"
-                 " CMakeLists.txt"_s));
+                 " 构建清单.txt"_s));
     }
     return valid;
   };

@@ -61,7 +61,7 @@ else()
     _cmake_find_compiler(OBJC)
 
   else()
-    # we only get here if CMAKE_OBJC_COMPILER was specified using -D or a pre-made CMakeCache.txt
+    # we only get here if CMAKE_OBJC_COMPILER was specified using -D or a pre-made 配置缓存.txt
     # (e.g. via ctest) or set in CMAKE_TOOLCHAIN_FILE
     # if CMAKE_OBJC_COMPILER is a list, use the first item as
     # CMAKE_OBJC_COMPILER and the rest as CMAKE_OBJC_COMPILER_ARG1

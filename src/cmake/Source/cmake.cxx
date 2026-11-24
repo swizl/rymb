@@ -138,7 +138,7 @@
 #  include "cmExtraSublimeTextGenerator.h"
 
 // NOTE: the __linux__ macro is predefined on Android host too, but
-// main CMakeLists.txt filters out this generator by host name.
+// main 构建清单.txt filters out this generator by host name.
 #  if (defined(__linux__) && !defined(__ANDROID__)) || defined(_WIN32)
 #    include "cmGlobalGhsMultiGenerator.h"
 #  endif
@@ -1793,16 +1793,16 @@ void cmake::SetTraceRedirect(cmake* other)
 
 bool cmake::SetDirectoriesFromFile(std::string const& arg)
 {
-  // Check if the argument refers to a CMakeCache.txt or CMakeLists.txt file.
+  // Check if the argument refers to a 配置缓存.txt or 构建清单.txt file.
   // Do not check for the custom project filename CMAKE_LIST_FILE_NAME, as it
-  // cannot be determined until after reading the CMakeCache.txt
+  // cannot be determined until after reading the 配置缓存.txt
   std::string listPath;
   std::string cachePath;
   bool is_source_dir = false;
   bool is_empty_directory = false;
   if (cmSystemTools::FileIsDirectory(arg)) {
     std::string path = cmSystemTools::ToNormalizedPathOnDisk(arg);
-    std::string cacheFile = cmStrCat(path, "/CMakeCache.txt"_s);
+    std::string cacheFile = cmStrCat(path, "/配置缓存.txt"_s);
     std::string listFile = this->GetCMakeListFile(path);
 
     is_empty_directory = true;
@@ -1837,7 +1837,7 @@ bool cmake::SetDirectoriesFromFile(std::string const& arg)
     }
   }
 
-  // If there is a CMakeCache.txt file, use its settings.
+  // If there is a 配置缓存.txt file, use its settings.
   if (!cachePath.empty()) {
     if (this->LoadCache(cachePath)) {
       cmValue existingValue =
@@ -1860,7 +1860,7 @@ bool cmake::SetDirectoriesFromFile(std::string const& arg)
   bool used_provided_path =
     (passed_same_path || is_source_dir || no_build_tree);
 
-  // If there is a CMakeLists.txt file, use it as the source tree.
+  // If there is a 构建清单.txt file, use it as the source tree.
   if (!listPath.empty()) {
     // When invoked with a path that points to an existing CMakeCache
     // This function is called multiple times with the same path
@@ -1879,7 +1879,7 @@ bool cmake::SetDirectoriesFromFile(std::string const& arg)
     }
   } else {
     if (no_source_tree) {
-      // We didn't find a CMakeLists.txt and it wasn't specified
+      // We didn't find a 构建清单.txt and it wasn't specified
       // with -S. Assume it is the path to the source tree
       this->SetHomeDirectory(cmSystemTools::ToNormalizedPathOnDisk(arg));
     }
@@ -1887,7 +1887,7 @@ bool cmake::SetDirectoriesFromFile(std::string const& arg)
       // passed `-S <path> <build_dir> when build_dir is an empty directory
       this->SetHomeOutputDirectory(cmSystemTools::ToNormalizedPathOnDisk(arg));
     } else if (no_build_tree) {
-      // We didn't find a CMakeCache.txt and it wasn't specified
+      // We didn't find a 配置缓存.txt and it wasn't specified
       // with -B. Assume the current working directory as the build tree.
       this->SetHomeOutputDirectory(
         cmSystemTools::GetLogicalWorkingDirectory());
@@ -2314,13 +2314,13 @@ std::string cmake::FindCacheFile(std::string const& binaryDir)
 {
   std::string cachePath = binaryDir;
   cmSystemTools::ConvertToUnixSlashes(cachePath);
-  std::string cacheFile = cmStrCat(cachePath, "/CMakeCache.txt"_s);
+  std::string cacheFile = cmStrCat(cachePath, "/配置缓存.txt"_s);
   if (!cmSystemTools::FileExists(cacheFile)) {
     // search in parent directories for cache
     std::string cmakeFiles = cmStrCat(cachePath, "/CMakeFiles"_s);
     if (cmSystemTools::FileExists(cmakeFiles)) {
       std::string cachePathFound =
-        cmSystemTools::FileExistsInParentDirectories("CMakeCache.txt",
+        cmSystemTools::FileExistsInParentDirectories("配置缓存.txt",
                                                      cachePath, "/");
       if (!cachePathFound.empty()) {
         cachePath = cmSystemTools::GetFilenamePath(cachePathFound);
@@ -2372,7 +2372,7 @@ void cmake::SetGlobalGenerator(std::unique_ptr<cmGlobalGenerator> gg)
 
 int cmake::DoPreConfigureChecks()
 {
-  // Make sure the Source directory contains a CMakeLists.txt file.
+  // Make sure the Source directory contains a 构建清单.txt file.
   std::string srcList =
     cmStrCat(this->GetHomeDirectory(), '/', this->CMakeListName);
   if (!cmSystemTools::FileExists(srcList)) {
@@ -2615,20 +2615,20 @@ int cmake::ActualConfigure()
     std::string message =
       cmStrCat("CMakeLists filename : \""_s, this->CMakeListName,
                "\"\nDoes not match the previous: \""_s, cmlNameCache,
-               "\"\nEither remove the CMakeCache.txt file and CMakeFiles "
+               "\"\nEither remove the 配置缓存.txt file and CMakeFiles "
                "directory or choose a different binary directory."_s);
     cmSystemTools::Error(message);
     return -2;
   }
   if (this->CMakeListName.empty()) {
     this->CMakeListName =
-      cmlNameCache.empty() ? "CMakeLists.txt" : cmlNameCache;
+      cmlNameCache.empty() ? "构建清单.txt" : cmlNameCache;
   }
-  if (this->CMakeListName != "CMakeLists.txt") {
+  if (this->CMakeListName != "构建清单.txt") {
     this->IssueMessage(
       MessageType::WARNING,
       "This project has been configured with a project file other than "
-      "CMakeLists.txt. This feature is intended for temporary use during "
+      "构建清单.txt. This feature is intended for temporary use during "
       "development and not for publication of a final product.");
   }
   this->AddCacheEntry("CMAKE_LIST_FILE_NAME", this->CMakeListName,
@@ -2642,7 +2642,7 @@ int cmake::ActualConfigure()
   if (!res) {
     this->AddCacheEntry(
       "CMAKE_HOME_DIRECTORY", this->GetHomeDirectory(),
-      "Source directory with the top level CMakeLists.txt file for this "
+      "Source directory with the top level 构建清单.txt file for this "
       "project",
       cmStateEnums::INTERNAL);
   }
@@ -2704,7 +2704,7 @@ int cmake::ActualConfigure()
                  "Does not match the generator used previously: "_s,
                  *genName,
                  "\n"
-                 "Either remove the CMakeCache.txt file and CMakeFiles "
+                 "Either remove the 配置缓存.txt file and CMakeFiles "
                  "directory or choose a different binary directory."_s);
       cmSystemTools::Error(message);
       return -2;
@@ -2737,7 +2737,7 @@ int cmake::ActualConfigure()
                  "Does not match the instance used previously: "_s,
                  *instance,
                  "\n"
-                 "Either remove the CMakeCache.txt file and CMakeFiles "
+                 "Either remove the 配置缓存.txt file and CMakeFiles "
                  "directory or choose a different binary directory."_s);
       cmSystemTools::Error(message);
       return -2;
@@ -2758,7 +2758,7 @@ int cmake::ActualConfigure()
                  "Does not match the platform used previously: "_s,
                  *platformName,
                  "\n"
-                 "Either remove the CMakeCache.txt file and CMakeFiles "
+                 "Either remove the 配置缓存.txt file and CMakeFiles "
                  "directory or choose a different binary directory."_s);
       cmSystemTools::Error(message);
       return -2;
@@ -2777,7 +2777,7 @@ int cmake::ActualConfigure()
                  "Does not match the toolset used previously: "_s,
                  *tsName,
                  "\n"
-                 "Either remove the CMakeCache.txt file and CMakeFiles "
+                 "Either remove the 配置缓存.txt file and CMakeFiles "
                  "directory or choose a different binary directory."_s);
       cmSystemTools::Error(message);
       return -2;
@@ -2919,7 +2919,7 @@ int cmake::ActualConfigure()
                        "CTEST_USE_LAUNCHERS is enabled, but the "
                        "RULE_LAUNCH_COMPILE global property is not defined.\n"
                        "Did you forget to include(CTest) in the toplevel "
-                       "CMakeLists.txt ?");
+                       "构建清单.txt ?");
   }
   // Setup launchers for instrumentation
 #if !defined(CMAKE_BOOTSTRAP)
@@ -3143,7 +3143,7 @@ int cmake::HandleDifferentSystemEnvironmentId(std::string envId,
         "CMAKE_SYSTEM_ENVIRONMENT_ID: "_s, envId,
         "\nDoes not match the previous value: "_s, cachedId,
         "\nThe configure results are probably outdated. Consider running"
-        " cmake with --fresh, removing the CMakeCache.txt file and"
+        " cmake with --fresh, removing the 配置缓存.txt file and"
         " CMakeFiles directory, or choosing a different binary"
         " directory."_s);
       this->IssueMessage(MessageType::WARNING, msg);
@@ -3568,10 +3568,10 @@ int cmake::LoadCache()
   if (!this->LoadCache(this->GetHomeOutputDirectory())) {
     // if it does exist, but isn't readable then warn the user
     std::string cacheFile =
-      cmStrCat(this->GetHomeOutputDirectory(), "/CMakeCache.txt"_s);
+      cmStrCat(this->GetHomeOutputDirectory(), "/配置缓存.txt"_s);
     if (cmSystemTools::FileExists(cacheFile)) {
       cmSystemTools::Error(
-        "There is a CMakeCache.txt file for the current binary tree but "
+        "There is a 配置缓存.txt file for the current binary tree but "
         "cmake does not have permission to read it. Please check the "
         "permissions of the directory you are trying to run CMake on.");
       return -1;
@@ -3977,7 +3977,7 @@ int cmake::GetSystemInformation(std::vector<std::string>& args)
   std::string modulesPath =
     cmStrCat(cmSystemTools::GetCMakeRoot(), "/Modules"_s);
   std::string inFile = cmStrCat(modulesPath, "/SystemInformation.cmake"_s);
-  std::string outFile = cmStrCat(destPath, "/CMakeLists.txt"_s);
+  std::string outFile = cmStrCat(destPath, "/构建清单.txt"_s);
 
   // Copy file
   if (!cmsys::SystemTools::CopyFileAlways(inFile, outFile)) {
@@ -3995,7 +3995,7 @@ int cmake::GetSystemInformation(std::vector<std::string>& args)
     // now run cmake on the CMakeLists file
     cmWorkingDirectory workdir(destPath);
     if (workdir.Failed()) {
-      // We created the directory and we were able to copy the CMakeLists.txt
+      // We created the directory and we were able to copy the 构建清单.txt
       // file to it, so we wouldn't expect to get here unless the default
       // permissions are questionable or some other process has deleted the
       // directory
@@ -4081,7 +4081,7 @@ int cmake::Build(cmBuildArgs buildArgs, std::vector<std::string> targets,
     // the source directory so we can locate the presets file.
     if (!buildArgs.binaryDir.empty() &&
         this->SetDirectoriesFromFile(buildArgs.binaryDir)) {
-      // HomeDirectory is now the source directory (found in CMakeCache.txt)
+      // HomeDirectory is now the source directory (found in 配置缓存.txt)
     } else {
       // Otherwise we assume this command was called from the source directory.
       this->SetHomeDirectory(cmSystemTools::GetLogicalWorkingDirectory());
@@ -4202,7 +4202,7 @@ int cmake::Build(cmBuildArgs buildArgs, std::vector<std::string> targets,
   std::string cachePath = FindCacheFile(buildArgs.binaryDir);
   if (!this->LoadCache(cachePath)) {
     std::cerr
-      << "Error: not a CMake build directory (missing CMakeCache.txt)\n";
+      << "Error: not a CMake build directory (missing 配置缓存.txt)\n";
     return 1;
   }
   cmValue cachedGenerator = this->State->GetCacheEntryValue("CMAKE_GENERATOR");
@@ -4367,7 +4367,7 @@ bool cmake::Open(std::string const& dir, DryRun dryRun)
   std::string cachePath = FindCacheFile(dir);
   if (!this->LoadCache(cachePath)) {
     std::cerr
-      << "Error: not a CMake build directory (missing CMakeCache.txt)\n";
+      << "Error: not a CMake build directory (missing 配置缓存.txt)\n";
     return false;
   }
   cmValue genName = this->State->GetCacheEntryValue("CMAKE_GENERATOR");
@@ -4714,7 +4714,7 @@ std::string cmake::GetCMakeListFile(std::string const& dir) const
     listFile = cmStrCat(dir, slash, this->CMakeListName);
   }
   if (listFile.empty() || !cmSystemTools::FileExists(listFile, true)) {
-    listFile = cmStrCat(dir, slash, "CMakeLists.txt"_s);
+    listFile = cmStrCat(dir, slash, "构建清单.txt"_s);
   }
   return listFile;
 }

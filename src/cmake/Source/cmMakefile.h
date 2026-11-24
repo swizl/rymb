@@ -92,10 +92,10 @@ public:
 };
 
 /** \class cmMakefile
- * \brief Process the input CMakeLists.txt file.
+ * \brief Process the input 构建清单.txt file.
  *
- * Process and store into memory the input CMakeLists.txt file.
- * Each CMakeLists.txt file is parsed and the commands found there
+ * Process and store into memory the input 构建清单.txt file.
+ * Each 构建清单.txt file is parsed and the commands found there
  * are added into the build process.
  */
 class cmMakefile
@@ -137,7 +137,7 @@ public:
    */
   void AddFunctionBlocker(std::unique_ptr<cmFunctionBlocker> fb);
 
-  /// @return whether we are processing the top CMakeLists.txt file.
+  /// @return whether we are processing the top 构建清单.txt file.
   bool IsRootMakefile() const;
 
   /**

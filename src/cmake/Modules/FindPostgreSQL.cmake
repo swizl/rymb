@@ -136,7 +136,7 @@ indicated by preprocessor macros in the ``libpq-fe.h`` header (e.g.
 #
 # To use this variable just do something like this:
 # set(PostgreSQL_ADDITIONAL_VERSIONS "9.2" "8.4.4")
-# before calling find_package(PostgreSQL) in your CMakeLists.txt file.
+# before calling find_package(PostgreSQL) in your 构建清单.txt file.
 # This will mean that the versions you set here will be found first in the order
 # specified before the default ones are searched.
 #
@@ -163,7 +163,7 @@ indicated by preprocessor macros in the ``libpq-fe.h`` header (e.g.
 # 1) After CMake runs, set PostgreSQL_INCLUDE_DIR to <Your Path>/include and
 #    PostgreSQL_LIBRARY_DIR to wherever the library pq (or libpq in windows) is
 # 2) Use CMAKE_INCLUDE_PATH to set a path to <Your Path>/PostgreSQL<-version>. This will allow find_path()
-#    to locate PostgreSQL_INCLUDE_DIR by utilizing the PATH_SUFFIXES option. e.g. In your CMakeLists.txt file
+#    to locate PostgreSQL_INCLUDE_DIR by utilizing the PATH_SUFFIXES option. e.g. In your 构建清单.txt file
 #    set(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "<Your Path>/include")
 # 3) Set an environment variable called ${PostgreSQL_ROOT} that points to the root of where you have
 #    installed PostgreSQL, e.g. <Your Path>.

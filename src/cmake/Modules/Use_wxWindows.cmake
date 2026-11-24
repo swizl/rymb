@@ -28,7 +28,7 @@ In earlier versions of CMake, wxWidgets (wxWindows) could be found and used in
 the current directory like this:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   include(Use_wxWindows)
 
@@ -36,7 +36,7 @@ To request OpenGL support, the ``WXWINDOWS_USE_GL`` variable could be set before
 including this module:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   set(WXWINDOWS_USE_GL ON)
   include(Use_wxWindows)
@@ -48,7 +48,7 @@ Starting with CMake 3.0, wxWidgets can be found using the
 either using result variables or imported target as of CMake 3.27:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   find_package(wxWidgets)
 

@@ -1702,7 +1702,7 @@ void cmMakefile::Configure()
     }
   }
 
-  // Set CMAKE_PARENT_LIST_FILE for CMakeLists.txt based on CMP0198 policy
+  // Set CMAKE_PARENT_LIST_FILE for 构建清单.txt based on CMP0198 policy
   this->UpdateParentListFileVariable();
 
 #ifdef CMake_ENABLE_DEBUGGER
@@ -1797,7 +1797,7 @@ void cmMakefile::Configure()
     if (!hasProject) {
       this->IssueDiagnostic(
         cmDiagnostics::CMD_AUTHOR,
-        "No project() command is present.  The top-level CMakeLists.txt "
+        "No project() command is present.  The top-level 构建清单.txt "
         "file must contain a literal, direct call to the project() command.  "
         "Add a line of code such as\n"
         "  project(ProjectName)\n"
@@ -1846,7 +1846,7 @@ void cmMakefile::ConfigureSubDirectory(cmMakefile* mf)
     this->IssueMessage(MessageType::FATAL_ERROR,
                        cmStrCat("The source directory\n  "_s, currentStart,
                                 "\n"
-                                "does not contain a CMakeLists.txt file."_s));
+                                "does not contain a 构建清单.txt file."_s));
     return;
   }
   // finally configure the subdir
@@ -2149,7 +2149,7 @@ cmTarget* cmMakefile::AddLibrary(std::string const& lname, cm::TargetType type,
 
   cmTarget* target = this->AddNewTarget(type, lname);
   // Clear its dependencies. Otherwise, dependencies might persist
-  // over changes in CMakeLists.txt, making the information stale and
+  // over changes in 构建清单.txt, making the information stale and
   // hence useless.
   target->ClearDependencyInformation(*this);
   if (excludeFromAll) {
@@ -4547,7 +4547,7 @@ bool cmMakefile::SetPolicyVersion(std::string const& version_min,
 
 void cmMakefile::UpdateParentListFileVariable()
 {
-  // CMP0198 determines CMAKE_PARENT_LIST_FILE behavior in CMakeLists.txt
+  // CMP0198 determines CMAKE_PARENT_LIST_FILE behavior in 构建清单.txt
   if (this->GetPolicyStatus(cmPolicies::CMP0198) == cmPolicies::NEW) {
     this->RemoveDefinition(kCMAKE_PARENT_LIST_FILE);
   } else {

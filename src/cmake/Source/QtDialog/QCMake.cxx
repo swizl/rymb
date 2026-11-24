@@ -143,9 +143,9 @@ void QCMake::setBinaryDirectory(QString const& _dir)
     this->setPlatform(QString());
     if (!this->CMakeInstance->LoadCache(this->BinaryDirectory.toStdString())) {
       QDir testDir(this->BinaryDirectory);
-      if (testDir.exists("CMakeCache.txt")) {
+      if (testDir.exists("配置缓存.txt")) {
         cmSystemTools::Error(
-          "There is a CMakeCache.txt file for the current binary "
+          "There is a 配置缓存.txt file for the current binary "
           "tree but cmake does not have permission to read it.  "
           "Please check the permissions of the directory you are trying to "
           "run CMake on.");

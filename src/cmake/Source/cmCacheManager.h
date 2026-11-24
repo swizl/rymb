@@ -53,12 +53,12 @@ class cmCacheManager
   };
 
 public:
-  //! Load a cache for given makefile.  Loads from path/CMakeCache.txt.
+  //! Load a cache for given makefile.  Loads from path/配置缓存.txt.
   bool LoadCache(std::string const& path, bool internal,
                  std::set<std::string>& excludes,
                  std::set<std::string>& includes);
 
-  //! Save cache for given makefile.  Saves to output path/CMakeCache.txt
+  //! Save cache for given makefile.  Saves to output path/配置缓存.txt
   bool SaveCache(std::string const& path, cmMessenger* messenger);
 
   //! Delete the cache given
@@ -196,7 +196,7 @@ private:
   CacheEntry* GetCacheEntry(std::string const& key);
   CacheEntry const* GetCacheEntry(std::string const& key) const;
 
-  //! Clean out the CMakeFiles directory if no CMakeCache.txt
+  //! Clean out the CMakeFiles directory if no 配置缓存.txt
   void CleanCMakeFiles(std::string const& path);
 
   static void OutputHelpString(std::ostream& fout,

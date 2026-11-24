@@ -310,7 +310,7 @@ In the following example, also the :module:`GNUInstallDirs` module is used
 to provide the ``CMAKE_INSTALL_LOCALEDIR`` variable:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
   :emphasize-lines: 9-14
 
   cmake_minimum_required(VERSION 3.24)
@@ -359,7 +359,7 @@ The :command:`gettext_process_pot_file` command processes ``.po`` translation
 files located in the current binary directory into ``.mo`` files:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   find_package(Gettext)
 
@@ -385,7 +385,7 @@ Using a simplified :command:`gettext_create_translations` command to create
 ``.mo`` files:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   find_package(Gettext)
 

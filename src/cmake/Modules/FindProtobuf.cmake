@@ -433,7 +433,7 @@ The following example demonstrates how to process all ``*.proto`` schema
 source files added to a target into C++ source files:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   cmake_minimum_required(VERSION 3.24)
   project(ProtobufExample)
@@ -483,7 +483,7 @@ Example: Using Protobuf and gRPC
 The following example shows how to use Protobuf and gRPC:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   find_package(Protobuf REQUIRED)
   find_package(gRPC CONFIG REQUIRED)
@@ -507,7 +507,7 @@ The following example shows how to process ``.proto`` files to C++ code,
 using a deprecated command and its modern replacement:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt`` with deprecated command
+  :caption: ``构建清单.txt`` with deprecated command
 
   find_package(Protobuf)
 
@@ -529,7 +529,7 @@ using a deprecated command and its modern replacement:
   target_link_libraries(example PRIVATE protobuf::libprotobuf)
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt`` with upgraded code
+  :caption: ``构建清单.txt`` with upgraded code
 
   find_package(Protobuf)
 
@@ -551,7 +551,7 @@ The following example shows how to process ``.proto`` files to Python code,
 using a deprecated command and its modern replacement:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt`` with deprecated command
+  :caption: ``构建清单.txt`` with deprecated command
 
   find_package(Protobuf)
 
@@ -562,7 +562,7 @@ using a deprecated command and its modern replacement:
   add_custom_target(proto_files DEPENDS ${python_sources})
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt`` with upgraded code
+  :caption: ``构建清单.txt`` with upgraded code
 
   find_package(Protobuf)
 

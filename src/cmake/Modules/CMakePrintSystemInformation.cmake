@@ -19,7 +19,7 @@ Examples
 For example, including this module in a project:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   project(Example)
 

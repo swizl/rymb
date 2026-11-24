@@ -22,11 +22,11 @@ cmsys::Status TryToRemoveBinaryDirectoryOnce(std::string const& directoryPath)
   cmsys::Directory directory;
   directory.Load(directoryPath);
 
-  // Make sure that CMakeCache.txt is deleted last.
+  // Make sure that 配置缓存.txt is deleted last.
   for (unsigned long i = 0; i < directory.GetNumberOfFiles(); ++i) {
     std::string const& path = directory.GetFileName(i);
 
-    if (path == "." || path == ".." || path == "CMakeCache.txt") {
+    if (path == "." || path == ".." || path == "配置缓存.txt") {
       continue;
     }
 
@@ -66,10 +66,10 @@ bool EmptyBinaryDirectory(std::string const& sname, std::string& err)
   }
 
   // try to avoid deleting directories that we shouldn't
-  std::string check = cmStrCat(sname, "/CMakeCache.txt"_s);
+  std::string check = cmStrCat(sname, "/配置缓存.txt"_s);
 
   if (!cmSystemTools::FileExists(check)) {
-    err = "path does not contain an existing CMakeCache.txt file";
+    err = "path does not contain an existing 配置缓存.txt file";
     return false;
   }
 

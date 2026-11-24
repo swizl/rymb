@@ -155,7 +155,7 @@ static void DiagnoseAncientPolicies(
   }
   e << "However, this version of CMake no longer supports the OLD "
        "behavior for these policies.  "
-       "Please either update your CMakeLists.txt files to conform to "
+       "Please either update your 构建清单.txt files to conform to "
        "the new behavior or use an older version of CMake that still "
        "supports the old behavior.";
   mf->IssueMessage(MessageType::FATAL_ERROR, e.str());
@@ -427,7 +427,7 @@ std::string cmPolicies::GetRemovedPolicyError(cmPolicies::PolicyID id)
     idToVersion(id),
     ", and use of NEW behavior is now required."
     "\n"
-    "Please either update your CMakeLists.txt files to conform to "
+    "Please either update your 构建清单.txt files to conform to "
     "the new behavior or use an older version of CMake that still "
     "supports the old behavior.  Run cmake --help-policy "_s,
     pid, " for more information."_s);

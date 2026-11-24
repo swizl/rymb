@@ -36,7 +36,7 @@ Including this module will check the ``for()`` loop scope behavior and define
 the ``CMAKE_NO_ANSI_FOR_SCOPE`` cache variable:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   include(TestForANSIForScope)
   file(

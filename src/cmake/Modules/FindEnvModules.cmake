@@ -33,7 +33,7 @@ It may also be used in a :ref:`CMake Script <Script Processing Mode>`
 
   The loaded environment will not persist beyond the end of the calling
   process.  Do not use this module in CMake project code (such as
-  ``CMakeLists.txt``) to load compiler environments, as the environment
+  ``构建清单.txt``) to load compiler environments, as the environment
   changes will not be available during the build phase.  In such a case, load
   the desired environment before invoking CMake or the generated build system.
 

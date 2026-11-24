@@ -1814,7 +1814,7 @@ bool cmGlobalXCodeGenerator::CreateXCodeTarget(
     return false;
   }
 
-  // Add CMakeLists.txt file for user convenience.
+  // Add 构建清单.txt file for user convenience.
   this->AddXCodeProjBuildRule(gtgt, commonSourceFiles);
 
   // Add the Info.plist we are about to generate for an App Bundle.
@@ -3603,7 +3603,7 @@ cmXCodeObject* cmGlobalXCodeGenerator::CreateUtilityTarget(
       return nullptr;
     }
 
-    // Add CMakeLists.txt file for user convenience.
+    // Add 构建清单.txt file for user convenience.
     this->AddXCodeProjBuildRule(gtgt, sources);
 
     for (auto* sourceFile : sources) {
@@ -4845,7 +4845,7 @@ bool cmGlobalXCodeGenerator::CreateGroups(
         addSourceToGroup(sf);
       }
 
-      // Add CMakeLists.txt file for user convenience.
+      // Add 构建清单.txt file for user convenience.
       {
         std::string listfile = this->GetCMakeInstance()->GetCMakeListFile(
           gtgt->GetLocalGenerator()->GetCurrentSourceDirectory());

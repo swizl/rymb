@@ -851,8 +851,8 @@ TEST_F(ParserTest, MissingInput) {
   State local_state;
   ManifestParser parser(&local_state, &fs_);
   string err;
-  EXPECT_FALSE(parser.Load("build.ninja", &err));
-  EXPECT_EQ("loading 'build.ninja': No such file or directory", err);
+  EXPECT_FALSE(parser.Load("构建.ninja", &err));
+  EXPECT_EQ("loading '构建.ninja': No such file or directory", err);
 }
 
 TEST_F(ParserTest, MultipleOutputs) {

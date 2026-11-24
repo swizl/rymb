@@ -24,7 +24,7 @@ Building an eCos Application
 
 .. command:: ecos_add_include_directories
 
-  Adds the eCos include directories for the current ``CMakeLists.txt`` file:
+  Adds the eCos include directories for the current ``构建清单.txt`` file:
 
   .. code-block:: cmake
 
@@ -117,10 +117,10 @@ Examples
 The following example demonstrates defining an eCos executable target in a
 project that follows the common eCos convention of listing source files in
 a ``ProjectSources.txt`` file, located one directory above the current
-``CMakeLists.txt``:
+``构建清单.txt``:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   include(UseEcos)
 
@@ -265,7 +265,7 @@ get_filename_component( ECOS_CMAKE_MODULE_DIR ${CMAKE_CURRENT_LIST_FILE} PATH)
 macro(ECOS_ADD_EXECUTABLE _exe_NAME )
   # Definitions, valid for all eCos projects.
   # The optimization and "-g" for debugging has to be enabled in the
-  # project-specific CMakeLists.txt.
+  # project-specific 构建清单.txt.
   add_definitions(-D__ECOS__=1 -D__ECOS=1)
   set(ECOS_DEFINITIONS -Wall -Wno-long-long -pipe -fno-builtin)
 

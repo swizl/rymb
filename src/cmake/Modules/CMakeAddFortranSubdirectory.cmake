@@ -66,7 +66,7 @@ This module provides the following command:
 
   ``PROJECT``
     The name of the Fortran project as defined in the top-level
-    ``CMakeLists.txt`` located in ``<subdir>``.
+    ``构建清单.txt`` located in ``<subdir>``.
 
   ``ARCHIVE_DIR``
     Directory where the project places ``.lib`` archive files.  A relative path

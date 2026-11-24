@@ -62,9 +62,9 @@
 #include "cmVersion.h"
 #include "cmake.h"
 
-char const* cmGlobalNinjaGenerator::NINJA_BUILD_FILE = "build.ninja";
+char const* cmGlobalNinjaGenerator::NINJA_BUILD_FILE = "构建.ninja";
 char const* cmGlobalNinjaGenerator::NINJA_RULES_FILE =
-  "CMakeFiles/rules.ninja";
+  "CMakeFiles/规则.ninja";
 char const* cmGlobalNinjaGenerator::INDENT = "  ";
 #ifdef _WIN32
 std::string const cmGlobalNinjaGenerator::SHELL_NOOP = "cd .";
@@ -605,7 +605,7 @@ codecvt_Encoding cmGlobalNinjaGenerator::GetMakefileEncoding() const
 cmDocumentationEntry cmGlobalNinjaGenerator::GetDocumentation()
 {
   return { cmGlobalNinjaGenerator::GetActualName(),
-           "Generates build.ninja files." };
+           "Generates 构建.ninja files." };
 }
 
 std::vector<std::string> const& cmGlobalNinjaGenerator::GetConfigNames() const
@@ -645,7 +645,7 @@ void cmGlobalNinjaGenerator::Generate()
   this->ExistingDirectories.clear();
 
   this->TargetAll = this->NinjaOutputPath("all");
-  this->CMakeCacheFile = this->NinjaOutputPath("CMakeCache.txt");
+  this->CMakeCacheFile = this->NinjaOutputPath("配置缓存.txt");
   this->DiagnosedCxxModuleNinjaSupport = false;
   this->ClangTidyExportFixesDirs.clear();
   this->ClangTidyExportFixesFiles.clear();
@@ -712,17 +712,17 @@ void cmGlobalNinjaGenerator::CleanMetaData()
     }
   };
 
-  // Can the tools below expect 'build.ninja' to be loadable?
+  // Can the tools below expect '构建.ninja' to be loadable?
   bool const expectBuildManifest =
     !this->IsMultiConfig() && this->OutputPathPrefix.empty();
 
-  // Skip some ninja tools if they need 'build.ninja' but it is missing.
+  // Skip some ninja tools if they need '构建.ninja' but it is missing.
   bool const missingBuildManifest = expectBuildManifest &&
     this->NinjaSupportsUnconditionalRecompactTool &&
-    !cmSystemTools::FileExists("build.ninja");
+    !cmSystemTools::FileExists("构建.ninja");
 
   // The `recompact` tool loads the manifest. As above, we don't have a single
-  // `build.ninja` to load for this in Ninja-Multi. This may be relaxed in the
+  // `构建.ninja` to load for this in Ninja-Multi. This may be relaxed in the
   // future pending further investigation into how Ninja works upstream
   // (ninja#1721).
   if (this->NinjaSupportsUnconditionalRecompactTool &&
@@ -1542,7 +1542,7 @@ void cmGlobalNinjaGenerator::AppendTargetOutputs(
   std::string const& config, cmNinjaTargetDepends depends) const
 {
   // for frameworks, we want the real name, not sample name
-  // frameworks always appear versioned, and the build.ninja
+  // frameworks always appear versioned, and the 构建.ninja
   // will always attempt to manage symbolic links instead
   // of letting cmOSXBundleGenerator do it.
   cmGeneratorTarget::NameType nameType = target->IsFrameworkOnApple()
@@ -2187,7 +2187,7 @@ void cmGlobalNinjaGenerator::WriteTargetRebuildManifest(std::ostream& os)
         this->NinjaVersion,
         "\n"
         "is less than the version of Ninja required by CMake for adding "
-        "restat dependencies to the build.ninja manifest regeneration "
+        "restat dependencies to the 构建.ninja manifest regeneration "
         "target:\n"
         "  "_s,
         cmGlobalNinjaGenerator::RequiredNinjaVersionForManifestRestat(),

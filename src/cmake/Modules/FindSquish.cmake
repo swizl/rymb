@@ -96,7 +96,7 @@ This module provides the following commands, if Squish is found:
   ``SUITE <suite-name>``
     Either the full path to the Squish test suite or just the suite name (i.e.,
     the last directory name of the suite).  In the latter case, the
-    ``CMakeLists.txt`` invoking ``squish_add_test()`` must reside in the parent
+    ``构建清单.txt`` invoking ``squish_add_test()`` must reside in the parent
     directory of the suite.
 
   ``TEST <squish-test-case-name>``

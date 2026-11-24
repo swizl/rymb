@@ -301,7 +301,7 @@ bool cmGlobalVisualStudio8Generator::AddCheckTarget()
       commandLines[0].emplace_back("--link-no-warning-as-error");
     }
 
-    // Add the rule.  Note that we cannot use the CMakeLists.txt
+    // Add the rule.  Note that we cannot use the 构建清单.txt
     // file as the main dependency because it would get
     // overwritten by the CreateVCProjBuildRule.
     // (this could be avoided with per-target source files)

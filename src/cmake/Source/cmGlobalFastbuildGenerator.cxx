@@ -1629,7 +1629,7 @@ void cmGlobalFastbuildGenerator::WriteIDEProjectCommon(
   IDEProjectCommon const& project)
 {
   WriteVariable("ProjectBasePath", Quote(project.ProjectBasePath), 1);
-  // So Fastbuild will pick up files relative to CMakeLists.txt
+  // So Fastbuild will pick up files relative to 构建清单.txt
   WriteVariable("ProjectInputPaths", Quote(project.ProjectBasePath), 1);
 }
 
@@ -2022,7 +2022,7 @@ void cmGlobalFastbuildGenerator::WriteTargetRebuildBFF()
   auto const* cmake = this->GetCMakeInstance();
   std::string outDir = cmake->GetHomeOutputDirectory() + '/';
 
-  implicitDeps.push_back(outDir + "CMakeCache.txt");
+  implicitDeps.push_back(outDir + "配置缓存.txt");
 
   FastbuildExecNode rebuildBFF;
   rebuildBFF.Name = FASTBUILD_REBUILD_BFF_TARGET_NAME;

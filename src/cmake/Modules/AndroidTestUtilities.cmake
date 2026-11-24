@@ -77,7 +77,7 @@ can then be run using :manual:`ctest(1)` to load the data onto the Android
 device.
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   include(AndroidTestUtilities)
 

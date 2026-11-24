@@ -90,7 +90,7 @@ endmacro()
 
 macro(_cmake_find_compiler_path lang)
   if(CMAKE_${lang}_COMPILER)
-    # we only get here if CMAKE_${lang}_COMPILER was specified using -D or a pre-made CMakeCache.txt
+    # we only get here if CMAKE_${lang}_COMPILER was specified using -D or a pre-made 配置缓存.txt
     # (e.g. via ctest) or set in CMAKE_TOOLCHAIN_FILE
     # if CMAKE_${lang}_COMPILER is a list, use the first item as
     # CMAKE_${lang}_COMPILER and the rest as CMAKE_${lang}_COMPILER_ARG1

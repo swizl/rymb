@@ -38,7 +38,7 @@ Including this module will check for the ``std`` namespace support and define
 the ``CMAKE_NO_STD_NAMESPACE`` cache variable:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   include(TestForSTDNamespace)
   file(

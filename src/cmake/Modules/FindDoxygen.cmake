@@ -236,7 +236,7 @@ This module provides the following command:
   ``doxygen_add_docs()``:
 
   .. code-block:: cmake
-    :caption: ``CMakeLists.txt``
+    :caption: ``构建清单.txt``
 
     find_package(Doxygen)
 
@@ -310,8 +310,8 @@ This module provides the following command:
       */CMakeFiles/*
       */_CPack_Packages/*
       DartConfiguration.tcl
-      CMakeLists.txt
-      CMakeCache.txt
+      构建清单.txt
+      配置缓存.txt
 
   ``DOXYGEN_OUTPUT_DIRECTORY``
     Set to :variable:`CMAKE_CURRENT_BINARY_DIR` by this module.  If the
@@ -377,7 +377,7 @@ This module provides the following command:
   :ref:`semicolon-separated list <CMake Language Lists>` can be set in CMake:
 
   .. code-block:: cmake
-    :caption: ``CMakeLists.txt``
+    :caption: ``构建清单.txt``
 
     find_package(Doxygen)
 
@@ -470,7 +470,7 @@ This module provides the following command:
     <Bracket Argument>` is used to make working with embedded quotes easier):
 
     .. code-block:: cmake
-      :caption: ``CMakeLists.txt``
+      :caption: ``构建清单.txt``
 
       find_package(Doxygen)
 
@@ -595,7 +595,7 @@ documentation files will be located in the ``html`` directory inside the
 project binary directory:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   cmake_minimum_required(VERSION 3.24)
   project(
@@ -682,7 +682,7 @@ to calling the ``doxygen_add_docs()``.  This allows project-specific
 configuration tags to be customized as needed:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   find_package(Doxygen)
 
@@ -1025,7 +1025,7 @@ endif()
 unset(_Doxygen_keep_backward_compat)
 
 #
-# Allow full control of Doxygen from CMakeLists.txt
+# Allow full control of Doxygen from 构建清单.txt
 #
 
 # Prepare a template Doxyfile and Doxygen's default values CMake file
@@ -1375,8 +1375,8 @@ doxygen_add_docs() for target ${targetName}")
         "*/CMakeFiles/*"
         "*/_CPack_Packages/*"
         "DartConfiguration.tcl"
-        "CMakeLists.txt"
-        "CMakeCache.txt"
+        "构建清单.txt"
+        "配置缓存.txt"
     )
 
     # Now bring in Doxygen's defaults for those things the project has not

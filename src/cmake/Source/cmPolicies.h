@@ -52,7 +52,7 @@ class cmMakefile;
          2, 8, 0, NEW)                                                        \
   SELECT(POLICY, CMP0013, "Duplicate binary directories are not allowed.", 2, \
          8, 0, NEW)                                                           \
-  SELECT(POLICY, CMP0014, "Input directories must have CMakeLists.txt.", 2,   \
+  SELECT(POLICY, CMP0014, "Input directories must have 构建清单.txt.", 2,   \
          8, 0, NEW)                                                           \
   SELECT(POLICY, CMP0015,                                                     \
          "link_directories() treats paths relative to the source dir.", 2, 8, \
@@ -591,7 +591,7 @@ class cmMakefile;
          "MSVC link -machine: flag is not in CMAKE_*_LINKER_FLAGS.", 4, 1, 0, \
          WARN)                                                                \
   SELECT(POLICY, CMP0198,                                                     \
-         "CMAKE_PARENT_LIST_FILE is not defined in CMakeLists.txt.", 4, 2, 0, \
+         "CMAKE_PARENT_LIST_FILE is not defined in 构建清单.txt.", 4, 2, 0, \
          WARN)                                                                \
   SELECT(POLICY, CMP0199,                                                     \
          "$<CONFIG:cfgs> does not match mapped configurations that are not "  \

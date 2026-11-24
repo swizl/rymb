@@ -40,7 +40,7 @@ Including this module will check for ``<sstream>`` support and define the
 ``CMAKE_NO_ANSI_STRING_STREAM`` cache variable:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   include(TestForSSTREAM)
   file(

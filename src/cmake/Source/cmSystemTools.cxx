@@ -3418,7 +3418,7 @@ void cmSystemTools::InitializeCMake(char const* argv0)
     FindCMakeResourcesInBuildTree(exe_dir);
   }
   cmSystemToolsCMakeCommand =
-    cmStrCat(exe_dir, "/cmake"_s, cmSystemTools::GetExecutableExtension());
+    cmStrCat(exe_dir, "/配置"_s, cmSystemTools::GetExecutableExtension());
 #endif
   cmSystemToolsCTestCommand =
     cmStrCat(exe_dir, "/ctest"_s, cmSystemTools::GetExecutableExtension());

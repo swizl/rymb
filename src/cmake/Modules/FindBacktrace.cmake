@@ -62,7 +62,7 @@ Examples
 Finding Backtrace and linking it to a project target as of CMake 3.30:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   find_package(Backtrace)
   target_link_libraries(app PRIVATE Backtrace::Backtrace)
@@ -71,7 +71,7 @@ The ``Backtrace_HEADER`` variable can be used, for example, in a configuration
 header file created by :command:`configure_file`:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   add_library(app app.c)
 
@@ -97,7 +97,7 @@ If the project needs to support CMake 3.29 or earlier, the imported target can
 be defined manually:
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   find_package(Backtrace)
   if(Backtrace_FOUND AND NOT TARGET Backtrace::Backtrace)

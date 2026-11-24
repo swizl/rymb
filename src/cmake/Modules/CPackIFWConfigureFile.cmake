@@ -72,7 +72,7 @@ script from a given template file ``qt.tools.foo.qs.in``, where
 the ``FOO_DOC_DIR`` CMake variable.
 
 .. code-block:: cmake
-  :caption: ``CMakeLists.txt``
+  :caption: ``构建清单.txt``
 
   cmake_minimum_required(VERSION 3.8)
 

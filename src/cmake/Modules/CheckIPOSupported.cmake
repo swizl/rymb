@@ -172,7 +172,7 @@ macro(_ipo_run_language_check language)
   # * CMAKE_VERSION
   configure_file(
       "${try_compile_src}/CMakeLists-${language}.txt.in"
-      "${srcdir}/CMakeLists.txt"
+      "${srcdir}/构建清单.txt"
       @ONLY
   )
 
